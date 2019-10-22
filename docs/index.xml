@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on In English</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in Introduction on In English</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 21 Oct 2019 20:01:37 +0300</lastBuildDate>
+    
+	<atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>With Table of Contents</title>
+      <link>//localhost:1313/docs/introduction/examples/with-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/introduction/examples/with-toc/</guid>
+      <description>Caput vino delphine in tamen vias Cognita laeva illo fracta Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
+ Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
+    </item>
+    
+    <item>
+      <title>Without Table of Contents</title>
+      <link>//localhost:1313/docs/introduction/examples/without-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/introduction/examples/without-toc/</guid>
+      <description>At me ipso nepotibus nunc celebratior genus Tanto oblite Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
+Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/docs/introduction/examples/shortcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/introduction/examples/shortcodes/</guid>
+      <description>Shortcodes Expand shortcode Default {{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Expand ↕  Markdown content Lorem markdownum insigne&amp;hellip;    With Custom Label {{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}}  Custom Label ...  Markdown content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>//localhost:1313/posts/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>//localhost:1313/posts/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>1</title>
+      <link>//localhost:1313/posts/1/</link>
+      <pubDate>Mon, 21 Oct 2019 20:01:37 +0300</pubDate>
+      
+      <guid>//localhost:1313/posts/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>//localhost:1313/posts/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>//localhost:1313/posts/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/docs/more-examples/advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/more-examples/advanced/</guid>
+      <description>Vagus elidunt Mole et vultus populifer quaque primoque non Lorem markdownum pignora pelle est tota propiore conpellat pectoribus de pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.
+ Exierant elisi ambit vivere dedere Duce pollice Eris modo Spargitque ferrea quos palude  Rursus nulli murmur; hastile inridet ut ab gravi sententia!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/docs/more-examples/client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/more-examples/client/</guid>
+      <description>Ista qua aera Tetigisse hac duc omnipotens urbis per sapiente Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes. Miseratus fonte Ditis conubia.
+var mnemonicPcmcia = file; if (bookmarkMultiprocessing) { core.intranetDigitize = menu(vdslWordart(enterprise, dviRealityTeraflops)); } else { portal_socket.jsp_shareware_digital = multicasting(component_uml); memory.ppc_title_hit(lunWebFormat + fontSmartphoneView, tween * default_hard, 5 + laptopMethod); wddm_tablet_null.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/docs/more-examples/hidden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/more-examples/hidden/</guid>
+      <description>This page is hidden in menu Quondam non pater est dignior ille Eurotas Latent te facies Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
+ Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona O fallor in sustinui iussorum equidem.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/docs/more-examples/server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/more-examples/server/</guid>
+      <description>Nimium sacravere cetera exorata multifidasque satia Datum perierunt nato Lorem markdownum. Sit en turpe, recessit nominibus et sanguis totis. Unaque cognitius docuit sensimus mutasse terra flammas. Nec nunc sustinet Coeranon figura Erecthida saepe gestu vel: quod mei. Docto interdum quasi labefactus nocentius miserrimus pars cum missi matrem, ipse fletus illo super.
+ Metuunt non paene iniectis licuit Extemplo iugulum relictis reddidit caput Frustra adspiceres viae Non fluctibus civiliter pater procedit non Deos spumis ille aderam semper Stygios quantum Orgia hoc  Dare hirtus cervice Cecropis Si veteris alas proelia, sic remotis in portus nisi minimae acerris carina: et ne.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/document_center-align-table-cell-content/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/document_center-align-table-cell-content/readme/</guid>
+      <description> center-align-table-cell-content </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/document_paste-data-to-selection/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/document_paste-data-to-selection/readme/</guid>
+      <description> document_paste-data-to-selection </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/external_smartlabru/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/external_smartlabru/readme/</guid>
+      <description> README  DOCS https://script.google.com/macros/library/versions/d/MUjQ0enKqP-RKxsvJNoWR8vVsbLCrn_6h SUBJECT http://smart-lab.ru/indeks-optimizma/ LIB KEY MUjQ0enKqP-RKxsvJNoWR8vVsbLCrn_6h  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/readme/</guid>
+      <description>Members  SPREADSHEET_ID ID Таблицы
+ EDITOR_EMAIL The user&amp;#39;s email
+  Constants  FILE_ID : string The File ID
+ EMAIL : string The email
+ FOLDER_ID : string The Folder ID
+ EMAIL : string The email
+ SPREADSHEET_ID   Functions  UNIONRANGES(...ranges) ⇒ Array.&amp;lt;Array.&amp;lt;object&amp;gt;&amp;gt; A custom function. Unions ranges
+ driveChangeMeRole_(fileId, email) ⇒ void Downgrade you in the rights from the editor to the viewer</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/scriptapp-delete-trigger/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/scriptapp-delete-trigger/readme/</guid>
+      <description>DeleteTrigger Google Apps Script. Delete triggers by event type, handler function, trigger source, trigger source id, unique id;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_add-row-to-filtered-range/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_add-row-to-filtered-range/readme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_autoincrement/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_autoincrement/readme/</guid>
+      <description>Creates autoincrement the video</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_clear-bandings/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_clear-bandings/readme/</guid>
+      <description> Clear brandings </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_insert-rows-before-by-condition/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_insert-rows-before-by-condition/readme/</guid>
+      <description> insert-rows-before-by-condition </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_onedit-copy-row-if-edit/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_onedit-copy-row-if-edit/readme/</guid>
+      <description>spreadsheet_onedit-copy-specific-row
+https://www.facebook.com/oshliaer/videos/2387201888033053/</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_painting-specific-characters/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_painting-specific-characters/readme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_rainbow_active_cell/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_rainbow_active_cell/readme/</guid>
+      <description> Rainbow active cell </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_update-colored-notes/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_update-colored-notes/readme/</guid>
+      <description> Update colored notes </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/standalone_driveapp-save-file-to-drive-from-web/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/standalone_driveapp-save-file-to-drive-from-web/readme/</guid>
+      <description> standalone_driveapp-save-file-to-drive-from-web </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/standalone_simple-webapp/app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/standalone_simple-webapp/app/</guid>
+      <description> Document   Hello World  My first website with Bulma!     </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/standalone_use-urlsearchparams-polyfill-copy/app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/standalone_use-urlsearchparams-polyfill-copy/app/</guid>
+      <description> let globalScope = {}; document.addEventListener(&#39;DOMContentLoaded&#39;, _ = { google.script.url.getLocation(function(location) { console.log(&#39;location&#39;, location); globalScope.item = location.parameter.item; }); });  </description>
+    </item>
+    
+  </channel>
+</rss>

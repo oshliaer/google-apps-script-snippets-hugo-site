@@ -1,0 +1,9 @@
+{
+  "timeZone": "Europe/Moscow",
+  "dependencies": {},
+  "webapp": {
+    "access": "ANYONE_ANONYMOUS",
+    "executeAs": "USER_DEPLOYING"
+  },
+  "exceptionLogging": "STACKDRIVER"
+}

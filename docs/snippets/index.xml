@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snippets on In English</title>
+    <link>//localhost:1313/snippets/</link>
+    <description>Recent content in Snippets on In English</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="//localhost:1313/snippets/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/document_center-align-table-cell-content/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/document_center-align-table-cell-content/readme/</guid>
+      <description> center-align-table-cell-content </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/document_paste-data-to-selection/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/document_paste-data-to-selection/readme/</guid>
+      <description> document_paste-data-to-selection </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/external_smartlabru/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/external_smartlabru/readme/</guid>
+      <description> README  DOCS https://script.google.com/macros/library/versions/d/MUjQ0enKqP-RKxsvJNoWR8vVsbLCrn_6h SUBJECT http://smart-lab.ru/indeks-optimizma/ LIB KEY MUjQ0enKqP-RKxsvJNoWR8vVsbLCrn_6h  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/readme/</guid>
+      <description>Members  SPREADSHEET_ID ID Таблицы
+ EDITOR_EMAIL The user&amp;#39;s email
+  Constants  FILE_ID : string The File ID
+ EMAIL : string The email
+ FOLDER_ID : string The Folder ID
+ EMAIL : string The email
+ SPREADSHEET_ID   Functions  UNIONRANGES(...ranges) ⇒ Array.&amp;lt;Array.&amp;lt;object&amp;gt;&amp;gt; A custom function. Unions ranges
+ driveChangeMeRole_(fileId, email) ⇒ void Downgrade you in the rights from the editor to the viewer</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/scriptapp-delete-trigger/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/scriptapp-delete-trigger/readme/</guid>
+      <description>DeleteTrigger Google Apps Script. Delete triggers by event type, handler function, trigger source, trigger source id, unique id;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_add-row-to-filtered-range/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_add-row-to-filtered-range/readme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_autoincrement/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_autoincrement/readme/</guid>
+      <description>Creates autoincrement the video</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_clear-bandings/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_clear-bandings/readme/</guid>
+      <description> Clear brandings </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_insert-rows-before-by-condition/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_insert-rows-before-by-condition/readme/</guid>
+      <description> insert-rows-before-by-condition </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_onedit-copy-row-if-edit/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_onedit-copy-row-if-edit/readme/</guid>
+      <description>spreadsheet_onedit-copy-specific-row
+https://www.facebook.com/oshliaer/videos/2387201888033053/</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_painting-specific-characters/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_painting-specific-characters/readme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_rainbow_active_cell/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_rainbow_active_cell/readme/</guid>
+      <description> Rainbow active cell </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/spreadsheet_update-colored-notes/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/spreadsheet_update-colored-notes/readme/</guid>
+      <description> Update colored notes </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/standalone_driveapp-save-file-to-drive-from-web/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/standalone_driveapp-save-file-to-drive-from-web/readme/</guid>
+      <description> standalone_driveapp-save-file-to-drive-from-web </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/standalone_simple-webapp/app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/standalone_simple-webapp/app/</guid>
+      <description> Document   Hello World  My first website with Bulma!     </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/snippets/standalone_use-urlsearchparams-polyfill-copy/app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/snippets/standalone_use-urlsearchparams-polyfill-copy/app/</guid>
+      <description> let globalScope = {}; document.addEventListener(&#39;DOMContentLoaded&#39;, _ = { google.script.url.getLocation(function(location) { console.log(&#39;location&#39;, location); globalScope.item = location.parameter.item; }); });  </description>
+    </item>
+    
+  </channel>
+</rss>

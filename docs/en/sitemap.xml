@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>//localhost:1313/docs/introduction/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/docs/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/docs/introduction/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/docs/introduction/examples/with-toc/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/docs/introduction/examples/with-toc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/docs/introduction/examples/with-toc/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/docs/more-examples/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/docs/more-examples/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/docs/more-examples/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/docs/introduction/examples/without-toc/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/docs/introduction/examples/without-toc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/docs/introduction/examples/without-toc/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/docs/introduction/examples/shortcodes/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/docs/introduction/examples/shortcodes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/docs/introduction/examples/shortcodes/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/creating-a-new-theme/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/posts/creating-a-new-theme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/posts/creating-a-new-theme/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/migrate-from-jekyll/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/1/</loc>
+    <lastmod>2019-10-21T20:01:37+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2019-10-21T20:01:37+03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/</loc>
+    <lastmod>2019-10-21T20:01:37+03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/goisforlovers/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/hugoisforlovers/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/docs/introduction/examples/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/docs/introduction/examples/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/docs/introduction/examples/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/docs/more-examples/advanced/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/docs/more-examples/advanced/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/docs/more-examples/advanced/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/docs/more-examples/client/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/docs/more-examples/client/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/docs/more-examples/client/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/docs/more-examples/hidden/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/docs/more-examples/hidden/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/docs/more-examples/hidden/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/docs/more-examples/server/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/docs/more-examples/server/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/docs/more-examples/server/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/document_center-align-table-cell-content/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/document_paste-data-to-selection/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/external_smartlabru/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/readme/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/snippets/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/snippets/readme/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/scriptapp-delete-trigger/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/spreadsheet_add-row-to-filtered-range/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/spreadsheet_autoincrement/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/spreadsheet_clear-bandings/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/spreadsheet_insert-rows-before-by-condition/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/spreadsheet_onedit-copy-row-if-edit/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/spreadsheet_painting-specific-characters/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/spreadsheet_rainbow_active_cell/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/spreadsheet_update-colored-notes/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/standalone_driveapp-save-file-to-drive-from-web/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/standalone_simple-webapp/app/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/standalone_use-urlsearchparams-polyfill-copy/app/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/docs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/docs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/docs/"
+                />
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/snippets/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="//localhost:1313/ru/snippets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/snippets/"
+                />
+  </url>
+  
+</urlset>

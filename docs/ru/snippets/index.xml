@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snippets on По-русски</title>
+    <link>//localhost:1313/ru/snippets/</link>
+    <description>Recent content in Snippets on По-русски</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="//localhost:1313/ru/snippets/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/ru/snippets/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/ru/snippets/readme/</guid>
+      <description>Сниппеты Коллекция различных примеров кода на Google Apps Script</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</guid>
+      <description> spreadsheet_appndRow-formula-increment </description>
+    </item>
+    
+    <item>
+      <title>Сходство Джаро — Винклера</title>
+      <link>//localhost:1313/ru/snippets/customfunction_jaro-winker-distance/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/ru/snippets/customfunction_jaro-winker-distance/readme/</guid>
+      <description>Сходство Джаро — Винклера Сниппет демонстиррует применение расчета Сходства Джаро — Винклера</description>
+    </item>
+    
+  </channel>
+</rss>
