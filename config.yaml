@@ -2,8 +2,7 @@
 
 publishDir: docs
 
-baseURL: ./
-title: Hugo Book
+baseURL: https://google-apps-script-snippets.contributor.pw/
 theme: hugo-book
 disableKinds: ['taxonomy', 'taxonomyTerm']
 
@@ -20,11 +19,11 @@ DefaultContentLanguage: en
 languages:
   en:
     languageName: English
-    title: In English
+    title: Google Apps Script snippets
     weight: 1
   ru:
     languageName: Russian
-    title: По-русски
+    title: Google Apps Script сниппеты
     weight: 2
 
 params:

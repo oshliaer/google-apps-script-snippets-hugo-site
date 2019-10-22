@@ -3,244 +3,256 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>//localhost:1313/ru/docs/introduction/</loc>
+    <loc>http://localhost:1313/ru/docs/introduction/</loc>
+    <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/docs/introduction/"
+                href="http://localhost:1313/docs/introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/docs/introduction/"
+                href="http://localhost:1313/ru/docs/introduction/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/docs/introduction/examples/with-toc/</loc>
+    <loc>http://localhost:1313/ru/docs/introduction/examples/with-toc/</loc>
+    <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/docs/introduction/examples/with-toc/"
+                href="http://localhost:1313/docs/introduction/examples/with-toc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/docs/introduction/examples/with-toc/"
+                href="http://localhost:1313/ru/docs/introduction/examples/with-toc/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/docs/more-examples/</loc>
+    <loc>http://localhost:1313/ru/docs/more-examples/</loc>
+    <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/docs/more-examples/"
+                href="http://localhost:1313/docs/more-examples/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/docs/more-examples/"
+                href="http://localhost:1313/ru/docs/more-examples/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/docs/introduction/examples/without-toc/</loc>
+    <loc>http://localhost:1313/ru/docs/introduction/examples/without-toc/</loc>
+    <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/docs/introduction/examples/without-toc/"
+                href="http://localhost:1313/docs/introduction/examples/without-toc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/docs/introduction/examples/without-toc/"
+                href="http://localhost:1313/ru/docs/introduction/examples/without-toc/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/docs/introduction/examples/shortcodes/</loc>
+    <loc>http://localhost:1313/ru/docs/introduction/examples/shortcodes/</loc>
+    <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/docs/introduction/examples/shortcodes/"
+                href="http://localhost:1313/docs/introduction/examples/shortcodes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/docs/introduction/examples/shortcodes/"
+                href="http://localhost:1313/ru/docs/introduction/examples/shortcodes/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/posts/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/ru/posts/creating-a-new-theme/</loc>
+    <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/posts/creating-a-new-theme/"
+                href="http://localhost:1313/posts/creating-a-new-theme/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/posts/creating-a-new-theme/"
+                href="http://localhost:1313/ru/posts/creating-a-new-theme/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/posts/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/ru/posts/</loc>
+    <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/posts/"
+                href="http://localhost:1313/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/posts/"
+                href="http://localhost:1313/ru/posts/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="//localhost:1313/ru/"
-                />
-  </url>
-  
-  <url>
-    <loc>//localhost:1313/ru/docs/introduction/examples/</loc>
+    <loc>http://localhost:1313/ru/docs/introduction/examples/</loc>
+    <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/docs/introduction/examples/"
+                href="http://localhost:1313/docs/introduction/examples/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/docs/introduction/examples/"
+                href="http://localhost:1313/ru/docs/introduction/examples/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/docs/more-examples/advanced/</loc>
+    <loc>http://localhost:1313/ru/docs/more-examples/advanced/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/docs/more-examples/advanced/"
+                href="http://localhost:1313/docs/more-examples/advanced/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/docs/more-examples/advanced/"
+                href="http://localhost:1313/ru/docs/more-examples/advanced/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/docs/more-examples/client/</loc>
+    <loc>http://localhost:1313/ru/docs/more-examples/client/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/docs/more-examples/client/"
+                href="http://localhost:1313/docs/more-examples/client/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/docs/more-examples/client/"
+                href="http://localhost:1313/ru/docs/more-examples/client/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/docs/more-examples/hidden/</loc>
+    <loc>http://localhost:1313/ru/docs/more-examples/hidden/</loc>
+    <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/docs/more-examples/hidden/"
+                href="http://localhost:1313/docs/more-examples/hidden/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/docs/more-examples/hidden/"
+                href="http://localhost:1313/ru/docs/more-examples/hidden/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/docs/more-examples/server/</loc>
+    <loc>http://localhost:1313/ru/docs/more-examples/server/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/docs/more-examples/server/"
+                href="http://localhost:1313/docs/more-examples/server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/docs/more-examples/server/"
+                href="http://localhost:1313/ru/docs/more-examples/server/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/snippets/readme/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/snippets/readme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="//localhost:1313/ru/snippets/readme/"
-                />
-  </url>
-  
-  <url>
-    <loc>//localhost:1313/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</loc>
+    <loc>http://localhost:1313/ru/snippets/document_center-align-table-cell-content/readme/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/docs/</loc>
+    <loc>http://localhost:1313/ru/snippets/readme/</loc>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/docs/"
+                href="http://localhost:1313/snippets/readme/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/docs/"
+                href="http://localhost:1313/ru/snippets/readme/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/snippets/</loc>
+    <loc>http://localhost:1313/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ru/docs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/snippets/"
+                href="http://localhost:1313/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="//localhost:1313/ru/snippets/"
+                href="http://localhost:1313/ru/docs/"
                 />
   </url>
   
   <url>
-    <loc>//localhost:1313/ru/snippets/customfunction_jaro-winker-distance/readme/</loc>
+    <loc>http://localhost:1313/ru/snippets/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/snippets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/snippets/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ru/</loc>
+    <lastmod>2019-10-22T10:21:35+03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ru/snippets/customfunction_jaro-winker-distance/readme/</loc>
   </url>
   
 </urlset>
