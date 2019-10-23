@@ -209,6 +209,26 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/ru/snippets/spreadsheet_change-basic-event/readme/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/snippets/spreadsheet_change-basic-event/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/snippets/spreadsheet_change-basic-event/readme/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ru/snippets/standalone_telegram-bot/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/ru/docs/</loc>
     <xhtml:link
                 rel="alternate"

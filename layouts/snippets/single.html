@@ -8,9 +8,23 @@
 </header>
 <article class="markdown">
   {{- .Content -}}
+
+
+
+  {{ $part := print "content-external/google-apps-script-snippets/" .Dir }}
+  {{ $files := readDir $part }}
+
+  {{ range $files }}
+    {{ if eq (substr .Name -1 3) ".js" }}
+      <h3>{{ .Name }}</h3>
+      {{ $file := readFile (print $part "/" .Name) }}
+      {{ highlight ($file) "js" "" }}
+    {{ end }}
+  {{ end }}
+
 </article>
 {{ end }}
 
 {{ define "toc" }}
-  {{ partial "docs/toc" . }}
+{{ partial "docs/toc" . }}
 {{ end }}

@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/search.min.4813431a162abcedf74acf865a3d588531c5bbcfbdf6915b260ca9d6f3b8dc1e.js" integrity="sha256-SBNDGhYqvO33Ss&#43;GWj1YhTHFu8&#43;99pFbJgyp1vO43B4="></script>
+<script defer src="/search.min.e2efb34b1467aa3c02896801a86ef96b0b64c1eb926baf16083af50c03a3aecc.js" integrity="sha256-4u&#43;zSxRnqjwCiWgBqG75awtkweuSa68WCDr1DAOjrsw="></script>
 
 
 
@@ -130,6 +130,51 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="rainbow-active-cell">Rainbow active cell</h1>
 
 <p><img src="./screenshot.png" alt="alt" /></p>
+
+  
+
+  
+    
+  
+    
+  
+    
+      <h3>rainbow_active_cell.js</h3>
+      
+      <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> * Paints the active cell text in rainbow colors.
+</span><span style="color:#09f;font-style:italic"> * @return {undefined}
+</span><span style="color:#09f;font-style:italic"> */</span>
+
+<span style="color:#09f;font-style:italic">/* exported rainbowActiveCell */</span>
+<span style="color:#09f;font-style:italic">/* global hslToHex */</span>
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> rainbowActiveCell() {
+  <span style="color:#069;font-weight:bold">var</span> cell <span style="color:#555">=</span> SpreadsheetApp.getActiveRange();
+  <span style="color:#069;font-weight:bold">var</span> text <span style="color:#555">=</span> cell.getValue().toString();
+  <span style="color:#069;font-weight:bold">var</span> richTextBuilder <span style="color:#555">=</span> SpreadsheetApp.newRichTextValue();
+  richTextBuilder.setText(text);
+  <span style="color:#069;font-weight:bold">for</span> (<span style="color:#069;font-weight:bold">var</span> i <span style="color:#555">=</span> <span style="color:#f60">0</span>; i <span style="color:#555">&lt;</span> text.length; i<span style="color:#555">++</span>) {
+    <span style="color:#069;font-weight:bold">var</span> textStyleBuilder <span style="color:#555">=</span> SpreadsheetApp.newTextStyle();
+    textStyleBuilder.setForegroundColor(
+      hslToHex(((<span style="color:#f60">360</span> <span style="color:#555">*</span> i) <span style="color:#555">/</span> text.length) <span style="color:#555">|</span> <span style="color:#f60">0</span>, <span style="color:#f60">100</span>, <span style="color:#f60">50</span>)
+    );
+    <span style="color:#069;font-weight:bold">var</span> textStyle <span style="color:#555">=</span> textStyleBuilder.build();
+    richTextBuilder.setTextStyle(i, i <span style="color:#555">+</span> <span style="color:#f60">1</span>, textStyle);
+  }
+  <span style="color:#069;font-weight:bold">var</span> value <span style="color:#555">=</span> richTextBuilder.build();
+  cell.setRichTextValue(value);
+}
+</code></pre></div>
+    
+  
+    
+  
+    
+  
+
 </article>
 
       
@@ -149,7 +194,7 @@ https://github.com/alex-shpak/hugo-book
     </div>
 
     
-  
+
 
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">

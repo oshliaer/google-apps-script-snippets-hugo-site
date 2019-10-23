@@ -116,6 +116,24 @@ var mnemonicPcmcia = file; if (bookmarkMultiprocessing) { core.intranetDigitize 
     </item>
     
     <item>
+      <title></title>
+      <link>http://localhost:1313/ru/snippets/spreadsheet_change-basic-event/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/ru/snippets/spreadsheet_change-basic-event/readme/</guid>
+      <description>Базовый пример триггера события CHANGE Для запуска сниппета требуется зарегистрировать функцию onchange, как триггер соб</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/ru/snippets/standalone_telegram-bot/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/ru/snippets/standalone_telegram-bot/readme/</guid>
+      <description> Телеграм бот </description>
+    </item>
+    
+    <item>
       <title>Сходство Джаро — Винклера</title>
       <link>http://localhost:1313/ru/snippets/customfunction_jaro-winker-distance/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

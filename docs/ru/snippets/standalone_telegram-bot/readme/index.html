@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Readme.ru | Google Apps Script сниппеты</title>
+
+
+<link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
+
+
+<script defer src="/search.min.e2efb34b1467aa3c02896801a86ef96b0b64c1eb926baf16083af50c03a3aecc.js" integrity="sha256-4u&#43;zSxRnqjwCiWgBqG75awtkweuSa68WCDr1DAOjrsw="></script>
+
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="http://localhost:1313/"><span>Google Apps Script сниппеты</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fru\2fsnippets\2fstandalone_telegram-bot\2freadme\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="/ru/docs/introduction/"><strong>Introduction</strong></a></li>
+<li><a href="/ru/docs/introduction/examples/">Examples</a>
+
+<ul>
+<li><a href="/ru/docs/introduction/examples/with-toc/">With Table of Contents</a></li>
+<li><a href="/ru/docs/introduction/examples/without-toc/">Without Table of Contents</a></li>
+<li><a href="/ru/docs/introduction/examples/shortcodes/">Shortcodes</a></li>
+</ul></li>
+<li><strong>More Examples</strong></li>
+<li><a href="/ru/docs/more-examples/server/">Server</a></li>
+<li><a href="/ru/docs/more-examples/client/">Client</a></li>
+
+<li><p><a href="/ru/docs/more-examples/advanced/">Advanced</a></p></li>
+
+<li><p><strong>Публикации</strong></p>
+
+<ul>
+<li><a href="/ru/posts/">Блог</a></li>
+<li><a href="/ru/snippets/">Сниппеты</a></li>
+</ul></li>
+
+<li><p><strong>Переводы</strong></p>
+
+<ul>
+<li><a href="/">English</a></li>
+<li><a href="/ru/">Русский</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-posts">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Readme.ru</strong>
+</header>
+
+      
+
+<header class="markdown">
+  <h1></h1>
+  <h5>
+    <strong>Jan 1, 0001</strong>
+  </h5>
+</header>
+<article class="markdown">
+
+<h2 id="телеграм-бот">Телеграм бот</h2>
+
+  
+
+  
+    
+      <h3>api.js</h3>
+      
+      <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#069;font-weight:bold">function</span> getScriptURL() {
+  <span style="color:#069;font-weight:bold">return</span> ScriptApp.getService().getUrl();
+}
+
+<span style="color:#069;font-weight:bold">function</span> setWebhook() {
+  <span style="color:#069;font-weight:bold">var</span> uf <span style="color:#555">=</span> UrlFetchApp.fetch(
+    api(<span style="color:#c30">&#39;setWebhook&#39;</span>) <span style="color:#555">+</span> <span style="color:#c30">&#39;?url=&#39;</span> <span style="color:#555">+</span> getScriptURL()
+  );
+}
+
+<span style="color:#069;font-weight:bold">function</span> disableWebhook() {
+  <span style="color:#069;font-weight:bold">var</span> uf <span style="color:#555">=</span> UrlFetchApp.fetch(api(<span style="color:#c30">&#39;setWebhook&#39;</span>) <span style="color:#555">+</span> <span style="color:#c30">&#39;?url=&#39;</span>);
+}
+
+<span style="color:#069;font-weight:bold">function</span> getApiKey() {
+  <span style="color:#069;font-weight:bold">return</span> PropertiesService.getScriptProperties().getProperty(
+    <span style="color:#c30">&#39;apikey&#39;</span>
+  );
+}
+</code></pre></div>
+    
+  
+    
+  
+    
+  
+    
+      <h3>logic.js</h3>
+      
+      <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#069;font-weight:bold">var</span> SPRID <span style="color:#555">=</span> <span style="color:#c30">&#39;128F4LovqmOV1E2LqXRBXj3HuDl4SCDpwUhJgj8Yzd1E&#39;</span>;
+
+<span style="color:#069;font-weight:bold">function</span> appendRow(data) {
+  SpreadsheetApp.openById(SPRID).appendRow([
+    <span style="color:#069;font-weight:bold">new</span> <span style="color:#366">Date</span>(),
+    data
+  ]);
+}
+
+<span style="color:#069;font-weight:bold">function</span> readLastRow() {
+  <span style="color:#069;font-weight:bold">var</span> data <span style="color:#555">=</span> SpreadsheetApp.openById(SPRID)
+    .getDataRange()
+    .getValues();
+  <span style="color:#069;font-weight:bold">return</span> JSON.stringify(data[data.length <span style="color:#555">-</span> <span style="color:#f60">1</span>], <span style="color:#069;font-weight:bold">null</span>, <span style="color:#c30">&#39;  &#39;</span>);
+}
+
+<span style="color:#069;font-weight:bold">function</span> getValuesOfRange(a1Nota) {
+  <span style="color:#069;font-weight:bold">var</span> data <span style="color:#555">=</span> SpreadsheetApp.openById(SPRID)
+    .getRange(a1Nota)
+    .getValues();
+  <span style="color:#069;font-weight:bold">return</span> JSON.stringify(data[data.length <span style="color:#555">-</span> <span style="color:#f60">1</span>], <span style="color:#069;font-weight:bold">null</span>, <span style="color:#c30">&#39;  &#39;</span>);
+}
+</code></pre></div>
+    
+  
+    
+  
+    
+      <h3>telegram-bot.js</h3>
+      
+      <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#069;font-weight:bold">function</span> doPost(e) {
+  <span style="color:#069;font-weight:bold">var</span> contents <span style="color:#555">=</span> JSON.parse(e.postData.contents);
+  <span style="color:#069;font-weight:bold">try</span> {
+    <span style="color:#09f;font-style:italic">//log([JSON.stringify(e), JSON.stringify(contents)]);
+</span><span style="color:#09f;font-style:italic"></span>    actions(contents);
+  } <span style="color:#069;font-weight:bold">catch</span> (err) {
+    <span style="color:#069;font-weight:bold">var</span> params <span style="color:#555">=</span> {
+      chat_id<span style="color:#555">:</span> contents.message.chat.id,
+      text<span style="color:#555">:</span> err.message
+    };
+    sendMessage(params);
+  }
+}
+
+<span style="color:#069;font-weight:bold">function</span> actions(contents) {
+  <span style="color:#069;font-weight:bold">var</span> cmd <span style="color:#555">=</span> contents.message.text.split(<span style="color:#c30">&#39; &#39;</span>)[<span style="color:#f60">0</span>];
+  <span style="color:#069;font-weight:bold">var</span> param <span style="color:#555">=</span> contents.message.text.split(<span style="color:#c30">&#39; &#39;</span>)[<span style="color:#f60">1</span>];
+  <span style="color:#069;font-weight:bold">var</span> text <span style="color:#555">=</span> <span style="color:#c30">&#39;&#39;</span>;
+  <span style="color:#069;font-weight:bold">var</span> params <span style="color:#555">=</span> {};
+  params.chat_id <span style="color:#555">=</span> contents.message.chat.id;
+  <span style="color:#069;font-weight:bold">switch</span> (cmd) {
+    <span style="color:#069;font-weight:bold">case</span> <span style="color:#c30">&#39;/get&#39;</span><span style="color:#555">:</span>
+      text <span style="color:#555">=</span> readLastRow();
+      <span style="color:#069;font-weight:bold">break</span>;
+    <span style="color:#069;font-weight:bold">case</span> <span style="color:#c30">&#39;/getr&#39;</span><span style="color:#555">:</span>
+      text <span style="color:#555">=</span> getValuesOfRange(param);
+      <span style="color:#069;font-weight:bold">break</span>;
+    <span style="color:#069;font-weight:bold">case</span> <span style="color:#c30">&#39;/start&#39;</span><span style="color:#555">:</span>
+      text <span style="color:#555">=</span> getInstructions();
+      <span style="color:#069;font-weight:bold">break</span>;
+    <span style="color:#069;font-weight:bold">case</span> <span style="color:#c30">&#39;/help&#39;</span><span style="color:#555">:</span>
+      text <span style="color:#555">=</span> getInstructions();
+      <span style="color:#069;font-weight:bold">break</span>;
+    <span style="color:#069;font-weight:bold">default</span><span style="color:#555">:</span>
+      appendRow(contents.message.text);
+  }
+
+  <span style="color:#069;font-weight:bold">if</span> (text <span style="color:#555">==</span> <span style="color:#c30">&#39;&#39;</span>) <span style="color:#069;font-weight:bold">return</span>;
+  params.text <span style="color:#555">=</span> text;
+  sendMessage(params);
+}
+
+<span style="color:#069;font-weight:bold">function</span> api(METHOD_NAME) {
+  console.log([
+    <span style="color:#c30">&#39;https://api.telegram.org/bot&#39;</span> <span style="color:#555">+</span>
+      getApiKey() <span style="color:#555">+</span>
+      <span style="color:#c30">&#39;/&#39;</span> <span style="color:#555">+</span>
+      METHOD_NAME
+  ]);
+  <span style="color:#069;font-weight:bold">return</span> (
+    <span style="color:#c30">&#39;https://api.telegram.org/bot&#39;</span> <span style="color:#555">+</span>
+    getApiKey() <span style="color:#555">+</span>
+    <span style="color:#c30">&#39;/&#39;</span> <span style="color:#555">+</span>
+    METHOD_NAME
+  );
+}
+
+<span style="color:#069;font-weight:bold">function</span> sendMessage(params) {
+  <span style="color:#069;font-weight:bold">var</span> uf <span style="color:#555">=</span> UrlFetchApp.fetch(
+    api(<span style="color:#c30">&#39;sendMessage&#39;</span>) <span style="color:#555">+</span> <span style="color:#c30">&#39;?&#39;</span> <span style="color:#555">+</span> params.serialize(),
+    {
+      muteHttpExceptions<span style="color:#555">:</span> <span style="color:#069;font-weight:bold">true</span>
+    }
+  );
+}
+
+<span style="color:#366">Object</span>.prototype.serialize <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">function</span>() {
+  <span style="color:#069;font-weight:bold">var</span> str <span style="color:#555">=</span> [];
+  <span style="color:#069;font-weight:bold">for</span> (<span style="color:#069;font-weight:bold">var</span> p <span style="color:#069;font-weight:bold">in</span> <span style="color:#069;font-weight:bold">this</span>)
+    <span style="color:#069;font-weight:bold">if</span> (<span style="color:#069;font-weight:bold">this</span>.hasOwnProperty(p)) {
+      str.push(
+        <span style="color:#366">encodeURIComponent</span>(p) <span style="color:#555">+</span>
+          <span style="color:#c30">&#39;=&#39;</span> <span style="color:#555">+</span>
+          <span style="color:#366">encodeURIComponent</span>(<span style="color:#069;font-weight:bold">this</span>[p])
+      );
+    }
+  <span style="color:#069;font-weight:bold">return</span> str.join(<span style="color:#c30">&#39;&amp;&#39;</span>);
+};
+
+<span style="color:#069;font-weight:bold">function</span> getInstructions() {
+  <span style="color:#069;font-weight:bold">var</span> text <span style="color:#555">=</span> <span style="color:#c30">&#39;&#39;</span>;
+  text <span style="color:#555">+=</span> <span style="color:#c30">&#39;Этот бот - пример&#39;</span> <span style="color:#555">+</span> <span style="color:#c30">&#39;\n&#39;</span>;
+  text <span style="color:#555">+=</span> <span style="color:#c30">&#39;Все запросы записываются в Таблицу&#39;</span>;
+  <span style="color:#069;font-weight:bold">return</span> text;
+}
+</code></pre></div>
+    
+  
+
+</article>
+
+      
+<div class="book-footer justify-end">
+  
+  
+  <div>
+    <a href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/content/snippets/standalone_telegram-bot/readme.ru.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" alt="Edit" /> Edit this page
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+
+    
+
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#телеграм-бот">Телеграм бот</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
+
+</html>
