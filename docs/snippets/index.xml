@@ -63,6 +63,15 @@
     
     <item>
       <title></title>
+      <link>http://localhost:1313/snippets/spreadsheet_autoid/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/snippets/spreadsheet_autoid/readme/</guid>
+      <description>Creates autoincrement the video</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://localhost:1313/snippets/spreadsheet_autoincrement/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

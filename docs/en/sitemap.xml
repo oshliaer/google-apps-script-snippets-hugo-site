@@ -239,6 +239,11 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/snippets/spreadsheet_autoid/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/snippets/spreadsheet_autoincrement/readme/</loc>
     <priority>0</priority>
   </url>
