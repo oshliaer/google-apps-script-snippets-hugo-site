@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/search.min.4813431a162abcedf74acf865a3d588531c5bbcfbdf6915b260ca9d6f3b8dc1e.js" integrity="sha256-SBNDGhYqvO33Ss&#43;GWj1YhTHFu8&#43;99pFbJgyp1vO43B4="></script>
+<script defer src="/search.min.ea8ab13ba98f42d164a18c9eb8311d8c5a93e248628766d8cf480c0c0826fb94.js" integrity="sha256-6oqxO6mPQtFkoYyeuDEdjFqT4khih2bYz0gMDAgm&#43;5Q="></script>
 
 
 
@@ -130,6 +130,104 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="center-align-table-cell-content">center-align-table-cell-content</h2>
 
 <p><img src="https://github.com/contributorpw/google-apps-script-snippets/raw/master/snippets/document_center-align-table-cell-content/screenshot.png" alt="alt" /></p>
+
+  
+
+  
+    
+  
+    
+      
+      <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> * @file Center align table cell content
+</span><span style="color:#09f;font-style:italic"> * @url https://webapps.stackexchange.com/questions/133249
+</span><span style="color:#09f;font-style:italic"> */</span>
+
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> * Run the snippet
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> run() {
+  <span style="color:#069;font-weight:bold">var</span> doc <span style="color:#555">=</span> DocumentApp.getActiveDocument();
+  setСenterAlignmentForAllTables2_(doc);
+}
+
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Document.Document} doc
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> setСenterAlignmentForAllTables_(doc) {
+  <span style="color:#069;font-weight:bold">var</span> style <span style="color:#555">=</span> {};
+  style[DocumentApp.Attribute.HORIZONTAL_ALIGNMENT] <span style="color:#555">=</span>
+    DocumentApp.HorizontalAlignment.CENTER;
+  style[DocumentApp.Attribute.VERTICAL_ALIGNMENT] <span style="color:#555">=</span>
+    DocumentApp.VerticalAlignment.CENTER;
+  <span style="color:#069;font-weight:bold">var</span> tables <span style="color:#555">=</span> doc.getBody().getTables();
+  tables.forEach(<span style="color:#069;font-weight:bold">function</span>(table) {
+    <span style="color:#069;font-weight:bold">var</span> numRows <span style="color:#555">=</span> table.getNumRows();
+    <span style="color:#069;font-weight:bold">var</span> indexRow <span style="color:#555">=</span> <span style="color:#f60">0</span>;
+    <span style="color:#069;font-weight:bold">while</span> (indexRow <span style="color:#555">&lt;</span> numRows) {
+      <span style="color:#069;font-weight:bold">var</span> row <span style="color:#555">=</span> table.getRow(indexRow);
+      <span style="color:#069;font-weight:bold">var</span> numCells <span style="color:#555">=</span> row.getNumCells();
+      <span style="color:#069;font-weight:bold">var</span> indexCell <span style="color:#555">=</span> <span style="color:#f60">0</span>;
+      <span style="color:#069;font-weight:bold">while</span> (indexCell <span style="color:#555">&lt;</span> numCells) {
+        <span style="color:#069;font-weight:bold">var</span> cell <span style="color:#555">=</span> row.getCell(indexCell);
+        cell.setAttributes(style);
+        indexCell<span style="color:#555">++</span>;
+      }
+      indexRow<span style="color:#555">++</span>;
+    }
+  });
+}
+
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Document.Document} doc
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> setСenterAlignmentForAllTables2_(doc) {
+  <span style="color:#069;font-weight:bold">var</span> style <span style="color:#555">=</span> {};
+  style[DocumentApp.Attribute.HORIZONTAL_ALIGNMENT] <span style="color:#555">=</span>
+    DocumentApp.HorizontalAlignment.CENTER;
+  style[DocumentApp.Attribute.VERTICAL_ALIGNMENT] <span style="color:#555">=</span>
+    DocumentApp.VerticalAlignment.CENTER;
+  <span style="color:#069;font-weight:bold">var</span> body <span style="color:#555">=</span> doc.getBody();
+  <span style="color:#069;font-weight:bold">for</span> (<span style="color:#069;font-weight:bold">var</span> i <span style="color:#555">=</span> <span style="color:#f60">0</span>; i <span style="color:#555">&lt;</span> body.getNumChildren(); i<span style="color:#555">++</span>) {
+    <span style="color:#069;font-weight:bold">if</span> (body.getChild(i).getType() <span style="color:#555">==</span> <span style="color:#c30">&#39;TABLE&#39;</span>) {
+      <span style="color:#069;font-weight:bold">var</span> table <span style="color:#555">=</span> body.getChild(i).asTable();
+      <span style="color:#069;font-weight:bold">var</span> rows <span style="color:#555">=</span> table.getNumRows();
+      <span style="color:#069;font-weight:bold">var</span> cols <span style="color:#555">=</span> table
+        .getChild(<span style="color:#f60">0</span>)
+        .asTableRow()
+        .getNumChildren();
+      <span style="color:#069;font-weight:bold">for</span> (<span style="color:#069;font-weight:bold">var</span> j <span style="color:#555">=</span> <span style="color:#f60">0</span>; j <span style="color:#555">&lt;</span> rows; j<span style="color:#555">++</span>) {
+        <span style="color:#069;font-weight:bold">for</span> (<span style="color:#069;font-weight:bold">var</span> k <span style="color:#555">=</span> <span style="color:#f60">0</span>; k <span style="color:#555">&lt;</span> cols; k<span style="color:#555">++</span>) {
+          body
+            .getChild(i)
+            .asTable()
+            .getCell(j, k)
+            .setAttributes(style);
+        }
+      }
+    }
+  }
+}
+</code></pre></div>
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+  
+  
+
+  
+
+  
 </article>
 
       
@@ -149,7 +247,7 @@ https://github.com/alex-shpak/hugo-book
     </div>
 
     
-  
+
 
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">

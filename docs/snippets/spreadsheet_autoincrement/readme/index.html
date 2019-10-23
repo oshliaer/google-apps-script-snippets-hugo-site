@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/search.min.4813431a162abcedf74acf865a3d588531c5bbcfbdf6915b260ca9d6f3b8dc1e.js" integrity="sha256-SBNDGhYqvO33Ss&#43;GWj1YhTHFu8&#43;99pFbJgyp1vO43B4="></script>
+<script defer src="/search.min.ea8ab13ba98f42d164a18c9eb8311d8c5a93e248628766d8cf480c0c0826fb94.js" integrity="sha256-6oqxO6mPQtFkoYyeuDEdjFqT4khih2bYz0gMDAgm&#43;5Q="></script>
 
 
 
@@ -131,6 +131,113 @@ https://github.com/alex-shpak/hugo-book
 
 <p>the video
 <a href="https://youtu.be/A1qkyQ7TAk8"><img src="https://img.youtube.com/vi/A1qkyQ7TAk8/0.jpg" alt="Google Sheets Autoincrement demo" /></a></p>
+
+  
+
+  
+    
+  
+    
+      
+      <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> * @file Adds autoincrement an a menu
+</span><span style="color:#09f;font-style:italic"> * @url https://stackoverflow.com/questions/58405672/optimizing-google-app-script-for-implementing-auto-increment-columns
+</span><span style="color:#09f;font-style:italic"> */</span>
+
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> autoincrement_(sheet) {
+  <span style="color:#069;font-weight:bold">var</span> data <span style="color:#555">=</span> sheet.getDataRange().getValues();
+  <span style="color:#069;font-weight:bold">if</span> (data.length <span style="color:#555">&lt;</span> <span style="color:#f60">2</span>) <span style="color:#069;font-weight:bold">return</span>;
+  <span style="color:#069;font-weight:bold">var</span> indexCol <span style="color:#555">=</span> data[<span style="color:#f60">0</span>].indexOf(<span style="color:#c30">&#39;autoincrement&#39;</span>);
+  <span style="color:#069;font-weight:bold">if</span> (indexCol <span style="color:#555">&lt;</span> <span style="color:#f60">0</span>) <span style="color:#069;font-weight:bold">return</span>;
+  <span style="color:#069;font-weight:bold">var</span> increment <span style="color:#555">=</span> data.map(<span style="color:#069;font-weight:bold">function</span>(row) {
+    <span style="color:#069;font-weight:bold">return</span> row[indexCol];
+  });
+  <span style="color:#069;font-weight:bold">var</span> lastIncrement <span style="color:#555">=</span> <span style="color:#366">Math</span>.max.apply(
+    <span style="color:#069;font-weight:bold">null</span>,
+    increment.filter(<span style="color:#069;font-weight:bold">function</span>(e) {
+      <span style="color:#069;font-weight:bold">return</span> isNumeric(e);
+    })
+  );
+
+  lastIncrement <span style="color:#555">=</span> isNumeric(lastIncrement) <span style="color:#555">?</span> lastIncrement <span style="color:#555">:</span> <span style="color:#f60">0</span>;
+  <span style="color:#069;font-weight:bold">var</span> newIncrement <span style="color:#555">=</span> data
+    .map(<span style="color:#069;font-weight:bold">function</span>(row) {
+      <span style="color:#069;font-weight:bold">if</span> (row[indexCol] <span style="color:#555">!==</span> <span style="color:#c30">&#39;&#39;</span>) <span style="color:#069;font-weight:bold">return</span> [row[indexCol]];
+      <span style="color:#069;font-weight:bold">if</span> (row.join(<span style="color:#c30">&#39;&#39;</span>).length <span style="color:#555">&gt;</span> <span style="color:#f60">0</span>) <span style="color:#069;font-weight:bold">return</span> [<span style="color:#555">++</span>lastIncrement];
+      <span style="color:#069;font-weight:bold">return</span> [<span style="color:#c30">&#39;&#39;</span>];
+    })
+    .slice(<span style="color:#f60">1</span>);
+  sheet.getRange(<span style="color:#f60">2</span>, indexCol <span style="color:#555">+</span> <span style="color:#f60">1</span>, newIncrement.length).setValues(newIncrement);
+}
+
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Events.SheetsOnEdit} e
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> onEdit(e) {
+  <span style="color:#069;font-weight:bold">try</span> {
+    <span style="color:#069;font-weight:bold">var</span> lock <span style="color:#555">=</span> LockService.getScriptLock();
+    <span style="color:#069;font-weight:bold">if</span> (lock.tryLock(<span style="color:#f60">0</span>)) {
+      autoincrement_(e.range.getSheet());
+      lock.releaseLock();
+    }
+  } <span style="color:#069;font-weight:bold">catch</span> (error) {
+    e.source.toast(error, <span style="color:#c30">&#39;error&#39;</span>, <span style="color:#f60">0</span>);
+  }
+}
+
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> userActionUpdateIncrement() {
+  onEdit({
+    range<span style="color:#555">:</span> SpreadsheetApp.getActiveRange(),
+    source<span style="color:#555">:</span> SpreadsheetApp.getActive()
+  });
+}
+
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> onOpen() {
+  SpreadsheetApp.getUi()
+    .createMenu(<span style="color:#c30">&#39;AUTOINCREMENT&#39;</span>)
+    .addItem(<span style="color:#c30">&#39;Update&#39;</span>, <span style="color:#c30">&#39;userActionUpdateIncrement&#39;</span>)
+    .addToUi();
+}
+
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> * @param {any} n
+</span><span style="color:#09f;font-style:italic"> * @return {boolean}
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> isNumeric(n) {
+  <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">!</span><span style="color:#366">isNaN</span>(<span style="color:#366">parseFloat</span>(n)) <span style="color:#555">&amp;&amp;</span> <span style="color:#366">isFinite</span>(n);
+}
+</code></pre></div>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+
+  
+  
+
+  
+
+  
 </article>
 
       
@@ -150,7 +257,7 @@ https://github.com/alex-shpak/hugo-book
     </div>
 
     
-  
+
 
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">

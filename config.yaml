@@ -13,6 +13,7 @@ enableGitInfo: true
 # Code highlight
 # pygmentsStyle: monokailight
 pygmentsCodeFences: true
+pygmentsStyle: manni
 
 DefaultContentLanguage: en
 

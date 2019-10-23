@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/search.min.4813431a162abcedf74acf865a3d588531c5bbcfbdf6915b260ca9d6f3b8dc1e.js" integrity="sha256-SBNDGhYqvO33Ss&#43;GWj1YhTHFu8&#43;99pFbJgyp1vO43B4="></script>
+<script defer src="/search.min.ea8ab13ba98f42d164a18c9eb8311d8c5a93e248628766d8cf480c0c0826fb94.js" integrity="sha256-6oqxO6mPQtFkoYyeuDEdjFqT4khih2bYz0gMDAgm&#43;5Q="></script>
 
 
 
@@ -134,6 +134,41 @@ https://github.com/alex-shpak/hugo-book
 <!-- Open the snippet anchor::link: Открыть сниппет -->
 
 <p><a href="https://youtu.be/UeULVV1wylU"><img src="https://img.youtube.com/vi/UeULVV1wylU/hqdefault.jpg" alt="Watch the video" /></a></p>
+
+  
+
+  
+    
+  
+    
+  
+    
+      
+      <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> * Returns Jaro–Winkler distance
+</span><span style="color:#09f;font-style:italic"> * @param {string} s1
+</span><span style="color:#09f;font-style:italic"> * @param {string} s2
+</span><span style="color:#09f;font-style:italic"> * @param {boolean} caseSensetive
+</span><span style="color:#09f;font-style:italic"> * @return {number}
+</span><span style="color:#09f;font-style:italic"> * @customfunction
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> DISTANCE_JW(s1, s2, caseSensetive) {
+  <span style="color:#069;font-weight:bold">return</span> distance(s1, s2, { caseSensitive<span style="color:#555">:</span> <span style="color:#555">!!</span>caseSensetive });
+}
+</code></pre></div>
+    
+  
+    
+  
+
+  
+
+  
+  
+
+  
+
+  
 </article>
 
       
@@ -153,7 +188,7 @@ https://github.com/alex-shpak/hugo-book
     </div>
 
     
-  
+
 
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
