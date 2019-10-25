@@ -204,6 +204,21 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/snippets/customfunction_flatten-arguments/readme/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/snippets/customfunction_flatten-arguments/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/snippets/customfunction_flatten-arguments/readme/"
+                />
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/snippets/document_paste-data-to-selection/readme/</loc>
     <priority>0</priority>
   </url>
@@ -306,6 +321,20 @@
   <url>
     <loc>http://localhost:1313/snippets/standalone_use-urlsearchparams-polyfill-copy/app/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/snippets/document_copy-inline-image/readme/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/snippets/document_copy-inline-image/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/snippets/document_copy-inline-image/readme/"
+                />
   </url>
   
   <url>

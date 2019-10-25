@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="" />
+<meta property="og:description" content=" Flatten arguments for customfunctions " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/snippets/customfunction_flatten-arguments/readme/" />
+<meta property="og:site_name" content="Google Apps Script snippets" />
+<title>Readme | Google Apps Script snippets</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.6c28d4c7786ace6b760a10f0da9a7fa873292f04f374a4819c43fd684501f609.css" integrity="sha256-bCjUx3hqzmt2ChDw2pp/qHMpLwTzdKSBnEP9aEUB9gk=">
+
+
+<script defer src="/search.min.4dba618f796c210692d72beba717fe53dcfef5ecc87316154e8b32a8eadc4120.js" integrity="sha256-Tbphj3lsIQaS1yvrpxf&#43;U9z&#43;9ezIcxYVTosyqOrcQSA="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="http://localhost:1313/"><span>Google Apps Script snippets</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    <ul>
+<li><a href="/docs/introduction/"><strong>Introduction</strong></a></li>
+<li><a href="/docs/introduction/examples/">Examples</a>
+
+<ul>
+<li><a href="/docs/introduction/examples/with-toc/">With Table of Contents</a></li>
+<li><a href="/docs/introduction/examples/without-toc/">Without Table of Contents</a></li>
+<li><a href="/docs/introduction/examples/shortcodes/">Shortcodes</a></li>
+</ul></li>
+<li><strong>More Examples</strong></li>
+<li><a href="/docs/more-examples/server/">Server</a></li>
+<li><a href="/docs/more-examples/client/">Client</a></li>
+
+<li><p><a href="/docs/more-examples/advanced/">Advanced</a></p></li>
+
+<li><p><strong>Publications</strong></p>
+
+<ul>
+<li><a href="/posts/">Blog</a></li>
+<li><a href="/snippets/">Snippets</a></li>
+</ul></li>
+
+<li><p><strong>Translations</strong></p>
+
+<ul>
+<li><a href="/">English</a></li>
+<li><a href="/ru/">Русский</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-posts">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Readme</strong>
+</header>
+
+      
+
+<header class="markdown">
+  <h1></h1>
+  <h5>
+    <strong>Jan 1, 0001</strong>
+  </h5>
+</header>
+<article class="markdown">
+
+<h1 id="flatten-arguments-for-customfunctions">Flatten arguments for customfunctions</h1>
+
+  
+
+  
+  
+    
+  
+    
+  
+    
+      
+      
+        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">// https://stackoverflow.com/questions/58448333/custom-function-udf-how-to-input-values-as-a-range/58542178#58542178
+</span><span style="color:#09f;font-style:italic"></span><span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> * @param {*} date
+</span><span style="color:#09f;font-style:italic"> * @param {*} pair
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> OHLCV_CEXIO_1d(date, pair) {
+  <span style="color:#069;font-weight:bold">try</span> {
+    date <span style="color:#555">=</span> <span style="color:#366">Array</span>.isArray(date) <span style="color:#555">?</span> date.flat(<span style="color:#f60">2</span>) <span style="color:#555">:</span> [date];
+    pair <span style="color:#555">=</span> <span style="color:#366">Array</span>.isArray(pair) <span style="color:#555">?</span> pair.flat(<span style="color:#f60">2</span>) <span style="color:#555">:</span> [pair];
+    <span style="color:#069;font-weight:bold">return</span> date.map(<span style="color:#069;font-weight:bold">function</span>(date) {
+      <span style="color:#069;font-weight:bold">return</span> pair.map(<span style="color:#069;font-weight:bold">function</span>(pair) {
+        <span style="color:#069;font-weight:bold">var</span> url <span style="color:#555">=</span>
+          <span style="color:#c30">&#39;https://cex.io/api/ohlcv/hd/&#39;</span> <span style="color:#555">+</span>
+          date <span style="color:#555">+</span>
+          <span style="color:#c30">&#39;/&#39;</span> <span style="color:#555">+</span>
+          pair <span style="color:#555">+</span>
+          <span style="color:#c30">&#39;/&#39;</span>;
+        <span style="color:#069;font-weight:bold">var</span> response <span style="color:#555">=</span> UrlFetchApp.fetch(url, {
+          muteHttpExceptions<span style="color:#555">:</span> <span style="color:#069;font-weight:bold">true</span>
+        });
+        <span style="color:#069;font-weight:bold">var</span> json <span style="color:#555">=</span> response.getContentText();
+        <span style="color:#09f;font-style:italic">// return json;
+</span><span style="color:#09f;font-style:italic"></span>        <span style="color:#069;font-weight:bold">var</span> data <span style="color:#555">=</span> JSON.parse(json);
+        <span style="color:#069;font-weight:bold">var</span> result <span style="color:#555">=</span> data.data1d;
+        <span style="color:#069;font-weight:bold">return</span> result;
+      });
+    });
+  } <span style="color:#069;font-weight:bold">catch</span> (err) {
+    <span style="color:#069;font-weight:bold">return</span> Utilities.formatString(
+      <span style="color:#c30">&#39;%s\n%s&#39;</span>,
+      err.message,
+      err.stack
+    );
+  }
+}
+</code></pre></div>
+        
+      
+    
+  
+    
+  
+    
+  
+
+</article>
+
+
+
+      
+<div class="book-footer justify-end">
+  
+  
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/content/snippets/customfunction_flatten-arguments/readme.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+    
+  </div>
+  
+</div>
+
+
+      
+    </div>
+
+    
+
+
+
+  <aside class="book-toc level-6 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#flatten-arguments-for-customfunctions">Flatten arguments for customfunctions</a></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
+
+</html>

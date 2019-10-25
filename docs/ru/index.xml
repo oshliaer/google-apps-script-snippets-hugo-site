@@ -90,6 +90,15 @@ var mnemonicPcmcia = file; if (bookmarkMultiprocessing) { core.intranetDigitize 
     
     <item>
       <title></title>
+      <link>http://localhost:1313/ru/snippets/customfunction_flatten-arguments/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/ru/snippets/customfunction_flatten-arguments/readme/</guid>
+      <description>Сведение аргументов для пользовательских функций Идея Положим, что уже есть какая-то функция. Например, она берет historical 1m OHLCV chart</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://localhost:1313/ru/snippets/document_center-align-table-cell-content/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -131,6 +140,15 @@ var mnemonicPcmcia = file; if (bookmarkMultiprocessing) { core.intranetDigitize 
       
       <guid>http://localhost:1313/ru/snippets/standalone_telegram-bot/readme/</guid>
       <description> Телеграм бот </description>
+    </item>
+    
+    <item>
+      <title>Как получить точную копию изображения из Документа Гугл</title>
+      <link>http://localhost:1313/ru/snippets/document_copy-inline-image/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/ru/snippets/document_copy-inline-image/readme/</guid>
+      <description> Как получить точную копию изображения из Документа Гугл </description>
     </item>
     
     <item>

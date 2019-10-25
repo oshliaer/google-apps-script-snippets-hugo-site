@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Как получить точную копию изображения из Документа Гугл" />
+<meta property="og:description" content=" Как получить точную копию изображения из Документа Гугл " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/ru/snippets/document_copy-inline-image/readme/" />
+<meta property="og:site_name" content="Google Apps Script сниппеты" />
+<title>Как получить точную копию изображения из Документа Гугл | Google Apps Script сниппеты</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.6c28d4c7786ace6b760a10f0da9a7fa873292f04f374a4819c43fd684501f609.css" integrity="sha256-bCjUx3hqzmt2ChDw2pp/qHMpLwTzdKSBnEP9aEUB9gk=">
+
+
+<script defer src="/search.min.4dba618f796c210692d72beba717fe53dcfef5ecc87316154e8b32a8eadc4120.js" integrity="sha256-Tbphj3lsIQaS1yvrpxf&#43;U9z&#43;9ezIcxYVTosyqOrcQSA="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="http://localhost:1313/"><span>Google Apps Script сниппеты</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    <ul>
+<li><a href="/ru/docs/introduction/"><strong>Introduction</strong></a></li>
+<li><a href="/ru/docs/introduction/examples/">Examples</a>
+
+<ul>
+<li><a href="/ru/docs/introduction/examples/with-toc/">With Table of Contents</a></li>
+<li><a href="/ru/docs/introduction/examples/without-toc/">Without Table of Contents</a></li>
+<li><a href="/ru/docs/introduction/examples/shortcodes/">Shortcodes</a></li>
+</ul></li>
+<li><strong>More Examples</strong></li>
+<li><a href="/ru/docs/more-examples/server/">Server</a></li>
+<li><a href="/ru/docs/more-examples/client/">Client</a></li>
+
+<li><p><a href="/ru/docs/more-examples/advanced/">Advanced</a></p></li>
+
+<li><p><strong>Публикации</strong></p>
+
+<ul>
+<li><a href="/ru/posts/">Блог</a></li>
+<li><a href="/ru/snippets/">Сниппеты</a></li>
+</ul></li>
+
+<li><p><strong>Переводы</strong></p>
+
+<ul>
+<li><a href="/">English</a></li>
+<li><a href="/ru/">Русский</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-posts">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Как получить точную копию изображения из Документа Гугл</strong>
+</header>
+
+      
+
+<header class="markdown">
+  <h1>Как получить точную копию изображения из Документа Гугл</h1>
+  <h5>
+    <strong>Jan 1, 0001</strong>
+  </h5>
+</header>
+<article class="markdown">
+
+<h2 id="как-получить-точную-копию-изображения-из-документа-гугл">Как получить точную копию изображения из Документа Гугл</h2>
+
+  
+
+  
+  
+    
+  
+    
+  
+    
+      
+      
+        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/* exported run, getBlobImageByIndexFromDoc_ */</span>
+
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> * @param {string} from The ID of a Document with the inlineImage
+</span><span style="color:#09f;font-style:italic"> * @param {number} index The index of the inlineImage. Starts from 0
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> getBlobImageByIndexFromDoc_(from, index) {
+  <span style="color:#069;font-weight:bold">var</span> template <span style="color:#555">=</span>
+    <span style="color:#c30">&#39;https://docs.google.com/feeds/download/documents/export/Export?id=%s&amp;exportFormat=zip&#39;</span>;
+  <span style="color:#069;font-weight:bold">var</span> url <span style="color:#555">=</span> Utilities.formatString(template, from);
+  <span style="color:#069;font-weight:bold">var</span> file <span style="color:#555">=</span> UrlFetchApp.fetch(url, {
+    headers<span style="color:#555">:</span> {
+      Authorization<span style="color:#555">:</span> <span style="color:#c30">&#39;Bearer &#39;</span> <span style="color:#555">+</span> ScriptApp.getOAuthToken()
+    }
+  }).getBlob();
+  <span style="color:#069;font-weight:bold">var</span> blobs <span style="color:#555">=</span> Utilities.unzip(file);
+  <span style="color:#069;font-weight:bold">var</span> imagePath <span style="color:#555">=</span> blobs
+    .find(<span style="color:#069;font-weight:bold">function</span>(b) {
+      <span style="color:#069;font-weight:bold">return</span> <span style="color:#3aa">/^.+?\.html$/</span>.test(b.getName());
+    })
+    .getDataAsString()
+    .match(<span style="color:#3aa">/&lt;img.+?src=&#34;images\/image\d+\..{2,4}&#34;.+?&gt;/g</span>)
+    [index].replace(<span style="color:#3aa">/^.*?&#34;(images\/image\d+\..{2,4})&#34;.*?$/g</span>, <span style="color:#c30">&#39;$1&#39;</span>);
+  <span style="color:#069;font-weight:bold">var</span> patt <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">new</span> <span style="color:#366">RegExp</span>(imagePath);
+  <span style="color:#069;font-weight:bold">var</span> blob <span style="color:#555">=</span> blobs.find(<span style="color:#069;font-weight:bold">function</span>(b) {
+    <span style="color:#069;font-weight:bold">return</span> patt.test(b.getName());
+  });
+  <span style="color:#069;font-weight:bold">return</span> blob;
+}
+
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> * Runs the example
+</span><span style="color:#09f;font-style:italic"> * @ignore
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> run() {
+  <span style="color:#069;font-weight:bold">var</span> blob <span style="color:#555">=</span> getBlobImageByIndexFromDoc_(
+    <span style="color:#c30">&#39;1HhlzUD2RuN0coxp7IuOBwiS4hYWAKdjUzUyiyoFjH4s&#39;</span>,
+    <span style="color:#f60">0</span>
+  );
+  DocumentApp.openById(<span style="color:#c30">&#39;1h7_W36wN-9p2Msabj-ZBcHLGQWdX-QtB_YqBpsmrMp0&#39;</span>)
+    .getBody()
+    .clear()
+    .appendImage(blob);
+}
+</code></pre></div>
+        
+      
+    
+  
+    
+  
+    
+  
+
+</article>
+
+
+
+      
+<div class="book-footer justify-end">
+  
+  
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/content/snippets/document_copy-inline-image/readme.ru.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+    
+  </div>
+  
+</div>
+
+
+      
+    </div>
+
+    
+
+
+
+  <aside class="book-toc level-6 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#как-получить-точную-копию-изображения-из-документа-гугл">Как получить точную копию изображения из Документа Гугл</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
+
+</html>

@@ -11,6 +11,15 @@
     
     <item>
       <title></title>
+      <link>http://localhost:1313/snippets/customfunction_flatten-arguments/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/snippets/customfunction_flatten-arguments/readme/</guid>
+      <description> Flatten arguments for customfunctions </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://localhost:1313/snippets/document_paste-data-to-selection/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -168,6 +177,15 @@ https://www.facebook.com/oshliaer/videos/2387201888033053/</description>
       
       <guid>http://localhost:1313/snippets/standalone_use-urlsearchparams-polyfill-copy/app/</guid>
       <description> let globalScope = {}; document.addEventListener(&#39;DOMContentLoaded&#39;, _ = { google.script.url.getLocation(function(location) { console.log(&#39;location&#39;, location); globalScope.item = location.parameter.item; }); });  </description>
+    </item>
+    
+    <item>
+      <title>Copy an inline image</title>
+      <link>http://localhost:1313/snippets/document_copy-inline-image/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/snippets/document_copy-inline-image/readme/</guid>
+      <description> Copy an inline image </description>
     </item>
     
   </channel>

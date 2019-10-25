@@ -1,0 +1,7 @@
+{{/* "https://discourse.gohugo.io/t/looking-for-custom-toc/19074" */}}
+{{ $tocLevels := default (default 6 .Site.Params.BookToC) .Params.BookToC }}
+{{ if and $tocLevels .Page.TableOfContents }}
+  <aside class="book-toc level-{{$tocLevels}} fixed">
+    {{ .Page.TableOfContents }}
+  </aside>
+{{ end }}

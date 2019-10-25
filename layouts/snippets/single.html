@@ -9,20 +9,23 @@
 <article class="markdown">
   {{- .Content -}}
 
-
-
   {{ $part := print "content-external/google-apps-script-snippets/" .Dir }}
   {{ $files := readDir $part }}
 
+  {{/*  {{ $tocFilesJs := slice }}  */}}
   {{ range $files }}
     {{ if eq (substr .Name -1 3) ".js" }}
-      <h3>{{ .Name }}</h3>
+      {{/*  <h3 id="{{ .Name }}">{{ .Name }}</h3>  */}}
       {{ $file := readFile (print $part "/" .Name) }}
-      {{ highlight ($file) "js" "" }}
+        {{ highlight ($file) "js" "" }}
+        {{/*  {{ partial "shortcodes/expand.html" (dict "0" "sadas" "1" "pp" "Inner" (highlight ($file) "js" "")) }}  */}}
+      {{/*  {{ $tocFilesJs = $tocFilesJs | append .Name }}  */}}
     {{ end }}
   {{ end }}
 
 </article>
+{{/*  {{ .Scratch.Set "tocFilesJs" $tocFilesJs }}  */}}
+
 {{ end }}
 
 {{ define "toc" }}

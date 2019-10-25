@@ -184,6 +184,21 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/ru/snippets/customfunction_flatten-arguments/readme/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/snippets/customfunction_flatten-arguments/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/snippets/customfunction_flatten-arguments/readme/"
+                />
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/ru/snippets/document_center-align-table-cell-content/readme/</loc>
     <priority>0</priority>
   </url>
@@ -268,6 +283,20 @@
                 rel="alternate"
                 hreflang="ru"
                 href="http://localhost:1313/ru/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/ru/snippets/document_copy-inline-image/readme/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/snippets/document_copy-inline-image/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/snippets/document_copy-inline-image/readme/"
                 />
   </url>
   
