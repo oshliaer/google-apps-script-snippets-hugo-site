@@ -1,15 +1,12 @@
+
 {{ define "main" }}
-{{ $dateFormat := default "January 2, 2006" .Site.Params.BookDateFormat }}
 <header class="markdown">
   <h1>{{ .Title }}</h1>
-  <h5>
-    <strong>{{ .Date.Format $dateFormat }}</strong>
-  </h5>
 </header>
 <article class="markdown">
   {{- .Content -}}
 
-  {{ $part := print "content-external/google-apps-script-snippets/" .Dir }}
+  {{ $part := print "content/" .Dir }}
   {{ $files := readDir $part }}
 
   {{/*  {{ $tocFilesJs := slice }}  */}}

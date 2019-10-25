@@ -14,10 +14,10 @@ We&rsquo;ll start with creating a new site with a very basic template." />
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/book.min.6c28d4c7786ace6b760a10f0da9a7fa873292f04f374a4819c43fd684501f609.css" integrity="sha256-bCjUx3hqzmt2ChDw2pp/qHMpLwTzdKSBnEP9aEUB9gk=">
+<link rel="stylesheet" href="/book.min.aa4cc3ebbdc303c54dc827aa848903274980b21867b9c5c276735c22c0c0b6fb.css" integrity="sha256-qkzD673DA8VNyCeqhIkDJ0mAshhnucXCdnNcIsDAtvs=">
 
 
-<script defer src="/search.min.884253bbfaa0c79ddb8a823b3f33f69b0b95e13a21a5d7b25fd7f10def01f2b8.js" integrity="sha256-iEJTu/qgx53bioI7PzP2mwuV4TohpdeyX9fxDe8B8rg="></script>
+<script defer src="/search.min.e73ddae37085676d9ad4e26cbd31d766675724bd51d632331e4477175f81ee6e.js" integrity="sha256-5z3a43CFZ22a1OJsvTHXZmdXJL1R1jIzHkR3F1&#43;B7m4="></script>
 
 <!--
 Made with Book Theme
@@ -50,24 +50,9 @@ https://github.com/alex-shpak/hugo-book
 
 
     <ul>
-<li><a href="/docs/introduction/"><strong>Introduction</strong></a></li>
-<li><a href="/docs/introduction/examples/">Examples</a>
-
-<ul>
-<li><a href="/docs/introduction/examples/with-toc/">With Table of Contents</a></li>
-<li><a href="/docs/introduction/examples/without-toc/">Without Table of Contents</a></li>
-<li><a href="/docs/introduction/examples/shortcodes/">Shortcodes</a></li>
-</ul></li>
-<li><strong>More Examples</strong></li>
-<li><a href="/docs/more-examples/server/">Server</a></li>
-<li><a href="/docs/more-examples/client/">Client</a></li>
-
-<li><p><a href="/docs/more-examples/advanced/">Advanced</a></p></li>
-
 <li><p><strong>Publications</strong></p>
 
 <ul>
-<li><a href="/posts/">Blog</a></li>
 <li><a href="/snippets/">Snippets</a></li>
 </ul></li>
 
@@ -1223,7 +1208,7 @@ $ vi themes/zafta/layouts/_default/single.html
   
   <div>
     
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/content/posts/creating-a-new-theme.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/posts/creating-a-new-theme.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" alt="Edit" />
       <span>Edit this page</span>
     </a>
@@ -1238,88 +1223,6 @@ $ vi themes/zafta/layouts/_default/single.html
 
     
   
-
-
-  <aside class="book-toc level-6 fixed">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#some-definitions">Some Definitions</a>
-<ul>
-<li><a href="#skins">Skins</a></li>
-<li><a href="#the-home-page">The Home Page</a></li>
-<li><a href="#site-configuration-file">Site Configuration File</a></li>
-<li><a href="#content">Content</a>
-<ul>
-<li><a href="#front-matter">Front Matter</a></li>
-<li><a href="#markdown">Markdown</a></li>
-</ul></li>
-<li><a href="#template-files">Template Files</a>
-<ul>
-<li><a href="#single-template">Single Template</a></li>
-<li><a href="#list-template">List Template</a></li>
-<li><a href="#partial-template">Partial Template</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#create-a-new-site">Create a New Site</a>
-<ul>
-<li><a href="#generate-the-html-for-the-new-site">Generate the HTML For the New Site</a></li>
-<li><a href="#test-the-new-site">Test the New Site</a></li>
-</ul></li>
-<li><a href="#create-a-new-theme">Create a New Theme</a>
-<ul>
-<li><a href="#create-a-skeleton">Create a Skeleton</a></li>
-<li><a href="#update-the-configuration-file-to-use-the-theme">Update the Configuration File to Use the Theme</a></li>
-<li><a href="#generate-the-site">Generate the Site</a>
-<ul>
-<li><a href="#the-home-page-1">The Home Page</a></li>
-<li><a href="#the-magic-of-static">The Magic of Static</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#the-theme-development-cycle">The Theme Development Cycle</a>
-<ul>
-<li><a href="#purge-the-public-directory">Purge the public/ Directory</a></li>
-<li><a href="#hugo-s-watch-option">Hugo&rsquo;s Watch Option</a></li>
-<li><a href="#live-reload">Live Reload</a></li>
-<li><a href="#development-commands">Development Commands</a></li>
-</ul></li>
-<li><a href="#update-the-home-page-template">Update the Home Page Template</a>
-<ul>
-<li><a href="#make-a-static-home-page">Make a Static Home Page</a>
-<ul>
-<li><a href="#live-reload-1">Live Reload</a></li>
-</ul></li>
-<li><a href="#build-a-dynamic-home-page">Build a &ldquo;Dynamic&rdquo; Home Page</a>
-<ul>
-<li><a href="#create-new-posts">Create New Posts</a></li>
-</ul></li>
-<li><a href="#list-and-single-templates">List and Single Templates</a></li>
-<li><a href="#add-content-to-the-homepage">Add Content to the Homepage</a></li>
-<li><a href="#add-content-to-the-posts">Add Content to the Posts</a>
-<ul>
-<li><a href="#update-the-template-file">Update the Template File</a></li>
-</ul></li>
-<li><a href="#linking-to-content">Linking to Content</a></li>
-<li><a href="#create-a-post-listing">Create a Post Listing</a></li>
-</ul></li>
-<li><a href="#creating-top-level-pages">Creating Top Level Pages</a></li>
-<li><a href="#sharing-templates">Sharing Templates</a>
-<ul>
-<li><a href="#create-the-header-and-footer-partials">Create the Header and Footer Partials</a></li>
-<li><a href="#update-the-home-page-template-to-use-the-partials">Update the Home Page Template to Use the Partials</a></li>
-<li><a href="#update-the-default-single-template-to-use-the-partials">Update the Default Single Template to Use the Partials</a></li>
-</ul></li>
-<li><a href="#add-date-published-to-posts">Add “Date Published” to Posts</a>
-<ul>
-<li><a href="#add-date-published-to-the-template">Add “Date Published” to the Template</a></li>
-<li><a href="#don-t-repeat-yourself">Don&rsquo;t Repeat Yourself</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-  </aside>
 
 
 

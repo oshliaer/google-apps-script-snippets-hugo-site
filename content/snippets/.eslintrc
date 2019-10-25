@@ -1,0 +1,18 @@
+{
+  "extends": ["eslint:recommended", "google", "plugin:prettier/recommended"],
+  "plugins": ["prettier", "googleappsscript"],
+  "env": {
+    "googleappsscript/googleappsscript": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-var": "off",
+    "no-unused-vars": ["error", { "varsIgnorePattern": "[on|run]*" }],
+    "require-jsdoc": "error",
+    "prefer-rest-params": "off",
+    "valid-jsdoc": "off"
+  },
+  "globals": {
+    "Sheets": true
+  }
+}

@@ -29,15 +29,6 @@
     
     <item>
       <title></title>
-      <link>http://localhost:1313/ru/snippets/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/ru/snippets/readme/</guid>
-      <description>Сниппеты Коллекция различных примеров кода на Google Apps Script</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>http://localhost:1313/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

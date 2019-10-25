@@ -204,21 +204,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/snippets/readme/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/snippets/readme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/snippets/readme/"
-                />
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</loc>
     <priority>0</priority>
   </url>
