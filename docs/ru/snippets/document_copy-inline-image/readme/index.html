@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/book.min.6c28d4c7786ace6b760a10f0da9a7fa873292f04f374a4819c43fd684501f609.css" integrity="sha256-bCjUx3hqzmt2ChDw2pp/qHMpLwTzdKSBnEP9aEUB9gk=">
 
 
-<script defer src="/search.min.4dba618f796c210692d72beba717fe53dcfef5ecc87316154e8b32a8eadc4120.js" integrity="sha256-Tbphj3lsIQaS1yvrpxf&#43;U9z&#43;9ezIcxYVTosyqOrcQSA="></script>
+<script defer src="/search.min.884253bbfaa0c79ddb8a823b3f33f69b0b95e13a21a5d7b25fd7f10def01f2b8.js" integrity="sha256-iEJTu/qgx53bioI7PzP2mwuV4TohpdeyX9fxDe8B8rg="></script>
 
 <!--
 Made with Book Theme
@@ -135,7 +135,8 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="color:#09f;font-style:italic"> */</span>
 <span style="color:#069;font-weight:bold">function</span> getBlobImageByIndexFromDoc_(from, index) {
   <span style="color:#069;font-weight:bold">var</span> template <span style="color:#555">=</span>
-    <span style="color:#c30">&#39;https://docs.google.com/feeds/download/documents/export/Export?id=%s&amp;exportFormat=zip&#39;</span>;
+    <span style="color:#c30">&#39;https://docs.google.com/feeds/download/documents/export/Export&#39;</span> <span style="color:#555">+</span>
+    <span style="color:#c30">&#39;?id=%s&amp;exportFormat=zip&#39;</span>;
   <span style="color:#069;font-weight:bold">var</span> url <span style="color:#555">=</span> Utilities.formatString(template, from);
   <span style="color:#069;font-weight:bold">var</span> file <span style="color:#555">=</span> UrlFetchApp.fetch(url, {
     headers<span style="color:#555">:</span> {
@@ -149,7 +150,10 @@ https://github.com/alex-shpak/hugo-book
     })
     .getDataAsString()
     .match(<span style="color:#3aa">/&lt;img.+?src=&#34;images\/image\d+\..{2,4}&#34;.+?&gt;/g</span>)
-    [index].replace(<span style="color:#3aa">/^.*?&#34;(images\/image\d+\..{2,4})&#34;.*?$/g</span>, <span style="color:#c30">&#39;$1&#39;</span>);
+    [index].replace(
+      <span style="color:#3aa">/^.*?&#34;(images\/image\d+\..{2,4})&#34;.*?$/g</span>,
+      <span style="color:#c30">&#39;$1&#39;</span>
+    );
   <span style="color:#069;font-weight:bold">var</span> patt <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">new</span> <span style="color:#366">RegExp</span>(imagePath);
   <span style="color:#069;font-weight:bold">var</span> blob <span style="color:#555">=</span> blobs.find(<span style="color:#069;font-weight:bold">function</span>(b) {
     <span style="color:#069;font-weight:bold">return</span> patt.test(b.getName());
@@ -166,7 +170,9 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#c30">&#39;1HhlzUD2RuN0coxp7IuOBwiS4hYWAKdjUzUyiyoFjH4s&#39;</span>,
     <span style="color:#f60">0</span>
   );
-  DocumentApp.openById(<span style="color:#c30">&#39;1h7_W36wN-9p2Msabj-ZBcHLGQWdX-QtB_YqBpsmrMp0&#39;</span>)
+  DocumentApp.openById(
+    <span style="color:#c30">&#39;1h7_W36wN-9p2Msabj-ZBcHLGQWdX-QtB_YqBpsmrMp0&#39;</span>
+  )
     .getBody()
     .clear()
     .appendImage(blob);
