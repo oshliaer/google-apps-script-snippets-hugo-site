@@ -1,3 +1,4 @@
 [submodule "themes/hugo-book"]
 path = themes/hugo-book
 url = git@github.com:contributorpw/hugo-book.git
+branch = google-apps-script-snippets-site-theme
