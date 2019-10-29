@@ -3,331 +3,332 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/ru/docs/introduction/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/</loc>
     <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/docs/introduction/"
+                href="https://google-apps-script-snippets.contributor.pw/docs/introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/docs/introduction/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/docs/introduction/examples/with-toc/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/examples/with-toc/</loc>
     <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/docs/introduction/examples/with-toc/"
+                href="https://google-apps-script-snippets.contributor.pw/docs/introduction/examples/with-toc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/docs/introduction/examples/with-toc/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/examples/with-toc/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/docs/more-examples/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/docs/more-examples/</loc>
     <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/docs/more-examples/"
+                href="https://google-apps-script-snippets.contributor.pw/docs/more-examples/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/docs/more-examples/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/docs/more-examples/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/docs/introduction/examples/without-toc/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/examples/without-toc/</loc>
     <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/docs/introduction/examples/without-toc/"
+                href="https://google-apps-script-snippets.contributor.pw/docs/introduction/examples/without-toc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/docs/introduction/examples/without-toc/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/examples/without-toc/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/docs/introduction/examples/shortcodes/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/examples/shortcodes/</loc>
     <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/docs/introduction/examples/shortcodes/"
+                href="https://google-apps-script-snippets.contributor.pw/docs/introduction/examples/shortcodes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/docs/introduction/examples/shortcodes/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/examples/shortcodes/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/posts/creating-a-new-theme/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/posts/creating-a-new-theme/</loc>
     <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/posts/creating-a-new-theme/"
+                href="https://google-apps-script-snippets.contributor.pw/posts/creating-a-new-theme/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/posts/creating-a-new-theme/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/posts/creating-a-new-theme/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/posts/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/posts/</loc>
     <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/posts/"
+                href="https://google-apps-script-snippets.contributor.pw/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/posts/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/posts/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/docs/introduction/examples/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/examples/</loc>
     <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/docs/introduction/examples/"
+                href="https://google-apps-script-snippets.contributor.pw/docs/introduction/examples/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/docs/introduction/examples/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/examples/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/docs/more-examples/advanced/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/docs/more-examples/advanced/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/docs/more-examples/advanced/"
+                href="https://google-apps-script-snippets.contributor.pw/docs/more-examples/advanced/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/docs/more-examples/advanced/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/docs/more-examples/advanced/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/docs/more-examples/client/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/docs/more-examples/client/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/docs/more-examples/client/"
+                href="https://google-apps-script-snippets.contributor.pw/docs/more-examples/client/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/docs/more-examples/client/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/docs/more-examples/client/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/docs/more-examples/hidden/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/docs/more-examples/hidden/</loc>
     <lastmod>2019-10-22T10:21:35+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/docs/more-examples/hidden/"
+                href="https://google-apps-script-snippets.contributor.pw/docs/more-examples/hidden/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/docs/more-examples/hidden/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/docs/more-examples/hidden/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/docs/more-examples/server/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/docs/more-examples/server/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/docs/more-examples/server/"
+                href="https://google-apps-script-snippets.contributor.pw/docs/more-examples/server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/docs/more-examples/server/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/docs/more-examples/server/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/snippets/customfunction_flatten-arguments/readme/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_flatten-arguments/readme/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/snippets/customfunction_flatten-arguments/readme/"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/customfunction_flatten-arguments/readme/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/snippets/customfunction_flatten-arguments/readme/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_flatten-arguments/readme/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/snippets/document_center-align-table-cell-content/readme/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/document_center-align-table-cell-content/readme/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/snippets/spreadsheet_change-basic-event/readme/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_change-basic-event/readme/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/snippets/spreadsheet_change-basic-event/readme/"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_change-basic-event/readme/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/snippets/spreadsheet_change-basic-event/readme/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_change-basic-event/readme/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/snippets/standalone_telegram-bot/readme/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/standalone_telegram-bot/readme/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/docs/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/docs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/docs/"
+                href="https://google-apps-script-snippets.contributor.pw/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/docs/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/docs/"
                 />
   </url>
   
   <url>
-    <loc>http://localhost:1313/ru/snippets/</loc>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/</loc>
+    <lastmod>2019-10-29T08:24:59+03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/</loc>
+    <lastmod>2019-10-26T00:23:52+03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://google-apps-script-snippets.contributor.pw/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://google-apps-script-snippets.contributor.pw/ru/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/document_copy-inline-image/readme/</loc>
+    <lastmod>2019-10-26T00:23:52+03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/document_copy-inline-image/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/document_copy-inline-image/readme/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_union_ranges/readme/</loc>
+    <lastmod>2019-10-29T08:24:59+03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/customfunction_union_ranges/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_union_ranges/readme/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_jaro-winker-distance/readme/</loc>
+    <lastmod>2019-10-26T00:23:52+03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/customfunction_jaro-winker-distance/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_jaro-winker-distance/readme/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_delete-rows-by-conditional/readme/</loc>
     <lastmod>2019-10-29T07:14:10+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/snippets/"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_delete-rows-by-conditional/readme/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/snippets/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ru/</loc>
-    <lastmod>2019-10-26T00:23:52+03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ru/snippets/document_copy-inline-image/readme/</loc>
-    <lastmod>2019-10-26T00:23:52+03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/snippets/document_copy-inline-image/readme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/snippets/document_copy-inline-image/readme/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ru/snippets/customfunction_union_ranges/readme/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/snippets/customfunction_union_ranges/readme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/snippets/customfunction_union_ranges/readme/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ru/snippets/customfunction_jaro-winker-distance/readme/</loc>
-    <lastmod>2019-10-26T00:23:52+03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/snippets/customfunction_jaro-winker-distance/readme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/snippets/customfunction_jaro-winker-distance/readme/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/ru/snippets/spreadsheet_delete-rows-by-conditional/readme/</loc>
-    <lastmod>2019-10-29T07:14:10+03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/snippets/spreadsheet_delete-rows-by-conditional/readme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="http://localhost:1313/ru/snippets/spreadsheet_delete-rows-by-conditional/readme/"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_delete-rows-by-conditional/readme/"
                 />
   </url>
   

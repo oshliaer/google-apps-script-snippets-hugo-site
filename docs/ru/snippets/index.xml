@@ -2,91 +2,91 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Snippets on Google Apps Script сниппеты</title>
-    <link>http://localhost:1313/ru/snippets/</link>
+    <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/</link>
     <description>Recent content in Snippets on Google Apps Script сниппеты</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://localhost:1313/ru/snippets/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://google-apps-script-snippets.contributor.pw/ru/snippets/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://localhost:1313/ru/snippets/customfunction_flatten-arguments/readme/</link>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_flatten-arguments/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/ru/snippets/customfunction_flatten-arguments/readme/</guid>
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_flatten-arguments/readme/</guid>
       <description>Сведение аргументов для пользовательских функций Идея Положим, что уже есть какая-то функция. Например, она берет historical 1m OHLCV chart</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/ru/snippets/document_center-align-table-cell-content/readme/</link>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/document_center-align-table-cell-content/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/ru/snippets/document_center-align-table-cell-content/readme/</guid>
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/document_center-align-table-cell-content/readme/</guid>
       <description> center-align-table-cell-content </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</link>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</guid>
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_appndrow-formula-increment/readme/</guid>
       <description> spreadsheet_appndRow-formula-increment </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/ru/snippets/spreadsheet_change-basic-event/readme/</link>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_change-basic-event/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/ru/snippets/spreadsheet_change-basic-event/readme/</guid>
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_change-basic-event/readme/</guid>
       <description>Базовый пример триггера события CHANGE Для запуска сниппета требуется зарегистрировать функцию onchange, как триггер соб</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/ru/snippets/standalone_telegram-bot/readme/</link>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/standalone_telegram-bot/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/ru/snippets/standalone_telegram-bot/readme/</guid>
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/standalone_telegram-bot/readme/</guid>
       <description> Телеграм бот </description>
     </item>
     
     <item>
       <title>Как получить точную копию изображения из Документа Гугл</title>
-      <link>http://localhost:1313/ru/snippets/document_copy-inline-image/readme/</link>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/document_copy-inline-image/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/ru/snippets/document_copy-inline-image/readme/</guid>
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/document_copy-inline-image/readme/</guid>
       <description> Как получить точную копию изображения из Документа Гугл </description>
     </item>
     
     <item>
       <title>Объединение диапазонов</title>
-      <link>http://localhost:1313/ru/snippets/customfunction_union_ranges/readme/</link>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_union_ranges/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/ru/snippets/customfunction_union_ranges/readme/</guid>
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_union_ranges/readme/</guid>
       <description> Объединение диапазонов </description>
     </item>
     
     <item>
       <title>Сходство Джаро — Винклера</title>
-      <link>http://localhost:1313/ru/snippets/customfunction_jaro-winker-distance/readme/</link>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_jaro-winker-distance/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/ru/snippets/customfunction_jaro-winker-distance/readme/</guid>
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_jaro-winker-distance/readme/</guid>
       <description>Сходство Джаро — Винклера Сниппет демонстиррует применение расчета Сходства Джаро — Винклера</description>
     </item>
     
     <item>
       <title>Удаление строк из Таблицы Гугл по условию</title>
-      <link>http://localhost:1313/ru/snippets/spreadsheet_delete-rows-by-conditional/readme/</link>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_delete-rows-by-conditional/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/ru/snippets/spreadsheet_delete-rows-by-conditional/readme/</guid>
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_delete-rows-by-conditional/readme/</guid>
       <description> Удаление строк из Таблицы Гугл по условию </description>
     </item>
     

@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google Apps Script сниппеты</title>
-    <link>http://localhost:1313/ru/docs/introduction/</link>
+    <link>https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/</link>
     <description>Recent content on Google Apps Script сниппеты</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://localhost:1313/ru/docs/introduction/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://google-apps-script-snippets.contributor.pw/ru/docs/introduction/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
