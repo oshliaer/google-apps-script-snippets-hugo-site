@@ -310,6 +310,7 @@
   
   <url>
     <loc>http://localhost:1313/snippets/document_copy-inline-image/readme/</loc>
+    <lastmod>2019-10-26T00:23:52+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
@@ -319,6 +320,20 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/snippets/document_copy-inline-image/readme/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/snippets/spreadsheet_delete-rows-by-conditional/readme/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/snippets/spreadsheet_delete-rows-by-conditional/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/snippets/spreadsheet_delete-rows-by-conditional/readme/"
                 />
   </url>
   
@@ -338,7 +353,7 @@
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2019-10-22T10:21:35+03:00</lastmod>
+    <lastmod>2019-10-26T00:23:52+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
@@ -353,6 +368,7 @@
   
   <url>
     <loc>http://localhost:1313/snippets/</loc>
+    <lastmod>2019-10-26T00:23:52+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"

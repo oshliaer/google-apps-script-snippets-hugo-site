@@ -151,5 +151,14 @@ var mnemonicPcmcia = file; if (bookmarkMultiprocessing) { core.intranetDigitize 
       <description>Сходство Джаро — Винклера Сниппет демонстиррует применение расчета Сходства Джаро — Винклера</description>
     </item>
     
+    <item>
+      <title>Удаление строк из Таблицы Гугл по условию</title>
+      <link>http://localhost:1313/ru/snippets/spreadsheet_delete-rows-by-conditional/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/ru/snippets/spreadsheet_delete-rows-by-conditional/readme/</guid>
+      <description> Удаление строк из Таблицы Гугл по условию </description>
+    </item>
+    
   </channel>
 </rss>
