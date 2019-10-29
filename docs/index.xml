@@ -304,5 +304,23 @@ https://www.facebook.com/oshliaer/videos/2387201888033053/</description>
       <description> Deleting rows from a Google Sheet by condition </description>
     </item>
     
+    <item>
+      <title>jaro-winker-distance</title>
+      <link>http://localhost:1313/snippets/customfunction_jaro-winker-distance/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/snippets/customfunction_jaro-winker-distance/readme/</guid>
+      <description> jaro-winker-distance </description>
+    </item>
+    
+    <item>
+      <title>union_ranges</title>
+      <link>http://localhost:1313/snippets/customfunction_union_ranges/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/snippets/customfunction_union_ranges/readme/</guid>
+      <description> union_ranges </description>
+    </item>
+    
   </channel>
 </rss>

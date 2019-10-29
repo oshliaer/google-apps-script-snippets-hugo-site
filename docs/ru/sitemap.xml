@@ -288,8 +288,32 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/ru/snippets/customfunction_union_ranges/readme/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/snippets/customfunction_union_ranges/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/snippets/customfunction_union_ranges/readme/"
+                />
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/ru/snippets/customfunction_jaro-winker-distance/readme/</loc>
     <lastmod>2019-10-26T00:23:52+03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/snippets/customfunction_jaro-winker-distance/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/snippets/customfunction_jaro-winker-distance/readme/"
+                />
   </url>
   
   <url>
