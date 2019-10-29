@@ -7,6 +7,11 @@
       "label": "dev",
       "type": "shell",
       "command": "scripts/dev.sh"
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "hugo"
     }
   ]
 }
