@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="jaro-winker-distance" />
+<meta property="og:description" content=" jaro-winker-distance " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/snippets/customfunction_union_ranges/readme/" />
+<meta property="og:site_name" content="Google Apps Script snippets" />
+<title>jaro-winker-distance | Google Apps Script snippets</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+
+
+<link rel="stylesheet" href="/book.min.css" integrity="">
+
+
+
+<script defer src="/search.min.js" integrity=""></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="http://localhost:1313/"><span>Google Apps Script snippets</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    <ul>
+<li><p><strong>Publications</strong></p>
+
+<ul>
+<li><a href="/snippets/">Snippets</a></li>
+</ul></li>
+
+<li><p><strong>Translations</strong></p>
+
+<ul>
+<li><a href="/">English</a></li>
+<li><a href="/ru/">Русский</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>jaro-winker-distance</strong>
+</header>
+
+      
+<header class="markdown">
+  <h1>jaro-winker-distance</h1>
+</header>
+<article class="markdown">
+
+<h2 id="jaro-winker-distance">jaro-winker-distance</h2>
+
+  
+
+  
+  
+    
+  
+    
+      
+      
+        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/* exported UNIONRANGES */</span>
+
+<span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> * A custom function. Unions ranges
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> * @example
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> * =UNIONRANGES(Sheet1!A2:B,{{1,2,3};{4,5,6}}, A2, 36, &#34;44&#34;, B3:C13)
+</span><span style="color:#09f;font-style:italic"> *
+</span><span style="color:#09f;font-style:italic"> * @param {...object} ranges Data for union
+</span><span style="color:#09f;font-style:italic"> * @return {object[][]} The unioned range
+</span><span style="color:#09f;font-style:italic"> * @function UNIONRANGES
+</span><span style="color:#09f;font-style:italic"> * @customfunction
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> UNIONRANGES(ranges) {
+  <span style="color:#069;font-weight:bold">var</span> result <span style="color:#555">=</span> [];
+  <span style="color:#069;font-weight:bold">var</span> length <span style="color:#555">=</span> <span style="color:#f60">0</span>;
+  <span style="color:#069;font-weight:bold">try</span> {
+    <span style="color:#069;font-weight:bold">for</span> (<span style="color:#069;font-weight:bold">var</span> j <span style="color:#555">=</span> <span style="color:#f60">0</span>; j <span style="color:#555">&lt;</span> arguments.length; j<span style="color:#555">++</span>) {
+      <span style="color:#069;font-weight:bold">if</span> (<span style="color:#555">!</span>(arguments[j] <span style="color:#069;font-weight:bold">instanceof</span> <span style="color:#366">Array</span>)) arguments[j] <span style="color:#555">=</span> [[arguments[j]]];
+      length <span style="color:#555">+=</span> arguments[j].length <span style="color:#555">*</span> arguments[j][<span style="color:#f60">0</span>].length;
+    }
+    <span style="color:#069;font-weight:bold">if</span> (length <span style="color:#555">&gt;</span> <span style="color:#f60">400000</span>) <span style="color:#069;font-weight:bold">return</span> <span style="color:#c30">&#39;#ERROR_OVER_TOTAL_CELLS: &#39;</span> <span style="color:#555">+</span> length;
+    <span style="color:#069;font-weight:bold">for</span> (<span style="color:#069;font-weight:bold">var</span> i <span style="color:#555">=</span> <span style="color:#f60">0</span>; i <span style="color:#555">&lt;</span> arguments.length; i<span style="color:#555">++</span>)
+      result <span style="color:#555">=</span> result.concat(
+        arguments[i].filter(<span style="color:#069;font-weight:bold">function</span>(el) {
+          <span style="color:#069;font-weight:bold">return</span> el.join(<span style="color:#c30">&#39;&#39;</span>).length <span style="color:#555">&gt;</span> <span style="color:#f60">0</span>;
+        })
+      );
+    <span style="color:#069;font-weight:bold">return</span> result;
+  } <span style="color:#069;font-weight:bold">catch</span> (err) {
+    <span style="color:#069;font-weight:bold">return</span> err.name <span style="color:#555">+</span> <span style="color:#c30">&#39; &#39;</span> <span style="color:#555">+</span> err.message;
+  }
+}
+</code></pre></div>
+        
+      
+    
+  
+    
+  
+
+</article>
+
+
+
+      
+<div class="book-footer justify-end">
+  
+  
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/snippets/customfunction_union_ranges/readme.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+    
+  </div>
+  
+</div>
+
+
+      
+    </div>
+
+    
+
+
+
+
+  </main>
+
+  
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
+
+</html>

@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="" />
-<meta property="og:description" content="DeleteTrigger Google Apps Script. Delete triggers by event type, handler function, trigger source, trigger source id, unique id;" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="jaro-winker-distance" />
+<meta property="og:description" content=" jaro-winker-distance " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/snippets/scriptapp-delete-trigger/readme/" />
+<meta property="og:url" content="http://localhost:1313/snippets/customfunction_jaro-winker-distance/readme/" />
 <meta property="og:site_name" content="Google Apps Script snippets" />
-<title>R E a D M E | Google Apps Script snippets</title>
+<title>jaro-winker-distance | Google Apps Script snippets</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
@@ -89,22 +89,43 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>R E a D M E</strong>
+  <strong>jaro-winker-distance</strong>
 </header>
 
       
 <header class="markdown">
-  <h1></h1>
+  <h1>jaro-winker-distance</h1>
 </header>
 <article class="markdown">
 
-<h1 id="deletetrigger">DeleteTrigger</h1>
-
-<p>Google Apps Script. Delete triggers by event type, handler function, trigger source, trigger source id, unique id;</p>
+<h2 id="jaro-winker-distance">jaro-winker-distance</h2>
 
   
 
   
+  
+    
+  
+    
+  
+    
+      
+      
+        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
+</span><span style="color:#09f;font-style:italic"> * Returns Jaro–Winkler distance
+</span><span style="color:#09f;font-style:italic"> * @param {string} s1
+</span><span style="color:#09f;font-style:italic"> * @param {string} s2
+</span><span style="color:#09f;font-style:italic"> * @param {boolean} caseSensetive
+</span><span style="color:#09f;font-style:italic"> * @return {number}
+</span><span style="color:#09f;font-style:italic"> * @customfunction
+</span><span style="color:#09f;font-style:italic"> */</span>
+<span style="color:#069;font-weight:bold">function</span> DISTANCE_JW(s1, s2, caseSensetive) {
+  <span style="color:#069;font-weight:bold">return</span> distance(s1, s2, { caseSensitive<span style="color:#555">:</span> <span style="color:#555">!!</span>caseSensetive });
+}
+</code></pre></div>
+        
+      
+    
   
     
   
@@ -116,20 +137,12 @@ https://github.com/alex-shpak/hugo-book
 
 
       
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/commit/4c469b6dfa6cf4ac2e250368e272dfed841d6c96" title='Last modified Oct 26, 2019 by Alex Ivanov' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Oct 26, 2019</span>
-    </a>
-  </div>
+<div class="book-footer justify-end">
   
   
   <div>
     
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/snippets/scriptapp-delete-trigger/README.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/snippets/customfunction_jaro-winker-distance/readme.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" alt="Edit" />
       <span>Edit this page</span>
     </a>
