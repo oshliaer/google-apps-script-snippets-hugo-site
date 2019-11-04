@@ -191,12 +191,30 @@ https://www.facebook.com/oshliaer/videos/2387201888033053/</description>
     </item>
     
     <item>
+      <title>standalone_gmail-import-csv-to-sheet</title>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/standalone_gmail-import-csv-to-sheet/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/standalone_gmail-import-csv-to-sheet/readme/</guid>
+      <description> standalone_gmail-import-csv-to-sheet </description>
+    </item>
+    
+    <item>
       <title>union_ranges</title>
       <link>https://google-apps-script-snippets.contributor.pw/snippets/customfunction_union_ranges/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/customfunction_union_ranges/readme/</guid>
       <description> union_ranges </description>
+    </item>
+    
+    <item>
+      <title>Updates notes based on cell value</title>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_binding-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_binding-notes/</guid>
+      <description> Screenmovie </description>
     </item>
     
   </channel>

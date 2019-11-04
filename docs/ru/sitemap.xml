@@ -258,6 +258,20 @@
   </url>
   
   <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/standalone_gmail-import-csv-to-sheet/readme/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/standalone_gmail-import-csv-to-sheet/readme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/standalone_gmail-import-csv-to-sheet/readme/"
+                />
+  </url>
+  
+  <url>
     <loc>https://google-apps-script-snippets.contributor.pw/ru/</loc>
     <lastmod>2019-10-26T00:23:52+03:00</lastmod>
     <xhtml:link
@@ -284,6 +298,20 @@
                 rel="alternate"
                 hreflang="ru"
                 href="https://google-apps-script-snippets.contributor.pw/ru/snippets/document_copy-inline-image/readme/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_binding-notes/readme/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_binding-notes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_binding-notes/readme/"
                 />
   </url>
   

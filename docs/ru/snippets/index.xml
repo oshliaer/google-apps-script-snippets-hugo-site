@@ -55,12 +55,30 @@
     </item>
     
     <item>
+      <title>standalone_gmail-import-csv-to-sheet</title>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/standalone_gmail-import-csv-to-sheet/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/standalone_gmail-import-csv-to-sheet/readme/</guid>
+      <description> standalone_gmail-import-csv-to-sheet </description>
+    </item>
+    
+    <item>
       <title>Как получить точную копию изображения из Документа Гугл</title>
       <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/document_copy-inline-image/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/document_copy-inline-image/readme/</guid>
       <description> Как получить точную копию изображения из Документа Гугл </description>
+    </item>
+    
+    <item>
+      <title>Обновляет заметки в зависимости от значения ячейки</title>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_binding-notes/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_binding-notes/readme/</guid>
+      <description> Screenmovie </description>
     </item>
     
     <item>
