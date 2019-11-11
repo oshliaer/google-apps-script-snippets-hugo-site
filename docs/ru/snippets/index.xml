@@ -91,6 +91,15 @@
     </item>
     
     <item>
+      <title>Простой пример `onEdit` для Таблиц</title>
+      <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_onedit-sample/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_onedit-sample/</guid>
+      <description> Простой пример onEdit для Таблиц </description>
+    </item>
+    
+    <item>
       <title>Сходство Джаро — Винклера</title>
       <link>https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_jaro-winker-distance/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

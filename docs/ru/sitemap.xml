@@ -333,6 +333,20 @@
   </url>
   
   <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_onedit-sample/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-sample/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_onedit-sample/"
+                />
+  </url>
+  
+  <url>
     <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_jaro-winker-distance/readme/</loc>
     <lastmod>2019-11-04T06:06:35+03:00</lastmod>
     <xhtml:link

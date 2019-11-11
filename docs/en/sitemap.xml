@@ -249,6 +249,11 @@
   </url>
   
   <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_autosort/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_change-basic-event/readme/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -276,6 +281,20 @@
   <url>
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-copy-row-if-edit/readme/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-sample/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_onedit-sample/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-sample/"
+                />
   </url>
   
   <url>
