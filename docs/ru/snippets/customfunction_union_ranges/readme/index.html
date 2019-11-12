@@ -1,197 +1,38 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html><html lang=ru><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta property=og:title content="Объединение диапазонов"><meta property=og:description content="Объединение диапазонов"><meta property=og:type content=article><meta property=og:url content=https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_union_ranges/readme/><meta property=article:modified_time content=2019-11-04T06:06:35+03:00><meta property=og:site_name content="Google Apps Script сниппеты"><title>Объединение диапазонов | Google Apps Script сниппеты</title><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.css integrity><script defer src=/search.min.js integrity></script></head><body><input type=checkbox class=hidden id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav><h2 class=book-brand><a href=https://google-apps-script-snippets.contributor.pw/><span>Google Apps Script сниппеты</span></a></h2><div class=book-search><input type=text placeholder=Search id=book-search-input maxlength=64><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><p><strong>Публикации</strong></p><ul><li><a href=/ru/snippets/>Сниппеты</a></li></ul></li><li><p><strong>Переводы</strong></p><ul><li><a href=/>English</a></li><li><a href=/ru/>Русский</a></li></ul></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class="flex align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Объединение диапазонов</strong></header><header class=markdown><h1>Объединение диапазонов</h1></header><article class=markdown><h2 id=объединение-диапазонов>Объединение диапазонов</h2><div class=highlight><pre style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#09f;font-style:italic>/* exported UNIONRANGES */</span>
 
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Объединение диапазонов" />
-<meta property="og:description" content=" Объединение диапазонов " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_union_ranges/readme/" />
-<meta property="article:modified_time" content="2019-11-04T06:06:35+03:00" /><meta property="og:site_name" content="Google Apps Script сниппеты" />
-<title>Объединение диапазонов | Google Apps Script сниппеты</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-
-
-
-
-<link rel="stylesheet" href="/book.min.css" integrity="">
-
-
-
-<script defer src="/search.min.js" integrity=""></script>
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://google-apps-script-snippets.contributor.pw/"><span>Google Apps Script сниппеты</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    <ul>
-<li><p><strong>Публикации</strong></p>
-
-<ul>
-<li><a href="/ru/snippets/">Сниппеты</a></li>
-</ul></li>
-
-<li><p><strong>Переводы</strong></p>
-
-<ul>
-<li><a href="/">English</a></li>
-<li><a href="/ru/">Русский</a></li>
-</ul></li>
-</ul>
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>Объединение диапазонов</strong>
-</header>
-
-      
-<header class="markdown">
-  <h1>Объединение диапазонов</h1>
-</header>
-<article class="markdown">
-
-<h2 id="объединение-диапазонов">Объединение диапазонов</h2>
-
-  
-
-  
-  
-    
-  
-    
-      
-      
-        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/* exported UNIONRANGES */</span>
-
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * A custom function. Unions ranges
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @example
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * =UNIONRANGES(Sheet1!A2:B,{{1,2,3};{4,5,6}}, A2, 36, &#34;44&#34;, B3:C13)
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @param {...object} ranges Data for union
-</span><span style="color:#09f;font-style:italic"> * @return {object[][]} The unioned range
-</span><span style="color:#09f;font-style:italic"> * @function UNIONRANGES
-</span><span style="color:#09f;font-style:italic"> * @customfunction
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> UNIONRANGES(ranges) {
-  <span style="color:#069;font-weight:bold">var</span> result <span style="color:#555">=</span> [];
-  <span style="color:#069;font-weight:bold">var</span> length <span style="color:#555">=</span> <span style="color:#f60">0</span>;
-  <span style="color:#069;font-weight:bold">try</span> {
-    <span style="color:#069;font-weight:bold">for</span> (<span style="color:#069;font-weight:bold">var</span> j <span style="color:#555">=</span> <span style="color:#f60">0</span>; j <span style="color:#555">&lt;</span> arguments.length; j<span style="color:#555">++</span>) {
-      <span style="color:#069;font-weight:bold">if</span> (<span style="color:#555">!</span>(arguments[j] <span style="color:#069;font-weight:bold">instanceof</span> <span style="color:#366">Array</span>)) arguments[j] <span style="color:#555">=</span> [[arguments[j]]];
-      length <span style="color:#555">+=</span> arguments[j].length <span style="color:#555">*</span> arguments[j][<span style="color:#f60">0</span>].length;
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * A custom function. Unions ranges
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @example
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * =UNIONRANGES(Sheet1!A2:B,{{1,2,3};{4,5,6}}, A2, 36, &#34;44&#34;, B3:C13)
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @param {...object} ranges Data for union
+</span><span style=color:#09f;font-style:italic> * @return {object[][]} The unioned range
+</span><span style=color:#09f;font-style:italic> * @function UNIONRANGES
+</span><span style=color:#09f;font-style:italic> * @customfunction
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> UNIONRANGES(ranges) {
+  <span style=color:#069;font-weight:700>var</span> result <span style=color:#555>=</span> [];
+  <span style=color:#069;font-weight:700>var</span> length <span style=color:#555>=</span> <span style=color:#f60>0</span>;
+  <span style=color:#069;font-weight:700>try</span> {
+    <span style=color:#069;font-weight:700>for</span> (<span style=color:#069;font-weight:700>var</span> j <span style=color:#555>=</span> <span style=color:#f60>0</span>; j <span style=color:#555>&lt;</span> arguments.length; j<span style=color:#555>++</span>) {
+      <span style=color:#069;font-weight:700>if</span> (<span style=color:#555>!</span>(arguments[j] <span style=color:#069;font-weight:700>instanceof</span> <span style=color:#366>Array</span>)) arguments[j] <span style=color:#555>=</span> [[arguments[j]]];
+      length <span style=color:#555>+=</span> arguments[j].length <span style=color:#555>*</span> arguments[j][<span style=color:#f60>0</span>].length;
     }
-    <span style="color:#069;font-weight:bold">if</span> (length <span style="color:#555">&gt;</span> <span style="color:#f60">400000</span>) <span style="color:#069;font-weight:bold">return</span> <span style="color:#c30">&#39;#ERROR_OVER_TOTAL_CELLS: &#39;</span> <span style="color:#555">+</span> length;
-    <span style="color:#069;font-weight:bold">for</span> (<span style="color:#069;font-weight:bold">var</span> i <span style="color:#555">=</span> <span style="color:#f60">0</span>; i <span style="color:#555">&lt;</span> arguments.length; i<span style="color:#555">++</span>)
-      result <span style="color:#555">=</span> result.concat(
-        arguments[i].filter(<span style="color:#069;font-weight:bold">function</span>(el) {
-          <span style="color:#069;font-weight:bold">return</span> el.join(<span style="color:#c30">&#39;&#39;</span>).length <span style="color:#555">&gt;</span> <span style="color:#f60">0</span>;
+    <span style=color:#069;font-weight:700>if</span> (length <span style=color:#555>&gt;</span> <span style=color:#f60>400000</span>) <span style=color:#069;font-weight:700>return</span> <span style=color:#c30>&#39;#ERROR_OVER_TOTAL_CELLS: &#39;</span> <span style=color:#555>+</span> length;
+    <span style=color:#069;font-weight:700>for</span> (<span style=color:#069;font-weight:700>var</span> i <span style=color:#555>=</span> <span style=color:#f60>0</span>; i <span style=color:#555>&lt;</span> arguments.length; i<span style=color:#555>++</span>)
+      result <span style=color:#555>=</span> result.concat(
+        arguments[i].filter(<span style=color:#069;font-weight:700>function</span>(el) {
+          <span style=color:#069;font-weight:700>return</span> el.join(<span style=color:#c30>&#39;&#39;</span>).length <span style=color:#555>&gt;</span> <span style=color:#f60>0</span>;
         })
       );
-    <span style="color:#069;font-weight:bold">return</span> result;
-  } <span style="color:#069;font-weight:bold">catch</span> (err) {
-    <span style="color:#069;font-weight:bold">return</span> err.name <span style="color:#555">+</span> <span style="color:#c30">&#39; &#39;</span> <span style="color:#555">+</span> err.message;
+    <span style=color:#069;font-weight:700>return</span> result;
+  } <span style=color:#069;font-weight:700>catch</span> (err) {
+    <span style=color:#069;font-weight:700>return</span> err.name <span style=color:#555>+</span> <span style=color:#c30>&#39; &#39;</span> <span style=color:#555>+</span> err.message;
   }
 }
-</code></pre></div>
-        
-      
-    
-  
-    
-  
-    
-  
-
-</article>
-
-
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13" title='Last modified Nov 4, 2019 by Alex Ivanov' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Nov 4, 2019</span>
-    </a>
-  </div>
-  
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/customfunction_union_ranges/readme.ru.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" alt="Edit" />
-      <span>Edit this page</span>
-    </a>
-    
-  </div>
-  
-</div>
-
-
-      
-    </div>
-
-    
-
-
-
-
-  </main>
-
-  
-</body>
-
-</html>
+</code></pre></div></article><div class="book-footer justify-between"><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13 title="Last modified Nov 4, 2019 by Alex Ivanov" target=_blank rel=noopener><img src=/svg/calendar.svg alt=Changed>
+<span>Nov 4, 2019</span></a></div><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/customfunction_union_ranges/readme.ru.md target=_blank rel=noopener><img src=/svg/edit.svg alt=Edit>
+<span>Edit this page</span></a></div></div></div></main></body></html>

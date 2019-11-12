@@ -1,275 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta property=og:title content><meta property=og:description content><meta property=og:type content=article><meta property=og:url content=https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_add-row-to-filtered-range/readme/><meta property=og:site_name content="Google Apps Script snippets"><title>Readme | Google Apps Script snippets</title><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.css integrity><script defer src=/search.min.js integrity></script></head><body><input type=checkbox class=hidden id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav><h2 class=book-brand><a href=https://google-apps-script-snippets.contributor.pw/><span>Google Apps Script snippets</span></a></h2><div class=book-search><input type=text placeholder=Search id=book-search-input maxlength=64><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><p><strong>Publications</strong></p><ul><li><a href=/snippets/>Snippets</a></li></ul></li><li><p><strong>Translations</strong></p><ul><li><a href=/>English</a></li><li><a href=/ru/>Русский</a></li></ul></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class="flex align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Readme</strong></header><header class=markdown><h1></h1></header><article class=markdown><div class=highlight><pre style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * @file
+</span><span style=color:#09f;font-style:italic> * @url
+</span><span style=color:#09f;font-style:italic> */</span>
 
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_add-row-to-filtered-range/readme/" />
-<meta property="og:site_name" content="Google Apps Script snippets" />
-<title>Readme | Google Apps Script snippets</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> run() {
+  <span style=color:#069;font-weight:700>var</span> sheet <span style=color:#555>=</span> SpreadsheetApp.getActiveSheet();
 
-
-
-
-<link rel="stylesheet" href="/book.min.css" integrity="">
-
-
-
-<script defer src="/search.min.js" integrity=""></script>
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://google-apps-script-snippets.contributor.pw/"><span>Google Apps Script snippets</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    <ul>
-<li><p><strong>Publications</strong></p>
-
-<ul>
-<li><a href="/snippets/">Snippets</a></li>
-</ul></li>
-
-<li><p><strong>Translations</strong></p>
-
-<ul>
-<li><a href="/">English</a></li>
-<li><a href="/ru/">Русский</a></li>
-</ul></li>
-</ul>
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>Readme</strong>
-</header>
-
-      
-<header class="markdown">
-  <h1></h1>
-</header>
-<article class="markdown">
-  
-
-  
-  
-    
-      
-      
-        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * @file
-</span><span style="color:#09f;font-style:italic"> * @url
-</span><span style="color:#09f;font-style:italic"> */</span>
-
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> run() {
-  <span style="color:#069;font-weight:bold">var</span> sheet <span style="color:#555">=</span> SpreadsheetApp.getActiveSheet();
-
-  sheet.insertRowBefore(<span style="color:#f60">4</span>);
+  sheet.insertRowBefore(<span style=color:#f60>4</span>);
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * Filter Criterias Collection
-</span><span style="color:#09f;font-style:italic"> * @typedef {object} FilterCriteriaCollection
-</span><span style="color:#09f;font-style:italic"> * @property {GoogleAppsScript.Spreadsheet.FilterCriteria[]} criterias
-</span><span style="color:#09f;font-style:italic"> * @property {Object.&lt;string&gt;} sdfg
-</span><span style="color:#09f;font-style:italic"> */</span>
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * Filter Criterias Collection
+</span><span style=color:#09f;font-style:italic> * @typedef {object} FilterCriteriaCollection
+</span><span style=color:#09f;font-style:italic> * @property {GoogleAppsScript.Spreadsheet.FilterCriteria[]} criterias
+</span><span style=color:#09f;font-style:italic> * @property {Object.&lt;string&gt;} sdfg
+</span><span style=color:#09f;font-style:italic> */</span>
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> FilterCriteriasStash(sheet) {
-  <span style="color:#069;font-weight:bold">var</span> filter <span style="color:#555">=</span> sheet.getFilter();
-  <span style="color:#069;font-weight:bold">var</span> range <span style="color:#555">=</span> filter.getRange();
-  <span style="color:#069;font-weight:bold">var</span> slip <span style="color:#555">=</span> range.getColumn() <span style="color:#555">-</span> <span style="color:#f60">1</span>;
-  <span style="color:#069;font-weight:bold">var</span> values <span style="color:#555">=</span> filter.getRange().getValues();
-  <span style="color:#09f;font-style:italic">// var columns =
-</span><span style="color:#09f;font-style:italic"></span>  <span style="color:#069;font-weight:bold">var</span> headers <span style="color:#555">=</span> values.slice(<span style="color:#f60">0</span>, <span style="color:#f60">1</span>)[<span style="color:#f60">0</span>];
-  <span style="color:#069;font-weight:bold">var</span> criterias <span style="color:#555">=</span> headers.map(<span style="color:#069;font-weight:bold">function</span>(header, i) {
-    <span style="color:#069;font-weight:bold">return</span> {
-      header<span style="color:#555">:</span> header,
-      index<span style="color:#555">:</span> i,
-      criteria<span style="color:#555">:</span> filter.getColumnFilterCriteria(i <span style="color:#555">+</span> <span style="color:#f60">1</span>)
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> FilterCriteriasStash(sheet) {
+  <span style=color:#069;font-weight:700>var</span> filter <span style=color:#555>=</span> sheet.getFilter();
+  <span style=color:#069;font-weight:700>var</span> range <span style=color:#555>=</span> filter.getRange();
+  <span style=color:#069;font-weight:700>var</span> slip <span style=color:#555>=</span> range.getColumn() <span style=color:#555>-</span> <span style=color:#f60>1</span>;
+  <span style=color:#069;font-weight:700>var</span> values <span style=color:#555>=</span> filter.getRange().getValues();
+  <span style=color:#09f;font-style:italic>// var columns =
+</span><span style=color:#09f;font-style:italic></span>  <span style=color:#069;font-weight:700>var</span> headers <span style=color:#555>=</span> values.slice(<span style=color:#f60>0</span>, <span style=color:#f60>1</span>)[<span style=color:#f60>0</span>];
+  <span style=color:#069;font-weight:700>var</span> criterias <span style=color:#555>=</span> headers.map(<span style=color:#069;font-weight:700>function</span>(header, i) {
+    <span style=color:#069;font-weight:700>return</span> {
+      header<span style=color:#555>:</span> header,
+      index<span style=color:#555>:</span> i,
+      criteria<span style=color:#555>:</span> filter.getColumnFilterCriteria(i <span style=color:#555>+</span> <span style=color:#f60>1</span>)
     };
   });
-  <span style="color:#069;font-weight:bold">this</span>.getCriterias <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">function</span>() {
-    <span style="color:#069;font-weight:bold">return</span> criterias;
+  <span style=color:#069;font-weight:700>this</span>.getCriterias <span style=color:#555>=</span> <span style=color:#069;font-weight:700>function</span>() {
+    <span style=color:#069;font-weight:700>return</span> criterias;
   };
-  <span style="color:#069;font-weight:bold">this</span>.getSlip <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">function</span>() {
-    <span style="color:#069;font-weight:bold">return</span> slip;
+  <span style=color:#069;font-weight:700>this</span>.getSlip <span style=color:#555>=</span> <span style=color:#069;font-weight:700>function</span>() {
+    <span style=color:#069;font-weight:700>return</span> slip;
   };
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Spreadsheet.Range} range
-</span><span style="color:#09f;font-style:italic"> * @param {number} slip
-</span><span style="color:#09f;font-style:italic"> */</span>
-FilterCriteriasStash.prototype.apply <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">function</span>(range, slip) {
-  slip <span style="color:#555">=</span> slip <span style="color:#555">||</span> <span style="color:#f60">0</span>;
-  <span style="color:#069;font-weight:bold">var</span> filter <span style="color:#555">=</span> range.newFilter();
-  <span style="color:#069;font-weight:bold">var</span> criterias <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">this</span>.getCriterias();
-  <span style="color:#069;font-weight:bold">var</span> values <span style="color:#555">=</span> filter.getRange().getValues();
-  <span style="color:#069;font-weight:bold">var</span> headers <span style="color:#555">=</span> values.slice(<span style="color:#f60">0</span>, <span style="color:#f60">1</span>)[<span style="color:#f60">0</span>];
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * @param {GoogleAppsScript.Spreadsheet.Range} range
+</span><span style=color:#09f;font-style:italic> * @param {number} slip
+</span><span style=color:#09f;font-style:italic> */</span>
+FilterCriteriasStash.prototype.apply <span style=color:#555>=</span> <span style=color:#069;font-weight:700>function</span>(range, slip) {
+  slip <span style=color:#555>=</span> slip <span style=color:#555>||</span> <span style=color:#f60>0</span>;
+  <span style=color:#069;font-weight:700>var</span> filter <span style=color:#555>=</span> range.newFilter();
+  <span style=color:#069;font-weight:700>var</span> criterias <span style=color:#555>=</span> <span style=color:#069;font-weight:700>this</span>.getCriterias();
+  <span style=color:#069;font-weight:700>var</span> values <span style=color:#555>=</span> filter.getRange().getValues();
+  <span style=color:#069;font-weight:700>var</span> headers <span style=color:#555>=</span> values.slice(<span style=color:#f60>0</span>, <span style=color:#f60>1</span>)[<span style=color:#f60>0</span>];
   
 };
 
-<span style="color:#069;font-weight:bold">var</span> firstCopyCol <span style="color:#555">=</span> <span style="color:#f60">3</span>;
-<span style="color:#069;font-weight:bold">var</span> numColCopy <span style="color:#555">=</span> <span style="color:#f60">2</span>;
-<span style="color:#069;font-weight:bold">var</span> noteTypeCol <span style="color:#555">=</span> <span style="color:#f60">2</span>;
-<span style="color:#069;font-weight:bold">var</span> sheet <span style="color:#555">=</span> SpreadsheetApp.getActiveSheet();
-<span style="color:#069;font-weight:bold">var</span> sheetName <span style="color:#555">=</span> <span style="color:#c30">&#39;MatchImport&#39;</span>;
+<span style=color:#069;font-weight:700>var</span> firstCopyCol <span style=color:#555>=</span> <span style=color:#f60>3</span>;
+<span style=color:#069;font-weight:700>var</span> numColCopy <span style=color:#555>=</span> <span style=color:#f60>2</span>;
+<span style=color:#069;font-weight:700>var</span> noteTypeCol <span style=color:#555>=</span> <span style=color:#f60>2</span>;
+<span style=color:#069;font-weight:700>var</span> sheet <span style=color:#555>=</span> SpreadsheetApp.getActiveSheet();
+<span style=color:#069;font-weight:700>var</span> sheetName <span style=color:#555>=</span> <span style=color:#c30>&#39;MatchImport&#39;</span>;
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> addNewCueNote() {
-  <span style="color:#069;font-weight:bold">if</span> (sheet.getSheetName() <span style="color:#555">===</span> sheetName) {
-    <span style="color:#069;font-weight:bold">var</span> filter <span style="color:#555">=</span> sheet.getFilter();
-    <span style="color:#069;font-weight:bold">if</span> (filter) {
-      <span style="color:#069;font-weight:bold">var</span> dataRange <span style="color:#555">=</span> sheet.getDataRange();
-      <span style="color:#069;font-weight:bold">var</span> oldNumColumns <span style="color:#555">=</span> filter.getRange().getNumColumns();
-      <span style="color:#069;font-weight:bold">var</span> newNumColumns <span style="color:#555">=</span> dataRange.getNumColumns();
-      <span style="color:#069;font-weight:bold">var</span> criterias <span style="color:#555">=</span> {};
-      <span style="color:#069;font-weight:bold">for</span> (<span style="color:#069;font-weight:bold">var</span> c <span style="color:#555">=</span> <span style="color:#f60">1</span>; c <span style="color:#555">&lt;=</span> oldNumColumns <span style="color:#555">&amp;&amp;</span> c <span style="color:#555">&lt;=</span> newNumColumns; c<span style="color:#555">++</span>) {
-        <span style="color:#069;font-weight:bold">var</span> criteria <span style="color:#555">=</span> filter.getColumnFilterCriteria(c);
-        <span style="color:#069;font-weight:bold">if</span> (criteria) criterias[<span style="color:#c30">&#39;_&#39;</span> <span style="color:#555">+</span> c] <span style="color:#555">=</span> criteria;
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> addNewCueNote() {
+  <span style=color:#069;font-weight:700>if</span> (sheet.getSheetName() <span style=color:#555>===</span> sheetName) {
+    <span style=color:#069;font-weight:700>var</span> filter <span style=color:#555>=</span> sheet.getFilter();
+    <span style=color:#069;font-weight:700>if</span> (filter) {
+      <span style=color:#069;font-weight:700>var</span> dataRange <span style=color:#555>=</span> sheet.getDataRange();
+      <span style=color:#069;font-weight:700>var</span> oldNumColumns <span style=color:#555>=</span> filter.getRange().getNumColumns();
+      <span style=color:#069;font-weight:700>var</span> newNumColumns <span style=color:#555>=</span> dataRange.getNumColumns();
+      <span style=color:#069;font-weight:700>var</span> criterias <span style=color:#555>=</span> {};
+      <span style=color:#069;font-weight:700>for</span> (<span style=color:#069;font-weight:700>var</span> c <span style=color:#555>=</span> <span style=color:#f60>1</span>; c <span style=color:#555>&lt;=</span> oldNumColumns <span style=color:#555>&amp;&amp;</span> c <span style=color:#555>&lt;=</span> newNumColumns; c<span style=color:#555>++</span>) {
+        <span style=color:#069;font-weight:700>var</span> criteria <span style=color:#555>=</span> filter.getColumnFilterCriteria(c);
+        <span style=color:#069;font-weight:700>if</span> (criteria) criterias[<span style=color:#c30>&#39;_&#39;</span> <span style=color:#555>+</span> c] <span style=color:#555>=</span> criteria;
       }
       filter.remove();
     }
 
-    <span style="color:#09f;font-style:italic">// START OF YOUR INSERT LOGIC
-</span><span style="color:#09f;font-style:italic"></span>    <span style="color:#069;font-weight:bold">var</span> noteType <span style="color:#555">=</span> <span style="color:#c30">&#39;CUE&#39;</span>;
+    <span style=color:#09f;font-style:italic>// START OF YOUR INSERT LOGIC
+</span><span style=color:#09f;font-style:italic></span>    <span style=color:#069;font-weight:700>var</span> noteType <span style=color:#555>=</span> <span style=color:#c30>&#39;CUE&#39;</span>;
 
-    <span style="color:#09f;font-style:italic">// ADDS ROW AND COPIES FORMULA DOWN
-</span><span style="color:#09f;font-style:italic"></span>    <span style="color:#09f;font-style:italic">// SETS VARIABLES FOR LAST ROW AND LAST COLUMN
-</span><span style="color:#09f;font-style:italic"></span>    <span style="color:#069;font-weight:bold">var</span> lRow <span style="color:#555">=</span> sheet.getLastRow();
-    <span style="color:#069;font-weight:bold">var</span> lCol <span style="color:#555">=</span> sheet.getLastColumn(); <span style="color:#09f;font-style:italic">// This is never used
-</span><span style="color:#09f;font-style:italic"></span>    <span style="color:#09f;font-style:italic">// INSERT LAST ROW
-</span><span style="color:#09f;font-style:italic"></span>    sheet.insertRowsAfter(lRow, <span style="color:#f60">1</span>);
+    <span style=color:#09f;font-style:italic>// ADDS ROW AND COPIES FORMULA DOWN
+</span><span style=color:#09f;font-style:italic></span>    <span style=color:#09f;font-style:italic>// SETS VARIABLES FOR LAST ROW AND LAST COLUMN
+</span><span style=color:#09f;font-style:italic></span>    <span style=color:#069;font-weight:700>var</span> lRow <span style=color:#555>=</span> sheet.getLastRow();
+    <span style=color:#069;font-weight:700>var</span> lCol <span style=color:#555>=</span> sheet.getLastColumn(); <span style=color:#09f;font-style:italic>// This is never used
+</span><span style=color:#09f;font-style:italic></span>    <span style=color:#09f;font-style:italic>// INSERT LAST ROW
+</span><span style=color:#09f;font-style:italic></span>    sheet.insertRowsAfter(lRow, <span style=color:#f60>1</span>);
 
-    <span style="color:#09f;font-style:italic">// COPY FORMULAS DOWN FOR SPECIFIED COLUMNS
-</span><span style="color:#09f;font-style:italic"></span>
+    <span style=color:#09f;font-style:italic>// COPY FORMULAS DOWN FOR SPECIFIED COLUMNS
+</span><span style=color:#09f;font-style:italic></span>
     sheet
-      .getRange(lRow, firstCopyCol, <span style="color:#f60">1</span>, numColCopy)
-      .copyTo(sheet.getRange(lRow <span style="color:#555">+</span> <span style="color:#f60">1</span>, firstCopyCol, <span style="color:#f60">1</span>, numColCopy));
+      .getRange(lRow, firstCopyCol, <span style=color:#f60>1</span>, numColCopy)
+      .copyTo(sheet.getRange(lRow <span style=color:#555>+</span> <span style=color:#f60>1</span>, firstCopyCol, <span style=color:#f60>1</span>, numColCopy));
 
-    <span style="color:#09f;font-style:italic">// SETS NOTE TYPE
-</span><span style="color:#09f;font-style:italic"></span>    sheet.getRange(sheet.getLastRow(), noteTypeCol).setValue(noteType);
+    <span style=color:#09f;font-style:italic>// SETS NOTE TYPE
+</span><span style=color:#09f;font-style:italic></span>    sheet.getRange(sheet.getLastRow(), noteTypeCol).setValue(noteType);
 
-    <span style="color:#09f;font-style:italic">//* * END OF YOUR INSERT LOGIC
-</span><span style="color:#09f;font-style:italic"></span>
-    <span style="color:#069;font-weight:bold">if</span> (<span style="color:#555">!</span>filter) <span style="color:#069;font-weight:bold">return</span>;
-    dataRange <span style="color:#555">=</span> sheet.getDataRange();
-    <span style="color:#069;font-weight:bold">var</span> newFilter <span style="color:#555">=</span> dataRange.createFilter();
-    newNumColumns <span style="color:#555">=</span> dataRange.getNumColumns();
-    <span style="color:#069;font-weight:bold">for</span> (c <span style="color:#555">=</span> <span style="color:#f60">1</span>; c <span style="color:#555">&lt;=</span> oldNumColumns <span style="color:#555">&amp;&amp;</span> c <span style="color:#555">&lt;=</span> newNumColumns; c<span style="color:#555">++</span>) {
-      <span style="color:#069;font-weight:bold">if</span> (criterias[<span style="color:#c30">&#39;_&#39;</span> <span style="color:#555">+</span> c])
-        newFilter.setColumnFilterCriteria(c, criterias[<span style="color:#c30">&#39;_&#39;</span> <span style="color:#555">+</span> c]);
+    <span style=color:#09f;font-style:italic>//* * END OF YOUR INSERT LOGIC
+</span><span style=color:#09f;font-style:italic></span>
+    <span style=color:#069;font-weight:700>if</span> (<span style=color:#555>!</span>filter) <span style=color:#069;font-weight:700>return</span>;
+    dataRange <span style=color:#555>=</span> sheet.getDataRange();
+    <span style=color:#069;font-weight:700>var</span> newFilter <span style=color:#555>=</span> dataRange.createFilter();
+    newNumColumns <span style=color:#555>=</span> dataRange.getNumColumns();
+    <span style=color:#069;font-weight:700>for</span> (c <span style=color:#555>=</span> <span style=color:#f60>1</span>; c <span style=color:#555>&lt;=</span> oldNumColumns <span style=color:#555>&amp;&amp;</span> c <span style=color:#555>&lt;=</span> newNumColumns; c<span style=color:#555>++</span>) {
+      <span style=color:#069;font-weight:700>if</span> (criterias[<span style=color:#c30>&#39;_&#39;</span> <span style=color:#555>+</span> c])
+        newFilter.setColumnFilterCriteria(c, criterias[<span style=color:#c30>&#39;_&#39;</span> <span style=color:#555>+</span> c]);
     }
   }
 }
-</code></pre></div>
-        
-      
-    
-  
-    
-  
-    
-  
-    
-  
-
-</article>
-
-
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13" title='Last modified Nov 4, 2019 by Alex Ivanov' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Nov 4, 2019</span>
-    </a>
-  </div>
-  
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_add-row-to-filtered-range/readme.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" alt="Edit" />
-      <span>Edit this page</span>
-    </a>
-    
-  </div>
-  
-</div>
-
-
-      
-    </div>
-
-    
-
-
-
-
-  </main>
-
-  
-</body>
-
-</html>
+</code></pre></div></article><div class="book-footer justify-between"><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13 title="Last modified Nov 4, 2019 by Alex Ivanov" target=_blank rel=noopener><img src=/svg/calendar.svg alt=Changed>
+<span>Nov 4, 2019</span></a></div><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_add-row-to-filtered-range/readme.md target=_blank rel=noopener><img src=/svg/edit.svg alt=Edit>
+<span>Edit this page</span></a></div></div></div></main></body></html>

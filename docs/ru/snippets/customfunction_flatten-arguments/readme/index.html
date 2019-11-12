@@ -1,206 +1,41 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="" />
-<meta property="og:description" content="Сведение аргументов для пользовательских функций Идея Положим, что уже есть какая-то функция. Например, она берет historical 1m OHLCV chart" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_flatten-arguments/readme/" />
-<meta property="og:site_name" content="Google Apps Script сниппеты" />
-<title>Readme.ru | Google Apps Script сниппеты</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-
-
-
-
-<link rel="stylesheet" href="/book.min.css" integrity="">
-
-
-
-<script defer src="/search.min.js" integrity=""></script>
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://google-apps-script-snippets.contributor.pw/"><span>Google Apps Script сниппеты</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    <ul>
-<li><p><strong>Публикации</strong></p>
-
-<ul>
-<li><a href="/ru/snippets/">Сниппеты</a></li>
-</ul></li>
-
-<li><p><strong>Переводы</strong></p>
-
-<ul>
-<li><a href="/">English</a></li>
-<li><a href="/ru/">Русский</a></li>
-</ul></li>
-</ul>
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>Readme.ru</strong>
-</header>
-
-      
-<header class="markdown">
-  <h1></h1>
-</header>
-<article class="markdown">
-
-<h1 id="сведение-аргументов-для-пользовательских-функций">Сведение аргументов для пользовательских функций</h1>
-
-<h2 id="идея">Идея</h2>
-
-<p>Положим, что уже есть какая-то функция. Например, она берет <a href="https://cex.io/rest-api#historical-1m-ohlcv-chart">historical 1m OHLCV chart</a></p>
-<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
-</code></pre></div>
-  
-
-  
-  
-    
-  
-    
-  
-    
-      
-      
-        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">// https://stackoverflow.com/questions/58448333/custom-function-udf-how-to-input-values-as-a-range/58542178#58542178
-</span><span style="color:#09f;font-style:italic"></span><span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @param {*} date
-</span><span style="color:#09f;font-style:italic"> * @param {*} pair
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> OHLCV_CEXIO_1d(date, pair) {
-  <span style="color:#069;font-weight:bold">try</span> {
-    date <span style="color:#555">=</span> <span style="color:#366">Array</span>.isArray(date) <span style="color:#555">?</span> date.flat(<span style="color:#f60">2</span>) <span style="color:#555">:</span> [date];
-    pair <span style="color:#555">=</span> <span style="color:#366">Array</span>.isArray(pair) <span style="color:#555">?</span> pair.flat(<span style="color:#f60">2</span>) <span style="color:#555">:</span> [pair];
-    <span style="color:#069;font-weight:bold">return</span> date.map(<span style="color:#069;font-weight:bold">function</span>(date) {
-      <span style="color:#069;font-weight:bold">return</span> pair.map(<span style="color:#069;font-weight:bold">function</span>(pair) {
-        <span style="color:#069;font-weight:bold">var</span> url <span style="color:#555">=</span>
-          <span style="color:#c30">&#39;https://cex.io/api/ohlcv/hd/&#39;</span> <span style="color:#555">+</span>
-          date <span style="color:#555">+</span>
-          <span style="color:#c30">&#39;/&#39;</span> <span style="color:#555">+</span>
-          pair <span style="color:#555">+</span>
-          <span style="color:#c30">&#39;/&#39;</span>;
-        <span style="color:#069;font-weight:bold">var</span> response <span style="color:#555">=</span> UrlFetchApp.fetch(url, {
-          muteHttpExceptions<span style="color:#555">:</span> <span style="color:#069;font-weight:bold">true</span>
+<!doctype html><html lang=ru><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta property=og:title content><meta property=og:description content="Сведение аргументов для пользовательских функций Идея Положим, что уже есть какая-то функция. Например, она берет historical 1m OHLCV chart"><meta property=og:type content=article><meta property=og:url content=https://google-apps-script-snippets.contributor.pw/ru/snippets/customfunction_flatten-arguments/readme/><meta property=og:site_name content="Google Apps Script сниппеты"><title>Readme.ru | Google Apps Script сниппеты</title><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.css integrity><script defer src=/search.min.js integrity></script></head><body><input type=checkbox class=hidden id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav><h2 class=book-brand><a href=https://google-apps-script-snippets.contributor.pw/><span>Google Apps Script сниппеты</span></a></h2><div class=book-search><input type=text placeholder=Search id=book-search-input maxlength=64><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><p><strong>Публикации</strong></p><ul><li><a href=/ru/snippets/>Сниппеты</a></li></ul></li><li><p><strong>Переводы</strong></p><ul><li><a href=/>English</a></li><li><a href=/ru/>Русский</a></li></ul></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class="flex align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Readme.ru</strong></header><header class=markdown><h1></h1></header><article class=markdown><h1 id=сведение-аргументов-для-пользовательских-функций>Сведение аргументов для пользовательских функций</h1><h2 id=идея>Идея</h2><p>Положим, что уже есть какая-то функция. Например, она берет <a href=https://cex.io/rest-api#historical-1m-ohlcv-chart>historical 1m OHLCV chart</a></p><div class=highlight><pre style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>
+</code></pre></div><div class=highlight><pre style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#09f;font-style:italic>// https://stackoverflow.com/questions/58448333/custom-function-udf-how-to-input-values-as-a-range/58542178#58542178
+</span><span style=color:#09f;font-style:italic></span><span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @param {*} date
+</span><span style=color:#09f;font-style:italic> * @param {*} pair
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> OHLCV_CEXIO_1d(date, pair) {
+  <span style=color:#069;font-weight:700>try</span> {
+    date <span style=color:#555>=</span> <span style=color:#366>Array</span>.isArray(date) <span style=color:#555>?</span> date.flat(<span style=color:#f60>2</span>) <span style=color:#555>:</span> [date];
+    pair <span style=color:#555>=</span> <span style=color:#366>Array</span>.isArray(pair) <span style=color:#555>?</span> pair.flat(<span style=color:#f60>2</span>) <span style=color:#555>:</span> [pair];
+    <span style=color:#069;font-weight:700>return</span> date.map(<span style=color:#069;font-weight:700>function</span>(date) {
+      <span style=color:#069;font-weight:700>return</span> pair.map(<span style=color:#069;font-weight:700>function</span>(pair) {
+        <span style=color:#069;font-weight:700>var</span> url <span style=color:#555>=</span>
+          <span style=color:#c30>&#39;https://cex.io/api/ohlcv/hd/&#39;</span> <span style=color:#555>+</span>
+          date <span style=color:#555>+</span>
+          <span style=color:#c30>&#39;/&#39;</span> <span style=color:#555>+</span>
+          pair <span style=color:#555>+</span>
+          <span style=color:#c30>&#39;/&#39;</span>;
+        <span style=color:#069;font-weight:700>var</span> response <span style=color:#555>=</span> UrlFetchApp.fetch(url, {
+          muteHttpExceptions<span style=color:#555>:</span> <span style=color:#069;font-weight:700>true</span>
         });
-        <span style="color:#069;font-weight:bold">var</span> json <span style="color:#555">=</span> response.getContentText();
-        <span style="color:#09f;font-style:italic">// return json;
-</span><span style="color:#09f;font-style:italic"></span>        <span style="color:#069;font-weight:bold">var</span> data <span style="color:#555">=</span> JSON.parse(json);
-        <span style="color:#069;font-weight:bold">var</span> result <span style="color:#555">=</span> data.data1d;
-        <span style="color:#069;font-weight:bold">return</span> result;
+        <span style=color:#069;font-weight:700>var</span> json <span style=color:#555>=</span> response.getContentText();
+        <span style=color:#09f;font-style:italic>// return json;
+</span><span style=color:#09f;font-style:italic></span>        <span style=color:#069;font-weight:700>var</span> data <span style=color:#555>=</span> JSON.parse(json);
+        <span style=color:#069;font-weight:700>var</span> result <span style=color:#555>=</span> data.data1d;
+        <span style=color:#069;font-weight:700>return</span> result;
       });
     });
-  } <span style="color:#069;font-weight:bold">catch</span> (err) {
-    <span style="color:#069;font-weight:bold">return</span> Utilities.formatString(
-      <span style="color:#c30">&#39;%s\n%s&#39;</span>,
+  } <span style=color:#069;font-weight:700>catch</span> (err) {
+    <span style=color:#069;font-weight:700>return</span> Utilities.formatString(
+      <span style=color:#c30>&#39;%s\n%s&#39;</span>,
       err.message,
       err.stack
     );
   }
 }
-</code></pre></div>
-        
-      
-    
-  
-    
-  
-    
-  
-
-</article>
-
-
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13" title='Last modified Nov 4, 2019 by Alex Ivanov' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Nov 4, 2019</span>
-    </a>
-  </div>
-  
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/customfunction_flatten-arguments/readme.ru.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" alt="Edit" />
-      <span>Edit this page</span>
-    </a>
-    
-  </div>
-  
-</div>
-
-
-      
-    </div>
-
-    
-
-
-
-
-  </main>
-
-  
-</body>
-
-</html>
+</code></pre></div></article><div class="book-footer justify-between"><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13 title="Last modified Nov 4, 2019 by Alex Ivanov" target=_blank rel=noopener><img src=/svg/calendar.svg alt=Changed>
+<span>Nov 4, 2019</span></a></div><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/customfunction_flatten-arguments/readme.ru.md target=_blank rel=noopener><img src=/svg/edit.svg alt=Edit>
+<span>Edit this page</span></a></div></div></div></main></body></html>

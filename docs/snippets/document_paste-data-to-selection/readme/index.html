@@ -1,207 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="" />
-<meta property="og:description" content=" document_paste-data-to-selection " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://google-apps-script-snippets.contributor.pw/snippets/document_paste-data-to-selection/readme/" />
-<meta property="og:site_name" content="Google Apps Script snippets" />
-<title>Readme | Google Apps Script snippets</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-
-
-
-
-<link rel="stylesheet" href="/book.min.css" integrity="">
-
-
-
-<script defer src="/search.min.js" integrity=""></script>
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://google-apps-script-snippets.contributor.pw/"><span>Google Apps Script snippets</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    <ul>
-<li><p><strong>Publications</strong></p>
-
-<ul>
-<li><a href="/snippets/">Snippets</a></li>
-</ul></li>
-
-<li><p><strong>Translations</strong></p>
-
-<ul>
-<li><a href="/">English</a></li>
-<li><a href="/ru/">Русский</a></li>
-</ul></li>
-</ul>
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>Readme</strong>
-</header>
-
-      
-<header class="markdown">
-  <h1></h1>
-</header>
-<article class="markdown">
-
-<h1 id="document-paste-data-to-selection">document_paste-data-to-selection</h1>
-
-<p><img src="./screenrecord.gif" alt="alt" /></p>
-
-  
-
-  
-  
-    
-  
-    
-  
-    
-      
-      
-        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * Runs the snippet
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> run() {
-  pasteTextToSelection_(<span style="color:#069;font-weight:bold">new</span> <span style="color:#366">Date</span>().toISOString().split(<span style="color:#c30">&#39;T&#39;</span>)[<span style="color:#f60">0</span>]);
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta property=og:title content><meta property=og:description content=document_paste-data-to-selection><meta property=og:type content=article><meta property=og:url content=https://google-apps-script-snippets.contributor.pw/snippets/document_paste-data-to-selection/readme/><meta property=og:site_name content="Google Apps Script snippets"><title>Readme | Google Apps Script snippets</title><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.css integrity><script defer src=/search.min.js integrity></script></head><body><input type=checkbox class=hidden id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav><h2 class=book-brand><a href=https://google-apps-script-snippets.contributor.pw/><span>Google Apps Script snippets</span></a></h2><div class=book-search><input type=text placeholder=Search id=book-search-input maxlength=64><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><p><strong>Publications</strong></p><ul><li><a href=/snippets/>Snippets</a></li></ul></li><li><p><strong>Translations</strong></p><ul><li><a href=/>English</a></li><li><a href=/ru/>Русский</a></li></ul></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class="flex align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Readme</strong></header><header class=markdown><h1></h1></header><article class=markdown><h1 id=document-paste-data-to-selection>document_paste-data-to-selection</h1><p><img src=./screenrecord.gif alt=alt></p><div class=highlight><pre style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * Runs the snippet
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> run() {
+  pasteTextToSelection_(<span style=color:#069;font-weight:700>new</span> <span style=color:#366>Date</span>().toISOString().split(<span style=color:#c30>&#39;T&#39;</span>)[<span style=color:#f60>0</span>]);
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * Paste the text to selection
-</span><span style="color:#09f;font-style:italic"> * @param {string} text
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> pasteTextToSelection_(text) {
-  <span style="color:#069;font-weight:bold">var</span> doc <span style="color:#555">=</span> DocumentApp.getActiveDocument();
-  <span style="color:#069;font-weight:bold">var</span> selection <span style="color:#555">=</span> doc.getSelection();
-  <span style="color:#069;font-weight:bold">if</span> (selection) {
-    <span style="color:#069;font-weight:bold">var</span> rEls <span style="color:#555">=</span> selection.getRangeElements();
-    rEls.forEach(<span style="color:#069;font-weight:bold">function</span>(rEl) {
-      <span style="color:#069;font-weight:bold">var</span> element <span style="color:#555">=</span> rEl.getElement();
-      <span style="color:#069;font-weight:bold">switch</span> (element.getType()) {
-        <span style="color:#069;font-weight:bold">case</span> DocumentApp.ElementType.TEXT<span style="color:#555">:</span>
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * Paste the text to selection
+</span><span style=color:#09f;font-style:italic> * @param {string} text
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> pasteTextToSelection_(text) {
+  <span style=color:#069;font-weight:700>var</span> doc <span style=color:#555>=</span> DocumentApp.getActiveDocument();
+  <span style=color:#069;font-weight:700>var</span> selection <span style=color:#555>=</span> doc.getSelection();
+  <span style=color:#069;font-weight:700>if</span> (selection) {
+    <span style=color:#069;font-weight:700>var</span> rEls <span style=color:#555>=</span> selection.getRangeElements();
+    rEls.forEach(<span style=color:#069;font-weight:700>function</span>(rEl) {
+      <span style=color:#069;font-weight:700>var</span> element <span style=color:#555>=</span> rEl.getElement();
+      <span style=color:#069;font-weight:700>switch</span> (element.getType()) {
+        <span style=color:#069;font-weight:700>case</span> DocumentApp.ElementType.TEXT<span style=color:#555>:</span>
           element
             .asText()
             .deleteText(rEl.getStartOffset(), rEl.getEndOffsetInclusive());
-          <span style="color:#069;font-weight:bold">break</span>;
-        <span style="color:#069;font-weight:bold">case</span> DocumentApp.ElementType.PARAGRAPH<span style="color:#555">:</span>
+          <span style=color:#069;font-weight:700>break</span>;
+        <span style=color:#069;font-weight:700>case</span> DocumentApp.ElementType.PARAGRAPH<span style=color:#555>:</span>
           element.removeFromParent();
-          <span style="color:#069;font-weight:bold">break</span>;
-        <span style="color:#069;font-weight:bold">case</span> DocumentApp.ElementType.TABLE_CELL<span style="color:#555">:</span>
-          element.asText().setText(<span style="color:#c30">&#39;&#39;</span>);
-          <span style="color:#069;font-weight:bold">break</span>;
+          <span style=color:#069;font-weight:700>break</span>;
+        <span style=color:#069;font-weight:700>case</span> DocumentApp.ElementType.TABLE_CELL<span style=color:#555>:</span>
+          element.asText().setText(<span style=color:#c30>&#39;&#39;</span>);
+          <span style=color:#069;font-weight:700>break</span>;
       }
     });
 
     selection
-      .getRangeElements()[<span style="color:#f60">0</span>]
+      .getRangeElements()[<span style=color:#f60>0</span>]
       .getElement()
       .asText()
-      .insertText(selection.getRangeElements()[<span style="color:#f60">0</span>].getStartOffset(), text);
-  } <span style="color:#069;font-weight:bold">else</span> {
-    Logger.log(<span style="color:#c30">&#39;There is no a selection&#39;</span>);
+      .insertText(selection.getRangeElements()[<span style=color:#f60>0</span>].getStartOffset(), text);
+  } <span style=color:#069;font-weight:700>else</span> {
+    Logger.log(<span style=color:#c30>&#39;There is no a selection&#39;</span>);
   }
 }
-</code></pre></div>
-        
-      
-    
-  
-    
-  
-
-</article>
-
-
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13" title='Last modified Nov 4, 2019 by Alex Ivanov' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Nov 4, 2019</span>
-    </a>
-  </div>
-  
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/document_paste-data-to-selection/readme.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" alt="Edit" />
-      <span>Edit this page</span>
-    </a>
-    
-  </div>
-  
-</div>
-
-
-      
-    </div>
-
-    
-
-
-
-
-  </main>
-
-  
-</body>
-
-</html>
+</code></pre></div></article><div class="book-footer justify-between"><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13 title="Last modified Nov 4, 2019 by Alex Ivanov" target=_blank rel=noopener><img src=/svg/calendar.svg alt=Changed>
+<span>Nov 4, 2019</span></a></div><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/document_paste-data-to-selection/readme.md target=_blank rel=noopener><img src=/svg/edit.svg alt=Edit>
+<span>Edit this page</span></a></div></div></div></main></body></html>

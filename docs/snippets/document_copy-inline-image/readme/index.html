@@ -1,215 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta property=og:title content="Copy the inline image"><meta property=og:description content="Copy the inline image by id doc-to-doc"><meta property=og:type content=article><meta property=og:url content=https://google-apps-script-snippets.contributor.pw/snippets/document_copy-inline-image/readme/><meta property=article:modified_time content=2019-11-04T06:06:35+03:00><meta property=og:site_name content="Google Apps Script snippets"><title>Copy the inline image | Google Apps Script snippets</title><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.css integrity><script defer src=/search.min.js integrity></script></head><body><input type=checkbox class=hidden id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav><h2 class=book-brand><a href=https://google-apps-script-snippets.contributor.pw/><span>Google Apps Script snippets</span></a></h2><div class=book-search><input type=text placeholder=Search id=book-search-input maxlength=64><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><p><strong>Publications</strong></p><ul><li><a href=/snippets/>Snippets</a></li></ul></li><li><p><strong>Translations</strong></p><ul><li><a href=/>English</a></li><li><a href=/ru/>Русский</a></li></ul></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class="flex align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Copy the inline image</strong></header><header class=markdown><h1>Copy the inline image</h1></header><article class=markdown><h2 id=copy-the-inline-image-by-id-doc-to-doc>Copy the inline image by id doc-to-doc</h2><div class=highlight><pre style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#09f;font-style:italic>/* exported run, getBlobImageByIndexFromDoc_ */</span>
 
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Copy the inline image" />
-<meta property="og:description" content=" Copy the inline image by id doc-to-doc " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://google-apps-script-snippets.contributor.pw/snippets/document_copy-inline-image/readme/" />
-<meta property="article:modified_time" content="2019-11-04T06:06:35+03:00" /><meta property="og:site_name" content="Google Apps Script snippets" />
-<title>Copy the inline image | Google Apps Script snippets</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-
-
-
-
-<link rel="stylesheet" href="/book.min.css" integrity="">
-
-
-
-<script defer src="/search.min.js" integrity=""></script>
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://google-apps-script-snippets.contributor.pw/"><span>Google Apps Script snippets</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    <ul>
-<li><p><strong>Publications</strong></p>
-
-<ul>
-<li><a href="/snippets/">Snippets</a></li>
-</ul></li>
-
-<li><p><strong>Translations</strong></p>
-
-<ul>
-<li><a href="/">English</a></li>
-<li><a href="/ru/">Русский</a></li>
-</ul></li>
-</ul>
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>Copy the inline image</strong>
-</header>
-
-      
-<header class="markdown">
-  <h1>Copy the inline image</h1>
-</header>
-<article class="markdown">
-
-<h2 id="copy-the-inline-image-by-id-doc-to-doc">Copy the inline image by id doc-to-doc</h2>
-
-  
-
-  
-  
-    
-  
-    
-  
-    
-      
-      
-        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/* exported run, getBlobImageByIndexFromDoc_ */</span>
-
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * @param {string} from The ID of a Document with the inlineImage
-</span><span style="color:#09f;font-style:italic"> * @param {number} index The index of the inlineImage. Starts from 0
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> getBlobImageByIndexFromDoc_(from, index) {
-  <span style="color:#069;font-weight:bold">var</span> template <span style="color:#555">=</span>
-    <span style="color:#c30">&#39;https://docs.google.com/feeds/download/documents/export/Export&#39;</span> <span style="color:#555">+</span>
-    <span style="color:#c30">&#39;?id=%s&amp;exportFormat=zip&#39;</span>;
-  <span style="color:#069;font-weight:bold">var</span> url <span style="color:#555">=</span> Utilities.formatString(template, from);
-  <span style="color:#069;font-weight:bold">var</span> file <span style="color:#555">=</span> UrlFetchApp.fetch(url, {
-    headers<span style="color:#555">:</span> {
-      Authorization<span style="color:#555">:</span> <span style="color:#c30">&#39;Bearer &#39;</span> <span style="color:#555">+</span> ScriptApp.getOAuthToken()
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * @param {string} from The ID of a Document with the inlineImage
+</span><span style=color:#09f;font-style:italic> * @param {number} index The index of the inlineImage. Starts from 0
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> getBlobImageByIndexFromDoc_(from, index) {
+  <span style=color:#069;font-weight:700>var</span> template <span style=color:#555>=</span>
+    <span style=color:#c30>&#39;https://docs.google.com/feeds/download/documents/export/Export&#39;</span> <span style=color:#555>+</span>
+    <span style=color:#c30>&#39;?id=%s&amp;exportFormat=zip&#39;</span>;
+  <span style=color:#069;font-weight:700>var</span> url <span style=color:#555>=</span> Utilities.formatString(template, from);
+  <span style=color:#069;font-weight:700>var</span> file <span style=color:#555>=</span> UrlFetchApp.fetch(url, {
+    headers<span style=color:#555>:</span> {
+      Authorization<span style=color:#555>:</span> <span style=color:#c30>&#39;Bearer &#39;</span> <span style=color:#555>+</span> ScriptApp.getOAuthToken()
     }
   }).getBlob();
-  <span style="color:#069;font-weight:bold">var</span> blobs <span style="color:#555">=</span> Utilities.unzip(file);
-  <span style="color:#069;font-weight:bold">var</span> imagePath <span style="color:#555">=</span> blobs
-    .find(<span style="color:#069;font-weight:bold">function</span>(b) {
-      <span style="color:#069;font-weight:bold">return</span> <span style="color:#3aa">/^.+?\.html$/</span>.test(b.getName());
+  <span style=color:#069;font-weight:700>var</span> blobs <span style=color:#555>=</span> Utilities.unzip(file);
+  <span style=color:#069;font-weight:700>var</span> imagePath <span style=color:#555>=</span> blobs
+    .find(<span style=color:#069;font-weight:700>function</span>(b) {
+      <span style=color:#069;font-weight:700>return</span> <span style=color:#3aa>/^.+?\.html$/</span>.test(b.getName());
     })
     .getDataAsString()
-    .match(<span style="color:#3aa">/&lt;img.+?src=&#34;images\/image\d+\..{2,4}&#34;.+?&gt;/g</span>)
+    .match(<span style=color:#3aa>/&lt;img.+?src=&#34;images\/image\d+\..{2,4}&#34;.+?&gt;/g</span>)
     [index].replace(
-      <span style="color:#3aa">/^.*?&#34;(images\/image\d+\..{2,4})&#34;.*?$/g</span>,
-      <span style="color:#c30">&#39;$1&#39;</span>
+      <span style=color:#3aa>/^.*?&#34;(images\/image\d+\..{2,4})&#34;.*?$/g</span>,
+      <span style=color:#c30>&#39;$1&#39;</span>
     );
-  <span style="color:#069;font-weight:bold">var</span> patt <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">new</span> <span style="color:#366">RegExp</span>(imagePath);
-  <span style="color:#069;font-weight:bold">var</span> blob <span style="color:#555">=</span> blobs.find(<span style="color:#069;font-weight:bold">function</span>(b) {
-    <span style="color:#069;font-weight:bold">return</span> patt.test(b.getName());
+  <span style=color:#069;font-weight:700>var</span> patt <span style=color:#555>=</span> <span style=color:#069;font-weight:700>new</span> <span style=color:#366>RegExp</span>(imagePath);
+  <span style=color:#069;font-weight:700>var</span> blob <span style=color:#555>=</span> blobs.find(<span style=color:#069;font-weight:700>function</span>(b) {
+    <span style=color:#069;font-weight:700>return</span> patt.test(b.getName());
   });
-  <span style="color:#069;font-weight:bold">return</span> blob;
+  <span style=color:#069;font-weight:700>return</span> blob;
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * Runs the example
-</span><span style="color:#09f;font-style:italic"> * @ignore
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> run() {
-  <span style="color:#069;font-weight:bold">var</span> blob <span style="color:#555">=</span> getBlobImageByIndexFromDoc_(
-    <span style="color:#c30">&#39;1HhlzUD2RuN0coxp7IuOBwiS4hYWAKdjUzUyiyoFjH4s&#39;</span>,
-    <span style="color:#f60">0</span>
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * Runs the example
+</span><span style=color:#09f;font-style:italic> * @ignore
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> run() {
+  <span style=color:#069;font-weight:700>var</span> blob <span style=color:#555>=</span> getBlobImageByIndexFromDoc_(
+    <span style=color:#c30>&#39;1HhlzUD2RuN0coxp7IuOBwiS4hYWAKdjUzUyiyoFjH4s&#39;</span>,
+    <span style=color:#f60>0</span>
   );
   DocumentApp.openById(
-    <span style="color:#c30">&#39;1h7_W36wN-9p2Msabj-ZBcHLGQWdX-QtB_YqBpsmrMp0&#39;</span>
+    <span style=color:#c30>&#39;1h7_W36wN-9p2Msabj-ZBcHLGQWdX-QtB_YqBpsmrMp0&#39;</span>
   )
     .getBody()
     .clear()
     .appendImage(blob);
 }
-</code></pre></div>
-        
-      
-    
-  
-    
-  
-    
-  
-
-</article>
-
-
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13" title='Last modified Nov 4, 2019 by Alex Ivanov' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Nov 4, 2019</span>
-    </a>
-  </div>
-  
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/document_copy-inline-image/readme.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" alt="Edit" />
-      <span>Edit this page</span>
-    </a>
-    
-  </div>
-  
-</div>
-
-
-      
-    </div>
-
-    
-
-
-
-
-  </main>
-
-  
-</body>
-
-</html>
+</code></pre></div></article><div class="book-footer justify-between"><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13 title="Last modified Nov 4, 2019 by Alex Ivanov" target=_blank rel=noopener><img src=/svg/calendar.svg alt=Changed>
+<span>Nov 4, 2019</span></a></div><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/document_copy-inline-image/readme.md target=_blank rel=noopener><img src=/svg/edit.svg alt=Edit>
+<span>Edit this page</span></a></div></div></div></main></body></html>

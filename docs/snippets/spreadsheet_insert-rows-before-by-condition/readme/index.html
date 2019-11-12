@@ -1,235 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta property=og:title content><meta property=og:description content=insert-rows-before-by-condition><meta property=og:type content=article><meta property=og:url content=https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_insert-rows-before-by-condition/readme/><meta property=og:site_name content="Google Apps Script snippets"><title>Readme | Google Apps Script snippets</title><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.css integrity><script defer src=/search.min.js integrity></script></head><body><input type=checkbox class=hidden id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav><h2 class=book-brand><a href=https://google-apps-script-snippets.contributor.pw/><span>Google Apps Script snippets</span></a></h2><div class=book-search><input type=text placeholder=Search id=book-search-input maxlength=64><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><p><strong>Publications</strong></p><ul><li><a href=/snippets/>Snippets</a></li></ul></li><li><p><strong>Translations</strong></p><ul><li><a href=/>English</a></li><li><a href=/ru/>Русский</a></li></ul></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class="flex align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Readme</strong></header><header class=markdown><h1></h1></header><article class=markdown><h1 id=insert-rows-before-by-condition>insert-rows-before-by-condition</h1><p><img src=./screenrecord.gif alt></p><div class=highlight><pre style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * @file Insert empty rows before by a condition
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> */</span>
 
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="" />
-<meta property="og:description" content=" insert-rows-before-by-condition " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_insert-rows-before-by-condition/readme/" />
-<meta property="og:site_name" content="Google Apps Script snippets" />
-<title>Readme | Google Apps Script snippets</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
+<span style=color:#09f;font-style:italic>/* exported userActionInsertRowsBefore */</span>
 
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *{@link https://stackoverflow.com/a/54731582/1393023}
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> runSample1() {
+  <span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic>   * @type {conditionCallback}
+</span><span style=color:#09f;font-style:italic>   */</span>
+  <span style=color:#069;font-weight:700>var</span> cb;
 
-
-
-<link rel="stylesheet" href="/book.min.css" integrity="">
-
-
-
-<script defer src="/search.min.js" integrity=""></script>
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://google-apps-script-snippets.contributor.pw/"><span>Google Apps Script snippets</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    <ul>
-<li><p><strong>Publications</strong></p>
-
-<ul>
-<li><a href="/snippets/">Snippets</a></li>
-</ul></li>
-
-<li><p><strong>Translations</strong></p>
-
-<ul>
-<li><a href="/">English</a></li>
-<li><a href="/ru/">Русский</a></li>
-</ul></li>
-</ul>
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>Readme</strong>
-</header>
-
-      
-<header class="markdown">
-  <h1></h1>
-</header>
-<article class="markdown">
-
-<h1 id="insert-rows-before-by-condition">insert-rows-before-by-condition</h1>
-
-<p><img src="./screenrecord.gif" alt="" /></p>
-
-  
-
-  
-  
-    
-  
-    
-  
-    
-      
-      
-        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * @file Insert empty rows before by a condition
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> */</span>
-
-<span style="color:#09f;font-style:italic">/* exported userActionInsertRowsBefore */</span>
-
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *{@link https://stackoverflow.com/a/54731582/1393023}
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> runSample1() {
-  <span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic">   * @type {conditionCallback}
-</span><span style="color:#09f;font-style:italic">   */</span>
-  <span style="color:#069;font-weight:bold">var</span> cb;
-
-  cb <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">function</span>(row, i, values) {
-    <span style="color:#09f;font-style:italic">// Returns true if it&#39;s not the first row, it contains an asterks
-</span><span style="color:#09f;font-style:italic"></span>    <span style="color:#09f;font-style:italic">// and there is no an empty row before
-</span><span style="color:#09f;font-style:italic"></span>    <span style="color:#069;font-weight:bold">return</span> values[i <span style="color:#555">-</span> <span style="color:#f60">1</span>] <span style="color:#555">&amp;&amp;</span> <span style="color:#3aa">/\*/</span>.test(row[<span style="color:#f60">0</span>]) <span style="color:#555">&amp;&amp;</span> values[i <span style="color:#555">-</span> <span style="color:#f60">1</span>].join(<span style="color:#c30">&#39;&#39;</span>) <span style="color:#555">!==</span> <span style="color:#c30">&#39;&#39;</span>;
+  cb <span style=color:#555>=</span> <span style=color:#069;font-weight:700>function</span>(row, i, values) {
+    <span style=color:#09f;font-style:italic>// Returns true if it&#39;s not the first row, it contains an asterks
+</span><span style=color:#09f;font-style:italic></span>    <span style=color:#09f;font-style:italic>// and there is no an empty row before
+</span><span style=color:#09f;font-style:italic></span>    <span style=color:#069;font-weight:700>return</span> values[i <span style=color:#555>-</span> <span style=color:#f60>1</span>] <span style=color:#555>&amp;&amp;</span> <span style=color:#3aa>/\*/</span>.test(row[<span style=color:#f60>0</span>]) <span style=color:#555>&amp;&amp;</span> values[i <span style=color:#555>-</span> <span style=color:#f60>1</span>].join(<span style=color:#c30>&#39;&#39;</span>) <span style=color:#555>!==</span> <span style=color:#c30>&#39;&#39;</span>;
   };
-  <span style="color:#069;font-weight:bold">var</span> sheet <span style="color:#555">=</span> SpreadsheetApp.getActiveSheet();
+  <span style=color:#069;font-weight:700>var</span> sheet <span style=color:#555>=</span> SpreadsheetApp.getActiveSheet();
   insertRowBeforeByCondition_(sheet, cb);
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *{@link https://stackoverflow.com/a/54731582/1393023}
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> runSample2() {
-  <span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic">   * @type {conditionCallback}
-</span><span style="color:#09f;font-style:italic">   */</span>
-  <span style="color:#069;font-weight:bold">var</span> cb;
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *{@link https://stackoverflow.com/a/54731582/1393023}
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> runSample2() {
+  <span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic>   * @type {conditionCallback}
+</span><span style=color:#09f;font-style:italic>   */</span>
+  <span style=color:#069;font-weight:700>var</span> cb;
 
-  cb <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">function</span>(row, i, values) {
-    <span style="color:#09f;font-style:italic">// Returns true if it&#39;s not the first row, the first cell of a row does not equal one of previous row
-</span><span style="color:#09f;font-style:italic"></span>    <span style="color:#09f;font-style:italic">// and there is no an empty row before
-</span><span style="color:#09f;font-style:italic"></span>    <span style="color:#069;font-weight:bold">return</span> (
-      values[i <span style="color:#555">-</span> <span style="color:#f60">1</span>] <span style="color:#555">&amp;&amp;</span>
-      values[i <span style="color:#555">-</span> <span style="color:#f60">1</span>][<span style="color:#f60">0</span>] <span style="color:#555">!==</span> row[<span style="color:#f60">0</span>] <span style="color:#555">&amp;&amp;</span>
-      values[i <span style="color:#555">-</span> <span style="color:#f60">1</span>].join(<span style="color:#c30">&#39;&#39;</span>) <span style="color:#555">!==</span> <span style="color:#c30">&#39;&#39;</span>
+  cb <span style=color:#555>=</span> <span style=color:#069;font-weight:700>function</span>(row, i, values) {
+    <span style=color:#09f;font-style:italic>// Returns true if it&#39;s not the first row, the first cell of a row does not equal one of previous row
+</span><span style=color:#09f;font-style:italic></span>    <span style=color:#09f;font-style:italic>// and there is no an empty row before
+</span><span style=color:#09f;font-style:italic></span>    <span style=color:#069;font-weight:700>return</span> (
+      values[i <span style=color:#555>-</span> <span style=color:#f60>1</span>] <span style=color:#555>&amp;&amp;</span>
+      values[i <span style=color:#555>-</span> <span style=color:#f60>1</span>][<span style=color:#f60>0</span>] <span style=color:#555>!==</span> row[<span style=color:#f60>0</span>] <span style=color:#555>&amp;&amp;</span>
+      values[i <span style=color:#555>-</span> <span style=color:#f60>1</span>].join(<span style=color:#c30>&#39;&#39;</span>) <span style=color:#555>!==</span> <span style=color:#c30>&#39;&#39;</span>
     );
   };
-  <span style="color:#069;font-weight:bold">var</span> sheet <span style="color:#555">=</span> SpreadsheetApp.getActiveSheet();
+  <span style=color:#069;font-weight:700>var</span> sheet <span style=color:#555>=</span> SpreadsheetApp.getActiveSheet();
   insertRowBeforeByCondition_(sheet, cb);
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * Insert row before by a condition
-</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
-</span><span style="color:#09f;font-style:italic"> * @param {conditionCallback} condition insert or skip the row
-</span><span style="color:#09f;font-style:italic"> * @return {GoogleAppsScript.Spreadsheet.Sheet}
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> insertRowBeforeByCondition_(sheet, condition) {
-  <span style="color:#069;font-weight:bold">var</span> dataRange <span style="color:#555">=</span> sheet.getDataRange();
-  <span style="color:#069;font-weight:bold">var</span> values <span style="color:#555">=</span> dataRange.getValues();
-  <span style="color:#069;font-weight:bold">var</span> i <span style="color:#555">=</span> values.length;
-  <span style="color:#069;font-weight:bold">while</span> (i<span style="color:#555">--</span> <span style="color:#555">&gt;</span> <span style="color:#f60">0</span>)
-    <span style="color:#069;font-weight:bold">if</span> (condition(values[i], i, values)) sheet.insertRowBefore(i <span style="color:#555">+</span> <span style="color:#f60">1</span>);
-  <span style="color:#069;font-weight:bold">return</span> sheet;
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * Insert row before by a condition
+</span><span style=color:#09f;font-style:italic> * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
+</span><span style=color:#09f;font-style:italic> * @param {conditionCallback} condition insert or skip the row
+</span><span style=color:#09f;font-style:italic> * @return {GoogleAppsScript.Spreadsheet.Sheet}
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> insertRowBeforeByCondition_(sheet, condition) {
+  <span style=color:#069;font-weight:700>var</span> dataRange <span style=color:#555>=</span> sheet.getDataRange();
+  <span style=color:#069;font-weight:700>var</span> values <span style=color:#555>=</span> dataRange.getValues();
+  <span style=color:#069;font-weight:700>var</span> i <span style=color:#555>=</span> values.length;
+  <span style=color:#069;font-weight:700>while</span> (i<span style=color:#555>--</span> <span style=color:#555>&gt;</span> <span style=color:#f60>0</span>)
+    <span style=color:#069;font-weight:700>if</span> (condition(values[i], i, values)) sheet.insertRowBefore(i <span style=color:#555>+</span> <span style=color:#f60>1</span>);
+  <span style=color:#069;font-weight:700>return</span> sheet;
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * This callback is displayed as a global member.
-</span><span style="color:#09f;font-style:italic"> * @callback conditionCallback
-</span><span style="color:#09f;font-style:italic"> * @param {object[]} row Row data
-</span><span style="color:#09f;font-style:italic"> * @param {number} index Index of the row
-</span><span style="color:#09f;font-style:italic"> * @param {object[][]} values Sheet values
-</span><span style="color:#09f;font-style:italic"> * @return {boolean}
-</span><span style="color:#09f;font-style:italic"> */</span>
-</code></pre></div>
-        
-      
-    
-  
-    
-  
-
-</article>
-
-
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13" title='Last modified Nov 4, 2019 by Alex Ivanov' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Nov 4, 2019</span>
-    </a>
-  </div>
-  
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_insert-rows-before-by-condition/readme.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" alt="Edit" />
-      <span>Edit this page</span>
-    </a>
-    
-  </div>
-  
-</div>
-
-
-      
-    </div>
-
-    
-
-
-
-
-  </main>
-
-  
-</body>
-
-</html>
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * This callback is displayed as a global member.
+</span><span style=color:#09f;font-style:italic> * @callback conditionCallback
+</span><span style=color:#09f;font-style:italic> * @param {object[]} row Row data
+</span><span style=color:#09f;font-style:italic> * @param {number} index Index of the row
+</span><span style=color:#09f;font-style:italic> * @param {object[][]} values Sheet values
+</span><span style=color:#09f;font-style:italic> * @return {boolean}
+</span><span style=color:#09f;font-style:italic> */</span>
+</code></pre></div></article><div class="book-footer justify-between"><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13 title="Last modified Nov 4, 2019 by Alex Ivanov" target=_blank rel=noopener><img src=/svg/calendar.svg alt=Changed>
+<span>Nov 4, 2019</span></a></div><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_insert-rows-before-by-condition/readme.md target=_blank rel=noopener><img src=/svg/edit.svg alt=Edit>
+<span>Edit this page</span></a></div></div></div></main></body></html>

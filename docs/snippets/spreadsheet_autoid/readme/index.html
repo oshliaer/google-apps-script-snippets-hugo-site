@@ -1,276 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta property=og:title content><meta property=og:description content="Creates autoincrement the video"><meta property=og:type content=article><meta property=og:url content=https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_autoid/readme/><meta property=og:site_name content="Google Apps Script snippets"><title>Readme | Google Apps Script snippets</title><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.css integrity><script defer src=/search.min.js integrity></script></head><body><input type=checkbox class=hidden id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav><h2 class=book-brand><a href=https://google-apps-script-snippets.contributor.pw/><span>Google Apps Script snippets</span></a></h2><div class=book-search><input type=text placeholder=Search id=book-search-input maxlength=64><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><p><strong>Publications</strong></p><ul><li><a href=/snippets/>Snippets</a></li></ul></li><li><p><strong>Translations</strong></p><ul><li><a href=/>English</a></li><li><a href=/ru/>Русский</a></li></ul></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class="flex align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Readme</strong></header><header class=markdown><h1></h1></header><article class=markdown><h1 id=creates-autoincrement>Creates autoincrement</h1><p>the video
+<a href=https://youtu.be/A1qkyQ7TAk8><img src=https://img.youtube.com/vi/A1qkyQ7TAk8/0.jpg alt="Google Sheets Autoincrement demo"></a></p><div class=highlight><pre style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * @file Adds autoid
+</span><span style=color:#09f;font-style:italic> * @url https://stackoverflow.com/questions/58513757/automatically-generate-a-unique-sequential-id-in-google-sheets?noredirect=1#58513757
+</span><span style=color:#09f;font-style:italic> */</span>
 
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="" />
-<meta property="og:description" content="Creates autoincrement the video" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_autoid/readme/" />
-<meta property="og:site_name" content="Google Apps Script snippets" />
-<title>Readme | Google Apps Script snippets</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-
-
-
-
-<link rel="stylesheet" href="/book.min.css" integrity="">
-
-
-
-<script defer src="/search.min.js" integrity=""></script>
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://google-apps-script-snippets.contributor.pw/"><span>Google Apps Script snippets</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    <ul>
-<li><p><strong>Publications</strong></p>
-
-<ul>
-<li><a href="/snippets/">Snippets</a></li>
-</ul></li>
-
-<li><p><strong>Translations</strong></p>
-
-<ul>
-<li><a href="/">English</a></li>
-<li><a href="/ru/">Русский</a></li>
-</ul></li>
-</ul>
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>Readme</strong>
-</header>
-
-      
-<header class="markdown">
-  <h1></h1>
-</header>
-<article class="markdown">
-
-<h1 id="creates-autoincrement">Creates autoincrement</h1>
-
-<p>the video
-<a href="https://youtu.be/A1qkyQ7TAk8"><img src="https://img.youtube.com/vi/A1qkyQ7TAk8/0.jpg" alt="Google Sheets Autoincrement demo" /></a></p>
-
-  
-
-  
-  
-    
-  
-    
-      
-      
-        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * @file Adds autoid
-</span><span style="color:#09f;font-style:italic"> * @url https://stackoverflow.com/questions/58513757/automatically-generate-a-unique-sequential-id-in-google-sheets?noredirect=1#58513757
-</span><span style="color:#09f;font-style:italic"> */</span>
-
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> autoid_(sheet) {
-  <span style="color:#069;font-weight:bold">var</span> data <span style="color:#555">=</span> sheet.getDataRange().getValues();
-  <span style="color:#069;font-weight:bold">if</span> (data.length <span style="color:#555">&lt;</span> <span style="color:#f60">2</span>) <span style="color:#069;font-weight:bold">return</span>;
-  <span style="color:#069;font-weight:bold">var</span> indexId <span style="color:#555">=</span> data[<span style="color:#f60">0</span>].indexOf(<span style="color:#c30">&#39;ID&#39;</span>);
-  <span style="color:#069;font-weight:bold">var</span> indexDate <span style="color:#555">=</span> data[<span style="color:#f60">0</span>].indexOf(<span style="color:#c30">&#39;DATE&#39;</span>);
-  <span style="color:#069;font-weight:bold">if</span> (indexId <span style="color:#555">&lt;</span> <span style="color:#f60">0</span> <span style="color:#555">||</span> indexDate <span style="color:#555">&lt;</span> <span style="color:#f60">0</span>) <span style="color:#069;font-weight:bold">return</span>;
-  <span style="color:#069;font-weight:bold">var</span> id <span style="color:#555">=</span> data.reduce(
-    <span style="color:#069;font-weight:bold">function</span>(p, row) {
-      <span style="color:#069;font-weight:bold">var</span> year <span style="color:#555">=</span>
-        row[indexDate] <span style="color:#555">&amp;&amp;</span> row[indexDate].getTime
-          <span style="color:#555">?</span> row[indexDate].getFullYear() <span style="color:#555">%</span> <span style="color:#f60">100</span>
-          <span style="color:#555">:</span> <span style="color:#c30">&#39;-&#39;</span>;
-      <span style="color:#069;font-weight:bold">if</span> (<span style="color:#555">!</span><span style="color:#366">Object</span>.prototype.hasOwnProperty.call(p.indexByGroup, year)) {
-        p.indexByGroup[year] <span style="color:#555">=</span> [];
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> autoid_(sheet) {
+  <span style=color:#069;font-weight:700>var</span> data <span style=color:#555>=</span> sheet.getDataRange().getValues();
+  <span style=color:#069;font-weight:700>if</span> (data.length <span style=color:#555>&lt;</span> <span style=color:#f60>2</span>) <span style=color:#069;font-weight:700>return</span>;
+  <span style=color:#069;font-weight:700>var</span> indexId <span style=color:#555>=</span> data[<span style=color:#f60>0</span>].indexOf(<span style=color:#c30>&#39;ID&#39;</span>);
+  <span style=color:#069;font-weight:700>var</span> indexDate <span style=color:#555>=</span> data[<span style=color:#f60>0</span>].indexOf(<span style=color:#c30>&#39;DATE&#39;</span>);
+  <span style=color:#069;font-weight:700>if</span> (indexId <span style=color:#555>&lt;</span> <span style=color:#f60>0</span> <span style=color:#555>||</span> indexDate <span style=color:#555>&lt;</span> <span style=color:#f60>0</span>) <span style=color:#069;font-weight:700>return</span>;
+  <span style=color:#069;font-weight:700>var</span> id <span style=color:#555>=</span> data.reduce(
+    <span style=color:#069;font-weight:700>function</span>(p, row) {
+      <span style=color:#069;font-weight:700>var</span> year <span style=color:#555>=</span>
+        row[indexDate] <span style=color:#555>&amp;&amp;</span> row[indexDate].getTime
+          <span style=color:#555>?</span> row[indexDate].getFullYear() <span style=color:#555>%</span> <span style=color:#f60>100</span>
+          <span style=color:#555>:</span> <span style=color:#c30>&#39;-&#39;</span>;
+      <span style=color:#069;font-weight:700>if</span> (<span style=color:#555>!</span><span style=color:#366>Object</span>.prototype.hasOwnProperty.call(p.indexByGroup, year)) {
+        p.indexByGroup[year] <span style=color:#555>=</span> [];
       }
-      <span style="color:#069;font-weight:bold">var</span> match <span style="color:#555">=</span> (<span style="color:#c30">&#39;&#39;</span> <span style="color:#555">+</span> row[indexId]).match(<span style="color:#3aa">/(\d+)-(\d+)/</span>);
-      <span style="color:#069;font-weight:bold">var</span> idVal <span style="color:#555">=</span> row[indexId];
-      <span style="color:#069;font-weight:bold">if</span> (match <span style="color:#555">&amp;&amp;</span> match.length <span style="color:#555">&gt;</span> <span style="color:#f60">1</span>) {
-        idVal <span style="color:#555">=</span> match[<span style="color:#f60">2</span>];
-        p.indexByGroup[year].push(<span style="color:#555">+</span>idVal);
+      <span style=color:#069;font-weight:700>var</span> match <span style=color:#555>=</span> (<span style=color:#c30>&#39;&#39;</span> <span style=color:#555>+</span> row[indexId]).match(<span style=color:#3aa>/(\d+)-(\d+)/</span>);
+      <span style=color:#069;font-weight:700>var</span> idVal <span style=color:#555>=</span> row[indexId];
+      <span style=color:#069;font-weight:700>if</span> (match <span style=color:#555>&amp;&amp;</span> match.length <span style=color:#555>&gt;</span> <span style=color:#f60>1</span>) {
+        idVal <span style=color:#555>=</span> match[<span style=color:#f60>2</span>];
+        p.indexByGroup[year].push(<span style=color:#555>+</span>idVal);
       }
       p.ids.push(idVal);
       p.years.push(year);
-      <span style="color:#069;font-weight:bold">return</span> p;
+      <span style=color:#069;font-weight:700>return</span> p;
     },
-    { indexByGroup<span style="color:#555">:</span> {}, ids<span style="color:#555">:</span> [], years<span style="color:#555">:</span> [] }
+    { indexByGroup<span style=color:#555>:</span> {}, ids<span style=color:#555>:</span> [], years<span style=color:#555>:</span> [] }
   );
 
-  <span style="color:#09f;font-style:italic">// Logger.log(JSON.stringify(id, null, &#39;  &#39;));
-</span><span style="color:#09f;font-style:italic"></span>
-  <span style="color:#069;font-weight:bold">var</span> newId <span style="color:#555">=</span> data
-    .map(<span style="color:#069;font-weight:bold">function</span>(row, i) {
-      <span style="color:#069;font-weight:bold">if</span> (row[indexId] <span style="color:#555">!==</span> <span style="color:#c30">&#39;&#39;</span>) <span style="color:#069;font-weight:bold">return</span> [row[indexId]];
-      <span style="color:#069;font-weight:bold">if</span> (isNumeric(id.years[i])) {
-        <span style="color:#069;font-weight:bold">var</span> lastId <span style="color:#555">=</span> <span style="color:#366">Math</span>.max.apply(
-          <span style="color:#069;font-weight:bold">null</span>,
-          id.indexByGroup[id.years[i]].filter(<span style="color:#069;font-weight:bold">function</span>(e) {
-            <span style="color:#069;font-weight:bold">return</span> isNumeric(e);
+  <span style=color:#09f;font-style:italic>// Logger.log(JSON.stringify(id, null, &#39;  &#39;));
+</span><span style=color:#09f;font-style:italic></span>
+  <span style=color:#069;font-weight:700>var</span> newId <span style=color:#555>=</span> data
+    .map(<span style=color:#069;font-weight:700>function</span>(row, i) {
+      <span style=color:#069;font-weight:700>if</span> (row[indexId] <span style=color:#555>!==</span> <span style=color:#c30>&#39;&#39;</span>) <span style=color:#069;font-weight:700>return</span> [row[indexId]];
+      <span style=color:#069;font-weight:700>if</span> (isNumeric(id.years[i])) {
+        <span style=color:#069;font-weight:700>var</span> lastId <span style=color:#555>=</span> <span style=color:#366>Math</span>.max.apply(
+          <span style=color:#069;font-weight:700>null</span>,
+          id.indexByGroup[id.years[i]].filter(<span style=color:#069;font-weight:700>function</span>(e) {
+            <span style=color:#069;font-weight:700>return</span> isNumeric(e);
           })
         );
-        lastId <span style="color:#555">=</span> lastId <span style="color:#555">===</span> <span style="color:#555">-</span><span style="color:#069;font-weight:bold">Infinity</span> <span style="color:#555">?</span> <span style="color:#f60">1</span> <span style="color:#555">:</span> lastId <span style="color:#555">+</span> <span style="color:#f60">1</span>;
+        lastId <span style=color:#555>=</span> lastId <span style=color:#555>===</span> <span style=color:#555>-</span><span style=color:#069;font-weight:700>Infinity</span> <span style=color:#555>?</span> <span style=color:#f60>1</span> <span style=color:#555>:</span> lastId <span style=color:#555>+</span> <span style=color:#f60>1</span>;
         id.indexByGroup[id.years[i]].push(lastId);
-        <span style="color:#069;font-weight:bold">return</span> [
+        <span style=color:#069;font-weight:700>return</span> [
           Utilities.formatString(
-            <span style="color:#c30">&#39;%s-%s&#39;</span>,
+            <span style=color:#c30>&#39;%s-%s&#39;</span>,
             id.years[i],
-            (<span style="color:#c30">&#39;000000000&#39;</span> <span style="color:#555">+</span> lastId).slice(<span style="color:#555">-</span><span style="color:#f60">3</span>)
+            (<span style=color:#c30>&#39;000000000&#39;</span> <span style=color:#555>+</span> lastId).slice(<span style=color:#555>-</span><span style=color:#f60>3</span>)
           )
         ];
       }
-      <span style="color:#069;font-weight:bold">return</span> [<span style="color:#c30">&#39;&#39;</span>];
+      <span style=color:#069;font-weight:700>return</span> [<span style=color:#c30>&#39;&#39;</span>];
     })
-    .slice(<span style="color:#f60">1</span>);
-  sheet.getRange(<span style="color:#f60">2</span>, indexId <span style="color:#555">+</span> <span style="color:#f60">1</span>, newId.length).setValues(newId);
+    .slice(<span style=color:#f60>1</span>);
+  sheet.getRange(<span style=color:#f60>2</span>, indexId <span style=color:#555>+</span> <span style=color:#f60>1</span>, newId.length).setValues(newId);
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Events.SheetsOnEdit} e
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> onEdit(e) {
-  <span style="color:#069;font-weight:bold">try</span> {
-    <span style="color:#069;font-weight:bold">var</span> lock <span style="color:#555">=</span> LockService.getScriptLock();
-    <span style="color:#069;font-weight:bold">if</span> (lock.tryLock(<span style="color:#f60">0</span>)) {
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @param {GoogleAppsScript.Events.SheetsOnEdit} e
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> onEdit(e) {
+  <span style=color:#069;font-weight:700>try</span> {
+    <span style=color:#069;font-weight:700>var</span> lock <span style=color:#555>=</span> LockService.getScriptLock();
+    <span style=color:#069;font-weight:700>if</span> (lock.tryLock(<span style=color:#f60>0</span>)) {
       autoid_(e.range.getSheet());
       lock.releaseLock();
     }
-  } <span style="color:#069;font-weight:bold">catch</span> (error) {
-    console.log(<span style="color:#c30">&#39;&#39;</span>, error, error.stack, error.message);
-    e.source.toast(error, <span style="color:#c30">&#39;error&#39;</span>, <span style="color:#f60">0</span>);
+  } <span style=color:#069;font-weight:700>catch</span> (error) {
+    console.log(<span style=color:#c30>&#39;&#39;</span>, error, error.stack, error.message);
+    e.source.toast(error, <span style=color:#c30>&#39;error&#39;</span>, <span style=color:#f60>0</span>);
   }
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> userActionUpdateId() {
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> userActionUpdateId() {
   onEdit({
-    range<span style="color:#555">:</span> SpreadsheetApp.getActiveRange(),
-    source<span style="color:#555">:</span> SpreadsheetApp.getActive()
+    range<span style=color:#555>:</span> SpreadsheetApp.getActiveRange(),
+    source<span style=color:#555>:</span> SpreadsheetApp.getActive()
   });
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> onOpen() {
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> onOpen() {
   SpreadsheetApp.getUi()
-    .createMenu(<span style="color:#c30">&#39;AUTOID&#39;</span>)
-    .addItem(<span style="color:#c30">&#39;Update&#39;</span>, <span style="color:#c30">&#39;userActionUpdateId&#39;</span>)
+    .createMenu(<span style=color:#c30>&#39;AUTOID&#39;</span>)
+    .addItem(<span style=color:#c30>&#39;Update&#39;</span>, <span style=color:#c30>&#39;userActionUpdateId&#39;</span>)
     .addToUi();
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @param {any} n
-</span><span style="color:#09f;font-style:italic"> * @return {boolean}
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> isNumeric(n) {
-  <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">!</span><span style="color:#366">isNaN</span>(<span style="color:#366">parseFloat</span>(n)) <span style="color:#555">&amp;&amp;</span> <span style="color:#366">isFinite</span>(n);
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @param {any} n
+</span><span style=color:#09f;font-style:italic> * @return {boolean}
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> isNumeric(n) {
+  <span style=color:#069;font-weight:700>return</span> <span style=color:#555>!</span><span style=color:#366>isNaN</span>(<span style=color:#366>parseFloat</span>(n)) <span style=color:#555>&amp;&amp;</span> <span style=color:#366>isFinite</span>(n);
 }
-</code></pre></div>
-        
-      
-    
-  
-    
-  
-    
-  
-
-</article>
-
-
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13" title='Last modified Nov 4, 2019 by Alex Ivanov' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Nov 4, 2019</span>
-    </a>
-  </div>
-  
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_autoid/readme.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" alt="Edit" />
-      <span>Edit this page</span>
-    </a>
-    
-  </div>
-  
-</div>
-
-
-      
-    </div>
-
-    
-
-
-
-
-  </main>
-
-  
-</body>
-
-</html>
+</code></pre></div></article><div class="book-footer justify-between"><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13 title="Last modified Nov 4, 2019 by Alex Ivanov" target=_blank rel=noopener><img src=/svg/calendar.svg alt=Changed>
+<span>Nov 4, 2019</span></a></div><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_autoid/readme.md target=_blank rel=noopener><img src=/svg/edit.svg alt=Edit>
+<span>Edit this page</span></a></div></div></div></main></body></html>

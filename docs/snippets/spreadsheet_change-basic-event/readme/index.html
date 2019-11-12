@@ -1,183 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta property=og:title content><meta property=og:description content=spreadsheet_change-basic-event><meta property=og:type content=article><meta property=og:url content=https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_change-basic-event/readme/><meta property=og:site_name content="Google Apps Script snippets"><title>Readme | Google Apps Script snippets</title><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.css integrity><script defer src=/search.min.js integrity></script></head><body><input type=checkbox class=hidden id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav><h2 class=book-brand><a href=https://google-apps-script-snippets.contributor.pw/><span>Google Apps Script snippets</span></a></h2><div class=book-search><input type=text placeholder=Search id=book-search-input maxlength=64><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><p><strong>Publications</strong></p><ul><li><a href=/snippets/>Snippets</a></li></ul></li><li><p><strong>Translations</strong></p><ul><li><a href=/>English</a></li><li><a href=/ru/>Русский</a></li></ul></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class="flex align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Readme</strong></header><header class=markdown><h1></h1></header><article class=markdown><p>spreadsheet_change-basic-event</p><div class=highlight><pre style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * @file
+</span><span style=color:#09f;font-style:italic> * {@link }
+</span><span style=color:#09f;font-style:italic> */</span>
 
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="" />
-<meta property="og:description" content="spreadsheet_change-basic-event" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_change-basic-event/readme/" />
-<meta property="og:site_name" content="Google Apps Script snippets" />
-<title>Readme | Google Apps Script snippets</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-
-
-
-
-<link rel="stylesheet" href="/book.min.css" integrity="">
-
-
-
-<script defer src="/search.min.js" integrity=""></script>
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://google-apps-script-snippets.contributor.pw/"><span>Google Apps Script snippets</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    <ul>
-<li><p><strong>Publications</strong></p>
-
-<ul>
-<li><a href="/snippets/">Snippets</a></li>
-</ul></li>
-
-<li><p><strong>Translations</strong></p>
-
-<ul>
-<li><a href="/">English</a></li>
-<li><a href="/ru/">Русский</a></li>
-</ul></li>
-</ul>
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>Readme</strong>
-</header>
-
-      
-<header class="markdown">
-  <h1></h1>
-</header>
-<article class="markdown"><p>spreadsheet_change-basic-event</p>
-
-  
-
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      
-      
-        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * @file
-</span><span style="color:#09f;font-style:italic"> * {@link }
-</span><span style="color:#09f;font-style:italic"> */</span>
-
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * Runs the snippet.
-</span><span style="color:#09f;font-style:italic"> * Please, register this function for CHANGE event
-</span><span style="color:#09f;font-style:italic"> * once from the owner of the Spreadsheet
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Events.SheetsOnChange} e
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> onchange(e) {
-  <span style="color:#069;font-weight:bold">try</span> {
-    <span style="color:#069;font-weight:bold">var</span> log <span style="color:#555">=</span> e.source.getSheetByName(<span style="color:#c30">&#39;log&#39;</span>) <span style="color:#555">||</span> e.source.insertSheet(<span style="color:#c30">&#39;log&#39;</span>);
-    log.appendRow([<span style="color:#069;font-weight:bold">new</span> <span style="color:#366">Date</span>(), JSON.stringify(e, <span style="color:#069;font-weight:bold">null</span>, <span style="color:#c30">&#39;  &#39;</span>)]);
-  } <span style="color:#069;font-weight:bold">catch</span> (error) {
-    console.error(<span style="color:#c30">&#39;error&#39;</span>, error);
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * Runs the snippet.
+</span><span style=color:#09f;font-style:italic> * Please, register this function for CHANGE event
+</span><span style=color:#09f;font-style:italic> * once from the owner of the Spreadsheet
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @param {GoogleAppsScript.Events.SheetsOnChange} e
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> onchange(e) {
+  <span style=color:#069;font-weight:700>try</span> {
+    <span style=color:#069;font-weight:700>var</span> log <span style=color:#555>=</span> e.source.getSheetByName(<span style=color:#c30>&#39;log&#39;</span>) <span style=color:#555>||</span> e.source.insertSheet(<span style=color:#c30>&#39;log&#39;</span>);
+    log.appendRow([<span style=color:#069;font-weight:700>new</span> <span style=color:#366>Date</span>(), JSON.stringify(e, <span style=color:#069;font-weight:700>null</span>, <span style=color:#c30>&#39;  &#39;</span>)]);
+  } <span style=color:#069;font-weight:700>catch</span> (error) {
+    console.error(<span style=color:#c30>&#39;error&#39;</span>, error);
   }
 }
-</code></pre></div>
-        
-      
-    
-  
-
-</article>
-
-
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13" title='Last modified Nov 4, 2019 by Alex Ivanov' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Nov 4, 2019</span>
-    </a>
-  </div>
-  
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_change-basic-event/readme.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" alt="Edit" />
-      <span>Edit this page</span>
-    </a>
-    
-  </div>
-  
-</div>
-
-
-      
-    </div>
-
-    
-
-
-
-
-  </main>
-
-  
-</body>
-
-</html>
+</code></pre></div></article><div class="book-footer justify-between"><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13 title="Last modified Nov 4, 2019 by Alex Ivanov" target=_blank rel=noopener><img src=/svg/calendar.svg alt=Changed>
+<span>Nov 4, 2019</span></a></div><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_change-basic-event/readme.md target=_blank rel=noopener><img src=/svg/edit.svg alt=Edit>
+<span>Edit this page</span></a></div></div></div></main></body></html>

@@ -1,203 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta property=og:title content><meta property=og:description content><meta property=og:type content=article><meta property=og:url content=https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_painting-specific-characters/readme/><meta property=og:site_name content="Google Apps Script snippets"><title>Readme | Google Apps Script snippets</title><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.css integrity><script defer src=/search.min.js integrity></script></head><body><input type=checkbox class=hidden id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav><h2 class=book-brand><a href=https://google-apps-script-snippets.contributor.pw/><span>Google Apps Script snippets</span></a></h2><div class=book-search><input type=text placeholder=Search id=book-search-input maxlength=64><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><p><strong>Publications</strong></p><ul><li><a href=/snippets/>Snippets</a></li></ul></li><li><p><strong>Translations</strong></p><ul><li><a href=/>English</a></li><li><a href=/ru/>Русский</a></li></ul></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class="flex align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Readme</strong></header><header class=markdown><h1></h1></header><article class=markdown><p><img src=./screenshot.png alt=alt></p><div class=highlight><pre style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * @file Painting specific characters in cells
+</span><span style=color:#09f;font-style:italic> * {@link https://support.google.com/docs/thread/11987044}
+</span><span style=color:#09f;font-style:italic> */</span>
 
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_painting-specific-characters/readme/" />
-<meta property="og:site_name" content="Google Apps Script snippets" />
-<title>Readme | Google Apps Script snippets</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-
-
-
-
-<link rel="stylesheet" href="/book.min.css" integrity="">
-
-
-
-<script defer src="/search.min.js" integrity=""></script>
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://google-apps-script-snippets.contributor.pw/"><span>Google Apps Script snippets</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    <ul>
-<li><p><strong>Publications</strong></p>
-
-<ul>
-<li><a href="/snippets/">Snippets</a></li>
-</ul></li>
-
-<li><p><strong>Translations</strong></p>
-
-<ul>
-<li><a href="/">English</a></li>
-<li><a href="/ru/">Русский</a></li>
-</ul></li>
-</ul>
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
-  });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>Readme</strong>
-</header>
-
-      
-<header class="markdown">
-  <h1></h1>
-</header>
-<article class="markdown"><p><img src="./screenshot.png" alt="alt" /></p>
-
-  
-
-  
-  
-    
-  
-    
-  
-    
-      
-      
-        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * @file Painting specific characters in cells
-</span><span style="color:#09f;font-style:italic"> * {@link https://support.google.com/docs/thread/11987044}
-</span><span style="color:#09f;font-style:italic"> */</span>
-
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * Runs the snippet
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> run() {
-  <span style="color:#069;font-weight:bold">var</span> range <span style="color:#555">=</span> SpreadsheetApp.getActiveRange();
-  <span style="color:#069;font-weight:bold">var</span> <span style="color:#069;font-weight:bold">char</span> <span style="color:#555">=</span> <span style="color:#c30">&#39;|&#39;</span>;
-  <span style="color:#069;font-weight:bold">var</span> color <span style="color:#555">=</span> <span style="color:#c30">&#39;red&#39;</span>;
-  paintingSpecificCharacters_(range, <span style="color:#069;font-weight:bold">char</span>, color);
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * Runs the snippet
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> run() {
+  <span style=color:#069;font-weight:700>var</span> range <span style=color:#555>=</span> SpreadsheetApp.getActiveRange();
+  <span style=color:#069;font-weight:700>var</span> <span style=color:#069;font-weight:700>char</span> <span style=color:#555>=</span> <span style=color:#c30>&#39;|&#39;</span>;
+  <span style=color:#069;font-weight:700>var</span> color <span style=color:#555>=</span> <span style=color:#c30>&#39;red&#39;</span>;
+  paintingSpecificCharacters_(range, <span style=color:#069;font-weight:700>char</span>, color);
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Spreadsheet.Range} range
-</span><span style="color:#09f;font-style:italic"> * @param {string} char
-</span><span style="color:#09f;font-style:italic"> * @param {string} color
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> paintingSpecificCharacters_(range, <span style="color:#069;font-weight:bold">char</span>, color) {
-  <span style="color:#069;font-weight:bold">var</span> textStyleBuilder <span style="color:#555">=</span> SpreadsheetApp.newTextStyle();
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @param {GoogleAppsScript.Spreadsheet.Range} range
+</span><span style=color:#09f;font-style:italic> * @param {string} char
+</span><span style=color:#09f;font-style:italic> * @param {string} color
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> paintingSpecificCharacters_(range, <span style=color:#069;font-weight:700>char</span>, color) {
+  <span style=color:#069;font-weight:700>var</span> textStyleBuilder <span style=color:#555>=</span> SpreadsheetApp.newTextStyle();
   textStyleBuilder.setForegroundColor(color);
-  <span style="color:#069;font-weight:bold">var</span> textStyle <span style="color:#555">=</span> textStyleBuilder.build();
-  <span style="color:#069;font-weight:bold">var</span> length <span style="color:#555">=</span> <span style="color:#069;font-weight:bold">char</span>.length;
-  <span style="color:#069;font-weight:bold">var</span> richTextValues <span style="color:#555">=</span> range.getRichTextValues().map(<span style="color:#069;font-weight:bold">function</span>(row) {
-    <span style="color:#069;font-weight:bold">return</span> row.map(<span style="color:#069;font-weight:bold">function</span>(richTextValue) {
-      <span style="color:#069;font-weight:bold">var</span> value <span style="color:#555">=</span> richTextValue.getText();
-      <span style="color:#069;font-weight:bold">var</span> richTextBuilder <span style="color:#555">=</span> SpreadsheetApp.newRichTextValue();
+  <span style=color:#069;font-weight:700>var</span> textStyle <span style=color:#555>=</span> textStyleBuilder.build();
+  <span style=color:#069;font-weight:700>var</span> length <span style=color:#555>=</span> <span style=color:#069;font-weight:700>char</span>.length;
+  <span style=color:#069;font-weight:700>var</span> richTextValues <span style=color:#555>=</span> range.getRichTextValues().map(<span style=color:#069;font-weight:700>function</span>(row) {
+    <span style=color:#069;font-weight:700>return</span> row.map(<span style=color:#069;font-weight:700>function</span>(richTextValue) {
+      <span style=color:#069;font-weight:700>var</span> value <span style=color:#555>=</span> richTextValue.getText();
+      <span style=color:#069;font-weight:700>var</span> richTextBuilder <span style=color:#555>=</span> SpreadsheetApp.newRichTextValue();
       richTextBuilder.setText(value);
-      <span style="color:#069;font-weight:bold">var</span> indexOf <span style="color:#555">=</span> value.indexOf(<span style="color:#069;font-weight:bold">char</span>);
-      <span style="color:#069;font-weight:bold">while</span> (indexOf <span style="color:#555">&gt;</span> <span style="color:#555">-</span><span style="color:#f60">1</span>) {
-        richTextBuilder.setTextStyle(indexOf, indexOf <span style="color:#555">+</span> length, textStyle);
-        indexOf <span style="color:#555">=</span> value.indexOf(<span style="color:#069;font-weight:bold">char</span>, indexOf <span style="color:#555">+</span> length);
+      <span style=color:#069;font-weight:700>var</span> indexOf <span style=color:#555>=</span> value.indexOf(<span style=color:#069;font-weight:700>char</span>);
+      <span style=color:#069;font-weight:700>while</span> (indexOf <span style=color:#555>&gt;</span> <span style=color:#555>-</span><span style=color:#f60>1</span>) {
+        richTextBuilder.setTextStyle(indexOf, indexOf <span style=color:#555>+</span> length, textStyle);
+        indexOf <span style=color:#555>=</span> value.indexOf(<span style=color:#069;font-weight:700>char</span>, indexOf <span style=color:#555>+</span> length);
       }
-      <span style="color:#069;font-weight:bold">return</span> richTextBuilder.build();
+      <span style=color:#069;font-weight:700>return</span> richTextBuilder.build();
     });
   });
 
   range.setRichTextValues(richTextValues);
 }
-</code></pre></div>
-        
-      
-    
-  
-    
-  
-
-</article>
-
-
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13" title='Last modified Nov 4, 2019 by Alex Ivanov' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Nov 4, 2019</span>
-    </a>
-  </div>
-  
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_painting-specific-characters/readme.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" alt="Edit" />
-      <span>Edit this page</span>
-    </a>
-    
-  </div>
-  
-</div>
-
-
-      
-    </div>
-
-    
-
-
-
-
-  </main>
-
-  
-</body>
-
-</html>
+</code></pre></div></article><div class="book-footer justify-between"><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13 title="Last modified Nov 4, 2019 by Alex Ivanov" target=_blank rel=noopener><img src=/svg/calendar.svg alt=Changed>
+<span>Nov 4, 2019</span></a></div><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_painting-specific-characters/readme.md target=_blank rel=noopener><img src=/svg/edit.svg alt=Edit>
+<span>Edit this page</span></a></div></div></div></main></body></html>

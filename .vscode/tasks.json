@@ -11,7 +11,7 @@
     {
       "label": "build",
       "type": "shell",
-      "command": "scripts/sync.sh && hugo"
+      "command": "scripts/sync.sh && hugo --minify"
     }
   ]
 }

@@ -1,245 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta property=og:title content><meta property=og:description content="Creates autoincrement the video"><meta property=og:type content=article><meta property=og:url content=https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_autoincrement/readme/><meta property=og:site_name content="Google Apps Script snippets"><title>Readme | Google Apps Script snippets</title><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.css integrity><script defer src=/search.min.js integrity></script></head><body><input type=checkbox class=hidden id=menu-control><main class="flex container"><aside class="book-menu fixed"><nav><h2 class=book-brand><a href=https://google-apps-script-snippets.contributor.pw/><span>Google Apps Script snippets</span></a></h2><div class=book-search><input type=text placeholder=Search id=book-search-input maxlength=64><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><p><strong>Publications</strong></p><ul><li><a href=/snippets/>Snippets</a></li></ul></li><li><p><strong>Translations</strong></p><ul><li><a href=/>English</a></li><li><a href=/ru/>Русский</a></li></ul></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class="flex align-center justify-between book-header"><label for=menu-control><img src=/svg/menu.svg alt=Menu></label>
+<strong>Readme</strong></header><header class=markdown><h1></h1></header><article class=markdown><h1 id=creates-autoincrement>Creates autoincrement</h1><p>the video
+<a href=https://youtu.be/A1qkyQ7TAk8><img src=https://img.youtube.com/vi/A1qkyQ7TAk8/0.jpg alt="Google Sheets Autoincrement demo"></a></p><div class=highlight><pre style=background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> * @file Adds autoincrement an a menu
+</span><span style=color:#09f;font-style:italic> * @url https://stackoverflow.com/questions/58405672/optimizing-google-app-script-for-implementing-auto-increment-columns
+</span><span style=color:#09f;font-style:italic> */</span>
 
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="" />
-<meta property="og:description" content="Creates autoincrement the video" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_autoincrement/readme/" />
-<meta property="og:site_name" content="Google Apps Script snippets" />
-<title>Readme | Google Apps Script snippets</title>
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-
-
-
-
-<link rel="stylesheet" href="/book.min.css" integrity="">
-
-
-
-<script defer src="/search.min.js" integrity=""></script>
-
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
-
-  
-</head>
-
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
-  <main class="flex container">
-
-    <aside class="book-menu fixed">
-      <nav>
-<h2 class="book-brand">
-  <a href="https://google-apps-script-snippets.contributor.pw/"><span>Google Apps Script snippets</span>
-  </a>
-</h2>
-
-
-<div class="book-search">
-  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
-  <div class="book-search-spinner spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-
-
-
-
-
-    <ul>
-<li><p><strong>Publications</strong></p>
-
-<ul>
-<li><a href="/snippets/">Snippets</a></li>
-</ul></li>
-
-<li><p><strong>Translations</strong></p>
-
-<ul>
-<li><a href="/">English</a></li>
-<li><a href="/ru/">Русский</a></li>
-</ul></li>
-</ul>
-
-
-
-
-
-</nav>
-
-
-<script>
-(function() {
-  var menu = document.querySelector("aside.book-menu nav");
-  addEventListener("beforeunload", function(event) {
-    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> autoincrement_(sheet) {
+  <span style=color:#069;font-weight:700>var</span> data <span style=color:#555>=</span> sheet.getDataRange().getValues();
+  <span style=color:#069;font-weight:700>if</span> (data.length <span style=color:#555>&lt;</span> <span style=color:#f60>2</span>) <span style=color:#069;font-weight:700>return</span>;
+  <span style=color:#069;font-weight:700>var</span> indexCol <span style=color:#555>=</span> data[<span style=color:#f60>0</span>].indexOf(<span style=color:#c30>&#39;autoincrement&#39;</span>);
+  <span style=color:#069;font-weight:700>if</span> (indexCol <span style=color:#555>&lt;</span> <span style=color:#f60>0</span>) <span style=color:#069;font-weight:700>return</span>;
+  <span style=color:#069;font-weight:700>var</span> increment <span style=color:#555>=</span> data.map(<span style=color:#069;font-weight:700>function</span>(row) {
+    <span style=color:#069;font-weight:700>return</span> row[indexCol];
   });
-  menu.scrollTop = localStorage.getItem("menu.scrollTop");
-})();
-</script>
-
-    </aside>
-
-    <div class="book-page">
-      <header class="flex align-center justify-between book-header">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" alt="Menu" />
-  </label>
-  <strong>Readme</strong>
-</header>
-
-      
-<header class="markdown">
-  <h1></h1>
-</header>
-<article class="markdown">
-
-<h1 id="creates-autoincrement">Creates autoincrement</h1>
-
-<p>the video
-<a href="https://youtu.be/A1qkyQ7TAk8"><img src="https://img.youtube.com/vi/A1qkyQ7TAk8/0.jpg" alt="Google Sheets Autoincrement demo" /></a></p>
-
-  
-
-  
-  
-    
-  
-    
-      
-      
-        <div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> * @file Adds autoincrement an a menu
-</span><span style="color:#09f;font-style:italic"> * @url https://stackoverflow.com/questions/58405672/optimizing-google-app-script-for-implementing-auto-increment-columns
-</span><span style="color:#09f;font-style:italic"> */</span>
-
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> autoincrement_(sheet) {
-  <span style="color:#069;font-weight:bold">var</span> data <span style="color:#555">=</span> sheet.getDataRange().getValues();
-  <span style="color:#069;font-weight:bold">if</span> (data.length <span style="color:#555">&lt;</span> <span style="color:#f60">2</span>) <span style="color:#069;font-weight:bold">return</span>;
-  <span style="color:#069;font-weight:bold">var</span> indexCol <span style="color:#555">=</span> data[<span style="color:#f60">0</span>].indexOf(<span style="color:#c30">&#39;autoincrement&#39;</span>);
-  <span style="color:#069;font-weight:bold">if</span> (indexCol <span style="color:#555">&lt;</span> <span style="color:#f60">0</span>) <span style="color:#069;font-weight:bold">return</span>;
-  <span style="color:#069;font-weight:bold">var</span> increment <span style="color:#555">=</span> data.map(<span style="color:#069;font-weight:bold">function</span>(row) {
-    <span style="color:#069;font-weight:bold">return</span> row[indexCol];
-  });
-  <span style="color:#069;font-weight:bold">var</span> lastIncrement <span style="color:#555">=</span> <span style="color:#366">Math</span>.max.apply(
-    <span style="color:#069;font-weight:bold">null</span>,
-    increment.filter(<span style="color:#069;font-weight:bold">function</span>(e) {
-      <span style="color:#069;font-weight:bold">return</span> isNumeric(e);
+  <span style=color:#069;font-weight:700>var</span> lastIncrement <span style=color:#555>=</span> <span style=color:#366>Math</span>.max.apply(
+    <span style=color:#069;font-weight:700>null</span>,
+    increment.filter(<span style=color:#069;font-weight:700>function</span>(e) {
+      <span style=color:#069;font-weight:700>return</span> isNumeric(e);
     })
   );
 
-  lastIncrement <span style="color:#555">=</span> isNumeric(lastIncrement) <span style="color:#555">?</span> lastIncrement <span style="color:#555">:</span> <span style="color:#f60">0</span>;
-  <span style="color:#069;font-weight:bold">var</span> newIncrement <span style="color:#555">=</span> data
-    .map(<span style="color:#069;font-weight:bold">function</span>(row) {
-      <span style="color:#069;font-weight:bold">if</span> (row[indexCol] <span style="color:#555">!==</span> <span style="color:#c30">&#39;&#39;</span>) <span style="color:#069;font-weight:bold">return</span> [row[indexCol]];
-      <span style="color:#069;font-weight:bold">if</span> (row.join(<span style="color:#c30">&#39;&#39;</span>).length <span style="color:#555">&gt;</span> <span style="color:#f60">0</span>) <span style="color:#069;font-weight:bold">return</span> [<span style="color:#555">++</span>lastIncrement];
-      <span style="color:#069;font-weight:bold">return</span> [<span style="color:#c30">&#39;&#39;</span>];
+  lastIncrement <span style=color:#555>=</span> isNumeric(lastIncrement) <span style=color:#555>?</span> lastIncrement <span style=color:#555>:</span> <span style=color:#f60>0</span>;
+  <span style=color:#069;font-weight:700>var</span> newIncrement <span style=color:#555>=</span> data
+    .map(<span style=color:#069;font-weight:700>function</span>(row) {
+      <span style=color:#069;font-weight:700>if</span> (row[indexCol] <span style=color:#555>!==</span> <span style=color:#c30>&#39;&#39;</span>) <span style=color:#069;font-weight:700>return</span> [row[indexCol]];
+      <span style=color:#069;font-weight:700>if</span> (row.join(<span style=color:#c30>&#39;&#39;</span>).length <span style=color:#555>&gt;</span> <span style=color:#f60>0</span>) <span style=color:#069;font-weight:700>return</span> [<span style=color:#555>++</span>lastIncrement];
+      <span style=color:#069;font-weight:700>return</span> [<span style=color:#c30>&#39;&#39;</span>];
     })
-    .slice(<span style="color:#f60">1</span>);
-  sheet.getRange(<span style="color:#f60">2</span>, indexCol <span style="color:#555">+</span> <span style="color:#f60">1</span>, newIncrement.length).setValues(newIncrement);
+    .slice(<span style=color:#f60>1</span>);
+  sheet.getRange(<span style=color:#f60>2</span>, indexCol <span style=color:#555>+</span> <span style=color:#f60>1</span>, newIncrement.length).setValues(newIncrement);
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @param {GoogleAppsScript.Events.SheetsOnEdit} e
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> onEdit(e) {
-  <span style="color:#069;font-weight:bold">try</span> {
-    <span style="color:#069;font-weight:bold">var</span> lock <span style="color:#555">=</span> LockService.getScriptLock();
-    <span style="color:#069;font-weight:bold">if</span> (lock.tryLock(<span style="color:#f60">0</span>)) {
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @param {GoogleAppsScript.Events.SheetsOnEdit} e
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> onEdit(e) {
+  <span style=color:#069;font-weight:700>try</span> {
+    <span style=color:#069;font-weight:700>var</span> lock <span style=color:#555>=</span> LockService.getScriptLock();
+    <span style=color:#069;font-weight:700>if</span> (lock.tryLock(<span style=color:#f60>0</span>)) {
       autoincrement_(e.range.getSheet());
       lock.releaseLock();
     }
-  } <span style="color:#069;font-weight:bold">catch</span> (error) {
-    e.source.toast(error, <span style="color:#c30">&#39;error&#39;</span>, <span style="color:#f60">0</span>);
+  } <span style=color:#069;font-weight:700>catch</span> (error) {
+    e.source.toast(error, <span style=color:#c30>&#39;error&#39;</span>, <span style=color:#f60>0</span>);
   }
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> userActionUpdateIncrement() {
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> userActionUpdateIncrement() {
   onEdit({
-    range<span style="color:#555">:</span> SpreadsheetApp.getActiveRange(),
-    source<span style="color:#555">:</span> SpreadsheetApp.getActive()
+    range<span style=color:#555>:</span> SpreadsheetApp.getActiveRange(),
+    source<span style=color:#555>:</span> SpreadsheetApp.getActive()
   });
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> onOpen() {
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> onOpen() {
   SpreadsheetApp.getUi()
-    .createMenu(<span style="color:#c30">&#39;AUTOINCREMENT&#39;</span>)
-    .addItem(<span style="color:#c30">&#39;Update&#39;</span>, <span style="color:#c30">&#39;userActionUpdateIncrement&#39;</span>)
+    .createMenu(<span style=color:#c30>&#39;AUTOINCREMENT&#39;</span>)
+    .addItem(<span style=color:#c30>&#39;Update&#39;</span>, <span style=color:#c30>&#39;userActionUpdateIncrement&#39;</span>)
     .addToUi();
 }
 
-<span style="color:#09f;font-style:italic">/**
-</span><span style="color:#09f;font-style:italic"> *
-</span><span style="color:#09f;font-style:italic"> * @param {any} n
-</span><span style="color:#09f;font-style:italic"> * @return {boolean}
-</span><span style="color:#09f;font-style:italic"> */</span>
-<span style="color:#069;font-weight:bold">function</span> isNumeric(n) {
-  <span style="color:#069;font-weight:bold">return</span> <span style="color:#555">!</span><span style="color:#366">isNaN</span>(<span style="color:#366">parseFloat</span>(n)) <span style="color:#555">&amp;&amp;</span> <span style="color:#366">isFinite</span>(n);
+<span style=color:#09f;font-style:italic>/**
+</span><span style=color:#09f;font-style:italic> *
+</span><span style=color:#09f;font-style:italic> * @param {any} n
+</span><span style=color:#09f;font-style:italic> * @return {boolean}
+</span><span style=color:#09f;font-style:italic> */</span>
+<span style=color:#069;font-weight:700>function</span> isNumeric(n) {
+  <span style=color:#069;font-weight:700>return</span> <span style=color:#555>!</span><span style=color:#366>isNaN</span>(<span style=color:#366>parseFloat</span>(n)) <span style=color:#555>&amp;&amp;</span> <span style=color:#366>isFinite</span>(n);
 }
-</code></pre></div>
-        
-      
-    
-  
-    
-  
-    
-  
-
-</article>
-
-
-
-      
-<div class="book-footer justify-between">
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13" title='Last modified Nov 4, 2019 by Alex Ivanov' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" alt="Changed" />
-      <span>Nov 4, 2019</span>
-    </a>
-  </div>
-  
-  
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_autoincrement/readme.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" alt="Edit" />
-      <span>Edit this page</span>
-    </a>
-    
-  </div>
-  
-</div>
-
-
-      
-    </div>
-
-    
-
-
-
-
-  </main>
-
-  
-</body>
-
-</html>
+</code></pre></div></article><div class="book-footer justify-between"><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/commit/6de89997b9bac735ed2774c70f0fe48ff3f38a13 title="Last modified Nov 4, 2019 by Alex Ivanov" target=_blank rel=noopener><img src=/svg/calendar.svg alt=Changed>
+<span>Nov 4, 2019</span></a></div><div><a class="flex align-center" href=https://github.com/contributorpw/google-apps-script-snippets/edit/master/snippets/spreadsheet_autoincrement/readme.md target=_blank rel=noopener><img src=/svg/edit.svg alt=Edit>
+<span>Edit this page</span></a></div></div></div></main></body></html>
