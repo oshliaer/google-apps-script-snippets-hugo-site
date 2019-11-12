@@ -11,7 +11,7 @@
     {
       "label": "build",
       "type": "shell",
-      "command": "hugo"
+      "command": "scripts/sync.sh && hugo"
     }
   ]
 }

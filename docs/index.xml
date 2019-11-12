@@ -332,6 +332,15 @@ https://www.facebook.com/oshliaer/videos/2387201888033053/</description>
     </item>
     
     <item>
+      <title>Reset sheets</title>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_reset-sheets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_reset-sheets/</guid>
+      <description>Reset sheets Based on I need a script to clear certain cells in sheets when a button is pressed</description>
+    </item>
+    
+    <item>
       <title>standalone_gmail-import-csv-to-sheet</title>
       <link>https://google-apps-script-snippets.contributor.pw/snippets/standalone_gmail-import-csv-to-sheet/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -402,6 +402,20 @@
   </url>
   
   <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_reset-sheets/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_reset-sheets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_reset-sheets/"
+                />
+  </url>
+  
+  <url>
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/</loc>
     <lastmod>2019-11-04T06:06:35+03:00</lastmod>
     <xhtml:link

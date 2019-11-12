@@ -274,7 +274,7 @@
   
   <url>
     <loc>https://google-apps-script-snippets.contributor.pw/ru/</loc>
-    <lastmod>2019-10-26T00:23:52+03:00</lastmod>
+    <lastmod>2019-11-11T09:55:04+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -343,6 +343,20 @@
                 rel="alternate"
                 hreflang="ru"
                 href="https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_onedit-sample/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_reset-sheets/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_reset-sheets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://google-apps-script-snippets.contributor.pw/ru/snippets/spreadsheet_reset-sheets/"
                 />
   </url>
   
