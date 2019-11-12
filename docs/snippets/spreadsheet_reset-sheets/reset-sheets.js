@@ -70,6 +70,9 @@ function userActionResetMultipleSheetsByRangesAddresses() {
   });
 }
 
+
+
+
 /**
  * Clear specifing sheets by color
  */
