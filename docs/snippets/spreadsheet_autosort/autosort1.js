@@ -1,9 +1,10 @@
 /**
  * https://stackoverflow.com/questions/58723024/auto-sort-data-moved-by-script
  */
-function AutoSortOnEdit() {
+function autoSortOnEdit_() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName('Completed Returns');
+  if (!sheet) return;
   var range = sheet.getRange(
     4,
     1,
@@ -13,9 +14,15 @@ function AutoSortOnEdit() {
   range.sort({ column: 2, ascending: true });
 }
 
-function run() {
-  copyData();
-  AutoSortOnEdit();
-}
+/**
+ * This is some additional function
+ */
+function copyData_() {}
 
-function copyData() {}
+/**
+ *
+ */
+function onEditAutosort1() {
+  copyData_();
+  autoSortOnEdit_();
+}
