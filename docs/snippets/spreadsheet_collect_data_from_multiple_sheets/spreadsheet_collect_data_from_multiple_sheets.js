@@ -1,40 +1,8 @@
 /* exported collectDataFromMultipleSheets_, example1, example2 */
 
 /**
- * Collect data from multiple sheets
- *
- * @param {GoogleAppsScript.Spreadsheet.Sheet[]} sheets The list of sheets
- * @param {collectDataReducerCallback} reducer The callback that handles data of sheets
- * @param {object[]} [headers=[]] The expected headers
- */
-
-function collectDataFromMultipleSheets_(sheets, reducer, headers) {
-  var headers_;
-  if (!headers || !headers.length) {
-    headers_ = [];
-    headers = [];
-  } else {
-    headers_ = [headers];
-  }
-  if (!reducer) {
-    var columnsCount = headers.length || sheets[0].getLastColumn() || 1;
-    reducer = function(accumulator, sheet) {
-      var lastRow = sheet.getLastRow();
-      if (lastRow > 1) {
-        var values = sheet
-          .getRange(2, 1, lastRow - 1, columnsCount)
-          .getValues();
-        accumulator = accumulator.concat(values);
-      }
-      return accumulator;
-    };
-  }
-  return sheets.reduce(reducer, headers_);
-}
-
-/**
  * Runs the example1
- * Logs data from all sheets of the current spreadsheet
+ * Log data from all sheets of the current spreadsheet
  * @ignore
  */
 function example1() {
@@ -45,7 +13,7 @@ function example1() {
 
 /**
  * Runcs the example2
- * Set values to Sheet1 from all sheets of the current spreadsheet
+ * Set values to 'Sheet1' from all sheets of the current spreadsheet
  * @ignore
  */
 function example2() {
@@ -78,6 +46,37 @@ function example2() {
       .clearContents()
       .getRange(1, 1, data.length, data[0].length)
       .setValues(data);
+}
+
+/**
+ * Collect data from multiple sheets
+ *
+ * @param {GoogleAppsScript.Spreadsheet.Sheet[]} sheets The list of sheets
+ * @param {collectDataReducerCallback} reducer The callback that handles data of sheets
+ * @param {object[]} [headers=[]] The expected headers
+ */
+function collectDataFromMultipleSheets_(sheets, reducer, headers) {
+  var headers_;
+  if (!headers || !headers.length) {
+    headers_ = [];
+    headers = [];
+  } else {
+    headers_ = [headers];
+  }
+  if (!reducer) {
+    var columnsCount = headers.length || sheets[0].getLastColumn() || 1;
+    reducer = function(accumulator, sheet) {
+      var lastRow = sheet.getLastRow();
+      if (lastRow > 1) {
+        var values = sheet
+          .getRange(2, 1, lastRow - 1, columnsCount)
+          .getValues();
+        accumulator = accumulator.concat(values);
+      }
+      return accumulator;
+    };
+  }
+  return sheets.reduce(reducer, headers_);
 }
 
 /**
