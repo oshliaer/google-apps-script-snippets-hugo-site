@@ -31,6 +31,10 @@ function onOpen() {
       'Reset multiple sheets',
       'userActionResetMultipleSheetsByRangesAddresses'
     )
+    .addItem(
+      'Reset "GSM" columns',
+      'userActionResetMultipleSheetsBySpecialColumns'
+    )
     .addToUi();
 }
 
@@ -98,6 +102,31 @@ function userActionResetMultipleSheetsByColor() {
         resetByRangesList_(sheet, rangesAddressesList);
     }
   });
+}
+
+/**
+ * Cleaning the sheet and special columns
+ */
+function userActionResetMultipleSheetsBySpecialColumns() {
+  SpreadsheetApp.getActive()
+    .getSheets()
+    .forEach(function(sheet) {
+      var lastRow = sheet.getLastRow();
+      var rangesAddressesList = sheet
+        .getRange('2:2')
+        .getValues()[0]
+        .reduce(function(p, cell, i) {
+          if (cell === 'GSA')
+            p.push(
+              Utilities.formatString('R3C%s:R%sC%s', i + 1, lastRow, i + 1)
+            );
+          return p;
+        }, []);
+      if (rangesAddressesList.length) {
+        sheet.activate(); // Please remove this
+        resetByRangesList_(sheet, rangesAddressesList);
+      }
+    });
 }
 
 /**
