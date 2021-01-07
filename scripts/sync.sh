@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 ## The target and source can contain spaces as
 ## long as they are quoted.

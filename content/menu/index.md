@@ -3,8 +3,7 @@ headless: true
 ---
 
 - **Publications**
-
-  - [Snippets]({{< relref "/snippets" >}})
+  - [Snippets]({{< relref "snippets" >}})
 
 - **Translations**
   - [English]({{< relref path="./" lang="en" >}})

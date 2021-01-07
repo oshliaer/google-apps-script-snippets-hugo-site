@@ -1,10 +1,9 @@
 ---
-headless: true
+headless: false
 ---
 
 - **Публикации**
-
-  - [Сниппеты]({{< relref "/snippets" >}})
+  - [Snippets]({{< relref "snippets" >}})
 
 - **Переводы**
   - [English]({{< relref path="./" lang="en" >}})

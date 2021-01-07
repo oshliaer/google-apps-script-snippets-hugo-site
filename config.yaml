@@ -3,7 +3,7 @@
 publishDir: docs
 
 baseURL: https://google-apps-script-snippets.contributor.pw/
-theme: hugo-book
+# theme: hugo-book
 disableKinds: ['taxonomy', 'taxonomyTerm']
 
 # Book configuration
@@ -31,7 +31,7 @@ params:
   # (Optional, default 6) Set how many table of contents levels to be showed on page.
   # Use false/off to hide ToC, note that 0 will default to 6 (https://gohugo.io/functions/default/)
   # You can also specify this parameter per page in front matter
-  BookToC: false
+  BookToC: true
 
   # (Optional, default none) Set the path to a logo for the book. If the logo is
   # /static/logo.png then the path would be /logo.png
@@ -65,3 +65,5 @@ params:
   # (Optional, default true) Enables search function with lunr.js,
   # Index is built on fly, therefore it might slowdown your website.
   BookSearch: true
+
+  OnlyTranslated: true
