@@ -1,0 +1,2 @@
+<strong>{{ (index .Params 1) }}</strong>
+{{ highlight (readFile (print (index .Params 0) "/" (index .Params 1))) (index .Params 2) (index .Params 3) }}
