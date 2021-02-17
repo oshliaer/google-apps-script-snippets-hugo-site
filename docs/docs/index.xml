@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docs on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-    <link>https://example.com/docs/</link>
+    <link>https://google-apps-script-snippets.contributor.pw/docs/</link>
     <description>Recent content in docs on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create a footnote</title>
-      <link>https://example.com/snippets/docs/create_footnote/readme/</link>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/create_footnote/readme/</link>
       <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/snippets/docs/create_footnote/readme/</guid>
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/create_footnote/readme/</guid>
       <description>Create footnote This snippet demonstrates the ability to create new footnotes by referencing the document body. Note, you will need to find the position index in the body before to insert a footnote.
 Leave a comment index.js /** * */ /** * Runs the sample. * Insert a footnote to specific position */ function run() { const reply = createFootnoteWithText_(&amp;#39;Aha!&amp;#39;, 1); console.log(JSON.stringify(reply, null, &amp;#39; &amp;#39;)); } /** * Create a footnote with the text * * @param {string} text * @param {number} bodyIndex * @param {string} id * @returns Result of batch updates or an issue reply */ function createFootnoteWithText_( text, bodyIndex, id = DocumentApp.</description>
     </item>

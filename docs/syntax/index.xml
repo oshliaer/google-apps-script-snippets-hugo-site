@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>syntax on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-    <link>https://example.com/syntax/</link>
+    <link>https://google-apps-script-snippets.contributor.pw/syntax/</link>
     <description>Recent content in syntax on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/syntax/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/syntax/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://example.com/markdown-syntax-guide/</link>
+      <link>https://google-apps-script-snippets.contributor.pw/markdown-syntax-guide/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/markdown-syntax-guide/</guid>
+      <guid>https://google-apps-script-snippets.contributor.pw/markdown-syntax-guide/</guid>
       <description>&lt;p&gt;For a quick cheatsheet, check out &lt;a href=&#34;https://simplemde.com/markdown-guide&#34;&gt;https://simplemde.com/markdown-guide&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
