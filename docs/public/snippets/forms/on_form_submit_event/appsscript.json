@@ -1,0 +1,6 @@
+{
+  "timeZone": "Europe/Moscow",
+  "oauthScopes": [],
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER"
+}

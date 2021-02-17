@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      #calendar_basic {
+        margin: 0 auto;
+      }
+    </style>
+    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load('current', { packages: ['calendar'] });
+
+      function drawChart(data) {
+        var headers = data.shift();
+        var dataTable = new google.visualization.DataTable();
+        dataTable.addColumn({ type: 'date', id: headers[0] });
+        dataTable.addColumn({ type: 'number', id: headers[1] });
+        dataTable.addRows(
+          data.map(function(row) {
+            row[0] = new Date(row[0]);
+            return row;
+          })
+        );
+
+        var chart = new google.visualization.Calendar(
+          document.getElementById('calendar_basic')
+        );
+
+        var options = {
+          title: 'Calendar Chart',
+          height: 350,
+        };
+
+        chart.draw(dataTable, options);
+      }
+    </script>
+    <script>
+      function getData() {
+        google.script.run.withSuccessHandler(drawChart).getData();
+      }
+      document.addEventListener('DOMContentLoaded', () => {});
+      google.charts.setOnLoadCallback(getData);
+    </script>
+  </head>
+  <body>
+    <div class="content">
+      <div id="calendar_basic" style="width: 1000px; height: 350px;"></div>
+    </div>
+  </body>
+</html>
