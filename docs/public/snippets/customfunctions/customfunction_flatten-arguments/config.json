@@ -1,4 +1,0 @@
-{
-  "type": "container-bound-sheet",
-  "src": ["./shims/Array.flat.js"]
-}

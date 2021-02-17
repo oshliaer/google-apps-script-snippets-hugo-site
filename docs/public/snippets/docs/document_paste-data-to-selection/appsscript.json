@@ -1,9 +1,0 @@
-{
-  "timeZone": "Europe/Moscow",
-  "oauthScopes": ["https://www.googleapis.com/auth/documents"],
-  "dependencies": {
-    "enabledAdvancedServices": [],
-    "libraries": []
-  },
-  "exceptionLogging": "STACKDRIVER"
-}

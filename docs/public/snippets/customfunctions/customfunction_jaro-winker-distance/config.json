@@ -1,6 +1,0 @@
-{
-  "type": "container-bound-sheet",
-  "src": [
-    "./node_modules/jaro-winkler/index.js"
-  ]
-}

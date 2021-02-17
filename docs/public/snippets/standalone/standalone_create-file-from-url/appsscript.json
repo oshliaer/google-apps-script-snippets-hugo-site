@@ -1,8 +1,0 @@
-{
-  "timeZone": "Europe/Moscow",
-  "oauthScopes": [
-    "https://www.googleapis.com/auth/script.external_request",
-    "https://www.googleapis.com/auth/drive"
-  ],
-  "exceptionLogging": "STACKDRIVER"
-}
