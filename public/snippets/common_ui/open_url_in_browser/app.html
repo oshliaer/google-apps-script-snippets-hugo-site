@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=https://google.com" />
+    </noscript>
+  </head>
+
+  <body>
+    <div id="message"></div>
+    <script>
+      const url = <?= url ?>;
+        const newWin = window.open(url, "_blank");
+        if(!newWin || newWin.closed || typeof newWin.closed=='undefined'){
+          document.getElementById("message").innerHTML =
+            'Pop-ups blocked! <a href="https://support.google.com/chrome/answer/95472" target="_blank">Enable</a>.';
+        } else {
+          google.script.host.close();
+        }
+    </script>
+  </body>
+</html>

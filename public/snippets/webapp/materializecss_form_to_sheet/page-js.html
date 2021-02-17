@@ -1,0 +1,67 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var multiSelect = document.querySelectorAll('select');
+    M.FormSelect.init(multiSelect);
+
+    google.script.run.withSuccessHandler(populateCodes).getCourseCode();
+
+    document.getElementById('btn').addEventListener('click', collectForm);
+  });
+
+  const onAutocompleteCourseCode = courseCode => {
+    google.script.run
+      .withSuccessHandler(listExpectations)
+      .getExpectations2(courseCode);
+  };
+
+  const values = Array.from(document.querySelectorAll('input[type="checkbox"]'))
+    .filter(checkbox => checkbox.checked)
+    .map(checkbox => checkbox.value);
+
+  function collectForm() {
+    var submission = {};
+    submission.grade = document.getElementById('grade').value;
+    submission.courseCode = document.getElementById('courseCode').value;
+    submission.expectations = M.FormSelect.getInstance(
+      document.getElementById('expectations')
+    )
+      .getSelectedValues()
+      .join('; ');
+
+    google.script.run.userClicked(submission);
+
+    // this will clear the last user's text in the input box username
+
+    var clearGrade = document.getElementById('grade');
+    clearGrade.selectedIndex = 0;
+    M.FormSelect.init(clearGrade);
+
+    document.getElementById('courseCode').value = '';
+
+    var clearExpectations = document.getElementById('expectations');
+    clearExpectations.selectedIndex = 0;
+    M.FormSelect.init(clearExpectations);
+
+    M.updateTextFields();
+  }
+
+  function populateCodes(codes) {
+    var autocomplete = document.getElementById('courseCode');
+    var instances = M.Autocomplete.init(autocomplete, {
+      data: codes,
+      onAutocomplete: onAutocompleteCourseCode,
+    });
+  }
+
+  function listExpectations(listLabels) {
+    console.log(listLabels);
+    const elm = document.getElementById('expectations');
+    const label = listLabels
+      .map(row => `<option value="${row}">${row}</option>`)
+      .join('');
+
+    elm.innerHTML =
+      '<option disabled selected>Select expectations not met</option>' + label;
+    setTimeout(() => M.FormSelect.init(elm), 0);
+  }
+</script>
