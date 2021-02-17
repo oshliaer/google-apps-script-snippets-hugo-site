@@ -86,7 +86,7 @@ Here it is
 }
 ```
 
-### How can I help
+## How can I help
 
 - Leave a request of snippet or suggestion for improvement in the repository [contributorpw/google-apps-script-snippets/issues][5]
 - Share the snippets

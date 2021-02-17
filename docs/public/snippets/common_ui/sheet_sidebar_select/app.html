@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://ssl.gstatic.com/docs/script/css/add-ons1.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="block form-group">
+        <label for="select">Select</label>
+        <select id="select"></select>
+      </div>
+    </div>
+    <script>
+      function getValues() {
+        google.script.run
+          .withSuccessHandler((values) => {
+            const select = document.getElementById('select');
+            select.options.length = 0;
+            values.forEach((value, i) => {
+              select.options[select.options.length] = new Option(value, value);
+            });
+          })
+          .getValues();
+      }
+      window.addEventListener('DOMContentLoaded', (event) => {
+        getValues();
+      });
+    </script>
+  </body>
+</html>
