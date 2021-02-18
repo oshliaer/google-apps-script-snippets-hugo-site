@@ -1,8 +1,0 @@
-{
-  "timeZone": "Europe/Moscow",
-  "dependencies": {
-    "enabledAdvancedServices": [],
-    "libraries": []
-  },
-  "exceptionLogging": "STACKDRIVER"
-}
