@@ -19,6 +19,8 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 pygmentsUseClasses = true
 
+ignoreFiles = [ "snippets/.*\\.js$", "snippets/.*\\.html$", "snippets/.*\\.json$" ]
+
 [permalinks]
   blog = "/:slug/"
   tags = "/:slug/"
