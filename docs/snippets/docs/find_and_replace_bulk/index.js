@@ -11,19 +11,19 @@
  */
 
 /**
- * Run the snippet
+ * Run the snippet for the active document
  */
 function run() {
-  const docId = DocumentApp.getActiveDocument().getId();
-  const response = replaceAllText(
-    [
-      {
-        substitution: '{{print}}',
-        text: 'Print!',
-      },
-    ],
-    docId
-  );
+  const response = replaceAllText([
+    {
+      substitution: '{{datetime}}',
+      text: Utilities.formatDate(new Date(), 'GMT+3', 'dd.mm.yyyy HH:MM'),
+    },
+    {
+      substitution: '{{signature}}',
+      text: 'Alex Ivanov',
+    },
+  ]);
   console.log(response);
 }
 
@@ -31,11 +31,14 @@ function run() {
  * Execute all Replacements
  *
  * @param {Array.<Replacement>} replacements
- * @param {string} docId
+ * @param {string} id The Doc id
  * @return {GoogleAppsScript.Docs.Schema.BatchUpdateDocumentResponse}
  */
-function replaceAllText(replacements, docId) {
-  const requests = replacements.map(replacement => {
+function replaceAllText(
+  replacements,
+  id = DocumentApp.getActiveDocument().getId()
+) {
+  const requests = replacements.map((replacement) => {
     const substringMatchCriteria = Docs.newSubstringMatchCriteria();
     substringMatchCriteria.matchCase = false;
     substringMatchCriteria.text = replacement.substitution;
@@ -55,7 +58,7 @@ function replaceAllText(replacements, docId) {
 
   const batchUpdateDocumentResponse = Docs.Documents.batchUpdate(
     batchUpdateDocumentRequest,
-    docId
+    id
   );
 
   return batchUpdateDocumentResponse;

@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Find and replace multiple pairs of occurrences</title>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/find_and_replace_bulk/readme/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/find_and_replace_bulk/readme/</guid>
+      <description>Find and replace multiple pairs of occurrences This snippet shows how you can find and replace multiple data entries at once. For example, you want to replace the text &amp;ldquo;{{datetime}}&amp;rdquo; with the current time, and &amp;ldquo;{{signature}}&amp;rdquo; with the signature. You will need a settings object. See how it is written in code:
+Leave a comment index.js /** * */ /** * Runs the sample. * Insert a footnote to specific position */ function run() { const reply = createFootnoteWithText_(&amp;#39;Aha!</description>
+    </item>
+    
     <item>
       <title>Create a footnote</title>
       <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/create_footnote/readme/</link>

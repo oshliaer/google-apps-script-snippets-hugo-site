@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>snippets on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-    <link>https://google-apps-script-snippets.contributor.pw/categories/snippets/</link>
-    <description>Recent content in snippets on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
+    <title>Docs advanced service on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
+    <link>https://google-apps-script-snippets.contributor.pw/docs-advanced-service/</link>
+    <description>Recent content in Docs advanced service on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/categories/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/docs-advanced-service/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Find and replace multiple pairs of occurrences</title>
       <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/find_and_replace_bulk/readme/</link>
