@@ -1,0 +1,26 @@
+{
+  "name": "google-apps-script-snippets-hugo-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contributorpw/google-apps-script-snippets-hugo-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/contributorpw/google-apps-script-snippets-hugo-site/issues"
+  },
+  "homepage": "https://github.com/contributorpw/google-apps-script-snippets-hugo-site#readme",
+  "dependencies": {
+    "clipboard": "^2.0.6"
+  }
+}
