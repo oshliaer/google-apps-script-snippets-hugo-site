@@ -1,41 +1,38 @@
 {{ define "main" }}
 <content>
-  {{ if .Data.Singular }}
-  {{else}}
-    <small>
-      <div>•
-        {{ range .Site.Taxonomies.tags }}
-        &nbsp;<a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;•
-        {{ end }}
-      </div>
-    </small>
-  {{ end }}
-  {{ if .Data.Singular }}
-  <h3 style="margin-bottom:0">Filtering for "{{ .Title }}"</h3>
+  {{ if .Data.Singular }} {{else}}
   <small>
-    <a href="{{ "/blog" | relURL }}">Remove filter</a>
+    <div>
+      •{{ range .Site.Taxonomies.tags }}&nbsp;<a
+        href="{{ .Page.Permalink | relURL }}"
+        >#{{ .Page.Title }}</a
+      >&nbsp;• {{ end }}
+    </div>
   </small>
+  {{ end }} {{ if .Data.Singular }}
+  <h3 style="margin-bottom: 0">Filtering for "{{ .Title }}"</h3>
   {{ end }}
   <ul class="blog-posts">
     {{ range .Pages }}
     <li>
       <!-- <span> -->
-        <!-- <i> -->
-          <!-- <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+      <!-- <i> -->
+      <!-- <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
             {{ .Date.Format "02 Jan, 2006" }}
           </time> -->
-        <!-- </i> -->
+      <!-- </i> -->
       <!-- </span> -->
-      <div class="list-path">
-      {{ .File.Dir }}</div><br>
+      <div class="list-path">{{ .File.Dir }}</div>
+      <br />
       <div>
-        <a href="{{ .Permalink }}">{{ cond (gt (len .Title) 0) .Title "No title" }}</a>
+        <a href="{{ .Permalink }}"
+          >{{ cond (gt (len .Title) 0) .Title "No title" }}</a
+        >
       </div>
+      <div class="description">{{ .Description }}</div>
     </li>
     {{ else }}
-    <li>
-      No posts yet
-    </li>
+    <li>No posts yet</li>
     {{ end }}
   </ul>
 </content>

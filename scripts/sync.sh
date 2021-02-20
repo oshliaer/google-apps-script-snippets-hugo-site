@@ -7,6 +7,7 @@ source="/raid/user/github.com/contributorpw/google-apps-script-snippets/snippets
 
 rsync -ar --progress --exclude "*.png" --exclude "*.gif" --exclude "*.mp4" --exclude "*.jpg" --exclude ".clasp.json" "$source/" "$target/" --delete
 
+brename -p "readme.md" -r "index.md" -R $target
 # while true; do
 
 ## Watch for new files, the grep will return true if a file has

@@ -5,10 +5,10 @@ baseURL = "https://google-apps-script-snippets.contributor.pw"
 # theme = 'hugo-bearblog'
 
 # Basic metadata configuration for your blog.
-title = "Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ"
 author = "Alex Ivanov <ai@contributor.pw>"
 copyright = "Copyright © 2021, Alex Ivanov."
 languageCode = "en-US"
+title = "Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ"
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true
@@ -19,32 +19,36 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 pygmentsUseClasses = true
 
-ignoreFiles = [ "snippets/.*\\.js$", "snippets/.*\\.html$", "snippets/.*\\.json$" ]
+ignoreFiles = ["snippets/.*\\.js$", "snippets/.*\\.html$", "snippets/.*\\.json$"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [permalinks]
-  blog = "/:slug/"
-  tags = "/:slug/"
+tags = "/:slug/"
 
 [params]
-  # The "description" of your website. This is used in the meta data of your generated html.
-  description = "Hugo + Bear = :heart:"
+# The "description" of your website. This is used in the meta data of your generated html.
+description = "Hugo + Bear = :heart:"
 
-  # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
-  # Hint: It's good practise to also put a "favicon.ico"-file into your "static"-folder.
-  favicon = "images/favicon.png"
+# The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
+# Hint: It's good practise to also put a "favicon.ico"-file into your "static"-folder.
+favicon = "images/favicon.png"
 
-  # These "images" are used for the structured data templates. This will show up, when
-  # services like Twitter or Slack want to generate a preview of a link to your site.
-  # See https://gohugo.io/templates/internal#twitter-cards and
-  # https://gohugo.io/templates/internal#open-graph.
-  images = ["images/share.png"]
+# These "images" are used for the structured data templates. This will show up, when
+# services like Twitter or Slack want to generate a preview of a link to your site.
+# See https://gohugo.io/templates/internal#twitter-cards and
+# https://gohugo.io/templates/internal#open-graph.
+images = ["images/share.png"]
 
-  # Another "title" :-). This one is used as the site_name on the Hugo's internal
-  # opengraph structured data template.
-  # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
-  title = "Google Apps Script Snippets"
+# Another "title" :-). This one is used as the site_name on the Hugo's internal
+# opengraph structured data template.
+# See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
+title = "Google Apps Script Snippets"
 
-  # This theme will, by default, inject a made-with-line at the bottom of the page.
-  # You can turn it off, but we would really appreciate if you don’t :-).
-  # hideMadeWithLine = true
-  snippetsRepo = "https://github.com/contributorpw/google-apps-script-snippets"
+# This theme will, by default, inject a made-with-line at the bottom of the page.
+# You can turn it off, but we would really appreciate if you don’t :-).
+# hideMadeWithLine = true
+snippetsRepo = "https://github.com/contributorpw/google-apps-script-snippets"
