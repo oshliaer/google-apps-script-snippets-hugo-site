@@ -1,1 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>common on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title><link>https://google-apps-script-snippets.contributor.pw/common/</link><description>Recent content in common on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><copyright>Copyright © 2021, Alex Ivanov.</copyright><lastBuildDate>Fri, 19 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/common/index.xml" rel="self" type="application/rss+xml"/><item><title>Column names to numbers and vice versa</title><link>https://google-apps-script-snippets.contributor.pw/snippets/common_js/column_names_and_numbers/</link><pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate><guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/column_names_and_numbers/</guid><description>Column names to numbers and vice versa Define Base 26 ABC Snippets Test The short list of the first 250 numbers Art Column names to numbers and vice versa Define Base 26 ABC A26 = a26 = 110 B26 = b26 = 210 C26 = c26 = 310 &amp;hellip; Y26 = y26 = 2510 Z26 = z26 = 2610 AA26 = aa26 = 2710 &amp;hellip; ZZ26 = zz26 = 70210 There are several base 26 types.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>common on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
+    <link>https://google-apps-script-snippets.contributor.pw/common/</link>
+    <description>Recent content in common on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2021, Alex Ivanov.</copyright>
+    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/common/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Column names to numbers and vice versa</title>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/common_js/column_names_and_numbers/</link>
+      <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/column_names_and_numbers/</guid>
+      <description>Column names to numbers and vice versa  Define Base 26 ABC Snippets Test The short list of the first 250 numbers Art     Column names to numbers and vice versa Define Base 26 ABC  A26 = a26 = 110 B26 = b26 = 210 C26 = c26 = 310 &amp;hellip; Y26 = y26 = 2510 Z26 = z26 = 2610 AA26 = aa26 = 2710 &amp;hellip; ZZ26 = zz26 = 70210  There are several base 26 types.</description>
+    </item>
+    
+  </channel>
+</rss>
