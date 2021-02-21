@@ -1,2 +1,0 @@
-User-Agent: *
-Sitemap: https://google-apps-script-snippets.contributor.pw/sitemap.xml
