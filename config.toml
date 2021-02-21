@@ -19,8 +19,6 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 pygmentsUseClasses = true
 
-ignoreFiles=["snippets/*/.*\\.js", "snippets/*/.*\\.html", "snippets/*/.*\\.json"]
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

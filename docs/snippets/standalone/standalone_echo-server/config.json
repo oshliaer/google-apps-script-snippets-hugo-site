@@ -1,0 +1,4 @@
+{
+  "type": "standalone",
+  "src": ["./shims/URL.js", "./shims/URLSearchParams.js"]
+}
