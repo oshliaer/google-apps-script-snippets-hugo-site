@@ -3,16 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://google-apps-script-snippets.contributor.pw/</loc>
-    <lastmod>2021-02-21T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://google-apps-script-snippets.contributor.pw/snippets/common_ui/open_url_in_browser/</loc>
-    <lastmod>2021-02-21T00:00:00+00:00</lastmod>
+    <loc>https://google-apps-script-snippets.contributor.pw/protection/</loc>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://google-apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</loc>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/</loc>
-    <lastmod>2021-02-21T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/categories/snippets/</loc>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://google-apps-script-snippets.contributor.pw/spreadsheetapp/</loc>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://google-apps-script-snippets.contributor.pw/snippets/common_ui/open_url_in_browser/</loc>
     <lastmod>2021-02-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/common_js/column_names_and_numbers/</loc>
