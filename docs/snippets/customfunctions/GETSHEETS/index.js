@@ -8,8 +8,8 @@
 /*
 Generate TOC
  =ARRAYFORMULA(HYPERLINK(
-  "#gid="&GETSHEETS("SheetId",A1)
-  ,GETSHEETS("Name",A1)
+  "#gid="&GETSHEETS("SheetId",A1)
+  ,GETSHEETS("Name",A1)
 ))
 */
 
