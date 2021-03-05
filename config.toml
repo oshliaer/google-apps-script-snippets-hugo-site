@@ -17,6 +17,8 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 
+ignoreFiles = [ "\\.json$", "\\.js$" ]
+
 pygmentsUseClasses = true
 
 [markup]

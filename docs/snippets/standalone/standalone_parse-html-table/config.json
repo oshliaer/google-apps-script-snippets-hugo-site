@@ -1,4 +1,0 @@
-{
-  "type": "standalone",
-  "src": ["./shims/String.repeat.js"]
-}
