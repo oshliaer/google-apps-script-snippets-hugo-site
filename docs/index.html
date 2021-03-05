@@ -590,13 +590,13 @@
 <p>This is a systematic view of Google Apps Script <a href="https://github.com/contributorpw/google-apps-script-snippets">snippets</a> sorted and grouped using <a href="https://gohugo.io">Hugo</a>. It also uses <a href="https://github.com/facebook/watchman">watchman</a> and <a href="https://rsync.samba.org/">rsync</a> to build locally.</p>
 <h2 id="why-is-this-necessary">Why is this necessary</h2>
 <p>The main reason is to share knowledge. Often the documentation is insufficient to reveal the capabilities of a method or coding approach.</p>
-<p>When I was learning I missed such samples. I really hope it will be useful for you too.</p>
+<p>I wish I could have samples like these when I was learning to code.</p>
 <h2 id="what-is-a-snippet">What is a snippet</h2>
-<p>Snippet is a programming term for a small region of re-usable source code, machine code, or text. These snippets are focused on simple and common use. Very often (in Google Apps Script) we need to copy and paste some code into our project for everything to work. These snippets are for this.</p>
+<p>Snippet is a programming term for a small region of re-usable source code, machine code, or text. These simple and common-case snippets can be re-used within an Apps Script project.</p>
 <h2 id="how-to-use">How to use</h2>
 <h3 id="main-approach">Main approach</h3>
-<p>You just copy the files to your project.</p>
-<p>Almost every snippet is provided with a main code file and a manifest. You need the manifest to know what additional libraries or services or scopes you may need to make the snippet work.</p>
+<p>Just copy the files to your project.</p>
+<p>Almost every snippet is provided with the main code file and a manifest. You need the manifest to know what additional libraries or services or scopes you may need to make the snippet work.</p>
 <h3 id="an-example-of-a-simple-manifest">An example of a simple manifest</h3>
 <p><strong>appsscript.json</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
@@ -606,7 +606,7 @@
   <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="an-example-of-a-manifest-with-dependencies">An example of a manifest with dependencies</h3>
-<p>Below is an example when using Advanced Docs Service. Usually, updating the manifest is enough for the program to request new permissions. Stay attentive.</p>
+<p>Below is an example when using Advanced Docs Service. Usually, updating the manifest is enough for the program to request new permissions.</p>
 <p><strong>appsscript.json</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
   <span class="nt">&#34;timeZone&#34;</span><span class="p">:</span> <span class="s2">&#34;Europe/Moscow&#34;</span><span class="p">,</span>
@@ -625,7 +625,7 @@
 </code></pre></div><h3 id="how-to-see-my-manifest">How to see my manifest</h3>
 <p>You need to check-in the property <code>Show &quot;appsscript.json&quot; manifest file in editor</code> in your project settings.</p>
 <h3 id="how-to-merge-manifests">How to merge manifests</h3>
-<p>When you take a snippet, you get two manifests: yours one in the current project and a snippet manifest.</p>
+<p>When you take a snippet, you get two manifests: yours in the current project and the snippet manifest.</p>
 <p>The snippet&rsquo;s manifest should just extend your manifest. From the example above, you can see that we need to add only one object to the simple manifest.</p>
 <p>Here it is</p>
 <div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
@@ -644,7 +644,7 @@
 <li>Contribute <a href="https://github.com/contributorpw/google-apps-script-snippets">contributorpw/google-apps-script-snippets</a></li>
 <li>Contribute <a href="https://github.com/contributorpw/google-apps-script-snippets-hugo-site">contributorpw/google-apps-script-snippets-hugo-site</a></li>
 <li>Contribute <a href="https://github.com/janraasch/hugo-bearblog">janraasch/hugo-bearblog</a></li>
-<li>Do know something cool about Google Apps Script? Leave an issue or PR <a href="https://github.com/contributorpw/google-apps-script-awesome-list">contributorpw/google-apps-script-awesome-list</a></li>
+<li>Do you know something cool about Google Apps Script? Leave an issue or PR <a href="https://github.com/contributorpw/google-apps-script-awesome-list">contributorpw/google-apps-script-awesome-list</a></li>
 </ul>
 
 
