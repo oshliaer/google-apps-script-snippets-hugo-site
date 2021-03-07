@@ -1,0 +1,13 @@
+{{ $file := "appsscript.json" }}
+{{ $repo := default ( .Page.Param "snippetsRepo" | replaceRE "(https://)?(github.com/)?" "" ) (.Get 0) }}
+{{ $dir := default .Page.File.Dir (.Get 1) }}
+{{ $path := path.Join $dir $file }}
+{{ $link := path.Join $repo $dir $file }}
+{{ if ( fileExists $path ) }}
+  <a href="https://scrviz.web.app/?manifest={{ $link }}" target="_blank">
+    Create script from the snippet
+  </a>
+  <sup style="font-size: x-small;">
+    &nbsp;<strong>*</strong>See <a href="https://ramblings.mcpher.com/vizzy-scrviz/vizzy-clone-apps-script-github/" target="_blank">how to use scrviz</a> for clone Apps Script project
+  </sup>
+{{ end }}
