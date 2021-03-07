@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/common/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/common/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get file/folder ID from url</title>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/common_js/get_id_from_url/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/get_id_from_url/</guid>
+      <description>Get file/folder ID from url  Snippet Run it Test     Get file/folder ID from url Snippet  See full code  Leave a comment  index.js /** * Gets ID from URL * * @param {string} url The file url * @returns {string} The file id */ function getIdFromUrl(url) { const match = url.match(/[\w-_]{15,}/); return match ? match[0] : undefined; }  Run it run.js /** * This code runs the snippet */ function run() { let url = &amp;#39;https://docs.</description>
+    </item>
+    
     <item>
       <title>Column names to numbers and vice versa</title>
       <link>https://google-apps-script-snippets.contributor.pw/snippets/common_js/column_names_and_numbers/</link>
