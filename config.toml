@@ -52,3 +52,4 @@ title = "Google Apps Script Snippets"
 # You can turn it off, but we would really appreciate if you don’t :-).
 # hideMadeWithLine = true
 snippetsRepo = "https://github.com/contributorpw/google-apps-script-snippets"
+thisRepo = "https://github.com/contributorpw/google-apps-script-snippets-hugo-site"
