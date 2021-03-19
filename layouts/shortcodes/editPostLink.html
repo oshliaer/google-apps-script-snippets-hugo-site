@@ -1,0 +1,5 @@
+{{ $repo := .Page.Param "thisRepo" }}
+{{ $slug := "/edit/master/content/" }}
+{{ $file := .Page.File }}
+
+<a href="{{ path.Join $repo $slug $file }}" target="blank">✎&nbsp;Edit</a>&nbsp;this&nbsp;post
