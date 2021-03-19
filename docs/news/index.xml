@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>news on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
+    <link>https://google-apps-script-snippets.contributor.pw/news/</link>
+    <description>Recent content in news on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2021, Alex Ivanov.</copyright>
+    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>False malware alerts</title>
+      <link>https://google-apps-script-snippets.contributor.pw/blog/false_malware_alerts/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/blog/false_malware_alerts/</guid>
+      <description>&lt;p&gt;Some security systems have started reporting that this site contains malicious content. &lt;code&gt;URL:Phishing&lt;/code&gt; is main of that.&lt;/p&gt;
+&lt;p&gt;You can check for yourself that this is a bug &lt;a href=&#34;https://www.virustotal.com/gui/url/c644d4ed496731077acde7ac88a8d3605fefd568c16fb976db9144248218518a/detection&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Below we will look at alerts, reasons for the occurrence and how to secure check.&lt;/p&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#alerts&#34;&gt;Alerts&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#the-eset-alert&#34;&gt;The ESET Alert&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#the-avast-alert&#34;&gt;The Avast alert&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#reasons&#34;&gt;Reasons&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#how-to-check&#34;&gt;How to check&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#check-the-report&#34;&gt;Check the report&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#check-virustotal&#34;&gt;Check virustotal&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
