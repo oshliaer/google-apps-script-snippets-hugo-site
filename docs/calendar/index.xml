@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>calendar on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
+    <link>https://google-apps-script-snippets.contributor.pw/calendar/</link>
+    <description>Recent content in calendar on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2021, Alex Ivanov.</copyright>
+    <lastBuildDate>Mon, 29 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/calendar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>To clear all events from a Google Calendar</title>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</link>
+      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</guid>
+      <description>Clear all events from a Calendar  Snippet Run it     Clear all events from a Calendar Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * * @param {GoogleAppsScript.Calendar.Calendar} calendar */ function clearAllEvents_(calendar) { const marks = []; return calendar.getEvents(new Date(0), new Date()).map((event) =&amp;gt; { const id = event.</description>
+    </item>
+    
+  </channel>
+</rss>
