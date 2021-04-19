@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Date range iterator</title>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/</link>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/</guid>
+      <description>Date range iterator  Snippet Run it     Date range iterator Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /* exported makeDatesRangeIterator */ /** * * @param {Date} start * @param {Date} end * @param {number} step ms */ function* makeDatesRangeIterator_(start, end, step = 1000 * 60 * 60 * 24) { const _start = new Date(start); let _iterationCount = 0; while (_start &amp;lt;= end) { _iterationCount++; yield _start; _start.</description>
+    </item>
+    
     <item>
       <title>Unlink all URLs in the range</title>
       <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</link>

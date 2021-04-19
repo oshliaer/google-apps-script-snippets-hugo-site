@@ -12,4 +12,5 @@ sleep 3
 watchman -- trigger $source sync '**/*' -- $PWD/scripts/sync.sh
 # rm -rf ./docs && hugo serve --renderToDisk --disableFastRender --minify
 #  rm -rf ./docs && hugo serve --theme hugo-book --themesDir /raid/user/github.com/contributorpw
-rm -rf ./content/snippets && hugo serve --theme hugo-bearblog --themesDir /raid/user/github.com/contributorpw --ignoreCache
+# rm -rf ./content/snippets && 
+hugo serve --theme hugo-bearblog --themesDir /raid/user/github.com/contributorpw --ignoreCache --renderToDisk --disableFastRender

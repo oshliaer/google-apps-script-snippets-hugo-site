@@ -3,19 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://google-apps-script-snippets.contributor.pw/</loc>
-    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://google-apps-script-snippets.contributor.pw/common/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://google-apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://google-apps-script-snippets.contributor.pw/js/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://google-apps-script-snippets.contributor.pw/snippets/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://google-apps-script-snippets.contributor.pw/categories/snippets/</loc>
+    <lastmod>2021-04-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/sheets/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/sheets-advanced-service/</loc>
-    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://google-apps-script-snippets.contributor.pw/snippets/</loc>
-    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://google-apps-script-snippets.contributor.pw/categories/snippets/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</loc>
@@ -30,13 +39,7 @@
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/</loc>
     <lastmod>2021-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://google-apps-script-snippets.contributor.pw/common/</loc>
-    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/common_js/get_id_from_url/</loc>
-    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://google-apps-script-snippets.contributor.pw/js/</loc>
     <lastmod>2021-03-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/protection/</loc>
