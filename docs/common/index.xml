@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Mon, 19 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/common/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/common/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sheets datetime converter</title>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/common_js/sheet_datetime/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/sheet_datetime/</guid>
+      <description>Sheets datetime converter  Snippet Run it Relations     Sheets datetime converter Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Converts date-time to numeric Sheets format * * @param {(number|Date)} date JS Date or time in ms * @param {number} timezoneOffset * @return {number} Google Sheets Date number */ function toGoogleSheetsDateNumber(date, timezoneOffset) { const _date = new Date(date); timezoneOffset = timezoneOffset || _date.</description>
+    </item>
+    
     <item>
       <title>Date range iterator</title>
       <link>https://google-apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/</link>
