@@ -9,12 +9,12 @@
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
     <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/calendar/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Delete specific events from a Google Calendar series</title>
+      <title>Delete specific events from Google Calendar series</title>
       <link>https://google-apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</guid>
-      <description>Delete specific events from a Google Calendar series  Snippet Run it     Delete specific events from a Google Calendar series Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * * Deletes only specific events from a series that match by date and search term * * @param {GoogleAppsScript.</description>
+      <description>Delete specific events from Google Calendar series  Snippet Run it     Delete specific events from Google Calendar series Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * * Deletes only specific events from series that match by date and search term * * @param {GoogleAppsScript.</description>
     </item>
     
     <item>
