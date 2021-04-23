@@ -14,7 +14,8 @@
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</guid>
-      <description>Delete specific events from Google Calendar series  Snippet Run it     Delete specific events from Google Calendar series Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * * Deletes only specific events from series that match by date and search term * * @param {GoogleAppsScript.</description>
+      <description>Delete specific events from Google Calendar series  Snippet Run it Manifest     Delete specific events from Google Calendar series Note: For bulk operations please use Google Calendar API Batch Requests. See: Sending Batch Requests | Calendar API | Google Developers, tanaikech/BatchRequest: This is a library for running Batch Requests using Google Apps Script (GAS).
+Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.</description>
     </item>
     
     <item>
