@@ -33,7 +33,7 @@
 <meta itemprop="name" content="Delete specific events from Google Calendar series">
 <meta itemprop="description" content=" Checking and deleting only specific events via CalendarApp"><meta itemprop="datePublished" content="2021-04-22T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-04-22T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="165"><meta itemprop="image" content="https://google-apps-script-snippets.contributor.pw/images/share.png"/>
+<meta itemprop="wordCount" content="265"><meta itemprop="image" content="https://google-apps-script-snippets.contributor.pw/images/share.png"/>
 <meta itemprop="keywords" content="calendar," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -602,11 +602,13 @@
       <ul>
         <li><a href="#snippet">Snippet</a></li>
         <li><a href="#run-it">Run it</a></li>
+        <li><a href="#manifest">Manifest</a></li>
       </ul>
     </li>
   </ul>
 </nav>
 <h2 id="delete-specific-events-from-google-calendar-series">Delete specific events from Google Calendar series</h2>
+<p><strong>Note:</strong> For bulk operations please use Google Calendar API Batch Requests. <em>See:</em> <a href="https://developers.google.com/calendar/batch">Sending Batch Requests  |  Calendar API  |  Google Developers</a>, <a href="https://github.com/tanaikech/BatchRequest">tanaikech/BatchRequest: This is a library for running Batch Requests using Google Apps Script (GAS).</a></p>
 <h3 id="snippet">Snippet</h3>
 <ul>
 <li><a href="https://github.com/contributorpw/google-apps-script-snippets/tree/master/snippets/calendar/delete-one-of-series/" target="blank">See full code</a>
@@ -637,19 +639,43 @@
 <div class="highlight"><pre class="chroma"><code class="language-.js" data-lang=".js"><span class="cm">/**
 </span><span class="cm"> *
 </span><span class="cm"> * Deletes only specific events from series that match by date and search term
+</span><span class="cm"> * Retuns affected events
 </span><span class="cm"> *
-</span><span class="cm"> * @param {GoogleAppsScript.Calendar.Calendar} calendar
+</span><span class="cm"> * @param {string} calendarId
 </span><span class="cm"> * @param {Date} start
 </span><span class="cm"> * @param {Date} end
 </span><span class="cm"> * @param {string} search
-</span><span class="cm"> * @returns {GoogleAppsScript.Calendar.CalendarEvent[]}
+</span><span class="cm"> * @returns {GoogleAppsScript.Calendar.Schema.Event[]}
 </span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">deleteEventFromSeries</span><span class="p">(</span><span class="nx">calendar</span><span class="p">,</span> <span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">,</span> <span class="nx">search</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">search</span> <span class="o">?</span> <span class="p">{}</span> <span class="o">:</span> <span class="p">{</span> <span class="nx">search</span> <span class="p">};</span>
-  <span class="kr">const</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">calendar</span><span class="p">.</span><span class="nx">getEvents</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-  <span class="k">return</span> <span class="nx">events</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span>
-    <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">getEventSeries</span><span class="p">()</span> <span class="o">?</span> <span class="nx">event</span><span class="p">.</span><span class="nx">deleteEvent</span><span class="p">()</span> <span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span> <span class="nx">event</span><span class="p">)</span>
-  <span class="p">);</span>
+<span class="kd">function</span> <span class="nx">deleteEventFromSeries</span><span class="p">(</span><span class="nx">calendarId</span><span class="p">,</span> <span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">,</span> <span class="nx">search</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="kr">const</span> <span class="nx">timeMin</span> <span class="o">=</span> <span class="nx">start</span><span class="p">.</span><span class="nx">toISOString</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">timeMax</span> <span class="o">=</span> <span class="nx">end</span><span class="p">.</span><span class="nx">toISOString</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">Calendar</span><span class="p">.</span><span class="nx">Events</span><span class="p">.</span><span class="nx">list</span><span class="p">(</span><span class="nx">calendarId</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">timeMin</span><span class="p">,</span>
+    <span class="nx">timeMax</span><span class="p">,</span>
+    <span class="nx">q</span><span class="o">:</span> <span class="nx">search</span><span class="p">,</span>
+    <span class="nx">singleEvents</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">fields</span><span class="o">:</span> <span class="s1">&#39;items&#39;</span><span class="p">,</span>
+  <span class="p">});</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">events</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">events</span><span class="p">.</span><span class="nx">items</span>
+      <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">event</span><span class="p">.</span><span class="nx">recurrence</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">instances</span> <span class="o">=</span> <span class="nx">Calendar</span><span class="p">.</span><span class="nx">Events</span><span class="p">.</span><span class="nx">instances</span><span class="p">(</span><span class="nx">calendarId</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="p">{</span>
+          <span class="nx">timeMin</span><span class="p">,</span>
+          <span class="nx">timeMax</span><span class="p">,</span>
+        <span class="p">});</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">instances</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+          <span class="nx">instances</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">instance</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="nx">instance</span><span class="p">.</span><span class="nx">status</span> <span class="o">=</span> <span class="s1">&#39;cancelled&#39;</span><span class="p">;</span>
+            <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
+              <span class="nx">Calendar</span><span class="p">.</span><span class="nx">Events</span><span class="p">.</span><span class="nx">patch</span><span class="p">(</span><span class="nx">instance</span><span class="p">,</span> <span class="nx">calendarId</span><span class="p">,</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span>
+            <span class="p">);</span>
+          <span class="p">});</span>
+      <span class="p">});</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 
@@ -677,7 +703,31 @@
   <span class="kr">const</span> <span class="nx">end</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">now</span><span class="p">);</span>
   <span class="nx">end</span><span class="p">.</span><span class="nx">setHours</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">999</span><span class="p">);</span>
   <span class="nx">end</span><span class="p">.</span><span class="nx">setDate</span><span class="p">(</span><span class="nx">end</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">deleteEventFromSeries</span><span class="p">(</span><span class="nx">calendar</span><span class="p">,</span> <span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">,</span> <span class="s1">&#39;event&#39;</span><span class="p">));</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">deleteEventFromSeries</span><span class="p">(</span><span class="nx">calendar</span><span class="p">.</span><span class="nx">getId</span><span class="p">(),</span> <span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">,</span> <span class="s1">&#39;event&#39;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="manifest">Manifest</h3>
+
+
+
+
+
+
+<strong>appsscript.json</strong>
+<div class="highlight"><pre class="chroma"><code class="language-.json" data-lang=".json"><span class="p">{</span>
+  <span class="nt">&#34;timeZone&#34;</span><span class="p">:</span> <span class="s2">&#34;Europe/Moscow&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;exceptionLogging&#34;</span><span class="p">:</span> <span class="s2">&#34;STACKDRIVER&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;enabledAdvancedServices&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&#34;userSymbol&#34;</span><span class="p">:</span> <span class="s2">&#34;Calendar&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;v3&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;serviceId&#34;</span><span class="p">:</span> <span class="s2">&#34;calendar&#34;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
