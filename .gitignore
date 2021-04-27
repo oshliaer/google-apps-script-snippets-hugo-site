@@ -1,6 +1,6 @@
 /resources/
 /content/snippets/
-node_modules
+/node_modules/
 .brename_detail.txt
-public
+/public/
 .log
