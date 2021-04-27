@@ -3,3 +3,4 @@
 node_modules
 .brename_detail.txt
 public
+.log
