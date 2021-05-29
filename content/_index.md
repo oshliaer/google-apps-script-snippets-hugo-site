@@ -6,7 +6,7 @@
 
 ## What is it
 
-This is a systematic view of Google Apps Script [snippets][1] sorted and grouped using [Hugo][2]. It also uses [watchman][3] and [rsync][4] [brename][9] to build locally.
+This is a systematic view of Google Apps Script [snippets][1] sorted and grouped using [Hugo][2]. It also uses [watchman][3] and [rsync][4] and [brename][9] to build locally.
 
 ## Why is this necessary
 
