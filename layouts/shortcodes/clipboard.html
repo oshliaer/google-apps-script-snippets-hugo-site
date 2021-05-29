@@ -1,0 +1,42 @@
+<style>
+  button.clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: Verdana, sans-serif;
+    color: #444;
+    border-radius: 2px;
+    border: #222 solid 1px;
+  }
+</style>
+<script src="/js/clipboard.min.js"></script>
+<script>
+  // console.log(c);
+  function getButton(e) {
+    const span = document.createElement('button');
+    span.classList.add('clipboard');
+    span.innerHTML = 'copy';
+    e.style.position = 'relative';
+    e.appendChild(span);
+  }
+  document.querySelectorAll('div.highlight').forEach(getButton);
+  const clipboard = new ClipboardJS(
+    document.querySelectorAll('div.highlight button.clipboard'),
+    {
+      target: function (trigger) {
+        return trigger.parentElement.querySelector('pre.chroma');
+      },
+    }
+  );
+  clipboard.on('success', function (e) {
+    const innerHTML = '' + e.trigger.innerHTML;
+    e.trigger.innerHTML = 'copied ✓';
+    setTimeout(() => (e.trigger.innerHTML = innerHTML), 1100);
+    e.clearSelection();
+  });
+
+  clipboard.on('error', function (e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+  });
+</script>
