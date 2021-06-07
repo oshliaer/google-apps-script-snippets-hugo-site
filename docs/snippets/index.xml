@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A responsive webapp</title>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/</link>
+      <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/</guid>
+      <description>Using responsive meta tags for an apps script webapp  Snippet Run it Manifest     Using responsive meta tags for an apps script webapp To display a responsive webapp on different devices you can use the addMetaTag method
+Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.</description>
+    </item>
+    
     <item>
       <title>Delete specific events from Google Calendar series</title>
       <link>https://google-apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</link>
