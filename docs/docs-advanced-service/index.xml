@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs advanced service on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-    <link>https://google-apps-script-snippets.contributor.pw/docs-advanced-service/</link>
+    <link>https://apps-script-snippets.contributor.pw/docs-advanced-service/</link>
     <description>Recent content in Docs advanced service on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/docs-advanced-service/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/docs-advanced-service/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Find and replace multiple pairs of occurrences</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/find_and_replace_bulk/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/docs/find_and_replace_bulk/</link>
       <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/find_and_replace_bulk/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/docs/find_and_replace_bulk/</guid>
       <description>Find and replace multiple pairs of occurrences This snippet shows how you can find and replace multiple data entries at once. For example, you want to replace the text &amp;ldquo;{{datetime}}&amp;rdquo; with the current time, and &amp;ldquo;{{signature}}&amp;rdquo; with the signature. You will need a settings object. See how it is written in code:
  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project     index.</description>
     </item>
     
     <item>
       <title>Create a footnote</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/create_footnote/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/docs/create_footnote/</link>
       <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/create_footnote/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/docs/create_footnote/</guid>
       <description>Create footnote This snippet demonstrates the ability to create new footnotes by referencing the document body. Note, you will need to find the position index in the body before to insert a footnote.
  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project     index.js /** * */ /** * Runs the sample.</description>
     </item>
