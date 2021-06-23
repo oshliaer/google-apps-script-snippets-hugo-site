@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SpreadsheetApp on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-    <link>https://google-apps-script-snippets.contributor.pw/spreadsheetapp/</link>
+    <link>https://apps-script-snippets.contributor.pw/spreadsheetapp/</link>
     <description>Recent content in SpreadsheetApp on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/spreadsheetapp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/spreadsheetapp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Protection of multiple sheets</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</link>
       <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</guid>
       <description>Protection of multiple sheets The snippet processes the list of sheets of the spreadsheet. It protects the sheets. It excludes ranges from protection if there is the specific list.
  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project     index.js /** * @file webpack.config.js * @author Alex Ivanov * @email ai@contributor.pw * * The snippet processes the list of sheets of the spreadsheet.</description>
     </item>

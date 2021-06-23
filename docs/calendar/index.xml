@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>calendar on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-    <link>https://google-apps-script-snippets.contributor.pw/calendar/</link>
+    <link>https://apps-script-snippets.contributor.pw/calendar/</link>
     <description>Recent content in calendar on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/calendar/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/calendar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Delete specific events from Google Calendar series</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</guid>
       <description>Snippet Run it Manifest   Delete specific events from Google Calendar series Note: For bulk operations please use Google Calendar API Batch Requests. See: Sending Batch Requests | Calendar API | Google Developers, tanaikech/BatchRequest: This is a library for running Batch Requests using Google Apps Script (GAS).
 Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.</description>
     </item>
     
     <item>
       <title>To clear all events from a Google Calendar</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</link>
       <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</guid>
       <description>Snippet Run it   Clear all events from a Calendar Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * * @param {GoogleAppsScript.Calendar.Calendar} calendar */ function clearAllEvents_(calendar) { const marks = []; return calendar.getEvents(new Date(0), new Date()).map((event) =&amp;gt; { const id = event.getId(); if (!marks.includes(id)) if (event.</description>
     </item>
     

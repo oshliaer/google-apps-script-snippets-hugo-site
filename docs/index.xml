@@ -2,150 +2,150 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-    <link>https://google-apps-script-snippets.contributor.pw/</link>
+    <link>https://apps-script-snippets.contributor.pw/</link>
     <description>Recent content on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reset a sheet</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</link>
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</guid>
       <description>Resets the sheet/sheets data to its original state. Cleans the sheet(s)  Snippet Run it Additional  Make copy before reset     Sorry, your browser doesn&#39;t support embedded videos.  Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * @file A snippet for reset the sheet/sheets data to its original state * Samples for {@link https://support.</description>
     </item>
     
     <item>
       <title>A responsive webapp</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/</link>
       <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/</guid>
       <description>Snippet Run it Manifest   Using responsive meta tags for an apps script webapp To display a responsive webapp on different devices you can use the addMetaTag method
 Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /* exported doGet */ /** * Using responsive meta tags for the webapp */ function doGet() { const htmlContent = &amp;#39;Hello world!</description>
     </item>
     
     <item>
       <title>Delete specific events from Google Calendar series</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</guid>
       <description>Snippet Run it Manifest   Delete specific events from Google Calendar series Note: For bulk operations please use Google Calendar API Batch Requests. See: Sending Batch Requests | Calendar API | Google Developers, tanaikech/BatchRequest: This is a library for running Batch Requests using Google Apps Script (GAS).
 Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.</description>
     </item>
     
     <item>
       <title>Sheets datetime converter</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/common_js/sheet_datetime/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/common_js/sheet_datetime/</link>
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/sheet_datetime/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/common_js/sheet_datetime/</guid>
       <description>Snippet Run it Relations   Sheets datetime converter Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Converts date-time to numeric Sheets format * * @param {(number|Date)} date JS Date or time in ms * @param {number} timezoneOffset * @return {number} Google Sheets Date number */ function toGoogleSheetsDateNumber(date, timezoneOffset) { const _date = new Date(date); timezoneOffset = timezoneOffset || _date.</description>
     </item>
     
     <item>
       <title>Date range iterator</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/</link>
       <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/</guid>
       <description>Snippet Run it   Date range iterator Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /* exported makeDatesRangeIterator */ /** * * @param {Date} start * @param {Date} end * @param {number} step ms */ function* makeDatesRangeIterator_(start, end, step = 1000 * 60 * 60 * 24) { const _start = new Date(start); let _iterationCount = 0; while (_start &amp;lt;= end) { _iterationCount++; yield _start; _start.</description>
     </item>
     
     <item>
       <title>Unlink all URLs in the range</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</link>
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</guid>
       <description>Snippet Run it Issues   Unlink all URLs in the range Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Removes all links from the range * * @param {GoogleAppsScript.Spreadsheet.Range} range A range * @return {GoogleAppsScript.Spreadsheet.RichTextValue[][]} */ function unlinkUrls_(range = SpreadsheetApp.getActiveRange()) { return range.setRichTextValues( range.getRichTextValues().map((rowRichTextValues) =&amp;gt; rowRichTextValues.</description>
     </item>
     
     <item>
       <title>To clear all events from a Google Calendar</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</link>
       <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</guid>
       <description>Snippet Run it   Clear all events from a Calendar Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * * @param {GoogleAppsScript.Calendar.Calendar} calendar */ function clearAllEvents_(calendar) { const marks = []; return calendar.getEvents(new Date(0), new Date()).map((event) =&amp;gt; { const id = event.getId(); if (!marks.includes(id)) if (event.</description>
     </item>
     
     <item>
       <title>TOC generator for Google Sheets</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/</link>
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/</guid>
       <description>Snippet Run it   TOC generator for Google Sheets Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * TOC object * @typedef {Array.&amp;lt;{ * name: string, * gid: number, * richTextValueBuilder: GoogleAppsScript.Spreadsheet.RichTextValueBuilder * }&amp;gt;} TOCBuild */ /** * Build a TOC object from the passed book * @param {GoogleAppsScript.</description>
     </item>
     
     <item>
       <title>Get file/folder ID from url</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/common_js/get_id_from_url/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/common_js/get_id_from_url/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/get_id_from_url/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/common_js/get_id_from_url/</guid>
       <description>Snippet Run it Test   Get file/folder ID from url Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Gets ID from URL * * @param {string} url The file url * @returns {string} The file id */ function getIdFromUrl(url) { const match = url.match(/[\w-_]{15,}/); return match ?</description>
     </item>
     
     <item>
       <title>Protection of multiple sheets</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</link>
       <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</guid>
       <description>Protection of multiple sheets The snippet processes the list of sheets of the spreadsheet. It protects the sheets. It excludes ranges from protection if there is the specific list.
  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project     index.js /** * @file webpack.config.js * @author Alex Ivanov * @email ai@contributor.pw * * The snippet processes the list of sheets of the spreadsheet.</description>
     </item>
     
     <item>
       <title>Open an url in browser</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/common_ui/open_url_in_browser/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/common_ui/open_url_in_browser/</link>
       <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_ui/open_url_in_browser/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/common_ui/open_url_in_browser/</guid>
       <description>Open an url in browser This snippet shows how to open a link using Apps Script in a browser. As a particular example it shows how to get/create a file and open it in browser. This may not always work as browsers protect tabs from opening spontaneously.
  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project     index.</description>
     </item>
     
     <item>
       <title>Column names to numbers and vice versa</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/common_js/column_names_and_numbers/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/common_js/column_names_and_numbers/</link>
       <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/column_names_and_numbers/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/common_js/column_names_and_numbers/</guid>
       <description>Define Base 26 ABC Snippet Test The short list of the first 250 numbers Art  Column names to number Numbers to column name     Column names to numbers and vice versa Define Base 26 ABC  A26 = a26 = 110 B26 = b26 = 210 C26 = c26 = 310 &amp;hellip; Y26 = y26 = 2510 Z26 = z26 = 2610 AA26 = aa26 = 2710 &amp;hellip; ZZ26 = zz26 = 70210  There are several base 26 types.</description>
     </item>
     
     <item>
       <title>Find and replace multiple pairs of occurrences</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/find_and_replace_bulk/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/docs/find_and_replace_bulk/</link>
       <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/find_and_replace_bulk/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/docs/find_and_replace_bulk/</guid>
       <description>Find and replace multiple pairs of occurrences This snippet shows how you can find and replace multiple data entries at once. For example, you want to replace the text &amp;ldquo;{{datetime}}&amp;rdquo; with the current time, and &amp;ldquo;{{signature}}&amp;rdquo; with the signature. You will need a settings object. See how it is written in code:
  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project     index.</description>
     </item>
     
     <item>
       <title>Create a footnote</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/create_footnote/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/docs/create_footnote/</link>
       <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/create_footnote/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/docs/create_footnote/</guid>
       <description>Create footnote This snippet demonstrates the ability to create new footnotes by referencing the document body. Note, you will need to find the position index in the body before to insert a footnote.
  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project     index.js /** * */ /** * Runs the sample.</description>
     </item>
     
     <item>
       <title>False malware alerts</title>
-      <link>https://google-apps-script-snippets.contributor.pw/blog/false_malware_alerts/</link>
+      <link>https://apps-script-snippets.contributor.pw/blog/false_malware_alerts/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/blog/false_malware_alerts/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/blog/false_malware_alerts/</guid>
       <description>&lt;p&gt;Some security systems have started reporting that this site contains malicious content. &lt;code&gt;URL:Phishing&lt;/code&gt; is main of that.&lt;/p&gt;
 &lt;p&gt;You can check for yourself that this is a bug &lt;a href=&#34;https://www.virustotal.com/gui/url/c644d4ed496731077acde7ac88a8d3605fefd568c16fb976db9144248218518a/detection&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
@@ -165,10 +165,10 @@ Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nb
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/apps/importxml-scrapper/readme.ru/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/apps/importxml-scrapper/readme.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/apps/importxml-scrapper/readme.ru/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/apps/importxml-scrapper/readme.ru/</guid>
       <description>importxml-scrapper Скрапер на основе формулы IMPORTXML.
 Принцип работы Метод scrape ищет первый лист, в имени которого есть слова [inproc] в любом месте в любом регистре. Производит замену подстановки на формулу, дожидается ее расчета, заменяет формулу на ее значение.
 scrape по умолчанию делает 50 замен за один вызов.
@@ -178,497 +178,497 @@ scrape по умолчанию делает 50 замен за один вызо
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/common_ui/check_ui/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/common_ui/check_ui/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_ui/check_ui/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/common_ui/check_ui/</guid>
       <description>on_change_trigger_sample </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_flatten-arguments/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_flatten-arguments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_flatten-arguments/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_flatten-arguments/</guid>
       <description>Flatten arguments for customfunctions </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/customfunctions/let/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/customfunctions/let/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/customfunctions/let/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/customfunctions/let/</guid>
       <description>LET Delighted with the Excel LET formula</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/docs_push_2d_array_to_table/readme.ru/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/docs/docs_push_2d_array_to_table/readme.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/docs_push_2d_array_to_table/readme.ru/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/docs/docs_push_2d_array_to_table/readme.ru/</guid>
       <description> </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/document-copy_and_replace/readme.ru/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/docs/document-copy_and_replace/readme.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/document-copy_and_replace/readme.ru/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/docs/document-copy_and_replace/readme.ru/</guid>
       <description>center-align-table-cell-content </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/document_center-align-table-cell-content/readme.ru/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/docs/document_center-align-table-cell-content/readme.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/document_center-align-table-cell-content/readme.ru/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/docs/document_center-align-table-cell-content/readme.ru/</guid>
       <description>center-align-table-cell-content </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/document_paste-data-to-selection/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/docs/document_paste-data-to-selection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/document_paste-data-to-selection/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/docs/document_paste-data-to-selection/</guid>
       <description>document_paste-data-to-selection </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/horizontal_align_samples/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/docs/horizontal_align_samples/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/horizontal_align_samples/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/docs/horizontal_align_samples/</guid>
       <description>horizontal_align_samples </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/external/external_smartlabru/readme/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/external/external_smartlabru/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/external/external_smartlabru/readme/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/external/external_smartlabru/readme/</guid>
       <description>README  DOCS https://script.google.com/macros/library/versions/d/MUjQ0enKqP-RKxsvJNoWR8vVsbLCrn_6h SUBJECT http://smart-lab.ru/indeks-optimizma/ LIB KEY MUjQ0enKqP-RKxsvJNoWR8vVsbLCrn_6h  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/autoid/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/autoid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/autoid/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/autoid/</guid>
       <description>Creates autoincrement the video</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/clean_cells_by_find_result/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/clean_cells_by_find_result/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/clean_cells_by_find_result/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/clean_cells_by_find_result/</guid>
       <description>Spreadsheet snippet </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/dynamic_meny/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/dynamic_meny/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/dynamic_meny/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/dynamic_meny/</guid>
       <description>dynamic menu </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/filters_samples/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/filters_samples/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/filters_samples/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/filters_samples/</guid>
       <description>Filters samples </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/find_and_replace_samples/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/find_and_replace_samples/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/find_and_replace_samples/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/find_and_replace_samples/</guid>
       <description>Spreadsheet snippet </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/get_data_sheet_as_array_of_objects/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/get_data_sheet_as_array_of_objects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/get_data_sheet_as_array_of_objects/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/get_data_sheet_as_array_of_objects/</guid>
       <description>get_data_sheet_as_array_of_objects </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/hide_empty_columns/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/hide_empty_columns/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/hide_empty_columns/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/hide_empty_columns/</guid>
       <description>hide_empty_columns </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/is_range_a_cell/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/is_range_a_cell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/is_range_a_cell/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/is_range_a_cell/</guid>
       <description>is_range_a_cell </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/on_change_trigger_sample/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/on_change_trigger_sample/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/on_change_trigger_sample/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/on_change_trigger_sample/</guid>
       <description>on_change_trigger_sample </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/on_change_trigger_sample_deprecated_es5/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/on_change_trigger_sample_deprecated_es5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/on_change_trigger_sample_deprecated_es5/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/on_change_trigger_sample_deprecated_es5/</guid>
       <description>on_change_trigger_sample </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-active-usere/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-active-usere/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-active-usere/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-active-usere/</guid>
       <description>spreadsheet_onedit-active-user </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/on_selection_change_simple_trigger/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/on_selection_change_simple_trigger/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/on_selection_change_simple_trigger/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/on_selection_change_simple_trigger/</guid>
       <description>on_change_trigger_sample </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/rename_sheets_by_patt/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/rename_sheets_by_patt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/rename_sheets_by_patt/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/rename_sheets_by_patt/</guid>
       <description>rename_sheets_by_patt </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-autoincrement/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-autoincrement/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-autoincrement/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-autoincrement/</guid>
       <description>Creates autoincrement the video</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-charts_calendar/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-charts_calendar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-charts_calendar/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-charts_calendar/</guid>
       <description>charts_calendar </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-dragg_down_formulas/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-dragg_down_formulas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-dragg_down_formulas/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-dragg_down_formulas/</guid>
       <description>Clear brandings </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-get_error_value_formulas/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-get_error_value_formulas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-get_error_value_formulas/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-get_error_value_formulas/</guid>
       <description>get_error_value_formulas </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-images_simple/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-images_simple/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-images_simple/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-images_simple/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-lodasgs_sample/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-lodasgs_sample/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-lodasgs_sample/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-lodasgs_sample/</guid>
       <description>lodasgs_sample </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-maps-check_streetview/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-maps-check_streetview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-maps-check_streetview/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-maps-check_streetview/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-multiple_formats/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-multiple_formats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-multiple_formats/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-multiple_formats/</guid>
       <description>Clear brandings </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-null_values/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-null_values/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-null_values/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet-null_values/</guid>
       <description>Null values </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-sample/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-sample/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-sample/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-sample/</guid>
       <description>Spreadsheet onEdit sample </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_add-row-to-filtered-range/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_add-row-to-filtered-range/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_add-row-to-filtered-range/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_add-row-to-filtered-range/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_appndrow-formula-increment/readme.ru/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_appndrow-formula-increment/readme.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_appndrow-formula-increment/readme.ru/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_appndrow-formula-increment/readme.ru/</guid>
       <description>spreadsheet_appndRow-formula-increment </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_change-basic-event/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_change-basic-event/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_change-basic-event/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_change-basic-event/</guid>
       <description>spreadsheet_change-basic-event</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_clear-bandings/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_clear-bandings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_clear-bandings/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_clear-bandings/</guid>
       <description>Clear brandings </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_insert-rows-before-by-condition/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_insert-rows-before-by-condition/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_insert-rows-before-by-condition/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_insert-rows-before-by-condition/</guid>
       <description>insert-rows-before-by-condition </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_onedit-copy-row-if-edit/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_onedit-copy-row-if-edit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_onedit-copy-row-if-edit/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_onedit-copy-row-if-edit/</guid>
       <description>spreadsheet_onedit-copy-specific-row
 https://www.facebook.com/oshliaer/videos/2387201888033053/</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-sample/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-sample/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-sample/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_onedit-sample/</guid>
       <description>Spreadsheet onEdit sample </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_painting-specific-characters/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_painting-specific-characters/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_painting-specific-characters/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_painting-specific-characters/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_rainbow_active_cell/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_rainbow_active_cell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_rainbow_active_cell/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_rainbow_active_cell/</guid>
       <description>Rainbow active cell </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_update-colored-notes/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_update-colored-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_update-colored-notes/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/spreadsheet_update-colored-notes/</guid>
       <description>Update colored notes </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/standalone/scriptapp-delete-trigger/readme/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/standalone/scriptapp-delete-trigger/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/standalone/scriptapp-delete-trigger/readme/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/standalone/scriptapp-delete-trigger/readme/</guid>
       <description>DeleteTrigger Google Apps Script. Delete triggers by event type, handler function, trigger source, trigger source id, unique id;</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/standalone/standalone_driveapp-save-file-to-drive-from-web/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/standalone/standalone_driveapp-save-file-to-drive-from-web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/standalone/standalone_driveapp-save-file-to-drive-from-web/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/standalone/standalone_driveapp-save-file-to-drive-from-web/</guid>
       <description>standalone_driveapp-save-file-to-drive-from-web </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/standalone/standalone_telegram-bot/readme.ru/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/standalone/standalone_telegram-bot/readme.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/standalone/standalone_telegram-bot/readme.ru/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/standalone/standalone_telegram-bot/readme.ru/</guid>
       <description>Телеграм бот </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/webapp/materializecss_form_to_sheet/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/webapp/materializecss_form_to_sheet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/webapp/materializecss_form_to_sheet/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/webapp/materializecss_form_to_sheet/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/webapp/webserver/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/webapp/webserver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/webapp/webserver/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/webapp/webserver/</guid>
       <description>Webserver </description>
     </item>
     
     <item>
       <title>Autosort</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_autosort/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_autosort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_autosort/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_autosort/</guid>
       <description>The Google Sheets onEdit sort example </description>
     </item>
     
     <item>
       <title>Collect data from multiple sheets</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_collect_data_from_multiple_sheets/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_collect_data_from_multiple_sheets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_collect_data_from_multiple_sheets/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_collect_data_from_multiple_sheets/</guid>
       <description>Please note that this code contains several examples that do different things.</description>
     </item>
     
     <item>
       <title>Copy the inline image</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/docs/document_copy-inline-image/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/docs/document_copy-inline-image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/docs/document_copy-inline-image/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/docs/document_copy-inline-image/</guid>
       <description>Copy the inline image by id doc-to-doc </description>
     </item>
     
     <item>
       <title>Deleting rows from a Google Sheet by condition</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/</guid>
       <description>Deleting rows from a Google Sheet by condition </description>
     </item>
     
     <item>
       <title>jaro-winker-distance</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_jaro-winker-distance/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_jaro-winker-distance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_jaro-winker-distance/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_jaro-winker-distance/</guid>
       <description>jaro-winker-distance </description>
     </item>
     
     <item>
       <title>standalone_gmail-import-csv-to-sheet</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/standalone/standalone_gmail-import-csv-to-sheet/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/standalone/standalone_gmail-import-csv-to-sheet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/standalone/standalone_gmail-import-csv-to-sheet/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/standalone/standalone_gmail-import-csv-to-sheet/</guid>
       <description>standalone_gmail-import-csv-to-sheet </description>
     </item>
     
     <item>
       <title>union_ranges</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_union_ranges/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_union_ranges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_union_ranges/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_union_ranges/</guid>
       <description>union_ranges </description>
     </item>
     
     <item>
       <title>Updates notes based on cell value</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_binding-notes/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_binding-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_binding-notes/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/spreadsheet_binding-notes/</guid>
       <description>Screenmovie </description>
     </item>
     

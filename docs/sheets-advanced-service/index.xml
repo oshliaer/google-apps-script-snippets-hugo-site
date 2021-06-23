@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sheets advanced service on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-    <link>https://google-apps-script-snippets.contributor.pw/sheets-advanced-service/</link>
+    <link>https://apps-script-snippets.contributor.pw/sheets-advanced-service/</link>
     <description>Recent content in Sheets advanced service on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/sheets-advanced-service/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/sheets-advanced-service/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unlink all URLs in the range</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</link>
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</guid>
       <description>Snippet Run it Issues   Unlink all URLs in the range Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Removes all links from the range * * @param {GoogleAppsScript.Spreadsheet.Range} range A range * @return {GoogleAppsScript.Spreadsheet.RichTextValue[][]} */ function unlinkUrls_(range = SpreadsheetApp.getActiveRange()) { return range.setRichTextValues( range.getRichTextValues().map((rowRichTextValues) =&amp;gt; rowRichTextValues.</description>
     </item>
     

@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sheets on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-    <link>https://google-apps-script-snippets.contributor.pw/sheets/</link>
+    <link>https://apps-script-snippets.contributor.pw/sheets/</link>
     <description>Recent content in sheets on Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/sheets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/sheets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reset a sheet</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</link>
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</guid>
       <description>Resets the sheet/sheets data to its original state. Cleans the sheet(s)  Snippet Run it Additional  Make copy before reset     Sorry, your browser doesn&#39;t support embedded videos.  Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * @file A snippet for reset the sheet/sheets data to its original state * Samples for {@link https://support.</description>
     </item>
     
     <item>
       <title>Unlink all URLs in the range</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</link>
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</guid>
       <description>Snippet Run it Issues   Unlink all URLs in the range Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Removes all links from the range * * @param {GoogleAppsScript.Spreadsheet.Range} range A range * @return {GoogleAppsScript.Spreadsheet.RichTextValue[][]} */ function unlinkUrls_(range = SpreadsheetApp.getActiveRange()) { return range.setRichTextValues( range.getRichTextValues().map((rowRichTextValues) =&amp;gt; rowRichTextValues.</description>
     </item>
     
     <item>
       <title>TOC generator for Google Sheets</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/</link>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/</link>
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/</guid>
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/</guid>
       <description>Snippet Run it   TOC generator for Google Sheets Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * TOC object * @typedef {Array.&amp;lt;{ * name: string, * gid: number, * richTextValueBuilder: GoogleAppsScript.Spreadsheet.RichTextValueBuilder * }&amp;gt;} TOCBuild */ /** * Build a TOC object from the passed book * @param {GoogleAppsScript.</description>
     </item>
     
