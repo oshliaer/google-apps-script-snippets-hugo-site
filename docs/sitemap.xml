@@ -3,16 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://google-apps-script-snippets.contributor.pw/</loc>
-    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://google-apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/</loc>
-    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+    <loc>https://google-apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</loc>
+    <lastmod>2021-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://google-apps-script-snippets.contributor.pw/sheets/</loc>
+    <lastmod>2021-06-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/</loc>
-    <lastmod>2021-06-07T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/categories/snippets/</loc>
+    <lastmod>2021-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://google-apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/</loc>
     <lastmod>2021-06-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/webapp/</loc>
@@ -35,9 +41,6 @@
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/</loc>
     <lastmod>2021-04-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://google-apps-script-snippets.contributor.pw/sheets/</loc>
-    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/sheets-advanced-service/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
@@ -198,8 +201,6 @@
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/</loc>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_jaro-winker-distance/</loc>
-  </url><url>
-    <loc>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_reset-sheets/</loc>
   </url><url>
     <loc>https://google-apps-script-snippets.contributor.pw/snippets/standalone/standalone_gmail-import-csv-to-sheet/</loc>
   </url><url>
