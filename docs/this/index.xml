@@ -20,19 +20,13 @@
 &lt;p&gt;Below we will look at alerts, reasons for the occurrence and how to secure check.&lt;/p&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&#34;#alerts&#34;&gt;Alerts&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#the-eset-alert&#34;&gt;The ESET Alert&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#the-avast-alert&#34;&gt;The Avast alert&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#reasons&#34;&gt;Reasons&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#how-to-check&#34;&gt;How to check&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#check-the-report&#34;&gt;Check the report&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#check-virustotal&#34;&gt;Check virustotal&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#the-eset-alert&#34;&gt;The ESET Alert&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#the-avast-alert&#34;&gt;The Avast alert&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#check-the-report&#34;&gt;Check the report&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#check-virustotal&#34;&gt;Check virustotal&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;</description>
     </item>

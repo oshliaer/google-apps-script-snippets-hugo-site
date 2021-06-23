@@ -5,7 +5,7 @@
 target="/raid/user/github.com/contributorpw/google-apps-script-snippets-hugo-site/content/snippets"
 source="/raid/user/github.com/contributorpw/google-apps-script-snippets/snippets"
 
-rsync -ar --progress --exclude "*.mp4" --exclude ".clasp.json" "$source/" "$target/" --delete
+rsync -ar --progress --exclude ".clasp.json" "$source/" "$target/" --delete
 
 brename -p "readme.md" -r "index.md" -R $target
 # while true; do
