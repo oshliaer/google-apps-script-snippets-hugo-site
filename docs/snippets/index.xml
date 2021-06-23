@@ -7,15 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Mon, 07 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://google-apps-script-snippets.contributor.pw/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reset a sheet</title>
+      <link>https://google-apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</link>
+      <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</guid>
+      <description>Resets the sheet/sheets data to its original state. Cleans the sheet(s)  Snippet Run it Additional  Make copy before reset     Sorry, your browser doesn&#39;t support embedded videos.  Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * @file A snippet for reset the sheet/sheets data to its original state * Samples for {@link https://support.</description>
+    </item>
+    
     <item>
       <title>A responsive webapp</title>
       <link>https://google-apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/</link>
       <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/</guid>
-      <description>Using responsive meta tags for an apps script webapp  Snippet Run it Manifest     Using responsive meta tags for an apps script webapp To display a responsive webapp on different devices you can use the addMetaTag method
-Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.</description>
+      <description>Snippet Run it Manifest   Using responsive meta tags for an apps script webapp To display a responsive webapp on different devices you can use the addMetaTag method
+Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /* exported doGet */ /** * Using responsive meta tags for the webapp */ function doGet() { const htmlContent = &amp;#39;Hello world!</description>
     </item>
     
     <item>
@@ -24,7 +33,7 @@ Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nb
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</guid>
-      <description>Delete specific events from Google Calendar series  Snippet Run it Manifest     Delete specific events from Google Calendar series Note: For bulk operations please use Google Calendar API Batch Requests. See: Sending Batch Requests | Calendar API | Google Developers, tanaikech/BatchRequest: This is a library for running Batch Requests using Google Apps Script (GAS).
+      <description>Snippet Run it Manifest   Delete specific events from Google Calendar series Note: For bulk operations please use Google Calendar API Batch Requests. See: Sending Batch Requests | Calendar API | Google Developers, tanaikech/BatchRequest: This is a library for running Batch Requests using Google Apps Script (GAS).
 Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.</description>
     </item>
     
@@ -34,7 +43,7 @@ Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nb
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/sheet_datetime/</guid>
-      <description>Sheets datetime converter  Snippet Run it Relations     Sheets datetime converter Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Converts date-time to numeric Sheets format * * @param {(number|Date)} date JS Date or time in ms * @param {number} timezoneOffset * @return {number} Google Sheets Date number */ function toGoogleSheetsDateNumber(date, timezoneOffset) { const _date = new Date(date); timezoneOffset = timezoneOffset || _date.</description>
+      <description>Snippet Run it Relations   Sheets datetime converter Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Converts date-time to numeric Sheets format * * @param {(number|Date)} date JS Date or time in ms * @param {number} timezoneOffset * @return {number} Google Sheets Date number */ function toGoogleSheetsDateNumber(date, timezoneOffset) { const _date = new Date(date); timezoneOffset = timezoneOffset || _date.</description>
     </item>
     
     <item>
@@ -43,7 +52,7 @@ Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nb
       <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/</guid>
-      <description>Date range iterator  Snippet Run it     Date range iterator Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /* exported makeDatesRangeIterator */ /** * * @param {Date} start * @param {Date} end * @param {number} step ms */ function* makeDatesRangeIterator_(start, end, step = 1000 * 60 * 60 * 24) { const _start = new Date(start); let _iterationCount = 0; while (_start &amp;lt;= end) { _iterationCount++; yield _start; _start.</description>
+      <description>Snippet Run it   Date range iterator Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /* exported makeDatesRangeIterator */ /** * * @param {Date} start * @param {Date} end * @param {number} step ms */ function* makeDatesRangeIterator_(start, end, step = 1000 * 60 * 60 * 24) { const _start = new Date(start); let _iterationCount = 0; while (_start &amp;lt;= end) { _iterationCount++; yield _start; _start.</description>
     </item>
     
     <item>
@@ -52,7 +61,7 @@ Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nb
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</guid>
-      <description>Unlink all URLs in the range  Snippet Run it Issues     Unlink all URLs in the range Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Removes all links from the range * * @param {GoogleAppsScript.Spreadsheet.Range} range A range * @return {GoogleAppsScript.Spreadsheet.RichTextValue[][]} */ function unlinkUrls_(range = SpreadsheetApp.</description>
+      <description>Snippet Run it Issues   Unlink all URLs in the range Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Removes all links from the range * * @param {GoogleAppsScript.Spreadsheet.Range} range A range * @return {GoogleAppsScript.Spreadsheet.RichTextValue[][]} */ function unlinkUrls_(range = SpreadsheetApp.getActiveRange()) { return range.setRichTextValues( range.getRichTextValues().map((rowRichTextValues) =&amp;gt; rowRichTextValues.</description>
     </item>
     
     <item>
@@ -61,7 +70,7 @@ Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nb
       <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</guid>
-      <description>Clear all events from a Calendar  Snippet Run it     Clear all events from a Calendar Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * * @param {GoogleAppsScript.Calendar.Calendar} calendar */ function clearAllEvents_(calendar) { const marks = []; return calendar.getEvents(new Date(0), new Date()).map((event) =&amp;gt; { const id = event.</description>
+      <description>Snippet Run it   Clear all events from a Calendar Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * * @param {GoogleAppsScript.Calendar.Calendar} calendar */ function clearAllEvents_(calendar) { const marks = []; return calendar.getEvents(new Date(0), new Date()).map((event) =&amp;gt; { const id = event.getId(); if (!marks.includes(id)) if (event.</description>
     </item>
     
     <item>
@@ -70,7 +79,7 @@ Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nb
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/</guid>
-      <description>TOC generator for Google Sheets  Snippet Run it     TOC generator for Google Sheets Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * TOC object * @typedef {Array.&amp;lt;{ * name: string, * gid: number, * richTextValueBuilder: GoogleAppsScript.Spreadsheet.RichTextValueBuilder * }&amp;gt;} TOCBuild */ /** * Build a TOC object from the passed book * @param {GoogleAppsScript.</description>
+      <description>Snippet Run it   TOC generator for Google Sheets Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * TOC object * @typedef {Array.&amp;lt;{ * name: string, * gid: number, * richTextValueBuilder: GoogleAppsScript.Spreadsheet.RichTextValueBuilder * }&amp;gt;} TOCBuild */ /** * Build a TOC object from the passed book * @param {GoogleAppsScript.</description>
     </item>
     
     <item>
@@ -79,7 +88,7 @@ Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nb
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/get_id_from_url/</guid>
-      <description>Get file/folder ID from url  Snippet Run it Test     Get file/folder ID from url Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Gets ID from URL * * @param {string} url The file url * @returns {string} The file id */ function getIdFromUrl(url) { const match = url.</description>
+      <description>Snippet Run it Test   Get file/folder ID from url Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Gets ID from URL * * @param {string} url The file url * @returns {string} The file id */ function getIdFromUrl(url) { const match = url.match(/[\w-_]{15,}/); return match ?</description>
     </item>
     
     <item>
@@ -108,7 +117,7 @@ Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nb
       <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/common_js/column_names_and_numbers/</guid>
-      <description>Column names to numbers and vice versa  Define Base 26 ABC Snippet Test The short list of the first 250 numbers Art     Column names to numbers and vice versa Define Base 26 ABC  A26 = a26 = 110 B26 = b26 = 210 C26 = c26 = 310 &amp;hellip; Y26 = y26 = 2510 Z26 = z26 = 2610 AA26 = aa26 = 2710 &amp;hellip; ZZ26 = zz26 = 70210  There are several base 26 types.</description>
+      <description>Define Base 26 ABC Snippet Test The short list of the first 250 numbers Art  Column names to number Numbers to column name     Column names to numbers and vice versa Define Base 26 ABC  A26 = a26 = 110 B26 = b26 = 210 C26 = c26 = 310 &amp;hellip; Y26 = y26 = 2510 Z26 = z26 = 2610 AA26 = aa26 = 2710 &amp;hellip; ZZ26 = zz26 = 70210  There are several base 26 types.</description>
     </item>
     
     <item>
@@ -611,16 +620,6 @@ https://www.facebook.com/oshliaer/videos/2387201888033053/</description>
       
       <guid>https://google-apps-script-snippets.contributor.pw/snippets/customfunctions/customfunction_jaro-winker-distance/</guid>
       <description>jaro-winker-distance </description>
-    </item>
-    
-    <item>
-      <title>Reset sheets</title>
-      <link>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_reset-sheets/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://google-apps-script-snippets.contributor.pw/snippets/spreadsheet_reset-sheets/</guid>
-      <description>Reset sheets Based on I need a script to clear certain cells in sheets when a button is pressed
-Sample sheet</description>
     </item>
     
     <item>
