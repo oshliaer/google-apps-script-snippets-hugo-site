@@ -6,35 +6,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="https://apps-script-snippets.contributor.pw/images/favicon.png" />
-<title>Deleting rows from a Google Sheet by condition | Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-<meta name="title" content="Deleting rows from a Google Sheet by condition" />
-<meta name="description" content="Deleting rows from a Google Sheet by condition " />
-<meta name="keywords" content="" />
+<title>Deleting rows by conditions | Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
+<meta name="title" content="Deleting rows by conditions" />
+<meta name="description" content="Removes or moves rows within Google Sheets by conditions" />
+<meta name="keywords" content="sheets," />
 
 
-<meta property="og:title" content="Deleting rows from a Google Sheet by condition" />
-<meta property="og:description" content="Deleting rows from a Google Sheet by condition " />
+<meta property="og:title" content="Deleting rows by conditions" />
+<meta property="og:description" content="Removes or moves rows within Google Sheets by conditions" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-
-<meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/screenshot.png" /><meta property="article:section" content="snippets" />
+<meta property="article:published_time" content="2021-06-23T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-06-23T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
+<meta name="twitter:image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/screenshot.png"/>
 
-<meta name="twitter:title" content="Deleting rows from a Google Sheet by condition"/>
-<meta name="twitter:description" content="Deleting rows from a Google Sheet by condition "/>
+<meta name="twitter:title" content="Deleting rows by conditions"/>
+<meta name="twitter:description" content="Removes or moves rows within Google Sheets by conditions"/>
 
 
 
-<meta itemprop="name" content="Deleting rows from a Google Sheet by condition">
-<meta itemprop="description" content="Deleting rows from a Google Sheet by condition ">
-
-<meta itemprop="wordCount" content="8"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
-<meta itemprop="keywords" content="" />
+<meta itemprop="name" content="Deleting rows by conditions">
+<meta itemprop="description" content="Removes or moves rows within Google Sheets by conditions"><meta itemprop="datePublished" content="2021-06-23T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-06-23T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="555"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/screenshot.png">
+<meta itemprop="keywords" content="sheets," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
@@ -204,12 +204,12 @@
   }
 
 </style>
-<meta property="og:title" content="Deleting rows from a Google Sheet by condition" />
-<meta property="og:description" content="Deleting rows from a Google Sheet by condition " />
+<meta property="og:title" content="Deleting rows by conditions" />
+<meta property="og:description" content="Removes or moves rows within Google Sheets by conditions" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-
-<meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/screenshot.png" /><meta property="article:section" content="snippets" />
+<meta property="article:published_time" content="2021-06-23T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-06-23T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -596,10 +596,230 @@
   <main>
 
 <content>
-  <h2 id="deleting-rows-from-a-google-sheet-by-condition">Deleting rows from a Google Sheet by condition</h2>
+  <h2 id="removes-or-moves-rows-within-google-sheets-by-conditions">Removes or moves rows within Google Sheets by conditions</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#snippet">Snippet</a></li>
+    <li><a href="#run-it">Run it</a></li>
+    <li><a href="#user-actions">User actions</a></li>
+  </ul>
+</nav>
+<video controls width="100%" height="350px" autoplay="true" loop="true">
+    <source src="./screenrecord.mp4"  type="video/mp4">
+    Sorry, your browser doesn't support embedded videos.
+</video>
+<h3 id="snippet">Snippet</h3>
+<ul>
+<li><a href="https://github.com/contributorpw/google-apps-script-snippets/tree/master/snippets/sheets/delete_move_rows_by_conditional/" target="blank">See full code</a>
+</li>
+<li><a href="https://github.com/contributorpw/google-apps-script-snippets/issues/new?title=Deleting%20rows%20by%20conditions" target="blank">Leave a comment</a></li>
+<li>
+
+
+
+
+
+  <a href="https://scrviz.web.app/?manifest=contributorpw%2fgoogle-apps-script-snippets%2fsnippets%2fsheets%2fdelete_move_rows_by_conditional%2fappsscript.json" target="_blank">
+    Create script from the snippet
+  </a>
+  <sup style="font-size: x-small;">
+    &nbsp;<strong>*</strong>See <a href="https://ramblings.mcpher.com/vizzy-scrviz/vizzy-clone-apps-script-github/" target="_blank">how to use scrviz</a> for clone Apps Script project
+  </sup>
+
+</li>
+</ul>
+
+
+
+
+
+
+<strong>index.js</strong>
+<div class="highlight"><pre class="chroma"><code class="language-.js" data-lang=".js"><span class="cm">/**
+</span><span class="cm"> * @file A snippet for deleting rows from a Google Sheet by condition.
+</span><span class="cm"> * Examples of the snippet
+</span><span class="cm"> * {@link https://webapps.stackexchange.com/a/133308/}
+</span><span class="cm"> * {@link https://groups.google.com/forum/#!topic/google-apps-script-community/-ITmOCfJmFw}
+</span><span class="cm"> * {@link https://toster.ru/q/690651}
+</span><span class="cm"> */</span>
+
+<span class="cm">/**
+</span><span class="cm"> * Removes rows from a sheet according to the condition
+</span><span class="cm"> *
+</span><span class="cm"> * @function
+</span><span class="cm"> * @name deleteRowsByConditional_
+</span><span class="cm"> * @example
+</span><span class="cm"> * // Removes all rows where B column contains 10
+</span><span class="cm"> * deleteRowsByConditional_(SpreadsheetApp.getActiveSheet(),
+</span><span class="cm"> *   function(currentValue){
+</span><span class="cm"> *     return currentValue[1] === 10;
+</span><span class="cm"> *   }
+</span><span class="cm"> * );
+</span><span class="cm"> *
+</span><span class="cm"> * @param {Sheet} sheet - Represents the Sheet that is changing.
+</span><span class="cm"> * @param {conditionCallback} condition - The callback that should return true/false state for each row.
+</span><span class="cm"> * @param {dataCallback} action - The callback that exec with current removed rows.
+</span><span class="cm"> **/</span>
+<span class="kd">function</span> <span class="nx">deleteRowsByConditional_</span><span class="p">(</span><span class="nx">sheet</span><span class="p">,</span> <span class="nx">condition</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">sheet</span>
+    <span class="p">.</span><span class="nx">getDataRange</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">getValues</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">forEach</span><span class="p">(</span>
+      <span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">condition</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="p">[</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">j</span><span class="p">]))</span> <span class="p">{</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">isContinue</span><span class="o">++</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">isContinue</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kr">const</span> <span class="nx">prevPos</span> <span class="o">=</span> <span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">action</span><span class="p">)</span> <span class="nx">action</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">prevPos</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">isContinue</span><span class="p">);</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">sheet</span><span class="p">.</span><span class="nx">deleteRows</span><span class="p">(</span><span class="nx">prevPos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">isContinue</span><span class="p">);</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">isContinue</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+          <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span><span class="p">;</span>
+      <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">sheet</span><span class="o">:</span> <span class="nx">sheet</span><span class="p">,</span> <span class="nx">condition</span><span class="o">:</span> <span class="nx">condition</span><span class="p">,</span> <span class="nx">isContinue</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+</span><span class="cm"> * Returns true/false state for each row.
+</span><span class="cm"> *
+</span><span class="cm"> * @callback conditionCallback
+</span><span class="cm"> * @param {Array} array - The DataRange.
+</span><span class="cm"> * @param {number} index - The index of the current row.
+</span><span class="cm"> * @return {boolean}
+</span><span class="cm"> **/</span>
+
+<span class="cm">/**
+</span><span class="cm"> * Exec with current removed rows.
+</span><span class="cm"> *
+</span><span class="cm"> * @callback dataCallback
+</span><span class="cm"> * @param {Array} array - The DataRange.
+</span><span class="cm"> * @param {number} index - The index of the current row.
+</span><span class="cm"> * @param {number} index2 - The index2 of the current row.
+</span><span class="cm"> * @return {any}
+</span><span class="cm"> **/</span>
+</code></pre></div>
+
+<h3 id="run-it">Run it</h3>
+
+
+
+
+
+
+<strong>run.js</strong>
+<div class="highlight"><pre class="chroma"><code class="language-.js" data-lang=".js"><span class="cm">/* global deleteRowsByConditional_ */</span>
+
+<span class="cm">/**
+</span><span class="cm"> * Runs the snippet.
+</span><span class="cm"> * Removes rows from an active sheet by condition &#39;B:B=10&#39;
+</span><span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">run1</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSheet</span><span class="p">();</span>
+  <span class="nx">deleteRowsByConditional_</span><span class="p">(</span><span class="nx">sheet</span><span class="p">,</span> <span class="p">(</span><span class="nx">values</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">===</span> <span class="mi">10</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+</span><span class="cm"> * Runs the snippet.
+</span><span class="cm"> * Removes rows by condition &#39;(A:A&lt;&gt;&#34;&#34;)*(B:B&lt;&gt;&#34;&#34;)*(D:D&lt;&gt;&#34;&#34;)*(F:F&lt;&gt;&#34;&#34;)&#39;.
+</span><span class="cm"> * Appends deleted rows to the &#39;Archive&#39; sheet.
+</span><span class="cm"> *
+</span><span class="cm"> * @see https://toster.ru/q/690651
+</span><span class="cm"> *
+</span><span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">run2</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSheet</span><span class="p">();</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">sheet</span><span class="p">.</span><span class="nx">getName</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;Archive&#39;</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">archive</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActive</span><span class="p">().</span><span class="nx">getSheetByName</span><span class="p">(</span><span class="s1">&#39;Archive&#39;</span><span class="p">);</span>
+
+  <span class="kr">const</span> <span class="nx">action</span> <span class="o">=</span> <span class="p">(</span><span class="nx">values</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">i2</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">values</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">i</span> <span class="o">+</span> <span class="nx">i2</span><span class="p">);</span>
+    <span class="nx">archive</span>
+      <span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">archive</span><span class="p">.</span><span class="nx">getLastRow</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">length</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">setValues</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="kr">const</span> <span class="nx">condition</span> <span class="o">=</span> <span class="p">(</span><span class="nx">values</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">row</span> <span class="o">=</span> <span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="nx">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">row</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span>
+    <span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="nx">deleteRowsByConditional_</span><span class="p">(</span><span class="nx">sheet</span><span class="p">,</span> <span class="nx">condition</span><span class="p">,</span> <span class="nx">action</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="user-actions">User actions</h3>
+
+
+
+
+
+
+<strong>userActions.js</strong>
+<div class="highlight"><pre class="chroma"><code class="language-.js" data-lang=".js"><span class="cm">/* global run2 */</span>
+
+<span class="cm">/**
+</span><span class="cm"> * If you wish implement the snippet for EDIT event
+</span><span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">onEdit</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">run2</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<style>
+  button.clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: Verdana, sans-serif;
+    color: #444;
+    border-radius: 2px;
+    border: #222 solid 1px;
+  }
+</style>
+<script src="/js/clipboard.min.js"></script>
+<script>
+  
+  function getButton(e) {
+    const span = document.createElement('button');
+    span.classList.add('clipboard');
+    span.innerHTML = 'copy';
+    e.style.position = 'relative';
+    e.appendChild(span);
+  }
+  document.querySelectorAll('div.highlight').forEach(getButton);
+  const clipboard = new ClipboardJS(
+    document.querySelectorAll('div.highlight button.clipboard'),
+    {
+      target: function (trigger) {
+        return trigger.parentElement.querySelector('pre.chroma');
+      },
+    }
+  );
+  clipboard.on('success', function (e) {
+    const innerHTML = '' + e.trigger.innerHTML;
+    e.trigger.innerHTML = 'copied ✓';
+    setTimeout(() => (e.trigger.innerHTML = innerHTML), 1100);
+    e.clearSelection();
+  });
+
+  clipboard.on('error', function (e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+  });
+</script>
+
 
 </content>
 <p>
+  
+  <a href="https://apps-script-snippets.contributor.pw/sheets/">#sheets</a>
   
 </p>
 

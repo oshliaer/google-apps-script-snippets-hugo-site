@@ -9,6 +9,15 @@
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
     <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/sheets/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Deleting rows by conditions</title>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/</link>
+      <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/</guid>
+      <description>Removes or moves rows within Google Sheets by conditions  Snippet Run it User actions   Sorry, your browser doesn&#39;t support embedded videos.  Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * @file A snippet for deleting rows from a Google Sheet by condition. * Examples of the snippet * {@link https://webapps.</description>
+    </item>
+    
+    <item>
       <title>Reset a sheet</title>
       <link>https://apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</link>
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
