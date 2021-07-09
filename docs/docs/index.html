@@ -2,21 +2,20 @@
 <html lang="en-US">
 
 <head>
-	<meta name="generator" content="Hugo 0.81.0" />
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="https://apps-script-snippets.contributor.pw/images/favicon.png" />
-<title>Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-<meta name="title" content="Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ" />
+<title>docs | Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
+<meta name="title" content="docs" />
 <meta name="description" content="Hugo &#43; Bear = :heart:" />
 <meta name="keywords" content="snippets,calendar,common,docs,docs-advanced-service,js,malware,news,protection,sheets,sheets-advanced-service,spreadsheetapp,this,webapp," />
 
 
-<meta property="og:title" content="" />
+<meta property="og:title" content="docs" />
 <meta property="og:description" content="Hugo &#43; Bear = :heart:" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://apps-script-snippets.contributor.pw/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="og:url" content="https://apps-script-snippets.contributor.pw/docs/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -24,16 +23,16 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
 
-<meta name="twitter:title" content=""/>
+<meta name="twitter:title" content="docs"/>
 <meta name="twitter:description" content="Hugo &#43; Bear = :heart:"/>
 
 
 
-<meta itemprop="name" content="">
+<meta itemprop="name" content="docs">
 <meta itemprop="description" content="Hugo &#43; Bear = :heart:">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
-  <link rel="alternate" type="application/rss+xml" href="https://apps-script-snippets.contributor.pw/index.xml" title="Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ" />
+  <link rel="alternate" type="application/rss+xml" href="https://apps-script-snippets.contributor.pw/docs/index.xml" title="Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ" />
   <style>
   body {
     font-family: Verdana, sans-serif;
@@ -201,10 +200,10 @@
   }
 
 </style>
-<meta property="og:title" content="" />
+<meta property="og:title" content="docs" />
 <meta property="og:description" content="Hugo &#43; Bear = :heart:" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://apps-script-snippets.contributor.pw/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="og:url" content="https://apps-script-snippets.contributor.pw/docs/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -589,81 +588,30 @@
 </nav>
 </header>
   <main>
-<h1 id="google-apps-script-snippets">Google Apps Script Snippets</h1>
-<figure>
-    <img src="https://ssl.gstatic.com/images/branding/product/2x/apps_script_64dp.png"/> 
-</figure>
-
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#main-approach">Main approach</a></li>
-    <li><a href="#an-example-of-a-simple-manifest">An example of a simple manifest</a></li>
-    <li><a href="#an-example-of-a-manifest-with-dependencies">An example of a manifest with dependencies</a></li>
-    <li><a href="#how-to-see-my-manifest">How to see my manifest</a></li>
-    <li><a href="#how-to-merge-manifests">How to merge manifests</a></li>
+<content>
+    
+  <h3 style="margin-bottom: 0">Filtering for "docs"</h3>
+  
+  <ul class="blog-posts">
+    
+    <li>
+      
+      
+      
+      
+      
+      <div class="list-path">snippets/docs/uncheck-checklist/</div>
+      <br />
+      <div>
+        <a href="https://apps-script-snippets.contributor.pw/snippets/docs/uncheck-checklist/"
+          >Uncheck a checklist</a
+        >
+      </div>
+      <div class="description">Check/uncheck the entire checklist in Google Documents.</div>
+    </li>
+    
   </ul>
-</nav>
-<h2 id="what-is-it">What is it</h2>
-<p>This is a systematic view of Google Apps Script <a href="https://github.com/contributorpw/google-apps-script-snippets">snippets</a> sorted and grouped using <a href="https://gohugo.io">Hugo</a>. It also uses <a href="https://github.com/facebook/watchman">watchman</a> and <a href="https://rsync.samba.org/">rsync</a> and <a href="https://github.com/shenwei356/brename">brename</a> to build locally.</p>
-<h2 id="why-is-this-necessary">Why is this necessary</h2>
-<p>The main reason is to share knowledge. Often the documentation is insufficient to reveal the capabilities of a method or coding approach.</p>
-<p>I wish I could have samples like these when I was learning to code.</p>
-<h2 id="what-is-a-snippet">What is a snippet</h2>
-<p>Snippet is a programming term for a small region of re-usable source code, machine code, or text. These simple and common-case snippets can be re-used within an Apps Script project.</p>
-<h2 id="how-to-use">How to use</h2>
-<h3 id="main-approach">Main approach</h3>
-<p>Just copy the files to your project.</p>
-<p>Almost every snippet is provided with the main code file and a manifest. You need the manifest to know what additional libraries or services or scopes you may need to make the snippet work.</p>
-<h3 id="an-example-of-a-simple-manifest">An example of a simple manifest</h3>
-<p><strong>appsscript.json</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;timeZone&#34;</span><span class="p">:</span> <span class="s2">&#34;America/New_York&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{},</span>
-  <span class="nt">&#34;exceptionLogging&#34;</span><span class="p">:</span> <span class="s2">&#34;STACKDRIVER&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="an-example-of-a-manifest-with-dependencies">An example of a manifest with dependencies</h3>
-<p>Below is an example when using Advanced Docs Service. Usually, updating the manifest is enough for the program to request new permissions.</p>
-<p><strong>appsscript.json</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;timeZone&#34;</span><span class="p">:</span> <span class="s2">&#34;Europe/Moscow&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;enabledAdvancedServices&#34;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&#34;userSymbol&#34;</span><span class="p">:</span> <span class="s2">&#34;Docs&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;serviceId&#34;</span><span class="p">:</span> <span class="s2">&#34;docs&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;v1&#34;</span>
-      <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">},</span>
-  <span class="nt">&#34;exceptionLogging&#34;</span><span class="p">:</span> <span class="s2">&#34;STACKDRIVER&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="how-to-see-my-manifest">How to see my manifest</h3>
-<p>You need to check-in the property <code>Show &quot;appsscript.json&quot; manifest file in editor</code> in your project settings.</p>
-<h3 id="how-to-merge-manifests">How to merge manifests</h3>
-<p>When you take a snippet, you get two manifests: yours in the current project and the snippet manifest.</p>
-<p>The snippet&rsquo;s manifest should just extend your manifest. From the example above, you can see that we need to add only one object to the simple manifest.</p>
-<p>Here it is</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;enabledAdvancedServices&#34;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nt">&#34;userSymbol&#34;</span><span class="p">:</span> <span class="s2">&#34;Docs&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;serviceId&#34;</span><span class="p">:</span> <span class="s2">&#34;docs&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;v1&#34;</span>
-    <span class="p">}</span>
-  <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div><h2 id="how-can-i-help">How can I help</h2>
-<ul>
-<li>Leave a request of snippet or suggestion for improvement in the repository <a href="https://github.com/contributorpw/google-apps-script-snippets/issues">contributorpw/google-apps-script-snippets/issues</a></li>
-<li>Share the snippets</li>
-<li>Contribute <a href="https://github.com/contributorpw/google-apps-script-snippets">contributorpw/google-apps-script-snippets</a></li>
-<li>Contribute <a href="https://github.com/contributorpw/google-apps-script-snippets-hugo-site">contributorpw/google-apps-script-snippets-hugo-site</a></li>
-<li>Contribute <a href="https://github.com/janraasch/hugo-bearblog">janraasch/hugo-bearblog</a></li>
-<li>Do you know something cool about Google Apps Script? Leave an issue or PR <a href="https://github.com/contributorpw/google-apps-script-awesome-list">contributorpw/google-apps-script-awesome-list</a></li>
-</ul>
-
+</content>
 
   </main>
   <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Uncheck a checklist</title>
+      <link>https://apps-script-snippets.contributor.pw/snippets/docs/uncheck-checklist/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://apps-script-snippets.contributor.pw/snippets/docs/uncheck-checklist/</guid>
+      <description>Check/uncheck the entire checklist in Google Documents  Snippet Run it Ui triggers   Sorry, your browser doesn&#39;t support embedded videos.  Currently it is unknown if the checklist can be manipulated in Docs. Clark Lind suggests to replace a list item with a copy of one of them (which is in expected state &amp;ndash; check/uncheck). We need to know the id &amp;ndash; see printListIds() &amp;ndash; of the list in order to be able to change it.</description>
+    </item>
+    
     <item>
       <title>Deleting rows by conditions</title>
       <link>https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/</link>
