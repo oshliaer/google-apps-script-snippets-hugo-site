@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Converts a 2D array to a collection</title>
+      <link>https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/</guid>
+      <description>Simple conversion of an array into a collection  Snippet Run it Minimized version   Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Converts a 2D array to a collection. * * @param {Array.&amp;lt;Array.&amp;lt;any&amp;gt;&amp;gt;} array * @returns {Array.&amp;lt;object&amp;gt;} */ function arrayToCollection_(array) { return array.slice(1).map( (_, rowIndex) =&amp;gt; array[0].</description>
+    </item>
+    
     <item>
       <title>Uncheck a checklist</title>
       <link>https://apps-script-snippets.contributor.pw/snippets/docs/uncheck-checklist/</link>

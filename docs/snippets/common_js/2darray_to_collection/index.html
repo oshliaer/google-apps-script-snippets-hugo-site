@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://apps-script-snippets.contributor.pw/images/favicon.png" />
+<title>Converts a 2D array to a collection | Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
+<meta name="title" content="Converts a 2D array to a collection" />
+<meta name="description" content="Simple conversion of an array into a collection is a common task. There is not always a desire to use wrappers or proxies." />
+<meta name="keywords" content="common," />
+
+
+<meta property="og:title" content="Converts a 2D array to a collection" />
+<meta property="og:description" content="Simple conversion of an array into a collection is a common task. There is not always a desire to use wrappers or proxies." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/screenshot.png" /><meta property="article:section" content="snippets" />
+<meta property="article:published_time" content="2021-07-13T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-07-13T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/screenshot.png"/>
+
+<meta name="twitter:title" content="Converts a 2D array to a collection"/>
+<meta name="twitter:description" content="Simple conversion of an array into a collection is a common task. There is not always a desire to use wrappers or proxies."/>
+
+
+
+<meta itemprop="name" content="Converts a 2D array to a collection">
+<meta itemprop="description" content="Simple conversion of an array into a collection is a common task. There is not always a desire to use wrappers or proxies."><meta itemprop="datePublished" content="2021-07-13T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-07-13T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="309"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/screenshot.png">
+<meta itemprop="keywords" content="common," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: initial;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+<meta property="og:title" content="Converts a 2D array to a collection" />
+<meta property="og:description" content="Simple conversion of an array into a collection is a common task. There is not always a desire to use wrappers or proxies." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/screenshot.png" /><meta property="article:section" content="snippets" />
+<meta property="article:published_time" content="2021-07-13T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-07-13T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+
+
+<style>
+  ul.blog-posts li {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  div.list-path {
+    width: 100%;
+     
+    font-size: x-small;
+    font-style: italic;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  div.description {
+    font-size: small;
+  }
+
+   
+  .chroma {
+    background-color: #ffffff;
+  }
+   
+  .chroma .x {
+  }
+   
+  .chroma .err {
+    color: #ff0000;
+  }
+   
+  .chroma .lntd {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+   
+  .chroma .lntable {
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: auto;
+    overflow: auto;
+    display: block;
+  }
+   
+  .chroma .hl {
+    display: block;
+    width: 100%;
+    background-color: #ffffcc;
+  }
+   
+  .chroma .lnt {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f;
+  }
+   
+  .chroma .ln {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f;
+  }
+   
+  .chroma .k {
+    color: #0000ff;
+  }
+   
+  .chroma .kc {
+    color: #0000ff;
+  }
+   
+  .chroma .kd {
+    color: #0000ff;
+  }
+   
+  .chroma .kn {
+    color: #0000ff;
+  }
+   
+  .chroma .kp {
+    color: #0000ff;
+  }
+   
+  .chroma .kr {
+    color: #0000ff;
+  }
+   
+  .chroma .kt {
+    color: #0000ff;
+  }
+   
+  .chroma .n {
+    color: #000000;
+  }
+   
+  .chroma .na {
+    color: #000000;
+  }
+   
+  .chroma .nb {
+    color: #000000;
+  }
+   
+  .chroma .bp {
+    color: #000000;
+  }
+   
+  .chroma .nc {
+    color: #000000;
+  }
+   
+  .chroma .no {
+    color: #000000;
+  }
+   
+  .chroma .nd {
+    color: #000000;
+  }
+   
+  .chroma .ni {
+    color: #000000;
+  }
+   
+  .chroma .ne {
+    color: #000000;
+  }
+   
+  .chroma .nf {
+    color: #000000;
+  }
+   
+  .chroma .fm {
+    color: #000000;
+  }
+   
+  .chroma .nl {
+    color: #000000;
+  }
+   
+  .chroma .nn {
+    color: #000000;
+  }
+   
+  .chroma .nx {
+    color: #000000;
+  }
+   
+  .chroma .py {
+    color: #000000;
+  }
+   
+  .chroma .nt {
+    color: #000000;
+  }
+   
+  .chroma .nv {
+    color: #000000;
+  }
+   
+  .chroma .vc {
+    color: #000000;
+  }
+   
+  .chroma .vg {
+    color: #000000;
+  }
+   
+  .chroma .vi {
+    color: #000000;
+  }
+   
+  .chroma .vm {
+    color: #000000;
+  }
+   
+  .chroma .l {
+  }
+   
+  .chroma .ld {
+  }
+   
+  .chroma .s {
+    color: #55aa22;
+  }
+   
+  .chroma .sa {
+    color: #55aa22;
+  }
+   
+  .chroma .sb {
+    color: #55aa22;
+  }
+   
+  .chroma .sc {
+    color: #55aa22;
+  }
+   
+  .chroma .dl {
+    color: #55aa22;
+  }
+   
+  .chroma .sd {
+    color: #55aa22;
+  }
+   
+  .chroma .s2 {
+    color: #55aa22;
+  }
+   
+  .chroma .se {
+    color: #55aa22;
+  }
+   
+  .chroma .sh {
+    color: #55aa22;
+  }
+   
+  .chroma .si {
+    color: #55aa22;
+  }
+   
+  .chroma .sx {
+    color: #55aa22;
+  }
+   
+  .chroma .sr {
+    color: #55aa22;
+  }
+   
+  .chroma .s1 {
+    color: #55aa22;
+  }
+   
+  .chroma .ss {
+    color: #55aa22;
+  }
+   
+  .chroma .m {
+    color: #33aaff;
+  }
+   
+  .chroma .mb {
+    color: #33aaff;
+  }
+   
+  .chroma .mf {
+    color: #33aaff;
+  }
+   
+  .chroma .mh {
+    color: #33aaff;
+  }
+   
+  .chroma .mi {
+    color: #33aaff;
+  }
+   
+  .chroma .il {
+    color: #33aaff;
+  }
+   
+  .chroma .mo {
+    color: #33aaff;
+  }
+   
+  .chroma .o {
+  }
+   
+  .chroma .ow {
+    color: #0000ff;
+  }
+   
+  .chroma .p {
+  }
+   
+  .chroma .c {
+    color: #888888;
+    font-style: italic;
+  }
+   
+  .chroma .ch {
+    color: #888888;
+    font-style: italic;
+  }
+   
+  .chroma .cm {
+    color: #888888;
+    font-style: italic;
+  }
+   
+  .chroma .c1 {
+    color: #888888;
+    font-style: italic;
+  }
+   
+  .chroma .cs {
+    color: #888888;
+    font-style: italic;
+  }
+   
+  .chroma .cp {
+    color: #888888;
+    font-style: italic;
+  }
+   
+  .chroma .cpf {
+    color: #888888;
+    font-style: italic;
+  }
+   
+  .chroma .g {
+  }
+   
+  .chroma .gd {
+  }
+   
+  .chroma .ge {
+  }
+   
+  .chroma .gr {
+  }
+   
+  .chroma .gh {
+  }
+   
+  .chroma .gi {
+  }
+   
+  .chroma .go {
+  }
+   
+  .chroma .gp {
+  }
+   
+  .chroma .gs {
+  }
+   
+  .chroma .gu {
+  }
+   
+  .chroma .gt {
+  }
+   
+  .chroma .gl {
+  }
+   
+  .chroma .w {
+  }
+</style>
+
+
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-B6SFJ4RBS8"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'G-B6SFJ4RBS8');
+</script></head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+
+<a href="/snippets">Snippets</a>
+</nav>
+</header>
+  <main>
+
+<content>
+  <h2 id="simple-conversion-of-an-array-into-a-collection">Simple conversion of an array into a collection</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#snippet">Snippet</a></li>
+    <li><a href="#run-it">Run it</a></li>
+    <li><a href="#minimized-version">Minimized version</a></li>
+  </ul>
+</nav>
+<p><img src="./screenshot.png" alt="Simple conversion of an array into a collection"></p>
+<h3 id="snippet">Snippet</h3>
+<ul>
+<li><a href="https://github.com/contributorpw/google-apps-script-snippets/tree/master/snippets/common_js/2darray_to_collection/" target="blank">See full code</a>
+</li>
+<li><a href="https://github.com/contributorpw/google-apps-script-snippets/issues/new?title=Converts%20a%202D%20array%20to%20a%20collection" target="blank">Leave a comment</a></li>
+<li>
+
+
+
+
+
+  <a href="https://scrviz.web.app/?manifest=contributorpw%2fgoogle-apps-script-snippets%2fsnippets%2fcommon_js%2f2darray_to_collection%2fappsscript.json" target="_blank">
+    Create script from the snippet
+  </a>
+  <sup style="font-size: x-small;">
+    &nbsp;<strong>*</strong>See <a href="https://ramblings.mcpher.com/vizzy-scrviz/vizzy-clone-apps-script-github/" target="_blank">how to use scrviz</a> for clone Apps Script project
+  </sup>
+
+</li>
+</ul>
+
+
+
+
+
+
+<strong>index.js</strong>
+<div class="highlight"><pre class="chroma"><code class="language-.js" data-lang=".js"><span class="cm">/**
+</span><span class="cm"> * Converts a 2D array to a collection.
+</span><span class="cm"> *
+</span><span class="cm"> * @param {Array.&lt;Array.&lt;any&gt;&gt;} array
+</span><span class="cm"> * @returns {Array.&lt;object&gt;}
+</span><span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">arrayToCollection_</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span>
+    <span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="nx">rowIndex</span><span class="p">)</span> <span class="p">=&gt;</span>
+      <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">rowCollection</span><span class="p">,</span> <span class="nx">header</span><span class="p">,</span> <span class="nx">columnIndex</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">rowCollection</span><span class="p">[</span><span class="nx">header</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">rowIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="nx">columnIndex</span><span class="p">];</span>
+        <span class="k">return</span> <span class="nx">rowCollection</span><span class="p">;</span>
+      <span class="p">},</span> <span class="p">{}),</span>
+    <span class="p">[]</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="run-it">Run it</h3>
+
+
+
+
+
+
+<strong>run.js</strong>
+<div class="highlight"><pre class="chroma"><code class="language-.js" data-lang=".js"><span class="cm">/* global arrayToCollection_ arrtocoll_ */</span>
+
+<span class="kr">const</span> <span class="nx">ARRAY</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">[</span><span class="s1">&#39;Num&#39;</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Amount&#39;</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span> <span class="s1">&#39;Alex&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span> <span class="s1">&#39;Nate&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span> <span class="s1">&#39;Piter&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
+<span class="p">];</span>
+
+<span class="cm">/**
+</span><span class="cm"> * Runs the snippet
+</span><span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Don&#39;t forget a deep copy
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="nx">ARRAY</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">r</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[...</span><span class="nx">r</span><span class="p">]);</span>
+  <span class="c1">// Headings become keys
+</span><span class="c1"></span>  <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">].</span><span class="nx">toLocaleLowerCase</span><span class="p">()));</span>
+  <span class="kr">const</span> <span class="nx">collection</span> <span class="o">=</span> <span class="nx">arrayToCollection_</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">collection</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+</span><span class="cm"> * Runs the minimized function of the snippet
+</span><span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">runMiniFn</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Don&#39;t forget a deep copy
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="nx">ARRAY</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">r</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[...</span><span class="nx">r</span><span class="p">]);</span>
+  <span class="c1">// Headings become keys
+</span><span class="c1"></span>  <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">].</span><span class="nx">toLocaleLowerCase</span><span class="p">()));</span>
+  <span class="kr">const</span> <span class="nx">collection</span> <span class="o">=</span> <span class="nx">arrtocoll_</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">collection</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="minimized-version">Minimized version</h3>
+<p>For quick use, you can use a more transparent version</p>
+
+
+
+
+
+
+<strong>index.min.js</strong>
+<div class="highlight"><pre class="chroma"><code class="language-.js" data-lang=".js"><span class="kd">function</span> <span class="nx">arrtocoll_</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">e</span>
+    <span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">r</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">e</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">r</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">o</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">((</span><span class="nx">r</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span> <span class="o">=</span> <span class="nx">e</span><span class="p">[</span><span class="nx">c</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="nx">o</span><span class="p">]),</span> <span class="nx">r</span><span class="p">),</span> <span class="p">{}),</span> <span class="p">[]);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<style>
+  button.clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: Verdana, sans-serif;
+    color: #444;
+    border-radius: 2px;
+    border: #222 solid 1px;
+  }
+</style>
+<script src="/js/clipboard.min.js"></script>
+<script>
+  
+  function getButton(e) {
+    const span = document.createElement('button');
+    span.classList.add('clipboard');
+    span.innerHTML = 'copy';
+    e.style.position = 'relative';
+    e.appendChild(span);
+  }
+  document.querySelectorAll('div.highlight').forEach(getButton);
+  const clipboard = new ClipboardJS(
+    document.querySelectorAll('div.highlight button.clipboard'),
+    {
+      target: function (trigger) {
+        return trigger.parentElement.querySelector('pre.chroma');
+      },
+    }
+  );
+  clipboard.on('success', function (e) {
+    const innerHTML = '' + e.trigger.innerHTML;
+    e.trigger.innerHTML = 'copied ✓';
+    setTimeout(() => (e.trigger.innerHTML = innerHTML), 1100);
+    e.clearSelection();
+  });
+
+  clipboard.on('error', function (e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+  });
+</script>
+
+
+</content>
+<p>
+  
+  <a href="https://apps-script-snippets.contributor.pw/common/">#common</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

@@ -3,16 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://apps-script-snippets.contributor.pw/</loc>
-    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://apps-script-snippets.contributor.pw/docs/</loc>
-    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
+    <loc>https://apps-script-snippets.contributor.pw/common/</loc>
+    <lastmod>2021-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/</loc>
+    <lastmod>2021-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://apps-script-snippets.contributor.pw/snippets/</loc>
-    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://apps-script-snippets.contributor.pw/categories/snippets/</loc>
+    <lastmod>2021-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/docs/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://apps-script-snippets.contributor.pw/snippets/docs/uncheck-checklist/</loc>
@@ -38,9 +44,6 @@
   </url><url>
     <loc>https://apps-script-snippets.contributor.pw/snippets/calendar/delete-one-of-series/</loc>
     <lastmod>2021-04-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://apps-script-snippets.contributor.pw/common/</loc>
-    <lastmod>2021-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://apps-script-snippets.contributor.pw/js/</loc>
     <lastmod>2021-04-20T00:00:00+00:00</lastmod>
