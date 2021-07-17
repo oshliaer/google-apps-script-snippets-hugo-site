@@ -1,32 +1,36 @@
-# Google Apps Script Snippets
++++
+title = "Home"
++++
+
+## Google Apps Script Snippets
 
 {{< figure src="https://ssl.gstatic.com/images/branding/product/2x/apps_script_64dp.png" >}}
 
 {{< toc >}}
 
-## What is it
+### What is it
 
 This is a systematic view of Google Apps Script [snippets][1] sorted and grouped using [Hugo][2]. It also uses [watchman][3] and [rsync][4] and [brename][9] to build locally.
 
-## Why is this necessary
+### Why is this necessary
 
 The main reason is to share knowledge. Often the documentation is insufficient to reveal the capabilities of a method or coding approach.
 
 I wish I could have samples like these when I was learning to code.
 
-## What is a snippet
+### What is a snippet
 
 Snippet is a programming term for a small region of re-usable source code, machine code, or text. These simple and common-case snippets can be re-used within an Apps Script project.
 
-## How to use
+### How to use
 
-### Main approach
+#### Main approach
 
 Just copy the files to your project.
 
 Almost every snippet is provided with the main code file and a manifest. You need the manifest to know what additional libraries or services or scopes you may need to make the snippet work.
 
-### An example of a simple manifest
+#### An example of a simple manifest
 
 **appsscript.json**
 
@@ -39,7 +43,7 @@ Almost every snippet is provided with the main code file and a manifest. You nee
 }
 ```
 
-### An example of a manifest with dependencies
+#### An example of a manifest with dependencies
 
 Below is an example when using Advanced Docs Service. Usually, updating the manifest is enough for the program to request new permissions.
 
@@ -62,11 +66,11 @@ Below is an example when using Advanced Docs Service. Usually, updating the mani
 }
 ```
 
-### How to see my manifest
+#### How to see my manifest
 
 You need to check-in the property `Show "appsscript.json" manifest file in editor` in your project settings.
 
-### How to merge manifests
+#### How to merge manifests
 
 When you take a snippet, you get two manifests: yours in the current project and the snippet manifest.
 
@@ -86,7 +90,7 @@ Here it is
 }
 ```
 
-## How can I help
+### How can I help
 
 - Leave a request of snippet or suggestion for improvement in the repository [contributorpw/google-apps-script-snippets/issues][5]
 - Share the snippets
