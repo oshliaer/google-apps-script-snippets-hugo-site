@@ -2,7 +2,7 @@
 title = "Home"
 +++
 
-## Google Apps Script Snippets
+[![github stars contributorpw google-apps-script-snippets](https://img.shields.io/github/stars/contributorpw/google-apps-script-snippets?style=for-the-badge&logo=github)](https://github.com/contributorpw/google-apps-script-snippets)
 
 {{< figure src="https://ssl.gstatic.com/images/branding/product/2x/apps_script_64dp.png" >}}
 
