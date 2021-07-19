@@ -8,14 +8,22 @@
 <link rel="shortcut icon" href="https://apps-script-snippets.contributor.pw/images/favicon.png" />
 <title>Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
 <meta name="title" content="Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ" />
-<meta name="description" content="LET Delighted with the Excel LET formula" />
+<meta name="description" content="importxml-scrapper Скрапер на основе формулы IMPORTXML.
+Принцип работы Метод scrape ищет первый лист, в имени которого есть слова [inproc] в любом месте в любом регистре. Производит замену подстановки на формулу, дожидается ее расчета, заменяет формулу на ее значение.
+scrape по умолчанию делает 50 замен за один вызов.
+Если замен нет, то лист автоматически переименовывается из [inproc] в [done].
+В сниппете приведены также элементы меню и создание триггера для автоматического запуска и инициализации новго проекта." />
 <meta name="keywords" content="" />
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="LET Delighted with the Excel LET formula" />
+<meta property="og:description" content="importxml-scrapper Скрапер на основе формулы IMPORTXML.
+Принцип работы Метод scrape ищет первый лист, в имени которого есть слова [inproc] в любом месте в любом регистре. Производит замену подстановки на формулу, дожидается ее расчета, заменяет формулу на ее значение.
+scrape по умолчанию делает 50 замен за один вызов.
+Если замен нет, то лист автоматически переименовывается из [inproc] в [done].
+В сниппете приведены также элементы меню и создание триггера для автоматического запуска и инициализации новго проекта." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/customfunctions/let/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
+<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/apps/importxml-scrapper/1/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
 
 <meta property="og:site_name" content="Google Apps Script Snippets" />
 
@@ -26,14 +34,22 @@
 <meta name="twitter:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
 
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="LET Delighted with the Excel LET formula"/>
+<meta name="twitter:description" content="importxml-scrapper Скрапер на основе формулы IMPORTXML.
+Принцип работы Метод scrape ищет первый лист, в имени которого есть слова [inproc] в любом месте в любом регистре. Производит замену подстановки на формулу, дожидается ее расчета, заменяет формулу на ее значение.
+scrape по умолчанию делает 50 замен за один вызов.
+Если замен нет, то лист автоматически переименовывается из [inproc] в [done].
+В сниппете приведены также элементы меню и создание триггера для автоматического запуска и инициализации новго проекта."/>
 
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="LET Delighted with the Excel LET formula">
+<meta itemprop="description" content="importxml-scrapper Скрапер на основе формулы IMPORTXML.
+Принцип работы Метод scrape ищет первый лист, в имени которого есть слова [inproc] в любом месте в любом регистре. Производит замену подстановки на формулу, дожидается ее расчета, заменяет формулу на ее значение.
+scrape по умолчанию делает 50 замен за один вызов.
+Если замен нет, то лист автоматически переименовывается из [inproc] в [done].
+В сниппете приведены также элементы меню и создание триггера для автоматического запуска и инициализации новго проекта.">
 
-<meta itemprop="wordCount" content="7"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
+<meta itemprop="wordCount" content="79"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
 <meta itemprop="keywords" content="" />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -205,9 +221,13 @@
 
 </style>
 <meta property="og:title" content="" />
-<meta property="og:description" content="LET Delighted with the Excel LET formula" />
+<meta property="og:description" content="importxml-scrapper Скрапер на основе формулы IMPORTXML.
+Принцип работы Метод scrape ищет первый лист, в имени которого есть слова [inproc] в любом месте в любом регистре. Производит замену подстановки на формулу, дожидается ее расчета, заменяет формулу на ее значение.
+scrape по умолчанию делает 50 замен за один вызов.
+Если замен нет, то лист автоматически переименовывается из [inproc] в [done].
+В сниппете приведены также элементы меню и создание триггера для автоматического запуска и инициализации новго проекта." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/customfunctions/let/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
+<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/apps/importxml-scrapper/1/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
 
 <meta property="og:site_name" content="Google Apps Script Snippets" />
 
@@ -596,9 +616,15 @@
   <main>
 
 <content>
-  <h1 id="let">LET</h1>
-<p>Delighted with the Excel <code>LET</code> formula</p>
-<p><img src="./screenrecord.gif" alt="LET"></p>
+  <h1 id="importxml-scrapper">importxml-scrapper</h1>
+<p>Скрапер на основе формулы IMPORTXML.</p>
+<h2 id="принцип-работы">Принцип работы</h2>
+<p>Метод <code>scrape</code> ищет первый лист, в имени которого есть слова <code>[inproc]</code> в любом месте в любом регистре. Производит замену подстановки на формулу, дожидается ее расчета, заменяет формулу на ее значение.</p>
+<p><code>scrape</code> по умолчанию делает 50 замен за один вызов.</p>
+<p>Если замен нет, то лист автоматически переименовывается из <code>[inproc]</code> в <code>[done]</code>.</p>
+<p>В сниппете приведены также элементы меню и создание триггера для автоматического запуска и инициализации новго проекта.</p>
+<h2 id="примеры">Примеры</h2>
+<p><a href="https://docs.google.com/spreadsheets/d/130aJWlbTvvE2-XqTglb5GngAVjq9U5CHcT2mGhJbRkA/edit?usp=sharing">Последняя версия в Таблице</a></p>
 
 </content>
 <p>
