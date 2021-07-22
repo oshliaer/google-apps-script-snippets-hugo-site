@@ -37,7 +37,7 @@
 <meta itemprop="description" content="Open an url in browser This snippet shows how to open a link using Apps Script in a browser. As a particular example it shows how to get/create a file and open it in browser. This may not always work as browsers protect tabs from opening spontaneously.
  See full code  Leave a comment  Create script from the snippet  &nbsp;*See how to use scrviz for clone Apps Script project     index."><meta itemprop="datePublished" content="2021-02-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-02-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="234"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
+<meta itemprop="wordCount" content="319"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
 <meta itemprop="keywords" content="" />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -723,6 +723,49 @@ This may not always work as browsers protect tabs from opening spontaneously.</p
 <span class="p">}</span>
 </code></pre></div>
 </p>
+<style>
+  button.clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: Verdana, sans-serif;
+    color: #444;
+    border-radius: 2px;
+    border: #222 solid 1px;
+  }
+</style>
+<script src="/js/clipboard.min.js"></script>
+<script>
+  
+  function getButton(e) {
+    const span = document.createElement('button');
+    span.classList.add('clipboard');
+    span.innerHTML = 'copy';
+    e.style.position = 'relative';
+    e.appendChild(span);
+  }
+  document.querySelectorAll('div.highlight').forEach(getButton);
+  const clipboard = new ClipboardJS(
+    document.querySelectorAll('div.highlight button.clipboard'),
+    {
+      target: function (trigger) {
+        return trigger.parentElement.querySelector('pre.chroma');
+      },
+    }
+  );
+  clipboard.on('success', function (e) {
+    const innerHTML = '' + e.trigger.innerHTML;
+    e.trigger.innerHTML = 'copied ✓';
+    setTimeout(() => (e.trigger.innerHTML = innerHTML), 1100);
+    e.clearSelection();
+  });
+
+  clipboard.on('error', function (e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+  });
+</script>
+
 
 </content>
 <p>
