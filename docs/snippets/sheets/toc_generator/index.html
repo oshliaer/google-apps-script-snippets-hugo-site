@@ -33,7 +33,7 @@
 <meta itemprop="name" content="TOC generator for Google Sheets">
 <meta itemprop="description" content="Generates a table of contents for a specific Spreadsheet"><meta itemprop="datePublished" content="2021-03-18T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-03-18T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="241"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/screenrecord.gif">
+<meta itemprop="wordCount" content="326"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/screenrecord.gif">
 <meta itemprop="keywords" content="sheets," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -724,6 +724,49 @@
     <span class="p">.</span><span class="nx">addToUi</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div>
+
+<style>
+  button.clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: Verdana, sans-serif;
+    color: #444;
+    border-radius: 2px;
+    border: #222 solid 1px;
+  }
+</style>
+<script src="/js/clipboard.min.js"></script>
+<script>
+  
+  function getButton(e) {
+    const span = document.createElement('button');
+    span.classList.add('clipboard');
+    span.innerHTML = 'copy';
+    e.style.position = 'relative';
+    e.appendChild(span);
+  }
+  document.querySelectorAll('div.highlight').forEach(getButton);
+  const clipboard = new ClipboardJS(
+    document.querySelectorAll('div.highlight button.clipboard'),
+    {
+      target: function (trigger) {
+        return trigger.parentElement.querySelector('pre.chroma');
+      },
+    }
+  );
+  clipboard.on('success', function (e) {
+    const innerHTML = '' + e.trigger.innerHTML;
+    e.trigger.innerHTML = 'copied ✓';
+    setTimeout(() => (e.trigger.innerHTML = innerHTML), 1100);
+    e.clearSelection();
+  });
+
+  clipboard.on('error', function (e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+  });
+</script>
 
 
 </content>
