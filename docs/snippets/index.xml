@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Fri, 16 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sample for xml-js</title>
+      <link>https://apps-script-snippets.contributor.pw/snippets/extra/xml-js_demo/</link>
+      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://apps-script-snippets.contributor.pw/snippets/extra/xml-js_demo/</guid>
+      <description>Using xml-js for Apps Script  Snippet Run it Init it before using   Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    Run it run.js /** * */ function runXML2JSON() { var xml = &amp;#39;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&amp;#39; + &amp;#39;&amp;lt;note importance=&amp;#34;high&amp;#34; logged=&amp;#34;true&amp;#34;&amp;gt;&amp;#39; + &amp;#39; &amp;lt;title&amp;gt;Happy&amp;lt;/title&amp;gt;&amp;#39; + &amp;#39; &amp;lt;todo&amp;gt;Work&amp;lt;/todo&amp;gt;&amp;#39; + &amp;#39; &amp;lt;todo&amp;gt;Play&amp;lt;/todo&amp;gt;&amp;#39; + &amp;#39;&amp;lt;/note&amp;gt;&amp;#39;; var result1 = convert.</description>
+    </item>
+    
     <item>
       <title>Put objects above 100KB to a Cache Service</title>
       <link>https://apps-script-snippets.contributor.pw/snippets/cache/chunky-cache/</link>
