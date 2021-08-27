@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://apps-script-snippets.contributor.pw/common_ui/</loc>
+    <lastmod>2021-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/</loc>
+    <lastmod>2021-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/snippets/common_ui/open-dialog-from-sidebar/</loc>
+    <lastmod>2021-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/snippets/</loc>
+    <lastmod>2021-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/categories/snippets/</loc>
+    <lastmod>2021-08-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://apps-script-snippets.contributor.pw/extra/</loc>
     <lastmod>2021-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://apps-script-snippets.contributor.pw/</loc>
-    <lastmod>2021-08-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://apps-script-snippets.contributor.pw/snippets/extra/xml-js_demo/</loc>
-    <lastmod>2021-08-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://apps-script-snippets.contributor.pw/snippets/</loc>
-    <lastmod>2021-08-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://apps-script-snippets.contributor.pw/categories/snippets/</loc>
     <lastmod>2021-08-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://apps-script-snippets.contributor.pw/cache/</loc>
