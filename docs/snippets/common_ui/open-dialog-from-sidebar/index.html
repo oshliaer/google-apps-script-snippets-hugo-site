@@ -6,18 +6,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="https://apps-script-snippets.contributor.pw/images/favicon.png" />
-<title>Sample for xml-js | Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
-<meta name="title" content="Sample for xml-js" />
-<meta name="description" content="Using xml-js for Apps Script" />
-<meta name="keywords" content="extra," />
+<title>Open an dialog from the sidebar | Google Apps Script snippets ᕦʕ •ᴥ•ʔᕤ</title>
+<meta name="title" content="Open an dialog from the sidebar" />
+<meta name="description" content="The snippet demonstrates how to open additional UI elements in Google Sheets." />
+<meta name="keywords" content="common_ui," />
 
 
-<meta property="og:title" content="Sample for xml-js" />
-<meta property="og:description" content="Using xml-js for Apps Script" />
+<meta property="og:title" content="Open an dialog from the sidebar" />
+<meta property="og:description" content="The snippet demonstrates how to open additional UI elements in Google Sheets." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/extra/xml-js_demo/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-08-02T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-08-02T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_ui/open-dialog-from-sidebar/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
+<meta property="article:published_time" content="2021-08-27T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-08-27T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -25,16 +25,16 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
 
-<meta name="twitter:title" content="Sample for xml-js"/>
-<meta name="twitter:description" content="Using xml-js for Apps Script"/>
+<meta name="twitter:title" content="Open an dialog from the sidebar"/>
+<meta name="twitter:description" content="The snippet demonstrates how to open additional UI elements in Google Sheets."/>
 
 
 
-<meta itemprop="name" content="Sample for xml-js">
-<meta itemprop="description" content="Using xml-js for Apps Script"><meta itemprop="datePublished" content="2021-08-02T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-08-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="227"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
-<meta itemprop="keywords" content="extra," />
+<meta itemprop="name" content="Open an dialog from the sidebar">
+<meta itemprop="description" content="The snippet demonstrates how to open additional UI elements in Google Sheets."><meta itemprop="datePublished" content="2021-08-27T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-08-27T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="216"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
+<meta itemprop="keywords" content="common_ui," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
@@ -204,12 +204,12 @@
   }
 
 </style>
-<meta property="og:title" content="Sample for xml-js" />
-<meta property="og:description" content="Using xml-js for Apps Script" />
+<meta property="og:title" content="Open an dialog from the sidebar" />
+<meta property="og:description" content="The snippet demonstrates how to open additional UI elements in Google Sheets." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/extra/xml-js_demo/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-08-02T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-08-02T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_ui/open-dialog-from-sidebar/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
+<meta property="article:published_time" content="2021-08-27T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-08-27T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -596,26 +596,28 @@
   <main>
 
 <content>
-  <h2 id="using-xml-js-for-apps-script">Using xml-js for Apps Script</h2>
+  <h2 id="open-an-dialog-from-the-sidebar">Open an dialog from the sidebar</h2>
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#snippet">Snippet</a></li>
+    <li><a href="#the-main-code">The main code</a></li>
     <li><a href="#run-it">Run it</a></li>
-    <li><a href="#init-it-before-using">Init it before using</a></li>
   </ul>
 </nav>
-<h3 id="snippet">Snippet</h3>
+<video controls width="100%" height="350px" autoplay="true" loop="true">
+    <source src="./screenrecord.mp4"  type="video/mp4">
+    Sorry, your browser doesn't support embedded videos.
+</video>
 <ul>
-<li><a href="https://github.com/contributorpw/google-apps-script-snippets/tree/master/snippets/extra/xml-js_demo/" target="blank">See full code</a>
+<li><a href="https://github.com/contributorpw/google-apps-script-snippets/tree/master/snippets/common_ui/open-dialog-from-sidebar/" target="blank">See full code</a>
 </li>
-<li><a href="https://github.com/contributorpw/google-apps-script-snippets/issues/new?title=Sample%20for%20xml-js" target="blank">Leave a comment</a></li>
+<li><a href="https://github.com/contributorpw/google-apps-script-snippets/issues/new?title=Open%20an%20dialog%20from%20the%20sidebar" target="blank">Leave a comment</a></li>
 <li>
 
 
 
 
 
-  <a href="https://scrviz.web.app/?manifest=contributorpw%2fgoogle-apps-script-snippets%2fsnippets%2fextra%2fxml-js_demo%2fappsscript.json" target="_blank">
+  <a href="https://scrviz.web.app/?manifest=contributorpw%2fgoogle-apps-script-snippets%2fsnippets%2fcommon_ui%2fopen-dialog-from-sidebar%2fappsscript.json" target="_blank">
     Create script from the snippet
   </a>
   <sup style="font-size: x-small;">
@@ -624,6 +626,65 @@
 
 </li>
 </ul>
+<h3 id="the-main-code">The main code</h3>
+<p>
+
+
+
+
+
+<strong>app/sidebar.html</strong>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;IE=edge&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;btnShowModalDialog&#34;</span><span class="p">&gt;</span>Show the modal dialog<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nb">document</span>
+          <span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;btnShowModalDialog&#39;</span><span class="p">)</span>
+          <span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+            <span class="nx">google</span><span class="p">.</span><span class="nx">script</span><span class="p">.</span><span class="nx">run</span><span class="p">.</span><span class="nx">showModalDialog</span><span class="p">();</span>
+          <span class="p">});</span>
+      <span class="p">});</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+<strong>app/index.js</strong>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
+</span><span class="cm"> * Opens the sidebar
+</span><span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">openSidebarDialog</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">().</span><span class="nx">showSidebar</span><span class="p">(</span>
+    <span class="nx">HtmlService</span><span class="p">.</span><span class="nx">createHtmlOutputFromFile</span><span class="p">(</span><span class="s1">&#39;app/sidebar.html&#39;</span><span class="p">)</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+</span><span class="cm"> * Opens the modal dialog
+</span><span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">showModalDialog</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">().</span><span class="nx">showModalDialog</span><span class="p">(</span>
+    <span class="nx">HtmlService</span><span class="p">.</span><span class="nx">createHtmlOutputFromFile</span><span class="p">(</span><span class="s1">&#39;app/dialog.html&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;Modal dialog&#39;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</p>
 <h3 id="run-it">Run it</h3>
 
 
@@ -633,48 +694,11 @@
 
 <strong>run.js</strong>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> *
+</span><span class="cm"> * Runs the snippet
 </span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">runXML2JSON</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">xml</span> <span class="o">=</span>
-    <span class="s1">&#39;&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;&#39;</span> <span class="o">+</span>
-    <span class="s1">&#39;&lt;note importance=&#34;high&#34; logged=&#34;true&#34;&gt;&#39;</span> <span class="o">+</span>
-    <span class="s1">&#39;    &lt;title&gt;Happy&lt;/title&gt;&#39;</span> <span class="o">+</span>
-    <span class="s1">&#39;    &lt;todo&gt;Work&lt;/todo&gt;&#39;</span> <span class="o">+</span>
-    <span class="s1">&#39;    &lt;todo&gt;Play&lt;/todo&gt;&#39;</span> <span class="o">+</span>
-    <span class="s1">&#39;&lt;/note&gt;&#39;</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">result1</span> <span class="o">=</span> <span class="nx">convert</span><span class="p">.</span><span class="nx">xml2json</span><span class="p">(</span><span class="nx">xml</span><span class="p">,</span> <span class="p">{</span> <span class="nx">compact</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">spaces</span><span class="o">:</span> <span class="mi">4</span> <span class="p">});</span>
-  <span class="kd">var</span> <span class="nx">result2</span> <span class="o">=</span> <span class="nx">convert</span><span class="p">.</span><span class="nx">xml2json</span><span class="p">(</span><span class="nx">xml</span><span class="p">,</span> <span class="p">{</span> <span class="nx">compact</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">spaces</span><span class="o">:</span> <span class="mi">4</span> <span class="p">});</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result1</span><span class="p">,</span> <span class="s1">&#39;\n&#39;</span><span class="p">,</span> <span class="nx">result2</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">openSidebarDialog</span><span class="p">();</span>
 <span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">runJSON2XML</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">json</span> <span class="o">=</span> <span class="s1">&#39;{&#34;name&#34;:{&#34;_text&#34;:&#34;Ali&#34;},&#34;age&#34;:{&#34;_text&#34;:&#34;30&#34;}}&#39;</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">compact</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nx">textFn</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">elementName</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="nx">elementName</span> <span class="o">===</span> <span class="s1">&#39;name&#39;</span> <span class="o">?</span> <span class="nb">String</span><span class="p">(</span><span class="nx">val</span><span class="p">).</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="o">:</span> <span class="nx">val</span><span class="p">;</span>
-    <span class="p">},</span>
-  <span class="p">};</span>
-  <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">convert</span><span class="p">.</span><span class="nx">json2xml</span><span class="p">(</span><span class="nx">json</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// &lt;name&gt;ALI&lt;/name&gt;&lt;age&gt;30&lt;/age&gt;
-</span><span class="c1"></span><span class="p">}</span>
-</code></pre></div>
-
-<h3 id="init-it-before-using">Init it before using</h3>
-
-
-
-
-
-
-<strong>init.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js">
-<span class="o">!</span><span class="kd">function</span><span class="p">(</span><span class="nx">global</span><span class="p">){</span>
-  <span class="kr">const</span> <span class="nb">window</span> <span class="o">=</span> <span class="p">{};</span>
-  <span class="nx">global</span><span class="p">.</span><span class="nb">window</span> <span class="o">=</span> <span class="nb">window</span><span class="p">;</span>
-  <span class="nx">global</span><span class="p">.</span><span class="nx">convert</span> <span class="o">=</span> <span class="nb">window</span><span class="p">;</span>
-<span class="p">}(</span><span class="k">this</span><span class="p">);</span>
 </code></pre></div>
 
 <style>
@@ -724,7 +748,7 @@
 </content>
 <p>
   
-  <a href="https://apps-script-snippets.contributor.pw/extra/">#extra</a>
+  <a href="https://apps-script-snippets.contributor.pw/common_ui/">#common_ui</a>
   
 </p>
 

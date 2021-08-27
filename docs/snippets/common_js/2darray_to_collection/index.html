@@ -632,7 +632,7 @@
 
 
 <strong>index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-.js" data-lang=".js"><span class="cm">/**
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
 </span><span class="cm"> * Converts a 2D array to a collection.
 </span><span class="cm"> *
 </span><span class="cm"> * @param {Array.&lt;Array.&lt;any&gt;&gt;} array
@@ -658,7 +658,7 @@
 
 
 <strong>run.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-.js" data-lang=".js"><span class="cm">/* global arrayToCollection_ arrtocoll_ */</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* global arrayToCollection_ arrtocoll_ */</span>
 
 <span class="kr">const</span> <span class="nx">ARRAY</span> <span class="o">=</span> <span class="p">[</span>
   <span class="p">[</span><span class="s1">&#39;Num&#39;</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Amount&#39;</span><span class="p">],</span>
@@ -701,7 +701,7 @@
 
 
 <strong>index.min.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-.js" data-lang=".js"><span class="kd">function</span> <span class="nx">arrtocoll_</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">arrtocoll_</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">e</span>
     <span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">r</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">e</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">r</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">o</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">((</span><span class="nx">r</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span> <span class="o">=</span> <span class="nx">e</span><span class="p">[</span><span class="nx">c</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="nx">o</span><span class="p">]),</span> <span class="nx">r</span><span class="p">),</span> <span class="p">{}),</span> <span class="p">[]);</span>

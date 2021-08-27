@@ -1,7 +1,7 @@
 {{ $file := .Get 0 }}
 {{ $dir := default .Page.File.Dir (.Get 1) }}
 {{ $path := path.Join $dir $file }}
-{{ $ext := default (path.Ext $file) (.Get 2) }}
+{{ $ext := default (substr (path.Ext $file) 1) (.Get 2) }}
 {{ $opt := default "" (.Get 3) }}
 
 <strong>{{ $file }}</strong>
