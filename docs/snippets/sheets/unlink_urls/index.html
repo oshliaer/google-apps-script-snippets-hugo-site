@@ -16,8 +16,8 @@
 <meta property="og:description" content="Using the RichTextValues for clearing a specific range" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/screenrecord.gif" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-04-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-12T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-04-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-12T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,8 +31,8 @@
 
 
 <meta itemprop="name" content="Unlink all URLs in the range">
-<meta itemprop="description" content="Using the RichTextValues for clearing a specific range"><meta itemprop="datePublished" content="2021-04-12T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-04-12T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Using the RichTextValues for clearing a specific range"><meta itemprop="datePublished" content="2021-04-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-04-12T00:00:00+00:00" />
 <meta itemprop="wordCount" content="166"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/screenrecord.gif">
 <meta itemprop="keywords" content="sheets,Sheets advanced service," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -208,8 +208,8 @@
 <meta property="og:description" content="Using the RichTextValues for clearing a specific range" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/screenrecord.gif" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-04-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-12T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-04-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-12T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -632,27 +632,27 @@
 
 
 <strong>index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> * Removes all links from the range
-</span><span class="cm"> *
-</span><span class="cm"> * @param {GoogleAppsScript.Spreadsheet.Range} range A range
-</span><span class="cm"> * @return {GoogleAppsScript.Spreadsheet.RichTextValue[][]}
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">unlinkUrls_</span><span class="p">(</span><span class="nx">range</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveRange</span><span class="p">())</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">range</span><span class="p">.</span><span class="nx">setRichTextValues</span><span class="p">(</span>
-    <span class="nx">range</span><span class="p">.</span><span class="nx">getRichTextValues</span><span class="p">().</span><span class="nx">map</span><span class="p">((</span><span class="nx">rowRichTextValues</span><span class="p">)</span> <span class="p">=&gt;</span>
-      <span class="nx">rowRichTextValues</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">richTextValue</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">richTextValue</span><span class="p">.</span><span class="nx">getRuns</span><span class="p">().</span><span class="nx">some</span><span class="p">((</span><span class="nx">ruin</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">ruin</span><span class="p">.</span><span class="nx">getLinkUrl</span><span class="p">()))</span> <span class="p">{</span>
-          <span class="kr">const</span> <span class="nx">copy</span> <span class="o">=</span> <span class="nx">richTextValue</span><span class="p">.</span><span class="nx">copy</span><span class="p">();</span>
-          <span class="nx">copy</span><span class="p">.</span><span class="nx">setLinkUrl</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span>
-          <span class="k">return</span> <span class="nx">copy</span><span class="p">.</span><span class="nx">build</span><span class="p">();</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="nx">richTextValue</span><span class="p">;</span>
-      <span class="p">})</span>
-    <span class="p">)</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Removes all links from the range
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {GoogleAppsScript.Spreadsheet.Range} range A range
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @return {GoogleAppsScript.Spreadsheet.RichTextValue[][]}
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">unlinkUrls_</span><span class="p">(</span><span class="nx">range</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveRange</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">range</span><span class="p">.</span><span class="nx">setRichTextValues</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">range</span><span class="p">.</span><span class="nx">getRichTextValues</span><span class="p">().</span><span class="nx">map</span><span class="p">((</span><span class="nx">rowRichTextValues</span><span class="p">)</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">rowRichTextValues</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">richTextValue</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">richTextValue</span><span class="p">.</span><span class="nx">getRuns</span><span class="p">().</span><span class="nx">some</span><span class="p">((</span><span class="nx">ruin</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">ruin</span><span class="p">.</span><span class="nx">getLinkUrl</span><span class="p">()))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="kr">const</span> <span class="nx">copy</span> <span class="o">=</span> <span class="nx">richTextValue</span><span class="p">.</span><span class="nx">copy</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">copy</span><span class="p">.</span><span class="nx">setLinkUrl</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="k">return</span> <span class="nx">copy</span><span class="p">.</span><span class="nx">build</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">richTextValue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="run-it">Run it</h3>
 
@@ -662,28 +662,28 @@
 
 
 <strong>run.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* global unlinkUrls_ */</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Runs the snippet.
-</span><span class="cm"> * Unlink URLs
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSheet</span><span class="p">();</span>
-  <span class="kr">const</span> <span class="nx">range</span> <span class="o">=</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getDataRange</span><span class="p">();</span>
-  <span class="nx">unlinkUrls_</span><span class="p">(</span><span class="nx">range</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Create menu for handy use
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">onOpen</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">()</span>
-    <span class="p">.</span><span class="nx">createMenu</span><span class="p">(</span><span class="s1">&#39;Apps Script Snippets&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="s1">&#39;Unlink all urls on the Sheet&#39;</span><span class="p">,</span> <span class="s1">&#39;run&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">addToUi</span><span class="p">();</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* global unlinkUrls_ */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Runs the snippet.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Unlink URLs
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSheet</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">range</span> <span class="o">=</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getDataRange</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">unlinkUrls_</span><span class="p">(</span><span class="nx">range</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Create menu for handy use
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">onOpen</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">createMenu</span><span class="p">(</span><span class="s1">&#39;Apps Script Snippets&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="s1">&#39;Unlink all urls on the Sheet&#39;</span><span class="p">,</span> <span class="s1">&#39;run&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">addToUi</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="issues">Issues</h3>
 <p>This code does not remove links if they are the only content in the cell. See <a href="https://stackoverflow.com/questions/62271646/unlink-all-hyperlinks-from-a-sheet/62275201#62275201">google apps script - Unlink all hyperlinks from a sheet - Stack Overflow</a></p>

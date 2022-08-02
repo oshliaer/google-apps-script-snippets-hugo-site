@@ -16,8 +16,8 @@
 <meta property="og:description" content="Gets an iterator of dates for the specified range." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/date-range-iterator/screenshot.png" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-04-19T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-19T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-04-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-19T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,8 +31,8 @@
 
 
 <meta itemprop="name" content="Date range iterator">
-<meta itemprop="description" content="Gets an iterator of dates for the specified range."><meta itemprop="datePublished" content="2021-04-19T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-04-19T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Gets an iterator of dates for the specified range."><meta itemprop="datePublished" content="2021-04-19T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-04-19T00:00:00+00:00" />
 <meta itemprop="wordCount" content="214"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/date-range-iterator/screenshot.png">
 <meta itemprop="keywords" content="js,common," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -208,8 +208,8 @@
 <meta property="og:description" content="Gets an iterator of dates for the specified range." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_js/date-range-iterator/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/date-range-iterator/screenshot.png" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-04-19T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-19T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-04-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-19T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -631,24 +631,24 @@
 
 
 <strong>index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* exported makeDatesRangeIterator */</span>
-<span class="cm">/**
-</span><span class="cm"> *
-</span><span class="cm"> * @param {Date} start
-</span><span class="cm"> * @param {Date} end
-</span><span class="cm"> * @param {number} step ms
-</span><span class="cm"> */</span>
-<span class="kd">function</span><span class="o">*</span> <span class="nx">makeDatesRangeIterator_</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">,</span> <span class="nx">step</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">_start</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">start</span><span class="p">);</span>
-  <span class="kd">let</span> <span class="nx">_iterationCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">while</span> <span class="p">(</span><span class="nx">_start</span> <span class="o">&lt;=</span> <span class="nx">end</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">_iterationCount</span><span class="o">++</span><span class="p">;</span>
-    <span class="k">yield</span> <span class="nx">_start</span><span class="p">;</span>
-    <span class="nx">_start</span><span class="p">.</span><span class="nx">setTime</span><span class="p">(</span><span class="nx">_start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="nx">step</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="nx">_iterationCount</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* exported makeDatesRangeIterator */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {Date} start
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {Date} end
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {number} step ms
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="o">*</span> <span class="nx">makeDatesRangeIterator_</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">,</span> <span class="nx">step</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">_start</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">start</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">_iterationCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="nx">_start</span> <span class="o">&lt;=</span> <span class="nx">end</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">_iterationCount</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">yield</span> <span class="nx">_start</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">_start</span><span class="p">.</span><span class="nx">setTime</span><span class="p">(</span><span class="nx">_start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="nx">step</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">_iterationCount</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="run-it">Run it</h3>
 
@@ -658,44 +658,44 @@
 
 
 <strong>run.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* global makeDatesRangeIterator_ */</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Prints 100 days
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">runPrint100Days</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">start</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
-  <span class="kr">const</span> <span class="nx">end</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
-  <span class="nx">end</span><span class="p">.</span><span class="nx">setTime</span><span class="p">(</span><span class="nx">start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">100</span><span class="p">);</span>
-
-  <span class="kr">const</span> <span class="nx">it</span> <span class="o">=</span> <span class="nx">makeDatesRangeIterator_</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">);</span>
-  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
-  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="nx">result</span><span class="p">.</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
-    <span class="nx">result</span> <span class="o">=</span> <span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Prints all mondays of the year
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">runPrintAllMondays</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">year</span> <span class="o">=</span> <span class="mi">2023</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">start</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">year</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-  <span class="kr">const</span> <span class="nx">end</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">year</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-  <span class="kr">const</span> <span class="nx">step</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">7</span><span class="p">;</span>
-
-  <span class="c1">// Set the first monday
-</span><span class="c1"></span>  <span class="k">while</span> <span class="p">(</span><span class="nx">start</span><span class="p">.</span><span class="nx">getDay</span><span class="p">()</span> <span class="o">!==</span> <span class="mi">1</span><span class="p">)</span> <span class="nx">start</span><span class="p">.</span><span class="nx">setDate</span><span class="p">(</span><span class="nx">start</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-
-  <span class="kr">const</span> <span class="nx">it</span> <span class="o">=</span> <span class="nx">makeDatesRangeIterator_</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">,</span> <span class="nx">step</span><span class="p">);</span>
-  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
-  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="nx">result</span><span class="p">.</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
-    <span class="nx">result</span> <span class="o">=</span> <span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* global makeDatesRangeIterator_ */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Prints 100 days
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">runPrint100Days</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">start</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">end</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">end</span><span class="p">.</span><span class="nx">setTime</span><span class="p">(</span><span class="nx">start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">it</span> <span class="o">=</span> <span class="nx">makeDatesRangeIterator_</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="nx">result</span><span class="p">.</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">result</span> <span class="o">=</span> <span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Prints all mondays of the year
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">runPrintAllMondays</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">year</span> <span class="o">=</span> <span class="mi">2023</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">start</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">year</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">end</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">year</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">step</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Set the first monday
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">while</span> <span class="p">(</span><span class="nx">start</span><span class="p">.</span><span class="nx">getDay</span><span class="p">()</span> <span class="o">!==</span> <span class="mi">1</span><span class="p">)</span> <span class="nx">start</span><span class="p">.</span><span class="nx">setDate</span><span class="p">(</span><span class="nx">start</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">it</span> <span class="o">=</span> <span class="nx">makeDatesRangeIterator_</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span> <span class="nx">end</span><span class="p">,</span> <span class="nx">step</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="nx">result</span><span class="p">.</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">result</span> <span class="o">=</span> <span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 
 </content>

@@ -16,8 +16,8 @@
 <meta property="og:description" content="Using xml-js for Apps Script" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/extra/xml-js_demo/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-08-02T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-08-02T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-08-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-02T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,9 +31,9 @@
 
 
 <meta itemprop="name" content="Sample for xml-js">
-<meta itemprop="description" content="Using xml-js for Apps Script"><meta itemprop="datePublished" content="2021-08-02T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-08-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="227"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
+<meta itemprop="description" content="Using xml-js for Apps Script"><meta itemprop="datePublished" content="2021-08-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-02T00:00:00+00:00" />
+<meta itemprop="wordCount" content="142"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
 <meta itemprop="keywords" content="extra," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -208,8 +208,8 @@
 <meta property="og:description" content="Using xml-js for Apps Script" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/extra/xml-js_demo/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-08-02T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-08-02T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-08-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-02T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -632,34 +632,34 @@
 
 
 <strong>run.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> *
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">runXML2JSON</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">xml</span> <span class="o">=</span>
-    <span class="s1">&#39;&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;&#39;</span> <span class="o">+</span>
-    <span class="s1">&#39;&lt;note importance=&#34;high&#34; logged=&#34;true&#34;&gt;&#39;</span> <span class="o">+</span>
-    <span class="s1">&#39;    &lt;title&gt;Happy&lt;/title&gt;&#39;</span> <span class="o">+</span>
-    <span class="s1">&#39;    &lt;todo&gt;Work&lt;/todo&gt;&#39;</span> <span class="o">+</span>
-    <span class="s1">&#39;    &lt;todo&gt;Play&lt;/todo&gt;&#39;</span> <span class="o">+</span>
-    <span class="s1">&#39;&lt;/note&gt;&#39;</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">result1</span> <span class="o">=</span> <span class="nx">convert</span><span class="p">.</span><span class="nx">xml2json</span><span class="p">(</span><span class="nx">xml</span><span class="p">,</span> <span class="p">{</span> <span class="nx">compact</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">spaces</span><span class="o">:</span> <span class="mi">4</span> <span class="p">});</span>
-  <span class="kd">var</span> <span class="nx">result2</span> <span class="o">=</span> <span class="nx">convert</span><span class="p">.</span><span class="nx">xml2json</span><span class="p">(</span><span class="nx">xml</span><span class="p">,</span> <span class="p">{</span> <span class="nx">compact</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">spaces</span><span class="o">:</span> <span class="mi">4</span> <span class="p">});</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result1</span><span class="p">,</span> <span class="s1">&#39;\n&#39;</span><span class="p">,</span> <span class="nx">result2</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">runJSON2XML</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">json</span> <span class="o">=</span> <span class="s1">&#39;{&#34;name&#34;:{&#34;_text&#34;:&#34;Ali&#34;},&#34;age&#34;:{&#34;_text&#34;:&#34;30&#34;}}&#39;</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">compact</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nx">textFn</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">elementName</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="nx">elementName</span> <span class="o">===</span> <span class="s1">&#39;name&#39;</span> <span class="o">?</span> <span class="nb">String</span><span class="p">(</span><span class="nx">val</span><span class="p">).</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="o">:</span> <span class="nx">val</span><span class="p">;</span>
-    <span class="p">},</span>
-  <span class="p">};</span>
-  <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">convert</span><span class="p">.</span><span class="nx">json2xml</span><span class="p">(</span><span class="nx">json</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// &lt;name&gt;ALI&lt;/name&gt;&lt;age&gt;30&lt;/age&gt;
-</span><span class="c1"></span><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">runXML2JSON</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">xml</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;&#39;</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&lt;note importance=&#34;high&#34; logged=&#34;true&#34;&gt;&#39;</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;    &lt;title&gt;Happy&lt;/title&gt;&#39;</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;    &lt;todo&gt;Work&lt;/todo&gt;&#39;</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;    &lt;todo&gt;Play&lt;/todo&gt;&#39;</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&lt;/note&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">result1</span> <span class="o">=</span> <span class="nx">convert</span><span class="p">.</span><span class="nx">xml2json</span><span class="p">(</span><span class="nx">xml</span><span class="p">,</span> <span class="p">{</span> <span class="nx">compact</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">spaces</span><span class="o">:</span> <span class="mi">4</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">result2</span> <span class="o">=</span> <span class="nx">convert</span><span class="p">.</span><span class="nx">xml2json</span><span class="p">(</span><span class="nx">xml</span><span class="p">,</span> <span class="p">{</span> <span class="nx">compact</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">spaces</span><span class="o">:</span> <span class="mi">4</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result1</span><span class="p">,</span> <span class="s1">&#39;\n&#39;</span><span class="p">,</span> <span class="nx">result2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">runJSON2XML</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">json</span> <span class="o">=</span> <span class="s1">&#39;{&#34;name&#34;:{&#34;_text&#34;:&#34;Ali&#34;},&#34;age&#34;:{&#34;_text&#34;:&#34;30&#34;}}&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">compact</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">textFn</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">elementName</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">elementName</span> <span class="o">===</span> <span class="s1">&#39;name&#39;</span> <span class="o">?</span> <span class="nb">String</span><span class="p">(</span><span class="nx">val</span><span class="p">).</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="o">:</span> <span class="nx">val</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">convert</span><span class="p">.</span><span class="nx">json2xml</span><span class="p">(</span><span class="nx">json</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// &lt;name&gt;ALI&lt;/name&gt;&lt;age&gt;30&lt;/age&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="init-it-before-using">Init it before using</h3>
 
@@ -669,13 +669,13 @@
 
 
 <strong>init.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js">
-<span class="o">!</span><span class="kd">function</span><span class="p">(</span><span class="nx">global</span><span class="p">){</span>
-  <span class="kr">const</span> <span class="nb">window</span> <span class="o">=</span> <span class="p">{};</span>
-  <span class="nx">global</span><span class="p">.</span><span class="nb">window</span> <span class="o">=</span> <span class="nb">window</span><span class="p">;</span>
-  <span class="nx">global</span><span class="p">.</span><span class="nx">convert</span> <span class="o">=</span> <span class="nb">window</span><span class="p">;</span>
-<span class="p">}(</span><span class="k">this</span><span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">!</span><span class="kd">function</span><span class="p">(</span><span class="nx">global</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nb">window</span> <span class="o">=</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">global</span><span class="p">.</span><span class="nb">window</span> <span class="o">=</span> <span class="nb">window</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">global</span><span class="p">.</span><span class="nx">convert</span> <span class="o">=</span> <span class="nb">window</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}(</span><span class="k">this</span><span class="p">);</span>
+</span></span></code></pre></div>
 
 <style>
   button.clipboard {

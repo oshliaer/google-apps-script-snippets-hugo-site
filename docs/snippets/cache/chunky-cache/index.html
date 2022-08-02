@@ -16,8 +16,8 @@
 <meta property="og:description" content="Using the Google Apps Script Cache Service for objects/files above 100KB." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/cache/chunky-cache/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/cache/chunky-cache/screenshot.png" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-07-16T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-16T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-07-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-16T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,9 +31,9 @@
 
 
 <meta itemprop="name" content="Put objects above 100KB to a Cache Service">
-<meta itemprop="description" content="Using the Google Apps Script Cache Service for objects/files above 100KB."><meta itemprop="datePublished" content="2021-07-16T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-07-16T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="911"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/cache/chunky-cache/screenshot.png">
+<meta itemprop="description" content="Using the Google Apps Script Cache Service for objects/files above 100KB."><meta itemprop="datePublished" content="2021-07-16T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-16T00:00:00+00:00" />
+<meta itemprop="wordCount" content="826"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/cache/chunky-cache/screenshot.png">
 <meta itemprop="keywords" content="cache," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -208,8 +208,8 @@
 <meta property="og:description" content="Using the Google Apps Script Cache Service for objects/files above 100KB." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/cache/chunky-cache/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/cache/chunky-cache/screenshot.png" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-07-16T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-16T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-07-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-16T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -633,136 +633,136 @@
 
 
 <strong>index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> * The fork of
-</span><span class="cm"> *   https://gist.github.com/pilbot/9d0567ef1daf556449fb,
-</span><span class="cm"> *   https://gist.github.com/glade-at-gigwell/4e080771d685fbf1908edbd98eb2d88c
-</span><span class="cm"> */</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Using the Google Apps Script Cache Service for objects above 100Kb
-</span><span class="cm"> */</span>
-<span class="kr">class</span> <span class="nx">ChunkyCache</span> <span class="p">{</span>
-  <span class="cm">/**
-</span><span class="cm">   *
-</span><span class="cm">   * @param {GoogleAppsScript.Cache.Cache} cache
-</span><span class="cm">   */</span>
-  <span class="nx">constructor</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">cache</span> <span class="o">=</span> <span class="nx">cache</span> <span class="o">||</span> <span class="nx">CacheService</span><span class="p">.</span><span class="nx">getScriptCache</span><span class="p">();</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="cm">/**
-</span><span class="cm">   * Gets the cached value for the given key, or null if none is found.
-</span><span class="cm">   * https://developers.google.com/apps-script/reference/cache/cache#getkey
-</span><span class="cm">   *
-</span><span class="cm">   * @param {string} key
-</span><span class="cm">   * @returns {any} A JSON.parse result
-</span><span class="cm">   */</span>
-  <span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">superKeyjson</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">superKeyjson</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="nx">superKey</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">superKeyjson</span><span class="p">);</span>
-    <span class="kr">const</span> <span class="nx">cache</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">);</span>
-    <span class="kr">const</span> <span class="nx">chunks</span> <span class="o">=</span> <span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">key</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">cache</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
-    <span class="k">if</span> <span class="p">(</span>
-      <span class="nx">chunks</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">c</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">;</span>
-      <span class="p">})</span>
-    <span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">chunks</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">));</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="cm">/**
-</span><span class="cm">   * Adds a key/value pair to the cache.
-</span><span class="cm">   * https://developers.google.com/apps-script/reference/cache/cache#putkey,-value
-</span><span class="cm">   *
-</span><span class="cm">   * @param {string} key
-</span><span class="cm">   * @param {string} value
-</span><span class="cm">   * @param {number} expirationInSeconds
-</span><span class="cm">   */</span>
-  <span class="nx">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">expirationInSeconds</span> <span class="o">=</span> <span class="mi">600</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
-    <span class="kr">const</span> <span class="nx">chunks</span> <span class="o">=</span> <span class="p">[];</span>
-    <span class="kr">const</span> <span class="nx">chunkValues</span> <span class="o">=</span> <span class="p">{};</span>
-    <span class="kd">let</span> <span class="nx">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">while</span> <span class="p">(</span><span class="nx">index</span> <span class="o">&lt;</span> <span class="nx">json</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kr">const</span> <span class="nx">chunkKey</span> <span class="o">=</span> <span class="nx">key</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nx">index</span><span class="p">;</span>
-      <span class="nx">chunks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunkKey</span><span class="p">);</span>
-      <span class="nx">chunkValues</span><span class="p">[</span><span class="nx">chunkKey</span><span class="p">]</span> <span class="o">=</span> <span class="nx">json</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">);</span>
-      <span class="nx">index</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="kr">const</span> <span class="nx">superKey</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="nx">chunkSize</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">,</span>
-      <span class="nx">chunks</span><span class="o">:</span> <span class="nx">chunks</span><span class="p">,</span>
-      <span class="nx">length</span><span class="o">:</span> <span class="nx">json</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
-    <span class="p">};</span>
-    <span class="nx">chunkValues</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">superKey</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">putAll</span><span class="p">(</span><span class="nx">chunkValues</span><span class="p">,</span> <span class="nx">expirationInSeconds</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="cm">/**
-</span><span class="cm">   * Removes an entry from the cache using the given key.
-</span><span class="cm">   *
-</span><span class="cm">   * @returns {null}
-</span><span class="cm">   */</span>
-  <span class="nx">remove</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">superKeyjson</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">superKeyjson</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kr">const</span> <span class="nx">superKey</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">superKeyjson</span><span class="p">);</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">removeAll</span><span class="p">([...</span><span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">,</span> <span class="nx">key</span><span class="p">]);</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Using the Google Apps Script Cache Service for blobs
-</span><span class="cm"> */</span>
-<span class="kr">class</span> <span class="nx">BlobCache</span> <span class="kr">extends</span> <span class="nx">ChunkyCache</span> <span class="p">{</span>
-  <span class="cm">/**
-</span><span class="cm">   * Extends of ChunkyCache
-</span><span class="cm">   */</span>
-  <span class="nx">constructor</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">super</span><span class="p">(</span><span class="nx">cache</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span> <span class="o">=</span> <span class="s1">&#39;1c16c2eb-a4a7-4cac-bf79-064cedfbb346&#39;</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span> <span class="o">=</span> <span class="s1">&#39;772fff0c-4207-4893-834c-aec73c498eeb&#39;</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span> <span class="o">=</span> <span class="mi">250</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="cm">/**
-</span><span class="cm">   * Adds a key/blob pair to the cache.
-</span><span class="cm">   *
-</span><span class="cm">   * @param {string} key
-</span><span class="cm">   * @param {GoogleAppsScript.Base.Blob | GoogleAppsScript.Base.BlobSource} blob
-</span><span class="cm">   * @param {number} expirationInSeconds
-</span><span class="cm">   */</span>
-  <span class="nx">putBlob</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">blob</span><span class="p">,</span> <span class="nx">expirationInSeconds</span> <span class="o">=</span> <span class="mi">600</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">getName</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">name</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="nx">name</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="nx">contentType</span> <span class="o">=</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">getContentType</span><span class="p">();</span>
-    <span class="kr">const</span> <span class="nx">prefix</span> <span class="o">=</span> <span class="p">[</span><span class="nx">name</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span><span class="p">,</span> <span class="nx">contentType</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span><span class="p">]</span>
-      <span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">padEnd</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">);</span>
-    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">prefix</span> <span class="o">+</span> <span class="nx">Utilities</span><span class="p">.</span><span class="nx">base64Encode</span><span class="p">(</span><span class="nx">blob</span><span class="p">.</span><span class="nx">getBytes</span><span class="p">());</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">expirationInSeconds</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="cm">/**
-</span><span class="cm">   * Gets the cached blob for the given key, or null if none is found.
-</span><span class="cm">   *
-</span><span class="cm">   * @param {*} key
-</span><span class="cm">   */</span>
-  <span class="nx">getBlob</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kr">const</span> <span class="nx">prefix</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">splitter</span><span class="p">);</span>
-      <span class="kr">const</span> <span class="nx">blob</span> <span class="o">=</span> <span class="nx">Utilities</span><span class="p">.</span><span class="nx">newBlob</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
-      <span class="nx">blob</span><span class="p">.</span><span class="nx">setBytes</span><span class="p">(</span><span class="nx">Utilities</span><span class="p">.</span><span class="nx">base64Decode</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">)));</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span><span class="p">)</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">setName</span><span class="p">(</span><span class="nx">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
-      <span class="nx">blob</span><span class="p">.</span><span class="nx">setContentType</span><span class="p">(</span><span class="nx">prefix</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-      <span class="k">return</span> <span class="nx">blob</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * The fork of
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   https://gist.github.com/pilbot/9d0567ef1daf556449fb,
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   https://gist.github.com/glade-at-gigwell/4e080771d685fbf1908edbd98eb2d88c
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Using the Google Apps Script Cache Service for objects above 100Kb
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">ChunkyCache</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">   *
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * @param {GoogleAppsScript.Cache.Cache} cache
+</span></span></span><span class="line"><span class="cl"><span class="cm">   */</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">constructor</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">cache</span> <span class="o">=</span> <span class="nx">cache</span> <span class="o">||</span> <span class="nx">CacheService</span><span class="p">.</span><span class="nx">getScriptCache</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * Gets the cached value for the given key, or null if none is found.
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * https://developers.google.com/apps-script/reference/cache/cache#getkey
+</span></span></span><span class="line"><span class="cl"><span class="cm">   *
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * @param {string} key
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * @returns {any} A JSON.parse result
+</span></span></span><span class="line"><span class="cl"><span class="cm">   */</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">superKeyjson</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">superKeyjson</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">superKey</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">superKeyjson</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">cache</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">chunks</span> <span class="o">=</span> <span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">key</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">cache</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">chunks</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">c</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">chunks</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * Adds a key/value pair to the cache.
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * https://developers.google.com/apps-script/reference/cache/cache#putkey,-value
+</span></span></span><span class="line"><span class="cl"><span class="cm">   *
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * @param {string} key
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * @param {string} value
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * @param {number} expirationInSeconds
+</span></span></span><span class="line"><span class="cl"><span class="cm">   */</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">expirationInSeconds</span> <span class="o">=</span> <span class="mi">600</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">chunks</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">chunkValues</span> <span class="o">=</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="nx">index</span> <span class="o">&lt;</span> <span class="nx">json</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">chunkKey</span> <span class="o">=</span> <span class="nx">key</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nx">index</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">chunks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunkKey</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">chunkValues</span><span class="p">[</span><span class="nx">chunkKey</span><span class="p">]</span> <span class="o">=</span> <span class="nx">json</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">index</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">superKey</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">chunkSize</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">chunks</span><span class="o">:</span> <span class="nx">chunks</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">length</span><span class="o">:</span> <span class="nx">json</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">chunkValues</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">superKey</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">putAll</span><span class="p">(</span><span class="nx">chunkValues</span><span class="p">,</span> <span class="nx">expirationInSeconds</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * Removes an entry from the cache using the given key.
+</span></span></span><span class="line"><span class="cl"><span class="cm">   *
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * @returns {null}
+</span></span></span><span class="line"><span class="cl"><span class="cm">   */</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">remove</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">superKeyjson</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">superKeyjson</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">superKey</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">superKeyjson</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">removeAll</span><span class="p">([...</span><span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">,</span> <span class="nx">key</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Using the Google Apps Script Cache Service for blobs
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">BlobCache</span> <span class="kr">extends</span> <span class="nx">ChunkyCache</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * Extends of ChunkyCache
+</span></span></span><span class="line"><span class="cl"><span class="cm">   */</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">constructor</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">super</span><span class="p">(</span><span class="nx">cache</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span> <span class="o">=</span> <span class="s1">&#39;1c16c2eb-a4a7-4cac-bf79-064cedfbb346&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span> <span class="o">=</span> <span class="s1">&#39;772fff0c-4207-4893-834c-aec73c498eeb&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span> <span class="o">=</span> <span class="mi">250</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * Adds a key/blob pair to the cache.
+</span></span></span><span class="line"><span class="cl"><span class="cm">   *
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * @param {string} key
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * @param {GoogleAppsScript.Base.Blob | GoogleAppsScript.Base.BlobSource} blob
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * @param {number} expirationInSeconds
+</span></span></span><span class="line"><span class="cl"><span class="cm">   */</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">putBlob</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">blob</span><span class="p">,</span> <span class="nx">expirationInSeconds</span> <span class="o">=</span> <span class="mi">600</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">getName</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">name</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="nx">name</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">contentType</span> <span class="o">=</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">getContentType</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">prefix</span> <span class="o">=</span> <span class="p">[</span><span class="nx">name</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span><span class="p">,</span> <span class="nx">contentType</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">.</span><span class="nx">padEnd</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">prefix</span> <span class="o">+</span> <span class="nx">Utilities</span><span class="p">.</span><span class="nx">base64Encode</span><span class="p">(</span><span class="nx">blob</span><span class="p">.</span><span class="nx">getBytes</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">expirationInSeconds</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * Gets the cached blob for the given key, or null if none is found.
+</span></span></span><span class="line"><span class="cl"><span class="cm">   *
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * @param {*} key
+</span></span></span><span class="line"><span class="cl"><span class="cm">   */</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">getBlob</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">prefix</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">splitter</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">blob</span> <span class="o">=</span> <span class="nx">Utilities</span><span class="p">.</span><span class="nx">newBlob</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">blob</span><span class="p">.</span><span class="nx">setBytes</span><span class="p">(</span><span class="nx">Utilities</span><span class="p">.</span><span class="nx">base64Decode</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span><span class="p">)</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">setName</span><span class="p">(</span><span class="nx">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">blob</span><span class="p">.</span><span class="nx">setContentType</span><span class="p">(</span><span class="nx">prefix</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">blob</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="run-it">Run it</h3>
 
@@ -772,56 +772,56 @@
 
 
 <strong>run.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* eslint-disable no-console */</span>
-<span class="cm">/* global ChunkyCache BlobCache */</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Runs the snippet. Caches a 200KB string.
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFileById</span><span class="p">(</span><span class="s1">&#39;19WGODj4pQ-VgwI2unZfQCxX25D4xaB4Q&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">getBlob</span><span class="p">()</span>
-    <span class="p">.</span><span class="nx">getDataAsString</span><span class="p">();</span>
-  <span class="k">new</span> <span class="nx">ChunkyCache</span><span class="p">().</span><span class="nx">put</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
-
-  <span class="kr">const</span> <span class="nx">cacheValue</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChunkyCache</span><span class="p">().</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">);</span>
-  <span class="k">new</span> <span class="nx">ChunkyCache</span><span class="p">().</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="nx">cacheValue</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Runs the snippet. Caches an image.
-</span><span class="cm"> * Then creates a copy of this from the cache
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">runCacheImage</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFileById</span><span class="p">(</span>
-    <span class="s1">&#39;14Sm76a_dJI4eKtSbfCfDq4gVjcUzREE7&#39;</span>
-  <span class="p">).</span><span class="nx">getBlob</span><span class="p">();</span>
-  <span class="k">new</span> <span class="nx">BlobCache</span><span class="p">().</span><span class="nx">putBlob</span><span class="p">(</span><span class="s1">&#39;myfile1&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-
-  <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">createFile</span><span class="p">(</span><span class="k">new</span> <span class="nx">BlobCache</span><span class="p">().</span><span class="nx">getBlob</span><span class="p">(</span><span class="s1">&#39;myfile1&#39;</span><span class="p">));</span>
-  <span class="k">new</span> <span class="nx">BlobCache</span><span class="p">().</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;myfile1&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Runs the test. Caches a data from the Google Sheet.
-</span><span class="cm"> * Compares the original data and the cache data
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">runTest</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">openById</span><span class="p">(</span>
-    <span class="s1">&#39;19TlsK5ICOuzrv07OSw5n3KtYbTHn00p1iFY6QArBWTM&#39;</span>
-  <span class="p">).</span><span class="nx">getSheetByName</span><span class="p">(</span><span class="s1">&#39;aka FuzzyMatch&#39;</span><span class="p">);</span>
-  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getDataRange</span><span class="p">().</span><span class="nx">getValues</span><span class="p">();</span>
-  <span class="kr">const</span> <span class="nx">chunky</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChunkyCache</span><span class="p">(</span><span class="nx">CacheService</span><span class="p">.</span><span class="nx">getUserCache</span><span class="p">());</span>
-  <span class="nx">chunky</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-  <span class="kr">const</span> <span class="nx">check</span> <span class="o">=</span> <span class="nx">chunky</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;Data&#39;</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
-    <span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
-    <span class="nx">check</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
-    <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="o">===</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">check</span><span class="p">)</span> <span class="c1">// It&#39;s not work for Date values
-</span><span class="c1"></span>  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* eslint-disable no-console */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* global ChunkyCache BlobCache */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Runs the snippet. Caches a 200KB string.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFileById</span><span class="p">(</span><span class="s1">&#39;19WGODj4pQ-VgwI2unZfQCxX25D4xaB4Q&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">getBlob</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">getDataAsString</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">new</span> <span class="nx">ChunkyCache</span><span class="p">().</span><span class="nx">put</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">cacheValue</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChunkyCache</span><span class="p">().</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">new</span> <span class="nx">ChunkyCache</span><span class="p">().</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="nx">cacheValue</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Runs the snippet. Caches an image.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Then creates a copy of this from the cache
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">runCacheImage</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFileById</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;14Sm76a_dJI4eKtSbfCfDq4gVjcUzREE7&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">).</span><span class="nx">getBlob</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">new</span> <span class="nx">BlobCache</span><span class="p">().</span><span class="nx">putBlob</span><span class="p">(</span><span class="s1">&#39;myfile1&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">createFile</span><span class="p">(</span><span class="k">new</span> <span class="nx">BlobCache</span><span class="p">().</span><span class="nx">getBlob</span><span class="p">(</span><span class="s1">&#39;myfile1&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">new</span> <span class="nx">BlobCache</span><span class="p">().</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;myfile1&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Runs the test. Caches a data from the Google Sheet.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Compares the original data and the cache data
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">runTest</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">sheet</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">openById</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;19TlsK5ICOuzrv07OSw5n3KtYbTHn00p1iFY6QArBWTM&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">).</span><span class="nx">getSheetByName</span><span class="p">(</span><span class="s1">&#39;aka FuzzyMatch&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getDataRange</span><span class="p">().</span><span class="nx">getValues</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">chunky</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ChunkyCache</span><span class="p">(</span><span class="nx">CacheService</span><span class="p">.</span><span class="nx">getUserCache</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">chunky</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">check</span> <span class="o">=</span> <span class="nx">chunky</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;Data&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">check</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="o">===</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">check</span><span class="p">)</span> <span class="c1">// It&#39;s not work for Date values
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="minimized-version">Minimized version</h3>
 <p>For quick use, you can use a more transparent version</p>
@@ -832,64 +832,63 @@
 
 
 <strong>index.min.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">ChunkyCache</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">cache</span> <span class="o">=</span> <span class="nx">cache</span> <span class="o">||</span> <span class="nx">CacheService</span><span class="p">.</span><span class="nx">getScriptCache</span><span class="p">(),</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span> <span class="o">=</span> <span class="mi">102400</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nx">get</span><span class="p">(</span><span class="nx">superKeyjson</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">superKeyjson</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">superKeyjson</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">===</span> <span class="nx">superKeyjson</span><span class="p">)</span> <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="kr">const</span> <span class="nx">superKey</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">superKeyjson</span><span class="p">),</span> <span class="nx">cache</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">),</span> <span class="nx">chunks</span> <span class="o">=</span> <span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">key</span> <span class="p">=&gt;</span> <span class="nx">cache</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
-        <span class="k">return</span> <span class="nx">chunks</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="k">void</span> <span class="mi">0</span> <span class="o">!==</span> <span class="nx">c</span><span class="p">;</span>
-        <span class="p">})</span> <span class="o">?</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">chunks</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">))</span> <span class="o">:</span> <span class="k">void</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nx">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">superKey</span><span class="p">,</span> <span class="nx">expirationInSeconds</span> <span class="o">=</span> <span class="mi">600</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">superKey</span><span class="p">),</span> <span class="nx">chunks</span> <span class="o">=</span> <span class="p">[],</span> <span class="nx">chunkValues</span> <span class="o">=</span> <span class="p">{};</span>
-        <span class="kd">let</span> <span class="nx">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(;</span><span class="nx">index</span> <span class="o">&lt;</span> <span class="nx">json</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="p">)</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">chunkKey</span> <span class="o">=</span> <span class="nx">key</span> <span class="o">+</span> <span class="s2">&#34;_&#34;</span> <span class="o">+</span> <span class="nx">index</span><span class="p">;</span>
-            <span class="nx">chunks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunkKey</span><span class="p">),</span> <span class="nx">chunkValues</span><span class="p">[</span><span class="nx">chunkKey</span><span class="p">]</span> <span class="o">=</span> <span class="nx">json</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">),</span> 
-            <span class="nx">index</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="nx">superKey</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="nx">chunkSize</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">,</span>
-            <span class="nx">chunks</span><span class="o">:</span> <span class="nx">chunks</span><span class="p">,</span>
-            <span class="nx">length</span><span class="o">:</span> <span class="nx">json</span><span class="p">.</span><span class="nx">length</span>
-        <span class="p">};</span>
-        <span class="nx">chunkValues</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">superKey</span><span class="p">),</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">putAll</span><span class="p">(</span><span class="nx">chunkValues</span><span class="p">,</span> <span class="nx">expirationInSeconds</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="nx">remove</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">superKey</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
-        <span class="k">return</span> <span class="kc">null</span> <span class="o">!==</span> <span class="nx">superKey</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">superKey</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">superKey</span><span class="p">),</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">removeAll</span><span class="p">([</span> <span class="p">...</span><span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">,</span> <span class="nx">key</span> <span class="p">])),</span> 
-        <span class="kc">null</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kr">class</span> <span class="nx">BlobCache</span> <span class="kr">extends</span> <span class="nx">ChunkyCache</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kr">super</span><span class="p">(</span><span class="nx">cache</span><span class="p">),</span> <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span> <span class="o">=</span> <span class="s2">&#34;1c16c2eb-a4a7-4cac-bf79-064cedfbb346&#34;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span> <span class="o">=</span> <span class="s2">&#34;772fff0c-4207-4893-834c-aec73c498eeb&#34;</span><span class="p">,</span> 
-        <span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span> <span class="o">=</span> <span class="mi">250</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nx">putBlob</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">expirationInSeconds</span> <span class="o">=</span> <span class="mi">600</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">getName</span><span class="p">();</span>
-        <span class="kc">null</span> <span class="o">===</span> <span class="nx">name</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">name</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span><span class="p">);</span>
-        <span class="kr">const</span> <span class="nx">contentType</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">getContentType</span><span class="p">();</span>
-        <span class="nx">data</span> <span class="o">=</span> <span class="p">[</span> <span class="nx">name</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span><span class="p">,</span> <span class="nx">contentType</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span> <span class="p">].</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">).</span><span class="nx">padEnd</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">,</span> <span class="s2">&#34; &#34;</span><span class="p">)</span> <span class="o">+</span> <span class="nx">Utilities</span><span class="p">.</span><span class="nx">base64Encode</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">getBytes</span><span class="p">());</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">expirationInSeconds</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="nx">getBlob</span><span class="p">(</span><span class="nx">prefix</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">prefix</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">===</span> <span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="p">{</span>
-            <span class="nx">prefix</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">splitter</span><span class="p">);</span>
-            <span class="kr">const</span> <span class="nx">blob</span> <span class="o">=</span> <span class="nx">Utilities</span><span class="p">.</span><span class="nx">newBlob</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
-            <span class="k">return</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">setBytes</span><span class="p">(</span><span class="nx">Utilities</span><span class="p">.</span><span class="nx">base64Decode</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">))),</span> <span class="nx">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span> <span class="o">&amp;&amp;</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">setName</span><span class="p">(</span><span class="nx">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> 
-            <span class="nx">blob</span><span class="p">.</span><span class="nx">setContentType</span><span class="p">(</span><span class="nx">prefix</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="nx">blob</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">ChunkyCache</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">constructor</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">cache</span> <span class="o">=</span> <span class="nx">cache</span> <span class="o">||</span> <span class="nx">CacheService</span><span class="p">.</span><span class="nx">getScriptCache</span><span class="p">(),</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span> <span class="o">=</span> <span class="mi">102400</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">get</span><span class="p">(</span><span class="nx">superKeyjson</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">superKeyjson</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">superKeyjson</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">===</span> <span class="nx">superKeyjson</span><span class="p">)</span> <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">superKey</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">superKeyjson</span><span class="p">),</span> <span class="nx">cache</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">getAll</span><span class="p">(</span><span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">),</span> <span class="nx">chunks</span> <span class="o">=</span> <span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">key</span> <span class="p">=&gt;</span> <span class="nx">cache</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">chunks</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="k">void</span> <span class="mi">0</span> <span class="o">!==</span> <span class="nx">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span> <span class="o">?</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">chunks</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">))</span> <span class="o">:</span> <span class="k">void</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">superKey</span><span class="p">,</span> <span class="nx">expirationInSeconds</span> <span class="o">=</span> <span class="mi">600</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">superKey</span><span class="p">),</span> <span class="nx">chunks</span> <span class="o">=</span> <span class="p">[],</span> <span class="nx">chunkValues</span> <span class="o">=</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(;</span><span class="nx">index</span> <span class="o">&lt;</span> <span class="nx">json</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">chunkKey</span> <span class="o">=</span> <span class="nx">key</span> <span class="o">+</span> <span class="s2">&#34;_&#34;</span> <span class="o">+</span> <span class="nx">index</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">chunks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunkKey</span><span class="p">),</span> <span class="nx">chunkValues</span><span class="p">[</span><span class="nx">chunkKey</span><span class="p">]</span> <span class="o">=</span> <span class="nx">json</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">            <span class="nx">index</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">superKey</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">chunkSize</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">chunkSize</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">chunks</span><span class="o">:</span> <span class="nx">chunks</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">length</span><span class="o">:</span> <span class="nx">json</span><span class="p">.</span><span class="nx">length</span>
+</span></span><span class="line"><span class="cl">        <span class="p">};</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">chunkValues</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">superKey</span><span class="p">),</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">putAll</span><span class="p">(</span><span class="nx">chunkValues</span><span class="p">,</span> <span class="nx">expirationInSeconds</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">remove</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">superKey</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">null</span> <span class="o">!==</span> <span class="nx">superKey</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">superKey</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">superKey</span><span class="p">),</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">removeAll</span><span class="p">([</span> <span class="p">...</span><span class="nx">superKey</span><span class="p">.</span><span class="nx">chunks</span><span class="p">,</span> <span class="nx">key</span> <span class="p">])),</span> 
+</span></span><span class="line"><span class="cl">        <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">BlobCache</span> <span class="kr">extends</span> <span class="nx">ChunkyCache</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">constructor</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">super</span><span class="p">(</span><span class="nx">cache</span><span class="p">),</span> <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span> <span class="o">=</span> <span class="s2">&#34;1c16c2eb-a4a7-4cac-bf79-064cedfbb346&#34;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span> <span class="o">=</span> <span class="s2">&#34;772fff0c-4207-4893-834c-aec73c498eeb&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span> <span class="o">=</span> <span class="mi">250</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">putBlob</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">expirationInSeconds</span> <span class="o">=</span> <span class="mi">600</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">getName</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">null</span> <span class="o">===</span> <span class="nx">name</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">name</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">contentType</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">getContentType</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span> <span class="o">=</span> <span class="p">[</span> <span class="nx">name</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span><span class="p">,</span> <span class="nx">contentType</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">splitter</span> <span class="p">].</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">).</span><span class="nx">padEnd</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">,</span> <span class="s2">&#34; &#34;</span><span class="p">)</span> <span class="o">+</span> <span class="nx">Utilities</span><span class="p">.</span><span class="nx">base64Encode</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">getBytes</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">expirationInSeconds</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">getBlob</span><span class="p">(</span><span class="nx">prefix</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">prefix</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">===</span> <span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">prefix</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">splitter</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">blob</span> <span class="o">=</span> <span class="nx">Utilities</span><span class="p">.</span><span class="nx">newBlob</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">setBytes</span><span class="p">(</span><span class="nx">Utilities</span><span class="p">.</span><span class="nx">base64Decode</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prefixSize</span><span class="p">))),</span> <span class="nx">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!==</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultName</span> <span class="o">&amp;&amp;</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">setName</span><span class="p">(</span><span class="nx">prefix</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> 
+</span></span><span class="line"><span class="cl">            <span class="nx">blob</span><span class="p">.</span><span class="nx">setContentType</span><span class="p">(</span><span class="nx">prefix</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="nx">blob</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
 
 <style>
   button.clipboard {

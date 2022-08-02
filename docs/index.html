@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-	<meta name="generator" content="Hugo 0.81.0" />
+	<meta name="generator" content="Hugo 0.101.0" />
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -590,8 +590,7 @@
 </header>
   <main>
 <p><a href="https://github.com/contributorpw/google-apps-script-snippets"><img src="https://img.shields.io/github/stars/contributorpw/google-apps-script-snippets?style=for-the-badge&amp;logo=github" alt="github stars contributorpw google-apps-script-snippets"></a></p>
-<figure>
-    <img src="https://ssl.gstatic.com/images/branding/product/2x/apps_script_64dp.png"/> 
+<figure><img src="https://ssl.gstatic.com/images/branding/product/2x/apps_script_64dp.png"/>
 </figure>
 
 <nav id="TableOfContents">
@@ -624,45 +623,45 @@
 <p>Almost every snippet is provided with the main code file and a manifest. You need the manifest to know what additional libraries or services or scopes you may need to make the snippet work.</p>
 <h4 id="an-example-of-a-simple-manifest">An example of a simple manifest</h4>
 <p><strong>appsscript.json</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;timeZone&#34;</span><span class="p">:</span> <span class="s2">&#34;America/New_York&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{},</span>
-  <span class="nt">&#34;exceptionLogging&#34;</span><span class="p">:</span> <span class="s2">&#34;STACKDRIVER&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span>
-<span class="p">}</span>
-</code></pre></div><h4 id="an-example-of-a-manifest-with-dependencies">An example of a manifest with dependencies</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;timeZone&#34;</span><span class="p">:</span> <span class="s2">&#34;America/New_York&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;exceptionLogging&#34;</span><span class="p">:</span> <span class="s2">&#34;STACKDRIVER&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h4 id="an-example-of-a-manifest-with-dependencies">An example of a manifest with dependencies</h4>
 <p>Below is an example when using Advanced Docs Service. Usually, updating the manifest is enough for the program to request new permissions.</p>
 <p><strong>appsscript.json</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;timeZone&#34;</span><span class="p">:</span> <span class="s2">&#34;Europe/Moscow&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;enabledAdvancedServices&#34;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&#34;userSymbol&#34;</span><span class="p">:</span> <span class="s2">&#34;Docs&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;serviceId&#34;</span><span class="p">:</span> <span class="s2">&#34;docs&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;v1&#34;</span>
-      <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">},</span>
-  <span class="nt">&#34;exceptionLogging&#34;</span><span class="p">:</span> <span class="s2">&#34;STACKDRIVER&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span>
-<span class="p">}</span>
-</code></pre></div><h4 id="how-to-see-my-manifest">How to see my manifest</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;timeZone&#34;</span><span class="p">:</span> <span class="s2">&#34;Europe/Moscow&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;enabledAdvancedServices&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;userSymbol&#34;</span><span class="p">:</span> <span class="s2">&#34;Docs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;serviceId&#34;</span><span class="p">:</span> <span class="s2">&#34;docs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;v1&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;exceptionLogging&#34;</span><span class="p">:</span> <span class="s2">&#34;STACKDRIVER&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h4 id="how-to-see-my-manifest">How to see my manifest</h4>
 <p>You need to check-in the property <code>Show &quot;appsscript.json&quot; manifest file in editor</code> in your project settings.</p>
 <h4 id="how-to-merge-manifests">How to merge manifests</h4>
 <p>When you take a snippet, you get two manifests: yours in the current project and the snippet manifest.</p>
 <p>The snippet&rsquo;s manifest should just extend your manifest. From the example above, you can see that we need to add only one object to the simple manifest.</p>
 <p>Here it is</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;enabledAdvancedServices&#34;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nt">&#34;userSymbol&#34;</span><span class="p">:</span> <span class="s2">&#34;Docs&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;serviceId&#34;</span><span class="p">:</span> <span class="s2">&#34;docs&#34;</span><span class="p">,</span>
-      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;v1&#34;</span>
-    <span class="p">}</span>
-  <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="how-can-i-help">How can I help</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;enabledAdvancedServices&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;userSymbol&#34;</span><span class="p">:</span> <span class="s2">&#34;Docs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;serviceId&#34;</span><span class="p">:</span> <span class="s2">&#34;docs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;v1&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="how-can-i-help">How can I help</h3>
 <ul>
 <li>Leave a request of snippet or suggestion for improvement in the repository <a href="https://github.com/contributorpw/google-apps-script-snippets/issues">contributorpw/google-apps-script-snippets/issues</a></li>
 <li>Share the snippets</li>

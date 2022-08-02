@@ -16,8 +16,8 @@
 <meta property="og:description" content="Loops through all events and removes them. Demonstrates differences in event types." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-03-29T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-29T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-03-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-29T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,8 +31,8 @@
 
 
 <meta itemprop="name" content="To clear all events from a Google Calendar">
-<meta itemprop="description" content="Loops through all events and removes them. Demonstrates differences in event types."><meta itemprop="datePublished" content="2021-03-29T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-29T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Loops through all events and removes them. Demonstrates differences in event types."><meta itemprop="datePublished" content="2021-03-29T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-29T00:00:00+00:00" />
 <meta itemprop="wordCount" content="92"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
 <meta itemprop="keywords" content="calendar," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -208,8 +208,8 @@
 <meta property="og:description" content="Loops through all events and removes them. Demonstrates differences in event types." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-03-29T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-29T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-03-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-29T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -630,23 +630,23 @@
 
 
 <strong>index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> *
-</span><span class="cm"> * @param {GoogleAppsScript.Calendar.Calendar} calendar
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">clearAllEvents_</span><span class="p">(</span><span class="nx">calendar</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">marks</span> <span class="o">=</span> <span class="p">[];</span>
-  <span class="k">return</span> <span class="nx">calendar</span><span class="p">.</span><span class="nx">getEvents</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()).</span><span class="nx">map</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">getId</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">marks</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">id</span><span class="p">))</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">isRecurringEvent</span><span class="p">())</span> <span class="p">{</span>
-        <span class="nx">calendar</span><span class="p">.</span><span class="nx">getEventSeriesById</span><span class="p">(</span><span class="nx">id</span><span class="p">).</span><span class="nx">deleteEventSeries</span><span class="p">();</span>
-        <span class="nx">marks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
-      <span class="p">}</span> <span class="k">else</span> <span class="nx">event</span><span class="p">.</span><span class="nx">deleteEvent</span><span class="p">();</span>
-    <span class="k">return</span> <span class="nx">id</span><span class="p">;</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {GoogleAppsScript.Calendar.Calendar} calendar
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">clearAllEvents_</span><span class="p">(</span><span class="nx">calendar</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">marks</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">calendar</span><span class="p">.</span><span class="nx">getEvents</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()).</span><span class="nx">map</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">getId</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">marks</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">id</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">isRecurringEvent</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">calendar</span><span class="p">.</span><span class="nx">getEventSeriesById</span><span class="p">(</span><span class="nx">id</span><span class="p">).</span><span class="nx">deleteEventSeries</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">marks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">else</span> <span class="nx">event</span><span class="p">.</span><span class="nx">deleteEvent</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="run-it">Run it</h3>
 
@@ -656,18 +656,18 @@
 
 
 <strong>run.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* global clearAllEvents_ */</span>
-
-<span class="cm">/**
-</span><span class="cm"> *
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="nx">CalendarApp</span><span class="p">.</span><span class="nx">getCalendarById</span><span class="p">(</span>
-    <span class="s1">&#39;1fq7choqdctaal2sk5i5du43qc@group.calendar.google.com&#39;</span>
-  <span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">clearAllEvents_</span><span class="p">(</span><span class="nx">calendar</span><span class="p">));</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* global clearAllEvents_ */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="nx">CalendarApp</span><span class="p">.</span><span class="nx">getCalendarById</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;1fq7choqdctaal2sk5i5du43qc@group.calendar.google.com&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">clearAllEvents_</span><span class="p">(</span><span class="nx">calendar</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 
 </content>
