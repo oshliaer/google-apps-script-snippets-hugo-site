@@ -4,3 +4,4 @@
 .brename_detail.txt
 /public/
 .log
+.hugo_build.lock
