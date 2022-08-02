@@ -16,8 +16,8 @@
 <meta property="og:description" content="Simple conversion of an array into a collection is a common task. There is not always a desire to use wrappers or proxies." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/screenshot.png" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-07-13T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-13T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-07-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-13T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,9 +31,9 @@
 
 
 <meta itemprop="name" content="Converts a 2D array to a collection">
-<meta itemprop="description" content="Simple conversion of an array into a collection is a common task. There is not always a desire to use wrappers or proxies."><meta itemprop="datePublished" content="2021-07-13T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-07-13T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="309"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/screenshot.png">
+<meta itemprop="description" content="Simple conversion of an array into a collection is a common task. There is not always a desire to use wrappers or proxies."><meta itemprop="datePublished" content="2021-07-13T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-13T00:00:00+00:00" />
+<meta itemprop="wordCount" content="224"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/screenshot.png">
 <meta itemprop="keywords" content="common," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -208,8 +208,8 @@
 <meta property="og:description" content="Simple conversion of an array into a collection is a common task. There is not always a desire to use wrappers or proxies." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/common_js/2darray_to_collection/screenshot.png" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-07-13T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-13T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-07-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-13T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -632,23 +632,23 @@
 
 
 <strong>index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> * Converts a 2D array to a collection.
-</span><span class="cm"> *
-</span><span class="cm"> * @param {Array.&lt;Array.&lt;any&gt;&gt;} array
-</span><span class="cm"> * @returns {Array.&lt;object&gt;}
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">arrayToCollection_</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span>
-    <span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="nx">rowIndex</span><span class="p">)</span> <span class="p">=&gt;</span>
-      <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">rowCollection</span><span class="p">,</span> <span class="nx">header</span><span class="p">,</span> <span class="nx">columnIndex</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="nx">rowCollection</span><span class="p">[</span><span class="nx">header</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">rowIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="nx">columnIndex</span><span class="p">];</span>
-        <span class="k">return</span> <span class="nx">rowCollection</span><span class="p">;</span>
-      <span class="p">},</span> <span class="p">{}),</span>
-    <span class="p">[]</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Converts a 2D array to a collection.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {Array.&lt;Array.&lt;any&gt;&gt;} array
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns {Array.&lt;object&gt;}
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">arrayToCollection_</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="nx">rowIndex</span><span class="p">)</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">rowCollection</span><span class="p">,</span> <span class="nx">header</span><span class="p">,</span> <span class="nx">columnIndex</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">rowCollection</span><span class="p">[</span><span class="nx">header</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">rowIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="nx">columnIndex</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">rowCollection</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="p">{}),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="run-it">Run it</h3>
 
@@ -658,39 +658,39 @@
 
 
 <strong>run.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* global arrayToCollection_ arrtocoll_ */</span>
-
-<span class="kr">const</span> <span class="nx">ARRAY</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="p">[</span><span class="s1">&#39;Num&#39;</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Amount&#39;</span><span class="p">],</span>
-  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span> <span class="s1">&#39;Alex&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
-  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span> <span class="s1">&#39;Nate&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>
-  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span> <span class="s1">&#39;Piter&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
-<span class="p">];</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Runs the snippet
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// Don&#39;t forget a deep copy
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="nx">ARRAY</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">r</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[...</span><span class="nx">r</span><span class="p">]);</span>
-  <span class="c1">// Headings become keys
-</span><span class="c1"></span>  <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">].</span><span class="nx">toLocaleLowerCase</span><span class="p">()));</span>
-  <span class="kr">const</span> <span class="nx">collection</span> <span class="o">=</span> <span class="nx">arrayToCollection_</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">collection</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Runs the minimized function of the snippet
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">runMiniFn</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// Don&#39;t forget a deep copy
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="nx">ARRAY</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">r</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[...</span><span class="nx">r</span><span class="p">]);</span>
-  <span class="c1">// Headings become keys
-</span><span class="c1"></span>  <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">].</span><span class="nx">toLocaleLowerCase</span><span class="p">()));</span>
-  <span class="kr">const</span> <span class="nx">collection</span> <span class="o">=</span> <span class="nx">arrtocoll_</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">collection</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* global arrayToCollection_ arrtocoll_ */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">ARRAY</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="s1">&#39;Num&#39;</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Amount&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span> <span class="s1">&#39;Alex&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span> <span class="s1">&#39;Nate&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span> <span class="s1">&#39;Piter&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Runs the snippet
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Don&#39;t forget a deep copy
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="nx">ARRAY</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">r</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[...</span><span class="nx">r</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Headings become keys
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">].</span><span class="nx">toLocaleLowerCase</span><span class="p">()));</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">collection</span> <span class="o">=</span> <span class="nx">arrayToCollection_</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">collection</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Runs the minimized function of the snippet
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">runMiniFn</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Don&#39;t forget a deep copy
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="nx">ARRAY</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">r</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[...</span><span class="nx">r</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Headings become keys
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">_</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">].</span><span class="nx">toLocaleLowerCase</span><span class="p">()));</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">collection</span> <span class="o">=</span> <span class="nx">arrtocoll_</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">collection</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="minimized-version">Minimized version</h3>
 <p>For quick use, you can use a more transparent version</p>
@@ -701,12 +701,12 @@
 
 
 <strong>index.min.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">arrtocoll_</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">e</span>
-    <span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">r</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">e</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">r</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">o</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">((</span><span class="nx">r</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span> <span class="o">=</span> <span class="nx">e</span><span class="p">[</span><span class="nx">c</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="nx">o</span><span class="p">]),</span> <span class="nx">r</span><span class="p">),</span> <span class="p">{}),</span> <span class="p">[]);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">arrtocoll_</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">e</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">r</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">e</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">r</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">o</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">((</span><span class="nx">r</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span> <span class="o">=</span> <span class="nx">e</span><span class="p">[</span><span class="nx">c</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="nx">o</span><span class="p">]),</span> <span class="nx">r</span><span class="p">),</span> <span class="p">{}),</span> <span class="p">[]);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <style>
   button.clipboard {

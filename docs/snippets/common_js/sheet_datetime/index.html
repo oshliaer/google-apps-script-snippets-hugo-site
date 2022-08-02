@@ -16,8 +16,8 @@
 <meta property="og:description" content="Converts date-time to Sheets format." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_js/sheet_datetime/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-04-20T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-20T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-04-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-20T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,8 +31,8 @@
 
 
 <meta itemprop="name" content="Sheets datetime converter">
-<meta itemprop="description" content="Converts date-time to Sheets format."><meta itemprop="datePublished" content="2021-04-20T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-04-20T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Converts date-time to Sheets format."><meta itemprop="datePublished" content="2021-04-20T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-04-20T00:00:00+00:00" />
 <meta itemprop="wordCount" content="155"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
 <meta itemprop="keywords" content="js,common," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -208,8 +208,8 @@
 <meta property="og:description" content="Converts date-time to Sheets format." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_js/sheet_datetime/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-04-20T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-20T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-04-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-20T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -631,20 +631,20 @@
 
 
 <strong>index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> * Converts date-time to numeric Sheets format
-</span><span class="cm"> *
-</span><span class="cm"> * @param {(number|Date)} date JS Date or time in ms
-</span><span class="cm"> * @param {number} timezoneOffset
-</span><span class="cm"> * @return {number} Google Sheets Date number
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">toGoogleSheetsDateNumber</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span> <span class="nx">timezoneOffset</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">_date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">date</span><span class="p">);</span>
-  <span class="nx">timezoneOffset</span> <span class="o">=</span> <span class="nx">timezoneOffset</span> <span class="o">||</span> <span class="nx">_date</span><span class="p">.</span><span class="nx">getTimezoneOffset</span><span class="p">();</span>
-  <span class="kr">const</span> <span class="nx">_start</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">UTC</span><span class="p">(</span><span class="mi">1899</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
-  <span class="k">return</span> <span class="p">((</span><span class="nx">_date</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="nx">_start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">())</span> <span class="o">/</span> <span class="mi">60000</span> <span class="o">-</span> <span class="nx">timezoneOffset</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1440</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Converts date-time to numeric Sheets format
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {(number|Date)} date JS Date or time in ms
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {number} timezoneOffset
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @return {number} Google Sheets Date number
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">toGoogleSheetsDateNumber</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span> <span class="nx">timezoneOffset</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">_date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">date</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">timezoneOffset</span> <span class="o">=</span> <span class="nx">timezoneOffset</span> <span class="o">||</span> <span class="nx">_date</span><span class="p">.</span><span class="nx">getTimezoneOffset</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">_start</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">UTC</span><span class="p">(</span><span class="mi">1899</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">((</span><span class="nx">_date</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="nx">_start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">())</span> <span class="o">/</span> <span class="mi">60000</span> <span class="o">-</span> <span class="nx">timezoneOffset</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1440</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="run-it">Run it</h3>
 
@@ -654,16 +654,16 @@
 
 
 <strong>run.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> * Returns Sheets datetime number from date of F5 cell
-</span><span class="cm"> * @customfunction
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">GETSHEETDATETIMENUMBER</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">toGoogleSheetsDateNumber</span><span class="p">(</span>
-    <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSheet</span><span class="p">().</span><span class="nx">getRange</span><span class="p">(</span><span class="s1">&#39;F5&#39;</span><span class="p">).</span><span class="nx">getValue</span><span class="p">()</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Returns Sheets datetime number from date of F5 cell
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @customfunction
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">GETSHEETDATETIMENUMBER</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">toGoogleSheetsDateNumber</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSheet</span><span class="p">().</span><span class="nx">getRange</span><span class="p">(</span><span class="s1">&#39;F5&#39;</span><span class="p">).</span><span class="nx">getValue</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="relations">Relations</h3>
 <ul>

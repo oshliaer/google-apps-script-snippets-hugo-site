@@ -14,8 +14,8 @@
       <pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://apps-script-snippets.contributor.pw/snippets/cache/chunky-cache/</guid>
-      <description>Using the Google Apps Script Cache Service for objects/files above 100KB  Snippet Run it Minimized version   Snippet This code is a fork of pilbot/9d0567ef1daf556449fb and glade-at-gigwell/4e080771d685fbf1908edbd98eb2d88c
- See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * The fork of * https://gist.github.com/pilbot/9d0567ef1daf556449fb, * https://gist.github.com/glade-at-gigwell/4e080771d685fbf1908edbd98eb2d88c */ /** * Using the Google Apps Script Cache Service for objects above 100Kb */ class ChunkyCache { /** * * @param {GoogleAppsScript.</description>
+      <description>Using the Google Apps Script Cache Service for objects/files above 100KB Snippet Run it Minimized version Snippet This code is a fork of pilbot/9d0567ef1daf556449fb and glade-at-gigwell/4e080771d685fbf1908edbd98eb2d88c
+See full code Leave a comment Create script from the snippet &amp;nbsp;*See how to use scrviz for clone Apps Script project index.js /** * The fork of * https://gist.github.com/pilbot/9d0567ef1daf556449fb, * https://gist.github.com/glade-at-gigwell/4e080771d685fbf1908edbd98eb2d88c */ /** * Using the Google Apps Script Cache Service for objects above 100Kb */ class ChunkyCache { /** * * @param {GoogleAppsScript.</description>
     </item>
     
   </channel>

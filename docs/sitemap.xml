@@ -2,19 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://apps-script-snippets.contributor.pw/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/snippets/sheets/join_rich-text-values/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/categories/snippets/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/snippets/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/spreadsheetapp/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/sheets/</loc>
+    <lastmod>2022-03-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/snippets/sheets/split_data_to_two_array_by_condition/</loc>
+    <lastmod>2022-03-18T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://apps-script-snippets.contributor.pw/common_ui/</loc>
     <lastmod>2021-08-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://apps-script-snippets.contributor.pw/</loc>
-    <lastmod>2021-08-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://apps-script-snippets.contributor.pw/snippets/common_ui/open-dialog-from-sidebar/</loc>
-    <lastmod>2021-08-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://apps-script-snippets.contributor.pw/snippets/</loc>
-    <lastmod>2021-08-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://apps-script-snippets.contributor.pw/categories/snippets/</loc>
     <lastmod>2021-08-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://apps-script-snippets.contributor.pw/extra/</loc>
@@ -47,9 +59,6 @@
     <loc>https://apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</loc>
     <lastmod>2021-06-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://apps-script-snippets.contributor.pw/sheets/</loc>
-    <lastmod>2021-06-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/</loc>
     <lastmod>2021-06-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -77,6 +86,12 @@
     <loc>https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</loc>
     <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/snippets/addons/minimal-workspace-drive-addon/</loc>
+    <lastmod>2021-03-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://apps-script-snippets.contributor.pw/snippets/apps/file-upload-to-drive/</loc>
+    <lastmod>2021-03-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://apps-script-snippets.contributor.pw/snippets/calendar/clear-all-events/</loc>
     <lastmod>2021-03-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -90,9 +105,6 @@
     <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</loc>
-    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://apps-script-snippets.contributor.pw/spreadsheetapp/</loc>
     <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://apps-script-snippets.contributor.pw/snippets/common_ui/open_url_in_browser/</loc>

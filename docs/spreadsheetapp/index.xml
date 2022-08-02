@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/spreadsheetapp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/spreadsheetapp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Join of RichTextValues</title>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/join_rich-text-values/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/join_rich-text-values/</guid>
+      <description>Join of RichTextValues The main code Run it Sometimes you need to concatenate two or more RichTextValue objects consecutively into one and preserving the formatting.
+The following class solves this problem.
+See full code Leave a comment Create script from the snippet &amp;nbsp;*See how to use scrviz for clone Apps Script project The main code index.js /** * @typedef {{ * linkUrl: string; * text: string; * textStyle: GoogleAppsScript.Spreadsheet.TextStyle; * length: number; * }} RichTextValueDecomp */ class JoinRichTextValue { constructor() { /** @type { RichTextValueDecomp[] } */ this.</description>
+    </item>
+    
     <item>
       <title>Protection of multiple sheets</title>
       <link>https://apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</link>
@@ -15,7 +26,7 @@
       
       <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/</guid>
       <description>Protection of multiple sheets The snippet processes the list of sheets of the spreadsheet. It protects the sheets. It excludes ranges from protection if there is the specific list.
- See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project     index.js /** * @file webpack.config.js * @author Alex Ivanov * @email ai@contributor.pw * * The snippet processes the list of sheets of the spreadsheet.</description>
+See full code Leave a comment Create script from the snippet &amp;nbsp;*See how to use scrviz for clone Apps Script project index.js /** * @file webpack.config.js * @author Alex Ivanov * @email ai@contributor.pw * * The snippet processes the list of sheets of the spreadsheet.</description>
     </item>
     
   </channel>

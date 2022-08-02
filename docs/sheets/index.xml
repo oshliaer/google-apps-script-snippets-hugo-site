@@ -7,14 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2021, Alex Ivanov.</copyright>
-    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/sheets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://apps-script-snippets.contributor.pw/sheets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Split data to two array by condition</title>
+      <link>https://apps-script-snippets.contributor.pw/snippets/sheets/split_data_to_two_array_by_condition/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/split_data_to_two_array_by_condition/</guid>
+      <description>Split data to two array by condition Snippet Snippet See full code Leave a comment Create script from the snippet &amp;nbsp;*See how to use scrviz for clone Apps Script project index.js /** * @file * Examples of the snippet * {@link https://ru.stackoverflow.com/questions/1390624} */ /** * * @function * @name splitDataByConditional_ * * @param {Sheet} sheet - Represents the Sheet that is changing. * @param {conditionCallback} condition - The callback that should return true/false state for each row.</description>
+    </item>
+    
     <item>
       <title>Deleting rows by conditions</title>
       <link>https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/</link>
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/delete_move_rows_by_conditional/</guid>
-      <description>Removes or moves rows within Google Sheets by conditions  Snippet Run it User actions   Sorry, your browser doesn&#39;t support embedded videos.  Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * @file A snippet for deleting rows from a Google Sheet by condition. * Examples of the snippet * {@link https://webapps.</description>
+      <description>Removes or moves rows within Google Sheets by conditions Snippet Run it User actions Sorry, your browser doesn&#39;t support embedded videos. Snippet See full code Leave a comment Create script from the snippet &amp;nbsp;*See how to use scrviz for clone Apps Script project index.js /** * @file A snippet for deleting rows from a Google Sheet by condition. * Examples of the snippet * {@link https://webapps.stackexchange.com/a/133308/} * {@link https://groups.google.com/forum/#!topic/google-apps-script-community/-ITmOCfJmFw} * {@link https://toster.</description>
     </item>
     
     <item>
@@ -23,7 +32,7 @@
       <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/reset_sheet_data/</guid>
-      <description>Resets the sheet/sheets data to its original state. Cleans the sheet(s)  Snippet Run it Additional  Make copy before reset     Sorry, your browser doesn&#39;t support embedded videos.  Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * @file A snippet for reset the sheet/sheets data to its original state * Samples for {@link https://support.</description>
+      <description>Resets the sheet/sheets data to its original state. Cleans the sheet(s) Snippet Run it Additional Make copy before reset Sorry, your browser doesn&#39;t support embedded videos. Snippet See full code Leave a comment Create script from the snippet &amp;nbsp;*See how to use scrviz for clone Apps Script project index.js /** * @file A snippet for reset the sheet/sheets data to its original state * Samples for {@link https://support.google.com/docs/thread/5809954?msgid=5809954} */ /** * Clear the sheet by the range list * @param {GoogleAppsScript.</description>
     </item>
     
     <item>
@@ -32,7 +41,7 @@
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</guid>
-      <description>Snippet Run it Issues   Unlink all URLs in the range Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Removes all links from the range * * @param {GoogleAppsScript.Spreadsheet.Range} range A range * @return {GoogleAppsScript.Spreadsheet.RichTextValue[][]} */ function unlinkUrls_(range = SpreadsheetApp.getActiveRange()) { return range.setRichTextValues( range.getRichTextValues().map((rowRichTextValues) =&amp;gt; rowRichTextValues.</description>
+      <description>Snippet Run it Issues Unlink all URLs in the range Snippet See full code Leave a comment Create script from the snippet &amp;nbsp;*See how to use scrviz for clone Apps Script project index.js /** * Removes all links from the range * * @param {GoogleAppsScript.Spreadsheet.Range} range A range * @return {GoogleAppsScript.Spreadsheet.RichTextValue[][]} */ function unlinkUrls_(range = SpreadsheetApp.getActiveRange()) { return range.setRichTextValues( range.getRichTextValues().map((rowRichTextValues) =&amp;gt; rowRichTextValues.map((richTextValue) =&amp;gt; { if (richTextValue.getRuns().some((ruin) =&amp;gt; ruin.getLinkUrl())) { const copy = richTextValue.</description>
     </item>
     
     <item>
@@ -41,7 +50,7 @@
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/</guid>
-      <description>Snippet Run it   TOC generator for Google Sheets Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * TOC object * @typedef {Array.&amp;lt;{ * name: string, * gid: number, * richTextValueBuilder: GoogleAppsScript.Spreadsheet.RichTextValueBuilder * }&amp;gt;} TOCBuild */ /** * Build a TOC object from the passed book * @param {GoogleAppsScript.</description>
+      <description>Snippet Run it TOC generator for Google Sheets Snippet See full code Leave a comment Create script from the snippet &amp;nbsp;*See how to use scrviz for clone Apps Script project index.js /** * TOC object * @typedef {Array.&amp;lt;{ * name: string, * gid: number, * richTextValueBuilder: GoogleAppsScript.Spreadsheet.RichTextValueBuilder * }&amp;gt;} TOCBuild */ /** * Build a TOC object from the passed book * @param {GoogleAppsScript.Spreadsheet.Spreadsheet} book * @returns {TOCBuild} */ function tocBuilder_(book = SpreadsheetApp.</description>
     </item>
     
   </channel>

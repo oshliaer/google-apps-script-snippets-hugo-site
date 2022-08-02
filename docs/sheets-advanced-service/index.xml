@@ -14,7 +14,7 @@
       <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://apps-script-snippets.contributor.pw/snippets/sheets/unlink_urls/</guid>
-      <description>Snippet Run it Issues   Unlink all URLs in the range Snippet  See full code  Leave a comment  Create script from the snippet  &amp;nbsp;*See how to use scrviz for clone Apps Script project    index.js /** * Removes all links from the range * * @param {GoogleAppsScript.Spreadsheet.Range} range A range * @return {GoogleAppsScript.Spreadsheet.RichTextValue[][]} */ function unlinkUrls_(range = SpreadsheetApp.getActiveRange()) { return range.setRichTextValues( range.getRichTextValues().map((rowRichTextValues) =&amp;gt; rowRichTextValues.</description>
+      <description>Snippet Run it Issues Unlink all URLs in the range Snippet See full code Leave a comment Create script from the snippet &amp;nbsp;*See how to use scrviz for clone Apps Script project index.js /** * Removes all links from the range * * @param {GoogleAppsScript.Spreadsheet.Range} range A range * @return {GoogleAppsScript.Spreadsheet.RichTextValue[][]} */ function unlinkUrls_(range = SpreadsheetApp.getActiveRange()) { return range.setRichTextValues( range.getRichTextValues().map((rowRichTextValues) =&amp;gt; rowRichTextValues.map((richTextValue) =&amp;gt; { if (richTextValue.getRuns().some((ruin) =&amp;gt; ruin.getLinkUrl())) { const copy = richTextValue.</description>
     </item>
     
   </channel>

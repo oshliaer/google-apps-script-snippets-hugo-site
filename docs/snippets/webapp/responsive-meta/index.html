@@ -16,8 +16,8 @@
 <meta property="og:description" content="Using responsive meta tags for an apps script webapp" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/screenshot.png" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-06-07T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-06-07T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-06-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-06-07T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,9 +31,9 @@
 
 
 <meta itemprop="name" content="A responsive webapp">
-<meta itemprop="description" content="Using responsive meta tags for an apps script webapp"><meta itemprop="datePublished" content="2021-06-07T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-06-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="193"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/screenshot.png">
+<meta itemprop="description" content="Using responsive meta tags for an apps script webapp"><meta itemprop="datePublished" content="2021-06-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-06-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="108"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/screenshot.png">
 <meta itemprop="keywords" content="webapp," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -208,8 +208,8 @@
 <meta property="og:description" content="Using responsive meta tags for an apps script webapp" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/webapp/responsive-meta/screenshot.png" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-06-07T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-06-07T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-06-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-06-07T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -633,18 +633,18 @@
 
 
 <strong>index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* exported doGet */</span>
-<span class="cm">/**
-</span><span class="cm"> * Using responsive meta tags for the webapp
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">doGet</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">htmlContent</span> <span class="o">=</span> <span class="s1">&#39;Hello world!&#39;</span><span class="p">;</span>
-  <span class="k">return</span> <span class="nx">HtmlService</span><span class="p">.</span><span class="nx">createHtmlOutput</span><span class="p">(</span><span class="nx">htmlContent</span><span class="p">).</span><span class="nx">addMetaTag</span><span class="p">(</span>
-    <span class="s1">&#39;viewport&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;width=device-width, initial-scale=1&#39;</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* exported doGet */</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Using responsive meta tags for the webapp
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">doGet</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">htmlContent</span> <span class="o">=</span> <span class="s1">&#39;Hello world!&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">HtmlService</span><span class="p">.</span><span class="nx">createHtmlOutput</span><span class="p">(</span><span class="nx">htmlContent</span><span class="p">).</span><span class="nx">addMetaTag</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;viewport&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;width=device-width, initial-scale=1&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="run-it">Run it</h3>
 <p>For custom run you need to deploy a webapp with the current <code>doGet</code> function.</p>
@@ -656,13 +656,13 @@
 
 
 <strong>appsscript.json</strong>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;webapp&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;executeAs&#34;</span><span class="p">:</span> <span class="s2">&#34;USER_DEPLOYING&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;access&#34;</span><span class="p">:</span> <span class="s2">&#34;ANYONE_ANONYMOUS&#34;</span>
-  <span class="p">},</span>
-  <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span>
-<span class="p">}</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;webapp&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;executeAs&#34;</span><span class="p">:</span> <span class="s2">&#34;USER_DEPLOYING&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;access&#34;</span><span class="p">:</span> <span class="s2">&#34;ANYONE_ANONYMOUS&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
 
 <style>
   button.clipboard {

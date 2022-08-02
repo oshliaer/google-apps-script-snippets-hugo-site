@@ -16,8 +16,8 @@
 <meta property="og:description" content="Generates a table of contents for a specific Spreadsheet" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/screenrecord.gif" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-03-18T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-18T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-03-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-18T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,9 +31,9 @@
 
 
 <meta itemprop="name" content="TOC generator for Google Sheets">
-<meta itemprop="description" content="Generates a table of contents for a specific Spreadsheet"><meta itemprop="datePublished" content="2021-03-18T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-18T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="326"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/screenrecord.gif">
+<meta itemprop="description" content="Generates a table of contents for a specific Spreadsheet"><meta itemprop="datePublished" content="2021-03-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-18T00:00:00+00:00" />
+<meta itemprop="wordCount" content="241"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/screenrecord.gif">
 <meta itemprop="keywords" content="sheets," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -208,8 +208,8 @@
 <meta property="og:description" content="Generates a table of contents for a specific Spreadsheet" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/snippets/sheets/toc_generator/screenrecord.gif" /><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-03-18T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-18T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-03-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-18T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -631,63 +631,63 @@
 
 
 <strong>index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> * TOC object
-</span><span class="cm"> * @typedef {Array.&lt;{
-</span><span class="cm"> *   name: string,
-</span><span class="cm"> *   gid: number,
-</span><span class="cm"> *   richTextValueBuilder: GoogleAppsScript.Spreadsheet.RichTextValueBuilder
-</span><span class="cm"> * }&gt;} TOCBuild
-</span><span class="cm"> */</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Build a TOC object from the passed book
-</span><span class="cm"> * @param {GoogleAppsScript.Spreadsheet.Spreadsheet} book
-</span><span class="cm"> * @returns {TOCBuild}
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">tocBuilder_</span><span class="p">(</span><span class="nx">book</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActive</span><span class="p">())</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">book</span>
-    <span class="p">.</span><span class="nx">getSheets</span><span class="p">()</span>
-    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">sheet</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
-      <span class="nx">name</span><span class="o">:</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getName</span><span class="p">(),</span>
-      <span class="nx">gid</span><span class="o">:</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getSheetId</span><span class="p">(),</span>
-    <span class="p">}))</span>
-    <span class="p">.</span><span class="nx">map</span><span class="p">(</span>
-      <span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
-        <span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">richTextValueBuilder</span> <span class="o">=</span> <span class="nx">createRichTextValueLink_</span><span class="p">(</span>
-          <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
-          <span class="sb">`#gid=</span><span class="si">${</span><span class="nx">item</span><span class="p">.</span><span class="nx">gid</span><span class="si">}</span><span class="sb">`</span>
-        <span class="p">)),</span>
-        <span class="nx">item</span>
-      <span class="p">)</span>
-    <span class="p">);</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Update the specific Range with the TOC object
-</span><span class="cm"> * @param {TOCBuild} tocBuild
-</span><span class="cm"> * @param {GoogleAppsScript.Spreadsheet.Range} range
-</span><span class="cm"> * @returns {GoogleAppsScript.Spreadsheet.Range} The updated range
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">tocUpdater_</span><span class="p">(</span><span class="nx">tocBuild</span><span class="p">,</span> <span class="nx">range</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">range</span>
-    <span class="p">.</span><span class="nx">getSheet</span><span class="p">()</span>
-    <span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">range</span><span class="p">.</span><span class="nx">getRow</span><span class="p">(),</span> <span class="nx">range</span><span class="p">.</span><span class="nx">getColumn</span><span class="p">(),</span> <span class="nx">tocBuild</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">setRichTextValues</span><span class="p">(</span>
-      <span class="nx">tocBuild</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">item</span><span class="p">.</span><span class="nx">richTextValueBuilder</span><span class="p">.</span><span class="nx">build</span><span class="p">()])</span>
-    <span class="p">);</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Create a RichTextValueBuilder with the text and the linkUrl
-</span><span class="cm"> * @param {string} text
-</span><span class="cm"> * @param {string} linkUrl
-</span><span class="cm"> * @returns {GoogleAppsScript.Spreadsheet.RichTextValueBuilder}
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">createRichTextValueLink_</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="nx">linkUrl</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">newRichTextValue</span><span class="p">().</span><span class="nx">setText</span><span class="p">(</span><span class="nx">text</span><span class="p">).</span><span class="nx">setLinkUrl</span><span class="p">(</span><span class="nx">linkUrl</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * TOC object
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @typedef {Array.&lt;{
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   name: string,
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   gid: number,
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   richTextValueBuilder: GoogleAppsScript.Spreadsheet.RichTextValueBuilder
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * }&gt;} TOCBuild
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Build a TOC object from the passed book
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {GoogleAppsScript.Spreadsheet.Spreadsheet} book
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns {TOCBuild}
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">tocBuilder_</span><span class="p">(</span><span class="nx">book</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActive</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">book</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">getSheets</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">sheet</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span><span class="o">:</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getName</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">gid</span><span class="o">:</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getSheetId</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">map</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">richTextValueBuilder</span> <span class="o">=</span> <span class="nx">createRichTextValueLink_</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="sb">`#gid=</span><span class="si">${</span><span class="nx">item</span><span class="p">.</span><span class="nx">gid</span><span class="si">}</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)),</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">item</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Update the specific Range with the TOC object
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {TOCBuild} tocBuild
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {GoogleAppsScript.Spreadsheet.Range} range
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns {GoogleAppsScript.Spreadsheet.Range} The updated range
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">tocUpdater_</span><span class="p">(</span><span class="nx">tocBuild</span><span class="p">,</span> <span class="nx">range</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">range</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">getSheet</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">range</span><span class="p">.</span><span class="nx">getRow</span><span class="p">(),</span> <span class="nx">range</span><span class="p">.</span><span class="nx">getColumn</span><span class="p">(),</span> <span class="nx">tocBuild</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">setRichTextValues</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">tocBuild</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">item</span><span class="p">.</span><span class="nx">richTextValueBuilder</span><span class="p">.</span><span class="nx">build</span><span class="p">()])</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Create a RichTextValueBuilder with the text and the linkUrl
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {string} text
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {string} linkUrl
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns {GoogleAppsScript.Spreadsheet.RichTextValueBuilder}
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">createRichTextValueLink_</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="nx">linkUrl</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">newRichTextValue</span><span class="p">().</span><span class="nx">setText</span><span class="p">(</span><span class="nx">text</span><span class="p">).</span><span class="nx">setLinkUrl</span><span class="p">(</span><span class="nx">linkUrl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="run-it">Run it</h3>
 
@@ -697,33 +697,33 @@
 
 
 <strong>run.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/* global tocBuilder_ tocUpdater_*/</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Runs the snippet.
-</span><span class="cm"> * Generates a TOC to &#39;Sheet27!B2&#39; without &#39;Sheet27&#39; item.
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">excludeSheetNames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sheet27&#39;</span><span class="p">];</span>
-  <span class="kr">const</span> <span class="nx">book</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActive</span><span class="p">();</span>
-  <span class="kr">const</span> <span class="nx">tocBuild</span> <span class="o">=</span> <span class="nx">tocBuilder_</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">filter</span><span class="p">(</span>
-    <span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">excludeSheetNames</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span>
-  <span class="p">);</span>
-  <span class="kr">const</span> <span class="nx">range</span> <span class="o">=</span> <span class="nx">book</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="s1">&#39;Sheet27!B2:B&#39;</span><span class="p">).</span><span class="nx">clearContent</span><span class="p">();</span>
-  <span class="nx">tocUpdater_</span><span class="p">(</span><span class="nx">tocBuild</span><span class="p">,</span> <span class="nx">range</span><span class="p">);</span>
-  <span class="nx">range</span><span class="p">.</span><span class="nx">activate</span><span class="p">();</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Create menu for handy use
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">onOpen</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">()</span>
-    <span class="p">.</span><span class="nx">createMenu</span><span class="p">(</span><span class="s1">&#39;Apps Script Snippets&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="s1">&#39;Generate TOC&#39;</span><span class="p">,</span> <span class="s1">&#39;run&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">addToUi</span><span class="p">();</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/* global tocBuilder_ tocUpdater_*/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Runs the snippet.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Generates a TOC to &#39;Sheet27!B2&#39; without &#39;Sheet27&#39; item.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">excludeSheetNames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sheet27&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">book</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActive</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">tocBuild</span> <span class="o">=</span> <span class="nx">tocBuilder_</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">filter</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">excludeSheetNames</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">range</span> <span class="o">=</span> <span class="nx">book</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="s1">&#39;Sheet27!B2:B&#39;</span><span class="p">).</span><span class="nx">clearContent</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">tocUpdater_</span><span class="p">(</span><span class="nx">tocBuild</span><span class="p">,</span> <span class="nx">range</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">range</span><span class="p">.</span><span class="nx">activate</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Create menu for handy use
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">onOpen</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">createMenu</span><span class="p">(</span><span class="s1">&#39;Apps Script Snippets&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="s1">&#39;Generate TOC&#39;</span><span class="p">,</span> <span class="s1">&#39;run&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">addToUi</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <style>
   button.clipboard {

@@ -16,8 +16,8 @@
 <meta property="og:description" content="Shows how to get file ID from url" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_js/get_id_from_url/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-03-07T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-07T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-03-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-07T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,8 +31,8 @@
 
 
 <meta itemprop="name" content="Get file/folder ID from url">
-<meta itemprop="description" content="Shows how to get file ID from url"><meta itemprop="datePublished" content="2021-03-07T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-07T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Shows how to get file ID from url"><meta itemprop="datePublished" content="2021-03-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-07T00:00:00+00:00" />
 <meta itemprop="wordCount" content="228"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
 <meta itemprop="keywords" content="js,common," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -208,8 +208,8 @@
 <meta property="og:description" content="Shows how to get file ID from url" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_js/get_id_from_url/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-03-07T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-07T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-03-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-07T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -631,17 +631,17 @@
 
 
 <strong>index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> * Gets ID from URL
-</span><span class="cm"> *
-</span><span class="cm"> * @param {string} url The file url
-</span><span class="cm"> * @returns {string} The file id
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">getIdFromUrl</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">match</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/[\w-_]{15,}/</span><span class="p">);</span>
-  <span class="k">return</span> <span class="nx">match</span> <span class="o">?</span> <span class="nx">match</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">:</span> <span class="kc">undefined</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Gets ID from URL
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {string} url The file url
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns {string} The file id
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">getIdFromUrl</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">match</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/[\w-_]{15,}/</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">match</span> <span class="o">?</span> <span class="nx">match</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">:</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="run-it">Run it</h3>
 
@@ -651,18 +651,18 @@
 
 
 <strong>run.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> * This code runs the snippet
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span>
-    <span class="s1">&#39;https://docs.google.com/spreadsheets/d/19GRd3EarV_SM3Y8MYdpWvQNYZVZgLZih4EO4gX_JSko/edit#gid=1702180728&#39;</span><span class="p">;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getIdFromUrl</span><span class="p">(</span><span class="nx">url</span><span class="p">));</span>
-  <span class="nx">url</span> <span class="o">=</span>
-    <span class="s1">&#39;https://drive.google.com/drive/folders/1nUB4UDrCNSbNmjSXy2H5DNz09s1LDEIb&#39;</span><span class="p">;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getIdFromUrl</span><span class="p">(</span><span class="nx">url</span><span class="p">));</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * This code runs the snippet
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://docs.google.com/spreadsheets/d/19GRd3EarV_SM3Y8MYdpWvQNYZVZgLZih4EO4gX_JSko/edit#gid=1702180728&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getIdFromUrl</span><span class="p">(</span><span class="nx">url</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;https://drive.google.com/drive/folders/1nUB4UDrCNSbNmjSXy2H5DNz09s1LDEIb&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getIdFromUrl</span><span class="p">(</span><span class="nx">url</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <h3 id="test">Test</h3>
 <blockquote>
@@ -675,63 +675,63 @@
 
 
 <strong>test.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> *
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">runTest</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">passed</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">maxItems</span> <span class="o">=</span> <span class="mi">6000</span><span class="p">;</span>
-  <span class="kr">const</span> <span class="nx">items</span> <span class="o">=</span> <span class="p">[];</span>
-
-  <span class="kd">let</span> <span class="nx">fileList</span><span class="p">;</span>
-  <span class="k">do</span> <span class="p">{</span>
-    <span class="nx">fileList</span> <span class="o">=</span> <span class="nx">Drive</span><span class="p">.</span><span class="nx">Files</span><span class="p">.</span><span class="nx">list</span><span class="p">({</span>
-      <span class="nx">maxResults</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>
-      <span class="nx">pageToken</span><span class="o">:</span> <span class="nx">fileList</span> <span class="o">?</span> <span class="nx">fileList</span><span class="p">.</span><span class="nx">nextPageToken</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-    <span class="p">});</span>
-    <span class="nx">items</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">fileList</span><span class="p">.</span><span class="nx">items</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="nx">fileList</span><span class="p">.</span><span class="nx">nextPageToken</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">fileList</span><span class="p">.</span><span class="nx">nextPageToken</span> <span class="o">&amp;&amp;</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">maxItems</span><span class="p">);</span>
-
-  <span class="nx">items</span>
-    <span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
-      <span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
-        <span class="nx">p</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
-          <span class="p">...[</span><span class="s1">&#39;alternateLink&#39;</span><span class="p">,</span> <span class="s1">&#39;downloadUrl&#39;</span><span class="p">,</span> <span class="s1">&#39;exportLinks&#39;</span><span class="p">].</span><span class="nx">reduce</span><span class="p">(</span>
-            <span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
-              <span class="k">typeof</span> <span class="nx">item</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span>
-                <span class="o">?</span> <span class="nx">r</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
-                    <span class="nx">url</span><span class="o">:</span> <span class="nx">item</span><span class="p">[</span><span class="nx">key</span><span class="p">],</span>
-                    <span class="nx">id</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
-                  <span class="p">})</span>
-                <span class="o">:</span> <span class="k">typeof</span> <span class="nx">item</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span>
-                <span class="o">?</span> <span class="nx">r</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
-                    <span class="p">...</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">item</span><span class="p">[</span><span class="nx">key</span><span class="p">]).</span><span class="nx">map</span><span class="p">((</span><span class="nx">elk</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
-                      <span class="nx">url</span><span class="o">:</span> <span class="nx">item</span><span class="p">[</span><span class="nx">key</span><span class="p">][</span><span class="nx">elk</span><span class="p">],</span>
-                      <span class="nx">id</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
-                    <span class="p">}))</span>
-                  <span class="p">)</span>
-                <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-              <span class="nx">r</span>
-            <span class="p">),</span>
-            <span class="p">[]</span>
-          <span class="p">)</span>
-        <span class="p">),</span>
-        <span class="nx">p</span>
-      <span class="p">),</span>
-      <span class="p">[]</span>
-    <span class="p">)</span>
-    <span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">entry</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="kr">const</span> <span class="nx">test</span> <span class="o">=</span> <span class="nx">getIdFromUrl</span><span class="p">(</span><span class="nx">entry</span><span class="p">.</span><span class="nx">url</span><span class="p">)</span> <span class="o">===</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">test</span> <span class="o">==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">passed</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">getIdFromUrl</span><span class="p">(</span><span class="nx">entry</span><span class="p">.</span><span class="nx">url</span><span class="p">));</span>
-      <span class="p">}</span>
-    <span class="p">});</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="nx">passed</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Test is passed&#39;</span><span class="p">,</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">runTest</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">passed</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">maxItems</span> <span class="o">=</span> <span class="mi">6000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">items</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">fileList</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fileList</span> <span class="o">=</span> <span class="nx">Drive</span><span class="p">.</span><span class="nx">Files</span><span class="p">.</span><span class="nx">list</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">maxResults</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">pageToken</span><span class="o">:</span> <span class="nx">fileList</span> <span class="o">?</span> <span class="nx">fileList</span><span class="p">.</span><span class="nx">nextPageToken</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">items</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">fileList</span><span class="p">.</span><span class="nx">items</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="nx">fileList</span><span class="p">.</span><span class="nx">nextPageToken</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">fileList</span><span class="p">.</span><span class="nx">nextPageToken</span> <span class="o">&amp;&amp;</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">maxItems</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">items</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">reduce</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">p</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="p">...[</span><span class="s1">&#39;alternateLink&#39;</span><span class="p">,</span> <span class="s1">&#39;downloadUrl&#39;</span><span class="p">,</span> <span class="s1">&#39;exportLinks&#39;</span><span class="p">].</span><span class="nx">reduce</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">              <span class="k">typeof</span> <span class="nx">item</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="o">?</span> <span class="nx">r</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">url</span><span class="o">:</span> <span class="nx">item</span><span class="p">[</span><span class="nx">key</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">id</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">                <span class="o">:</span> <span class="k">typeof</span> <span class="nx">item</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="o">?</span> <span class="nx">r</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">...</span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">item</span><span class="p">[</span><span class="nx">key</span><span class="p">]).</span><span class="nx">map</span><span class="p">((</span><span class="nx">elk</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">                      <span class="nx">url</span><span class="o">:</span> <span class="nx">item</span><span class="p">[</span><span class="nx">key</span><span class="p">][</span><span class="nx">elk</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                      <span class="nx">id</span><span class="o">:</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}))</span>
+</span></span><span class="line"><span class="cl">                  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">r</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">p</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">entry</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">test</span> <span class="o">=</span> <span class="nx">getIdFromUrl</span><span class="p">(</span><span class="nx">entry</span><span class="p">.</span><span class="nx">url</span><span class="p">)</span> <span class="o">===</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">test</span> <span class="o">==</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">passed</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">getIdFromUrl</span><span class="p">(</span><span class="nx">entry</span><span class="p">.</span><span class="nx">url</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">passed</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Test is passed&#39;</span><span class="p">,</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 
 </content>

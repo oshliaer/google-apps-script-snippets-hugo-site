@@ -16,8 +16,8 @@
 <meta property="og:description" content="The snippet demonstrates how to open additional UI elements in Google Sheets." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_ui/open-dialog-from-sidebar/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-08-27T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-08-27T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-08-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-27T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,9 +31,9 @@
 
 
 <meta itemprop="name" content="Open an dialog from the sidebar">
-<meta itemprop="description" content="The snippet demonstrates how to open additional UI elements in Google Sheets."><meta itemprop="datePublished" content="2021-08-27T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-08-27T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="216"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
+<meta itemprop="description" content="The snippet demonstrates how to open additional UI elements in Google Sheets."><meta itemprop="datePublished" content="2021-08-27T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-27T00:00:00+00:00" />
+<meta itemprop="wordCount" content="131"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
 <meta itemprop="keywords" content="common_ui," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -208,8 +208,8 @@
 <meta property="og:description" content="The snippet demonstrates how to open additional UI elements in Google Sheets." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/common_ui/open-dialog-from-sidebar/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-08-27T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-08-27T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-08-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-27T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -634,29 +634,29 @@
 
 
 <strong>app/sidebar.html</strong>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;IE=edge&#34;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;btnShowModalDialog&#34;</span><span class="p">&gt;</span>Show the modal dialog<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-      <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="nb">document</span>
-          <span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;btnShowModalDialog&#39;</span><span class="p">)</span>
-          <span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-            <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
-            <span class="nx">google</span><span class="p">.</span><span class="nx">script</span><span class="p">.</span><span class="nx">run</span><span class="p">.</span><span class="nx">showModalDialog</span><span class="p">();</span>
-          <span class="p">});</span>
-      <span class="p">});</span>
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;IE=edge&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;btnShowModalDialog&#34;</span><span class="p">&gt;</span>Show the modal dialog<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">document</span>
+</span></span><span class="line"><span class="cl">          <span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;btnShowModalDialog&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">google</span><span class="p">.</span><span class="nx">script</span><span class="p">.</span><span class="nx">run</span><span class="p">.</span><span class="nx">showModalDialog</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">          <span class="p">});</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
 
 
 
@@ -665,25 +665,25 @@
 
 
 <strong>app/index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> * Opens the sidebar
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">openSidebarDialog</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">().</span><span class="nx">showSidebar</span><span class="p">(</span>
-    <span class="nx">HtmlService</span><span class="p">.</span><span class="nx">createHtmlOutputFromFile</span><span class="p">(</span><span class="s1">&#39;app/sidebar.html&#39;</span><span class="p">)</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Opens the modal dialog
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">showModalDialog</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">().</span><span class="nx">showModalDialog</span><span class="p">(</span>
-    <span class="nx">HtmlService</span><span class="p">.</span><span class="nx">createHtmlOutputFromFile</span><span class="p">(</span><span class="s1">&#39;app/dialog.html&#39;</span><span class="p">),</span>
-    <span class="s1">&#39;Modal dialog&#39;</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Opens the sidebar
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">openSidebarDialog</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">().</span><span class="nx">showSidebar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">HtmlService</span><span class="p">.</span><span class="nx">createHtmlOutputFromFile</span><span class="p">(</span><span class="s1">&#39;app/sidebar.html&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Opens the modal dialog
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">showModalDialog</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getUi</span><span class="p">().</span><span class="nx">showModalDialog</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">HtmlService</span><span class="p">.</span><span class="nx">createHtmlOutputFromFile</span><span class="p">(</span><span class="s1">&#39;app/dialog.html&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;Modal dialog&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 </p>
 <h3 id="run-it">Run it</h3>
 
@@ -693,13 +693,13 @@
 
 
 <strong>run.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> * Runs the snippet
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">openSidebarDialog</span><span class="p">();</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Runs the snippet
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">openSidebarDialog</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 <style>
   button.clipboard {

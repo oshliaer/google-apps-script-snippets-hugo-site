@@ -16,8 +16,8 @@
 <meta property="og:description" content="Protects the list of sheets" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-03-04T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-04T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-03-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-04T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 
@@ -31,8 +31,8 @@
 
 
 <meta itemprop="name" content="Protection of multiple sheets">
-<meta itemprop="description" content="Protects the list of sheets"><meta itemprop="datePublished" content="2021-03-04T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-04T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Protects the list of sheets"><meta itemprop="datePublished" content="2021-03-04T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-04T00:00:00+00:00" />
 <meta itemprop="wordCount" content="196"><meta itemprop="image" content="https://apps-script-snippets.contributor.pw/images/share.png"/>
 <meta itemprop="keywords" content="SpreadsheetApp,Protection," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -208,8 +208,8 @@
 <meta property="og:description" content="Protects the list of sheets" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://apps-script-snippets.contributor.pw/snippets/sheets/protection_multiple_sheets/" /><meta property="og:image" content="https://apps-script-snippets.contributor.pw/images/share.png"/><meta property="article:section" content="snippets" />
-<meta property="article:published_time" content="2021-03-04T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-04T00:00:00&#43;00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
+<meta property="article:published_time" content="2021-03-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-04T00:00:00+00:00" /><meta property="og:site_name" content="Google Apps Script Snippets" />
 
 
 <style>
@@ -624,54 +624,54 @@
 
 
 <strong>index.js</strong>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="cm">/**
-</span><span class="cm"> * @file webpack.config.js
-</span><span class="cm"> * @author Alex Ivanov
-</span><span class="cm"> * @email ai@contributor.pw
-</span><span class="cm"> *
-</span><span class="cm"> * The snippet processes the list of sheets of the spreadsheet.
-</span><span class="cm"> * It protects the sheets.
-</span><span class="cm"> * It excludes ranges from protection if there is the specific list.
-</span><span class="cm"> *
-</span><span class="cm"> * Protection of multiple sheets
-</span><span class="cm"> *
-</span><span class="cm"> */</span>
-
-<span class="kr">const</span> <span class="nx">SHEET_LIST</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sheet1&#39;</span><span class="p">,</span> <span class="s1">&#39;Sheet2&#39;</span><span class="p">,</span> <span class="s1">&#39;Sheet3&#39;</span><span class="p">,</span> <span class="s1">&#39;Sheet23&#39;</span><span class="p">];</span>
-<span class="kr">const</span> <span class="nx">UNPROTECTED_ADDRS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A1:C9&#39;</span><span class="p">];</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Runs the snippet
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">userActionRunSnippet</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">book</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActive</span><span class="p">();</span>
-  <span class="kr">const</span> <span class="nx">sheets</span> <span class="o">=</span> <span class="nx">book</span>
-    <span class="p">.</span><span class="nx">getSheets</span><span class="p">()</span>
-    <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">sheet</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">SHEET_LIST</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">sheet</span><span class="p">.</span><span class="nx">getName</span><span class="p">()));</span>
-
-  <span class="nx">sheets</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">sheet</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">unprotected</span> <span class="o">=</span> <span class="nx">UNPROTECTED_ADDRS</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">addr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">addr</span><span class="p">));</span>
-    <span class="nx">protect_</span><span class="p">(</span><span class="nx">sheet</span><span class="p">,</span> <span class="nx">unprotected</span><span class="p">);</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm"> * Protects the sheet
-</span><span class="cm"> *
-</span><span class="cm"> * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
-</span><span class="cm"> * @param {Array.&lt;GoogleAppsScript.Spreadsheet.Range&gt;}
-</span><span class="cm"> * @return {GoogleAppsScript.Spreadsheet.Sheet}
-</span><span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">protect_</span><span class="p">(</span><span class="nx">sheet</span><span class="p">,</span> <span class="nx">unprotected</span> <span class="o">=</span> <span class="p">[])</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">protection</span> <span class="o">=</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">protect</span><span class="p">().</span><span class="nx">setDescription</span><span class="p">(</span><span class="s1">&#39;Auto protection&#39;</span><span class="p">);</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">unprotected</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="nx">protection</span><span class="p">.</span><span class="nx">setUnprotectedRanges</span><span class="p">(</span><span class="nx">unprotected</span><span class="p">);</span>
-  <span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> <span class="nx">Session</span><span class="p">.</span><span class="nx">getEffectiveUser</span><span class="p">();</span>
-  <span class="nx">protection</span><span class="p">.</span><span class="nx">addEditor</span><span class="p">(</span><span class="nx">me</span><span class="p">);</span>
-  <span class="nx">protection</span><span class="p">.</span><span class="nx">removeEditors</span><span class="p">(</span><span class="nx">protection</span><span class="p">.</span><span class="nx">getEditors</span><span class="p">());</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">protection</span><span class="p">.</span><span class="nx">canDomainEdit</span><span class="p">())</span> <span class="nx">protection</span><span class="p">.</span><span class="nx">setDomainEdit</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-  <span class="k">return</span> <span class="nx">sheet</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @file webpack.config.js
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @author Alex Ivanov
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @email ai@contributor.pw
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * The snippet processes the list of sheets of the spreadsheet.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * It protects the sheets.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * It excludes ranges from protection if there is the specific list.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Protection of multiple sheets
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">SHEET_LIST</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sheet1&#39;</span><span class="p">,</span> <span class="s1">&#39;Sheet2&#39;</span><span class="p">,</span> <span class="s1">&#39;Sheet3&#39;</span><span class="p">,</span> <span class="s1">&#39;Sheet23&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">UNPROTECTED_ADDRS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A1:C9&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Runs the snippet
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">userActionRunSnippet</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">book</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActive</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">sheets</span> <span class="o">=</span> <span class="nx">book</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">getSheets</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">sheet</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">SHEET_LIST</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">sheet</span><span class="p">.</span><span class="nx">getName</span><span class="p">()));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">sheets</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">sheet</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">unprotected</span> <span class="o">=</span> <span class="nx">UNPROTECTED_ADDRS</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">addr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">addr</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">protect_</span><span class="p">(</span><span class="nx">sheet</span><span class="p">,</span> <span class="nx">unprotected</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Protects the sheet
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param {Array.&lt;GoogleAppsScript.Spreadsheet.Range&gt;}
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @return {GoogleAppsScript.Spreadsheet.Sheet}
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">protect_</span><span class="p">(</span><span class="nx">sheet</span><span class="p">,</span> <span class="nx">unprotected</span> <span class="o">=</span> <span class="p">[])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">protection</span> <span class="o">=</span> <span class="nx">sheet</span><span class="p">.</span><span class="nx">protect</span><span class="p">().</span><span class="nx">setDescription</span><span class="p">(</span><span class="s1">&#39;Auto protection&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">unprotected</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="nx">protection</span><span class="p">.</span><span class="nx">setUnprotectedRanges</span><span class="p">(</span><span class="nx">unprotected</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> <span class="nx">Session</span><span class="p">.</span><span class="nx">getEffectiveUser</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">protection</span><span class="p">.</span><span class="nx">addEditor</span><span class="p">(</span><span class="nx">me</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">protection</span><span class="p">.</span><span class="nx">removeEditors</span><span class="p">(</span><span class="nx">protection</span><span class="p">.</span><span class="nx">getEditors</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">protection</span><span class="p">.</span><span class="nx">canDomainEdit</span><span class="p">())</span> <span class="nx">protection</span><span class="p">.</span><span class="nx">setDomainEdit</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">sheet</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 
 
 
@@ -680,12 +680,12 @@
 
 
 <strong>appsscript.json</strong>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;timeZone&#34;</span><span class="p">:</span> <span class="s2">&#34;Europe/Moscow&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;exceptionLogging&#34;</span><span class="p">:</span> <span class="s2">&#34;STACKDRIVER&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;timeZone&#34;</span><span class="p">:</span> <span class="s2">&#34;Europe/Moscow&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;exceptionLogging&#34;</span><span class="p">:</span> <span class="s2">&#34;STACKDRIVER&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;runtimeVersion&#34;</span><span class="p">:</span> <span class="s2">&#34;V8&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
 </p>
 
 </content>
